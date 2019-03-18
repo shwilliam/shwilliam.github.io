@@ -4,11 +4,77 @@ import { Link } from 'gatsby'
 
 const Header = ({ siteTitle }) => (
   <header>
-    <h1 className="link">
-      <Link to="/">
-        {siteTitle}
-      </Link>
-    </h1>
+    <div className="dib w-100 w-30-ns bb br-ns relative">
+      <section>
+        <h1 className="f4-ns f3 ma0">
+          <Link to="/" className="link near-black ttc db ph3 pb3 pt4 nowrap">
+            William L<span className="dn-m">indvall</span>
+          </Link>
+        </h1>
+      </section>
+      <section>
+        <a className="dn-ns absolute right-1 top-1 link near-black pa3 f4-ns f3" href="mailto:w-lindvall@outlook.com">
+          <span role="img" aria-label="Email">
+            📧
+          </span>
+        </a>
+      </section>
+    </div>
+    <section className="dib-ns dn fr tr-ns w-100 w-70-ns">
+      <a className="link near-black ph3 pb3-ns pt4-ns pv2 bb db" href="mailto:w-lindvall@outlook.com">
+        Contact me
+      </a>
+    </section>
+    <div>
+      <section className="dib w-100 f4 w-30-ns ma0 bb br-ns">
+        <div className="ph3 pv2 fl dn dib-l gray">
+          Filters:
+        </div>
+        {/* TODO: enable category filters */}
+        <ul className="pv2 list pa0 ma0 flex justify-around">
+          <li className="dib">
+            <button className="ma0 pa0 bn bg-transparent pointer" type="button">
+              <span className="nowrap" role="image" aria-label="visualizations">
+                📊
+              </span>
+            </button>
+          </li>
+          <li className="dib">
+            <button className="ma0 pa0 bn bg-transparent pointer" type="button">
+              <span className="nowrap" role="image" aria-label="websites">
+                💻
+              </span>
+            </button>
+          </li>
+          <li className="dib">
+            <button className="ma0 pa0 bn bg-transparent pointer" type="button">
+              <span className="nowrap" role="image" aria-label="components">
+                🔨
+              </span>
+            </button>
+          </li>
+          <li className="dib">
+            <button className="ma0 pa0 bn bg-transparent pointer" type="button">
+              <span className="nowrap" role="image" aria-label="experiments">
+                👨‍🔬
+              </span>
+            </button>
+          </li>
+          <li className="dib">
+            <button className="ma0 pa0 bn bg-transparent pointer" type="button">
+              <span className="nowrap" role="image" aria-label="photos">
+                📷
+              </span>
+            </button>
+          </li>
+        </ul>
+      </section>
+      <div className="fr tr-ns w-100 w-70-ns bb">
+        <label className="sr-only" htmlFor="search-input">Search for a project</label>
+        {/* TODO: enable search */}
+        <input disabled id="search-input" name="search-input" type="search" className="input-reset bn ph3 pv2 ma0 br-ns w-100 lh-copy" placeholder="Search..."/>
+      </div>
+    </div>
   </header>
 )
 

@@ -11,14 +11,16 @@ export default function Template ({
   const { frontmatter, html } = markdownRemark
   return (
     <Layout>
-      <SEO title="Project" keywords={[`project`]} />
-      <article>
-        <header>
-          {frontmatter.title}
-          {frontmatter.date}
-        </header>
-        <section dangerouslySetInnerHTML={{ __html: html }}/>
-      </article>
+      <SEO title={frontmatter.title} keywords={[`project`]} />
+      <header>
+        <h2 className="mb0">
+          <a className="f-subheadline-l f1 lh-title link near-black" href={frontmatter.link} target="_blank" rel="noopener noreferrer">
+            {frontmatter.title}
+          </a>
+        </h2>
+        <div className="gray">{frontmatter.date}</div>
+      </header>
+      <section dangerouslySetInnerHTML={{ __html: html }}/>
     </Layout>
   )
 }
@@ -28,7 +30,8 @@ Template.propTypes = {
     markdownRemark: PropTypes.shape({
       frontmatter: PropTypes.shape({
         title: PropTypes.string.isRequired,
-        date: PropTypes.string.isRequired
+        date: PropTypes.string.isRequired,
+        link: PropTypes.string.isRequired
       }),
       html: PropTypes.string.isRequired
     })
@@ -43,6 +46,7 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         path
         title
+        link
       }
     }
   }
