@@ -29,13 +29,17 @@ const ProjectList = () => {
         const projects = data.allMarkdownRemark.edges
 
         return (
-          <ol className="list ph3-ns ph4 pv2 dib w-100 w-30-ns ma0 bb br-ns bt-0-ns bt">
+          <ol className="list dib w-100 w-30-ns ma0 pa0 bb br-ns bt-0-ns bt">
             {
               projects.map(({ node }) => {
                 const { excerpt, frontmatter } = node
                 return (
-                  <li className="mv2-ns mv4 pb1" key={frontmatter.path}>
-                    <Link to={frontmatter.path} className="link near-black">
+                  <li key={frontmatter.path}>
+                    <Link
+                      to={frontmatter.path}
+                      className="link pv2-ns pv4 dib near-black w-100 ph3-ns ph4 pv2"
+                      activeClassName="bl bw2"
+                    >
                       <div className="f6 gray">
                         {frontmatter.date}
                       </div>
