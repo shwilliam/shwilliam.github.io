@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
+import CategoryFilters from './category-filters'
 
 const Header = ({ siteTitle }) => (
   <header>
@@ -27,47 +28,7 @@ const Header = ({ siteTitle }) => (
     </section>
     <div>
       <section className="dib w-100 f4 w-30-ns ma0 bb br-ns">
-        <div className="ph3 pv2 fl dn dib-l gray">
-          Filters:
-        </div>
-        {/* TODO: enable category filters */}
-        <ul className="pv2 list pa0 ma0 flex justify-around">
-          <li className="dib">
-            <button className="ma0 pa0 bn bg-transparent pointer" type="button">
-              <span className="nowrap" role="image" aria-label="visualizations">
-                📊
-              </span>
-            </button>
-          </li>
-          <li className="dib">
-            <button className="ma0 pa0 bn bg-transparent pointer" type="button">
-              <span className="nowrap" role="image" aria-label="websites">
-                💻
-              </span>
-            </button>
-          </li>
-          <li className="dib">
-            <button className="ma0 pa0 bn bg-transparent pointer" type="button">
-              <span className="nowrap" role="image" aria-label="components">
-                🔨
-              </span>
-            </button>
-          </li>
-          <li className="dib">
-            <button className="ma0 pa0 bn bg-transparent pointer" type="button">
-              <span className="nowrap" role="image" aria-label="experiments">
-                👨‍🔬
-              </span>
-            </button>
-          </li>
-          <li className="dib">
-            <button className="ma0 pa0 bn bg-transparent pointer" type="button">
-              <span className="nowrap" role="image" aria-label="photos">
-                📷
-              </span>
-            </button>
-          </li>
-        </ul>
+        <CategoryFilters />
       </section>
       <div className="fr tr-ns w-100 w-70-ns bb">
         <label className="sr-only" htmlFor="search-input">Search for a project</label>
