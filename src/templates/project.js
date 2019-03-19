@@ -1,8 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
+import Img from 'gatsby-image'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
+import BrowserWindow from '../components/browser-window'
 
 export default function Template ({
   data
@@ -20,6 +22,12 @@ export default function Template ({
         </h2>
         <div className="gray">{frontmatter.date}</div>
       </header>
+      <figure className="mh0 mv4">
+        <figcaption className="sr-only">Project screengrab</figcaption>
+        <BrowserWindow>
+          <Img fluid={frontmatter.image.childImageSharp.fluid} />
+        </BrowserWindow>
+      </figure>
       <section dangerouslySetInnerHTML={{ __html: html }}/>
     </Layout>
   )
@@ -31,7 +39,14 @@ Template.propTypes = {
       frontmatter: PropTypes.shape({
         title: PropTypes.string.isRequired,
         date: PropTypes.string.isRequired,
-        link: PropTypes.string.isRequired
+        link: PropTypes.string.isRequired,
+        image: PropTypes.shape({
+          childImageSharp: PropTypes.shape({
+            fluid: PropTypes.shape({
+              // TODO: describe shape
+            })
+          })
+        })
       }),
       html: PropTypes.string.isRequired
     })
@@ -47,6 +62,13 @@ export const pageQuery = graphql`
         path
         title
         link
+        image {
+          childImageSharp {
+            fluid(maxWidth: 975) {
+              ...GatsbyImageSharpFluid_noBase64
+            }
+          }
+        }
       }
     }
   }

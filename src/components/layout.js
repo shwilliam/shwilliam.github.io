@@ -22,9 +22,9 @@ const Layout = ({ children }) => {
         }
       `}
       render={data => (
-        <div id="layout" className="sans-serif near-black f4 lh-copy mw8 center bl-l br-l min-vh-100">
+        <div id="layout" className="sans-serif near-black f4 lh-copy mw8 center bl-l br-l cf min-vh-100">
           <Header siteTitle={data.site.siteMetadata.title} />
-          <main role="main" className="pv2 ph4 fr w-100 w-70-ns relative">
+          <main role="main" className="pv2 ph4 w-100 w-70-ns relative fr">
             <article className="pt2 pb4">
               {children}
             </article>
