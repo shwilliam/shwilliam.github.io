@@ -23,9 +23,13 @@ export default function Template ({
         <div className="gray">{frontmatter.date}</div>
       </header>
       <figure className="mh0 mv4">
-        <figcaption className="sr-only">Project screengrab</figcaption>
+        <figcaption className="sr-only">{frontmatter.imgAlt}</figcaption>
         <BrowserWindow>
-          <Img fluid={frontmatter.image.childImageSharp.fluid} />
+          {
+            frontmatter.imgUrl
+              ? <img src={frontmatter.imgUrl} />
+              : <Img fluid={frontmatter.image.childImageSharp.fluid} />
+          }
         </BrowserWindow>
       </figure>
       <section dangerouslySetInnerHTML={{ __html: html }}/>
@@ -46,7 +50,9 @@ Template.propTypes = {
               // TODO: describe shape
             })
           })
-        })
+        }),
+        imgUrl: PropTypes.string,
+        imgAlt: PropTypes.string.isRequired
       }),
       html: PropTypes.string.isRequired
     })
@@ -69,6 +75,8 @@ export const pageQuery = graphql`
             }
           }
         }
+        imgUrl
+        imgAlt
       }
     }
   }
