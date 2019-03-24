@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
 import CategoryFilters from './category-filters'
+import SearchForm from './search-form'
 
 const Header = ({ siteTitle }) => (
   <header>
@@ -31,11 +32,7 @@ const Header = ({ siteTitle }) => (
         <CategoryFilters />
       </section>
       <section className="fr tr-ns w-100 w-70-ns bb">
-        <form>
-          <label className="sr-only" htmlFor="search-input">Search for a project</label>
-          {/* TODO: enable search */}
-          <input disabled id="search-input" name="search-input" type="search" className="input-reset bn ph3 pv2 ma0 w-100 lh-copy" placeholder="Search..."/>
-        </form>
+        <SearchForm />
       </section>
     </div>
   </header>

@@ -8,11 +8,11 @@ function focusMainLink () {
 }
 
 const ProjectList = () => {
-  const { category } = useContext(FilterContext)
+  const { category, query } = useContext(FilterContext)
 
   useEffect(() => {
     focusMainLink()
-  })
+  }, [])
 
   return (
     <StaticQuery
@@ -45,9 +45,14 @@ const ProjectList = () => {
             {
               projects
                 .map(({ node }) => {
-                  const { excerpt, frontmatter } = node
+                  const { html, excerpt, frontmatter } = node
 
+                  // filter by category
                   if (category && frontmatter.category !== category) return
+
+                  // filter by query
+                  // FIXME: fuzzy search
+                  if (query && !`${frontmatter.title} ${frontmatter.category} ${html}`.includes(query)) return
 
                   return (
                     <li key={frontmatter.path} className="bb br-ns bt-0-ns bt">

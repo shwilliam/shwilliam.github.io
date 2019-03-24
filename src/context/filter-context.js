@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 
 const defaultState = {
   category: undefined,
+  query: undefined,
   setCategory: () => {}
 }
 
@@ -12,10 +13,12 @@ class FilterContextProvider extends React.Component {
   constructor (props) {
     super(props)
     this.state = {
-      category: undefined
+      category: undefined,
+      query: undefined
     }
 
     this.setCategory = this.setCategory.bind(this)
+    this.setQuery = this.setQuery.bind(this)
   }
 
   setCategory (category) {
@@ -26,15 +29,21 @@ class FilterContextProvider extends React.Component {
     }
   }
 
+  setQuery (query) {
+    this.setState({ query })
+  }
+
   render () {
     const { children } = this.props
-    const { category } = this.state
+    const { category, query } = this.state
 
     return (
       <FilterContext.Provider
         value={{
           category,
-          setCategory: this.setCategory
+          query,
+          setCategory: this.setCategory,
+          setQuery: this.setQuery
         }}
       >
         {children}
