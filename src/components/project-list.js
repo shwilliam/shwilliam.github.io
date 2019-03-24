@@ -1,9 +1,18 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
 import { Link, StaticQuery, graphql } from 'gatsby'
 import FilterContext from '../context/filter-context'
 
+function focusMainLink () {
+  const mainLink = document.querySelector('main').querySelector('a')
+  if (mainLink) mainLink.focus()
+}
+
 const ProjectList = () => {
   const { category } = useContext(FilterContext)
+
+  useEffect(() => {
+    focusMainLink()
+  })
 
   return (
     <StaticQuery
@@ -44,7 +53,7 @@ const ProjectList = () => {
                     <li key={frontmatter.path} className="bb br-ns bt-0-ns bt">
                       <Link
                         to={frontmatter.path}
-                        className="link pv2-ns pv4 dib near-black w-100 ph3-ns ph4 pv2"
+                        className="link pv2-ns pv4 dib near-black w-100 ph3-ns ph4 pv2 focus-bg"
                         activeClassName="bl bw2"
                       >
                         <div className="f6 gray">

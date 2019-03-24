@@ -4,3 +4,7 @@
   left: -9999px;
   top: -9999px;
 }
+
+.focus-bg:focus:not(:active) {
+  background-color: #eee;
+}

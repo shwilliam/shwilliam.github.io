@@ -32,6 +32,7 @@ export default function Template ({
           }
         </BrowserWindow>
       </figure>
+      {/* TODO: use aria-live */}
       <section dangerouslySetInnerHTML={{ __html: html }}/>
     </Layout>
   )
