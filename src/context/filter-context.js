@@ -19,7 +19,11 @@ class FilterContextProvider extends React.Component {
   }
 
   setCategory (category) {
-    this.setState({ category })
+    if (category === this.state.category) {
+      this.setState({ category: undefined })
+    } else {
+      this.setState({ category })
+    }
   }
 
   render () {

@@ -2,51 +2,52 @@ import React, { useContext } from 'react'
 import FilterContext from '../context/filter-context'
 
 const CategoryFilters = () => {
-  const { setCategory } = useContext(FilterContext)
-  // TODO: show active filter
+  const { category: activeCategory, setCategory } = useContext(FilterContext)
 
-  return (<>
-    <div className="ph3 pv2 fl dn dib-l gray">
+  return (
+    <section>
+      <div className="ph3 pv2 fl dn dib-l gray">
       Filters:
-    </div>
-    <ul className="pv2 list pa0 ma0 flex justify-around">
-      <li className="dib">
-        <button onClick={() => setCategory('visualization')} className="ma0 pa0 bn bg-transparent pointer" type="button">
-          <span className="nowrap" role="image" aria-label="visualizations">
-            📊
-          </span>
-        </button>
-      </li>
-      <li className="dib">
-        <button onClick={() => setCategory('website')} className="ma0 pa0 bn bg-transparent pointer" type="button">
-          <span className="nowrap" role="image" aria-label="websites">
-            💻
-          </span>
-        </button>
-      </li>
-      <li className="dib">
-        <button onClick={() => setCategory('component')} className="ma0 pa0 bn bg-transparent pointer" type="button">
-          <span className="nowrap" role="image" aria-label="components">
-            🔨
-          </span>
-        </button>
-      </li>
-      <li className="dib">
-        <button onClick={() => setCategory('experiment')} className="ma0 pa0 bn bg-transparent pointer" type="button">
-          <span className="nowrap" role="image" aria-label="experiments">
-            👨‍🔬
-          </span>
-        </button>
-      </li>
-      <li className="dib">
-        <button onClick={() => setCategory('photos')} className="ma0 pa0 bn bg-transparent pointer" type="button">
-          <span className="nowrap" role="image" aria-label="photos">
-            📷
-          </span>
-        </button>
-      </li>
-    </ul>
-  </>)
+      </div>
+      <ul className="list pv2 ph0 ma0 flex justify-around">
+        {
+          [
+            {
+              value: 'visualization',
+              emoji: '📊'
+            },
+            {
+              value: 'website',
+              emoji: '💻'
+            },
+            {
+              value: 'component',
+              emoji: '🔨'
+            },
+            {
+              value: 'experiment',
+              emoji: '👨‍🔬'
+            },
+            {
+              value: 'photos',
+              emoji: '📷'
+            }
+          ].map(category => (
+            <li key={category.value} className="dib">
+              <button onClick={() => setCategory(category.value)} className={`
+                mv0 pa0 bn br-100 bg-transparent pointer grow
+                ${(activeCategory && category.value !== activeCategory) ? 'o-50' : 'o-100'}
+              `} type="button">
+                <span className="nowrap lh-copy" role="image" aria-label={category.value}>
+                  {category.emoji}
+                </span>
+              </button>
+            </li>
+          ))
+        }
+      </ul>
+    </section>
+  )
 }
 
 export default CategoryFilters

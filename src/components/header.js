@@ -21,8 +21,8 @@ const Header = ({ siteTitle }) => (
         </a>
       </section>
     </div>
-    <section className="dib-ns dn fr tr-ns w-100 w-70-ns">
-      <a className="link near-black ph3 pb3-ns pt4-ns pv2 bb db" href="mailto:w-lindvall@outlook.com">
+    <section className="dib-ns dn fr bb tr-ns w-100 w-70-ns">
+      <a className="link near-black ph3 pb3-ns pt4-ns pv2 dib" href="mailto:w-lindvall@outlook.com">
         Contact me
       </a>
     </section>
@@ -33,7 +33,7 @@ const Header = ({ siteTitle }) => (
       <div className="fr tr-ns w-100 w-70-ns bb">
         <label className="sr-only" htmlFor="search-input">Search for a project</label>
         {/* TODO: enable search */}
-        <input disabled id="search-input" name="search-input" type="search" className="input-reset bn ph3 pv2 ma0 br-ns w-100 lh-copy" placeholder="Search..."/>
+        <input disabled id="search-input" name="search-input" type="search" className="input-reset bn ph3 pv2 ma0 w-100 lh-copy" placeholder="Search..."/>
       </div>
     </div>
   </header>
