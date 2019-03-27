@@ -29,7 +29,7 @@ class FilterContextProvider extends React.Component {
     }
   }
 
-  setQuery (query) {
+  setQuery (query = '') {
     this.setState({ query })
   }
 

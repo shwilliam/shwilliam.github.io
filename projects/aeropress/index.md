@@ -5,7 +5,7 @@ description: Animated instructional graphic
 category: visualization
 link: https://how-to-aeropress.netlify.com/
 date: 2019-01-14T00:00:00-05:00
-image: aeropress-image.png
+imgUrl: https://user-images.githubusercontent.com/38357771/54892606-596a8400-4e6f-11e9-94c9-0f3a819428b0.gif
 imgAlt: Project screengrab
 ---
 An animated instructional graphic that explains how to use an AeroPress coffee maker built using SVG.js and Scrollama.

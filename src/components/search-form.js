@@ -24,7 +24,6 @@ class SearchForm extends React.Component {
     return (
       <form onSubmit={this.makeSearch}>
         <label className="sr-only" htmlFor="search-input">Search for a project</label>
-        {/* TODO: enable search */}
         <input
           id="search-input"
           name="search-input"

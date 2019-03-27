@@ -8,7 +8,7 @@ function focusMainLink () {
 }
 
 const ProjectList = () => {
-  const { category, query } = useContext(FilterContext)
+  const { category, query, setQuery } = useContext(FilterContext)
 
   useEffect(() => {
     focusMainLink()
@@ -40,40 +40,71 @@ const ProjectList = () => {
       render={data => {
         const projects = data.allMarkdownRemark.edges
 
+        const filteredProjects = projects
+          .filter(({ node }) => {
+            const { html, frontmatter } = node
+
+            // filter by category
+            if (category && frontmatter.category !== category) return false
+
+            // filter by query
+            // FIXME: fuzzy search
+            if (query && !`${frontmatter.title} ${frontmatter.category} ${html}`.includes(query)) return false
+
+            return true
+          })
+
         return (
-          <ol className="list dib w-100 w-30-ns ma0 pa0">
+          <section className="dib w-100 w-30-ns br-ns">
             {
-              projects
-                .map(({ node }) => {
-                  const { html, excerpt, frontmatter } = node
-
-                  // filter by category
-                  if (category && frontmatter.category !== category) return
-
-                  // filter by query
-                  // FIXME: fuzzy search
-                  if (query && !`${frontmatter.title} ${frontmatter.category} ${html}`.includes(query)) return
-
-                  return (
-                    <li key={frontmatter.path} className="bb br-ns bt-0-ns bt">
-                      <Link
-                        to={frontmatter.path}
-                        className="link pv2-ns pv4 dib near-black w-100 ph3-ns ph4 pv2 focus-bg"
-                        activeClassName="bl bw2"
-                      >
-                        <div className="f6 gray">
-                          {frontmatter.date}
-                        </div>
-                        <h3 className="f4 ma0">{frontmatter.title}</h3>
-                        <div className="dn-ns">
-                          {excerpt}
-                        </div>
-                      </Link>
-                    </li>
-                  )
-                })
+              query && <div className="pl3 pr2 bb-ns bg-light-gray flex justify-between">
+                &#39;{query}&#39;
+                <button
+                  type="button"
+                  onClick={() => setQuery('')}
+                  className="bg-transparent bn pointer dim"
+                >clear</button>
+              </div>
             }
-          </ol>
+            <ol className="list dib w-100 ma0 pa0">
+              {
+                filteredProjects.length
+                  ? filteredProjects.map(({ node }) => {
+                    const { excerpt, frontmatter } = node
+
+                    return (
+                      <li key={frontmatter.path} className="bb bt-0-ns bt">
+                        <Link
+                          to={frontmatter.path}
+                          className="link pv2-ns pv4 dib near-black w-100 ph3-ns ph4 pv2 focus-bg"
+                          activeClassName="bl bw2"
+                        >
+                          <div className="f6 gray">
+                            {frontmatter.date}
+                          </div>
+                          <h3 className="f4 ma0">{frontmatter.title}</h3>
+                          <div className="dn-ns">
+                            {excerpt}
+                          </div>
+                        </Link>
+                      </li>
+                    )
+                  })
+                  : <li className="bb bt-0-ns bt pv2-ns pv4 near-black w-100 ph3-ns ph4 pv2 f5-ns f3 dib">
+                    <div className="mt1 b nowrap">
+                    No results
+                      <span className="ml2" role="img" aria-label="Crying emoji">😢</span>
+                    </div>
+                    <div className="f7-ns f5 nowrap mb1 mt0-ns mt1">
+                      More on my{' '}
+                      <a className="link" href="https://github.com/shwilliam" target="_blank" rel="noopener noreferrer">
+                        GitHub
+                      </a>
+                    </div>
+                  </li>
+              }
+            </ol>
+          </section>
         )
       }}
     />
