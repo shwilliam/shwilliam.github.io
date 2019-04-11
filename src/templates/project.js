@@ -24,13 +24,16 @@ export default function Template ({
       </header>
       <figure className="mh0 mv4">
         <figcaption className="sr-only">{frontmatter.imgAlt}</figcaption>
-        <BrowserWindow>
-          {
-            frontmatter.imgUrl
-              ? <img src={frontmatter.imgUrl} />
-              : <Img fluid={frontmatter.image.childImageSharp.fluid} />
-          }
-        </BrowserWindow>
+        {
+          !frontmatter.imgUrl && !frontmatter.image ? null
+            : (<BrowserWindow>
+              {
+                frontmatter.imgUrl
+                  ? <img src={frontmatter.imgUrl} />
+                  : <Img fluid={frontmatter.image.childImageSharp.fluid} />
+              }
+            </BrowserWindow>)
+        }
       </figure>
       {/* TODO: use aria-live */}
       <section dangerouslySetInnerHTML={{ __html: html }}/>
