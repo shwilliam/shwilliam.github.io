@@ -1,18 +1,20 @@
 {
   "name": "shwilliam.github.io",
   "private": true,
-  "description": "",
+  "description": "@shwilliam's personal website",
   "version": "0.1.0",
   "license": "MIT",
   "author": "William L <w-lindvall@outlook.com>",
   "keywords": [
-    "website",
     "william",
     "lindvall",
     "frontend",
+    "vancouver",
+    "website",
+    "developer",
     "web",
     "visualizations",
-    "developer"
+    "van"
   ],
   "repository": {
     "type": "git",
