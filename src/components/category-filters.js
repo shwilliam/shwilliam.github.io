@@ -38,7 +38,7 @@ const CategoryFilters = () => {
                 mv0 pa0 bn br-100 bg-transparent pointer grow
                 ${(activeCategory && category.value !== activeCategory) ? 'o-50' : 'o-100'}
               `} type="button">
-                <span className="nowrap lh-copy" role="image" aria-label={category.value}>
+                <span className="nowrap lh-copy" role="img" aria-label={category.value}>
                   {category.emoji}
                 </span>
               </button>
