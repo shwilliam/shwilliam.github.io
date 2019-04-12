@@ -1,5 +1,6 @@
 import React, { useContext, useEffect } from 'react'
 import { Link, StaticQuery, graphql } from 'gatsby'
+import Fuse from 'fuse.js'
 import FilterContext from '../context/filter-context'
 
 function focusMainLink () {
@@ -40,19 +41,25 @@ const ProjectList = () => {
       render={data => {
         const projects = data.allMarkdownRemark.edges
 
-        const filteredProjects = projects
+        let filteredProjects = projects
+          // filter by category
           .filter(({ node }) => {
-            const { html, frontmatter } = node
-
-            // filter by category
-            if (category && frontmatter.category !== category) return false
-
-            // filter by query
-            // FIXME: fuzzy search
-            if (query && !`${frontmatter.title} ${frontmatter.category} ${html}`.includes(query)) return false
-
-            return true
+            if (category && node.frontmatter.category !== category) return false
+            else return true
           })
+
+        // filter by query
+        if (query) {
+          const fuse = new Fuse(filteredProjects, {
+            keys: [
+              { name: 'node.frontmatter.title', weight: 0.9 },
+              { name: 'node.frontmatter.category', weight: 0.8 },
+              { name: 'node.html', weight: 0.4 }
+            ]
+          })
+
+          filteredProjects = fuse.search(query)
+        }
 
         return (
           <section className="dib w-100 w-30-ns br-ns">

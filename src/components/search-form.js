@@ -18,6 +18,7 @@ class SearchForm extends React.Component {
   makeSearch (e) {
     e.preventDefault()
     this.context.setQuery(this.state.query)
+    this.setState({ query: '' })
   }
 
   render () {
