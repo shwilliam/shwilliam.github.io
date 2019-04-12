@@ -8,3 +8,7 @@
 .focus-bg:focus:not(:active) {
   background-color: #eee;
 }
+
+.cursor-default {
+  cursor: default;
+}
