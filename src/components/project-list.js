@@ -102,12 +102,9 @@ const ProjectList = () => {
                     No results
                       <span className="ml2" role="img" aria-label="Crying emoji">😢</span>
                     </div>
-                    <div className="f7-ns f5 nowrap mb1 mt0-ns mt1">
-                      More on my{' '}
-                      <a className="link" href="https://github.com/shwilliam" target="_blank" rel="noopener noreferrer">
-                        GitHub
-                      </a>
-                    </div>
+                    <a className="db f7-ns f5 nowrap mb1 mt0-ns mt1 link" href={`mailto:w-lindvall@outlook.com?subject=Have you worked with ${query}?`}>
+                      Get in touch
+                    </a>
                   </li>
               }
             </ol>
