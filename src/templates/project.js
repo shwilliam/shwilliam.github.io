@@ -56,7 +56,7 @@ Template.propTypes = {
           })
         }),
         imgUrl: PropTypes.string,
-        imgAlt: PropTypes.string.isRequired
+        imgAlt: PropTypes.string
       }),
       html: PropTypes.string.isRequired
     })
