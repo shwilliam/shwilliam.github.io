@@ -1,4 +1,5 @@
 import React, { useContext } from 'react'
+import { navigate } from 'gatsby'
 import FilterContext from '../context/filter-context'
 
 const CategoryFilters = () => {
@@ -34,7 +35,17 @@ const CategoryFilters = () => {
             }
           ].map(category => (
             <li key={category.value} className="dib">
-              <button onClick={() => setCategory(category.value)} className={`
+              <button onClick={() => {
+                setCategory(category.value)
+
+                // if small
+                if (typeof window.innerWidth === 'number' && window.innerWidth < 480) {
+                  // close open article
+                  navigate(
+                    '/'
+                  )
+                }
+              }} className={`
                 mv0 pa0 bn br-100 bg-transparent pointer grow
                 ${(activeCategory && category.value !== activeCategory) ? 'o-50' : 'o-100'}
               `} type="button">

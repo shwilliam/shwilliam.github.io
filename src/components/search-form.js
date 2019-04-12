@@ -1,4 +1,5 @@
 import React from 'react'
+import { navigate } from 'gatsby'
 import FilterContext from '../context/filter-context'
 
 class SearchForm extends React.Component {
@@ -19,6 +20,14 @@ class SearchForm extends React.Component {
     e.preventDefault()
     this.context.setQuery(this.state.query)
     this.setState({ query: '' })
+
+    // if small
+    if (typeof window.innerWidth === 'number' && window.innerWidth < 480) {
+      // close open article
+      navigate(
+        '/'
+      )
+    }
   }
 
   render () {

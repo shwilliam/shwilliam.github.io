@@ -9,7 +9,7 @@ function focusMainLink () {
 }
 
 const ProjectList = () => {
-  const { category, query, setQuery } = useContext(FilterContext)
+  const { category, setCategory, query, setQuery } = useContext(FilterContext)
 
   useEffect(() => {
     focusMainLink()
@@ -83,6 +83,14 @@ const ProjectList = () => {
                       <li key={frontmatter.path} className="bb bt-0-ns bt">
                         <Link
                           to={frontmatter.path}
+                          onClick={() => {
+                            // if small
+                            if (typeof window.innerWidth === 'number' && window.innerWidth < 480) {
+                              // clear query & category
+                              setCategory()
+                              setQuery()
+                            }
+                          }}
                           className="link pv2-ns pv4 dib near-black w-100 ph3-ns ph4 pv2 focus-bg"
                           activeClassName="bl bw2"
                         >
