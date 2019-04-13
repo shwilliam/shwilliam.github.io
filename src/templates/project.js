@@ -5,6 +5,7 @@ import Img from 'gatsby-image'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import BrowserWindow from '../components/browser-window'
+import Carousel from '../components/carousel'
 
 export default function Template ({
   data
@@ -16,25 +17,49 @@ export default function Template ({
       <SEO title={frontmatter.title} keywords={[`project`]} />
       <header>
         <h2 className="mb0">
-          <a className="f-subheadline-l f1 lh-title link near-black" href={frontmatter.link} target="_blank" rel="noopener noreferrer">
-            {frontmatter.title}
-          </a>
+          {
+            frontmatter.link
+              ? (
+                <a className="f-subheadline-l f1 lh-title link near-black" href={frontmatter.link} target="_blank" rel="noopener noreferrer">
+                  {frontmatter.title}
+                </a>
+              )
+              : frontmatter.title
+          }
         </h2>
         <div className="gray">{frontmatter.date}</div>
       </header>
-      <figure className="mh0 mv4">
-        <figcaption className="sr-only">{frontmatter.imgAlt}</figcaption>
-        {
-          !frontmatter.imgUrl && !frontmatter.image ? null
-            : (<BrowserWindow>
+      {
+        frontmatter.category === 'photos'
+          ? (
+            <Carousel>
+              {frontmatter.photos.split(', ').map((photo, i) => (
+                <figure className="mh0" key={photo}>
+                  <figcaption className="sr-only">
+                    {frontmatter.imgAlt.split(', ')[i]}
+                  </figcaption>
+                  <img src={photo} />
+                </figure>
+              )
+              )}
+            </Carousel>
+          )
+          : (
+            <figure className="mh0 mv4">
+              <figcaption className="sr-only">{frontmatter.imgAlt}</figcaption>
               {
-                frontmatter.imgUrl
-                  ? <img src={frontmatter.imgUrl} />
-                  : <Img fluid={frontmatter.image.childImageSharp.fluid} />
+                !frontmatter.imgUrl && !frontmatter.image ? null
+                  : (<BrowserWindow>
+                    {
+                      frontmatter.imgUrl
+                        ? <img src={frontmatter.imgUrl} />
+                        : <Img fluid={frontmatter.image.childImageSharp.fluid} />
+                    }
+                  </BrowserWindow>)
               }
-            </BrowserWindow>)
-        }
-      </figure>
+            </figure>
+          )
+      }
       {/* TODO: use aria-live */}
       <section dangerouslySetInnerHTML={{ __html: html }}/>
     </Layout>
@@ -47,7 +72,8 @@ Template.propTypes = {
       frontmatter: PropTypes.shape({
         title: PropTypes.string.isRequired,
         date: PropTypes.string.isRequired,
-        link: PropTypes.string.isRequired,
+        category: PropTypes.string.isRequired,
+        link: PropTypes.string,
         image: PropTypes.shape({
           childImageSharp: PropTypes.shape({
             fluid: PropTypes.shape({
@@ -56,7 +82,8 @@ Template.propTypes = {
           })
         }),
         imgUrl: PropTypes.string,
-        imgAlt: PropTypes.string
+        imgAlt: PropTypes.string,
+        photos: PropTypes.string
       }),
       html: PropTypes.string.isRequired
     })
@@ -69,6 +96,7 @@ export const pageQuery = graphql`
       html
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
+        category
         path
         title
         link
@@ -81,6 +109,7 @@ export const pageQuery = graphql`
         }
         imgUrl
         imgAlt
+        photos
       }
     }
   }
