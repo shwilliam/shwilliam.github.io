@@ -1,6 +1,6 @@
 ---
 path: /project/espresso
-title: Espresso types
+title: Espresso type visualization
 description: Visualizing common espresso coffees
 category: visualization
 link: https://shwilliam.github.io/espresso/
