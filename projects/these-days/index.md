@@ -7,4 +7,4 @@ photos: https://user-images.githubusercontent.com/38357771/56162060-fbb5ed00-5f7
 imgAlt: These days 1, These days 2, These days 3, These days 4, These days 5, These days 6, These days 7, These days 8, These days 9, These days 10, These days 11
 date: 2017-10-22T00:00:00-05:00
 ---
-A personal photo series mader around my family home in Sweden and the Gold Coast, Australia.
+A personal photo series made around my family home in Sweden and the Gold Coast, Australia.

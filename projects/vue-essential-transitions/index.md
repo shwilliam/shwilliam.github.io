@@ -11,4 +11,4 @@ imgAlt: Transition examples
 ![Package version](https://img.shields.io/npm/v/vue-essential-transitions.svg)
 ![Minified size](https://img.shields.io/bundlephobia/min/vue-essential-transitions.svg)
 
-Vue provides a handy `transition` wrapper component that makes styling enter/leave transitions an ease. When starting a new app or quickly sketching a demo, writing styles can slow and repetetive. This project tries to alleviate some of this by providing a small collection of common, transition styles intended to be used with Vue's native `transition` component.
+Vue provides a handy `transition` wrapper component that makes styling enter/leave transitions an ease. When starting a new app or quickly sketching a demo, writing styles can slow and repetitive. This project tries to alleviate some of this by providing a small collection of common, transition styles intended to be used with Vue's native `transition` component.

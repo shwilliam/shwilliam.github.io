@@ -11,4 +11,4 @@ imgAlt: Component example
 ![Package version](https://img.shields.io/npm/v/vue-shiny-button.svg)
 ![Minified size](https://img.shields.io/bundlephobia/min/vue-shiny-button.svg)
 
-[`vue-shiny-button`](https://github.com/shwilliam/vue-shiny-button) is a super shiny and incredibly useful Vue button component. 
+[`vue-shiny-button`](https://github.com/shwilliam/vue-shiny-button) is a super shiny and incredibly useful Vue button component.
