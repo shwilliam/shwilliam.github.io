@@ -22,7 +22,7 @@ const CategoryFilters = () => {
               emoji: '💻'
             },
             {
-              value: 'component',
+              value: 'tool',
               emoji: '🔨'
             },
             {

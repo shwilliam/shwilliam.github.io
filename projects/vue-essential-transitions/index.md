@@ -2,7 +2,7 @@
 path: /project/vue-essential-transitions
 title: Vue essential transitions
 description: Collection of Vue transitions for quick prototyping
-category: component
+category: tool
 link: https://github.com/shwilliam/vue-essential-transitions
 date: 2019-02-10T00:00:00-05:00
 imgUrl: https://user-images.githubusercontent.com/38357771/54794660-f08ccd00-4c1e-11e9-86f7-195b16c810e9.gif

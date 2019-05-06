@@ -2,7 +2,7 @@
 path: /project/vue-visibility-trigger
 title: Declarative Vue visibility trigger
 description: Vue component that triggers an event when scrolled into view
-category: component
+category: tool
 link: https://github.com/shwilliam/vue-visibility-trigger
 date: 2018-10-14T00:00:00-05:00
 ---
