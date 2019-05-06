@@ -5,6 +5,13 @@ module.exports = {
     author: `@shwilliam`
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-purgecss`,
+      options: {
+        // develop: true, // uncomment when using `gatsby develop`
+        printRejected: true
+      }
+    },
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
