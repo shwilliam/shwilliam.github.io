@@ -31,6 +31,7 @@
     "deploy": "gatsby build && gh-pages -d public -b master"
   },
   "dependencies": {
+    "babel-plugin-styled-components": "^1.10.0",
     "fuse.js": "^3.4.4",
     "gatsby": "^2.3.21",
     "gatsby-image": "^2.0.32",
@@ -39,6 +40,7 @@
     "gatsby-plugin-purgecss": "^3.1.1",
     "gatsby-plugin-react-helmet": "^3.0.9",
     "gatsby-plugin-sharp": "^2.0.34",
+    "gatsby-plugin-styled-components": "^3.0.7",
     "gatsby-source-filesystem": "^2.0.24",
     "gatsby-transformer-remark": "^2.3.2",
     "gatsby-transformer-sharp": "^2.1.16",
@@ -47,7 +49,8 @@
     "react-dom": "^16.8.4",
     "react-helmet": "^5.2.0",
     "react-pose": "^4.0.8",
-    "siema": "^1.5.1"
+    "siema": "^1.5.1",
+    "styled-components": "^4.2.0"
   },
   "devDependencies": {
     "eslint": "^5.15.1",

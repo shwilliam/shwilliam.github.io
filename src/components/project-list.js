@@ -62,7 +62,7 @@ const ProjectList = () => {
         }
 
         return (
-          <section className="dib w-100 w-30-ns br-ns">
+          <section className="br-ns">
             {
               query && <div className="pl3 pr2 bb-ns bg-light-gray flex justify-between">
                 &#39;{query}&#39;

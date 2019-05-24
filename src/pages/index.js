@@ -20,7 +20,7 @@ const IndexPage = () => (
         <a className="link" href="https://github.com/shwilliam" target="_blank" rel="noopener noreferrer">
           @shwilliam
         </a>
-        {' '}on the GitHub). I&nbsp;love the web and working to make it more fun, interesting
+        {' '}on GitHub). I&nbsp;love the web and working to make it more fun, interesting
         and exciting to use.
         <br /><br />
         Select a project from the left to read a bit more about it, or{' '}

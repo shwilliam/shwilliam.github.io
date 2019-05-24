@@ -39,9 +39,11 @@ class SearchForm extends React.Component {
           name="search-input"
           type="search"
           className="input-reset bn ph3 pv2 ma0 w-100 lh-copy"
+          // TODO: if small replace w 🔎
           placeholder="Search..."
           value={this.state.query}
           onChange={this.handleInput}
+          // TODO: if small, fill width on focus
         />
       </form>
     )
