@@ -1,0 +1,21 @@
+
+  √ Performance Score above 90
+    i Is 99.
+  × PWA Score above 90 Test failed via `t.fail()`
+    i Is 74.
+  √ Accessibility Score above 90
+    i Is 98.
+  √ Best Practices Score above 90
+    i Is 100.
+  √ SEO Score above 90
+    i Is 100.
+
+  1 test failed
+
+  PWA Score above 90
+    i Is 74.
+
+  C:\Users\shwilliam\temp\shwilliam.github.io\scripts\lighthouse.test.js:37
+
+  Test failed via `t.fail()`
+

@@ -27,7 +27,7 @@
     "build": "gatsby build",
     "develop": "gatsby develop",
     "serve": "gatsby serve",
-    "test": "echo \"Hehe...\"",
+    "test": "ava **/*.test.js --verbose > tests/lighthouse/output.txt",
     "deploy": "gatsby build && gh-pages -d public -b master"
   },
   "dependencies": {
@@ -53,12 +53,15 @@
     "styled-components": "^4.2.0"
   },
   "devDependencies": {
+    "ava": "^1.4.1",
+    "chrome-launcher": "^0.10.7",
     "eslint": "^5.15.1",
     "eslint-config-standard": "^12.0.0",
     "eslint-plugin-import": "^2.16.0",
     "eslint-plugin-node": "^8.0.1",
     "eslint-plugin-promise": "^4.0.1",
     "eslint-plugin-standard": "^4.0.0",
-    "gh-pages": "^2.0.1"
+    "gh-pages": "^2.0.1",
+    "lighthouse": "^5.0.0"
   }
 }
