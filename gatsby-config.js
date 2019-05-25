@@ -34,7 +34,6 @@ module.exports = {
         path: `${__dirname}/src/images`
       }
     },
-    `gatsby-plugin-offline`,
     `gatsby-transformer-remark`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
@@ -49,6 +48,7 @@ module.exports = {
         display: `minimal-ui`,
         icon: `src/images/blossom.png`
       }
-    }
+    },
+    `gatsby-plugin-offline`
   ]
 }
