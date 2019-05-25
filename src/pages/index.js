@@ -7,13 +7,13 @@ const IndexPage = () => (
     <SEO title="Home" keywords={[`home`]} />
     <section className="dib-ns dn">
       <span
-        className="f1 pa2 fr cursor-default"
+        className="pa2 fr cursor-default"
         role="img"
         aria-label="wave"
       >
       👋
       </span>
-      <p className="f3 pv3 pv4-l mt4 mh3 mh4-l">
+      <p className="pv3 pv4-l mt4 mh3 mh4-l">
         Hej!
         <br /><br />
           I&#8217;m William (

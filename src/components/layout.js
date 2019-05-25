@@ -14,12 +14,11 @@ import Header from './header'
 import ProjectList from './project-list'
 
 const LayoutWrapper = styled.div`
-  font-family: ;
   color: ${TEXT.PRIMARY};
   background-color: ${UI.WHITE};
-  line-height: ;
-  max-width: ;
+  max-width: 1000px;
   min-height: 100vh;
+  margin: 0 auto;
 `
 
 const Grid = styled.div`

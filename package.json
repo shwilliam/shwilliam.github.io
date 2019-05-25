@@ -41,6 +41,7 @@
     "gatsby-plugin-react-helmet": "^3.0.9",
     "gatsby-plugin-sharp": "^2.0.34",
     "gatsby-plugin-styled-components": "^3.0.7",
+    "gatsby-plugin-typography": "^2.2.13",
     "gatsby-source-filesystem": "^2.0.24",
     "gatsby-transformer-remark": "^2.3.2",
     "gatsby-transformer-sharp": "^2.1.16",
@@ -49,8 +50,11 @@
     "react-dom": "^16.8.4",
     "react-helmet": "^5.2.0",
     "react-pose": "^4.0.8",
+    "react-typography": "^0.16.19",
     "siema": "^1.5.1",
-    "styled-components": "^4.2.0"
+    "styled-components": "^4.2.0",
+    "typography": "^0.16.19",
+    "typography-theme-wordpress-kubrick": "^0.16.19"
   },
   "devDependencies": {
     "ava": "^1.4.1",

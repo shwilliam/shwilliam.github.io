@@ -1,7 +1,15 @@
 import React, { useContext, useEffect } from 'react'
 import { Link, StaticQuery, graphql } from 'gatsby'
 import Fuse from 'fuse.js'
+import styled from 'styled-components'
 import FilterContext from '../context/filter-context'
+
+import { TEXT } from '../constants/colors'
+
+const DateWrapper = styled.div`
+  font-size: 0.85rem;
+  color: ${TEXT.SECONDARY};
+`
 
 function focusMainLink () {
   const mainLink = document.querySelector('main').querySelector('a')
@@ -94,10 +102,10 @@ const ProjectList = () => {
                           className="link pv2-ns pv4 dib near-black w-100 ph3-ns ph4 pv2 focus-bg"
                           activeClassName="bl bw2"
                         >
-                          <div className="f6 gray">
+                          <DateWrapper>
                             {frontmatter.date}
-                          </div>
-                          <h3 className="f4 ma0">{frontmatter.title}</h3>
+                          </DateWrapper>
+                          <h3 className="ma0">{frontmatter.title}</h3>
                           <div className="dn-ns">
                             {excerpt}
                           </div>
@@ -105,12 +113,12 @@ const ProjectList = () => {
                       </li>
                     )
                   })
-                  : <li className="bb bt-0-ns bt pv2-ns pv4 near-black w-100 ph3-ns ph4 pv2 f5-ns f3 dib">
+                  : <li className="bb bt-0-ns bt pv2-ns pv4 near-black w-100 ph3-ns ph4 pv2 dib">
                     <div className="mt1 b nowrap">
                     No results
                       <span className="ml2" role="img" aria-label="Crying emoji">😢</span>
                     </div>
-                    <a className="db f7-ns f5 nowrap mb1 mt0-ns mt1 link" href={`mailto:w-lindvall@outlook.com?subject=Have you worked with ${query}?`}>
+                    <a className="db nowrap mb1 mt0-ns mt1 link" href={`mailto:w-lindvall@outlook.com?subject=Have you worked with ${query}?`}>
                       Get in touch
                     </a>
                   </li>

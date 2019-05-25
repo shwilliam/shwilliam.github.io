@@ -20,7 +20,7 @@ export default function Template ({
           {
             frontmatter.link
               ? (
-                <a className="f-subheadline-l f1 lh-title link near-black" href={frontmatter.link} target="_blank" rel="noopener noreferrer">
+                <a className="f-subheadline-l lh-title link near-black" href={frontmatter.link} target="_blank" rel="noopener noreferrer">
                   {frontmatter.title}
                 </a>
               )
