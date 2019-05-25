@@ -4,13 +4,23 @@ import { StaticQuery, graphql } from 'gatsby'
 import styled from 'styled-components'
 
 import '../styles/tachyons.min.css'
-import '../styles/global.css'
+import '../styles/index.css'
 import '../styles/utilities.css'
 
 import MEDIA from '../constants/breakpoints'
+import { TEXT, UI } from '../constants/colors'
 
 import Header from './header'
 import ProjectList from './project-list'
+
+const LayoutWrapper = styled.div`
+  font-family: ;
+  color: ${TEXT.PRIMARY};
+  background-color: ${UI.WHITE};
+  line-height: ;
+  max-width: ;
+  min-height: 100vh;
+`
 
 const Grid = styled.div`
   display: grid;
@@ -50,7 +60,7 @@ const Layout = ({ children }) => {
         }
       `}
       render={data => (
-        <div id="layout" className="sans-serif near-black f4 lh-copy mw8 center bl-l br-l cf min-vh-100">
+        <LayoutWrapper id="layout" className="bl-l br-l">
           <Header siteTitle={data.site.siteMetadata.title} />
           <Grid>
             <GridMain className="pv2-ns ph4">
@@ -64,7 +74,7 @@ const Layout = ({ children }) => {
               <ProjectList/>
             </GridSider>
           </Grid>
-        </div>
+        </LayoutWrapper>
       )}
     />
   )
