@@ -13,12 +13,30 @@ import { TEXT, UI } from '../constants/colors'
 import Header from './header'
 import ProjectList from './project-list'
 
-const LayoutWrapper = styled.div`
+const StylesWrapper = styled.div`
   color: ${TEXT.PRIMARY};
   background-color: ${UI.WHITE};
   max-width: 1000px;
   min-height: 100vh;
   margin: 0 auto;
+  border: 1px solid ${UI.PRIMARY};
+
+  a {
+    color: ${TEXT.LINK};
+  }
+
+  a:visited {
+    color: ${TEXT.LINK_VISITED};
+  }
+
+  a:hover {
+    color: ${TEXT.LINK_HOVER};
+    text-decoration: none;
+  }
+
+  ${MEDIA.TABLET`
+    border: 1px solid transparent;
+  `}
 `
 
 const Grid = styled.div`
@@ -37,13 +55,17 @@ const Grid = styled.div`
 
 const GridMain = styled.div`
   grid-area: main;
-
-  // override grid item default min-width auto
   min-width: 0;
+  padding: 0 2.5rem;
+
+  ${MEDIA.PHONE`
+    padding: 0 2rem;
+  `}
 `
 
 const GridSider = styled.div`
   grid-area: sider;
+  min-width: 0;
 `
 
 const Layout = ({ children }) => {
@@ -59,12 +81,12 @@ const Layout = ({ children }) => {
         }
       `}
       render={data => (
-        <LayoutWrapper id="layout" className="bl-l br-l">
+        <StylesWrapper>
           <Header siteTitle={data.site.siteMetadata.title} />
           <Grid>
-            <GridMain className="pv2-ns ph4">
+            <GridMain>
               <main>
-                <article className="pt2-ns pb4-ns">
+                <article>
                   {children}
                 </article>
               </main>
@@ -73,7 +95,7 @@ const Layout = ({ children }) => {
               <ProjectList/>
             </GridSider>
           </Grid>
-        </LayoutWrapper>
+        </StylesWrapper>
       )}
     />
   )

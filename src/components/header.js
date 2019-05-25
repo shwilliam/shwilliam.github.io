@@ -8,8 +8,14 @@ import styled from 'styled-components'
 
 import MEDIA from '../constants/breakpoints'
 
-const StyledHeader = styled.h1`
+const HeaderFirst = styled.h1`
+  font-size: 1.4rem;
   margin: 0;
+  white-space: nowrap;
+  padding-top: 1.7rem;
+  padding-bottom: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 `
 
 const Grid = styled.header`
@@ -30,10 +36,14 @@ const Grid = styled.header`
 
 const GridLogo = styled.section`
   grid-area: logo;
-`
+  min-width: 0;
+  border-bottom: 1px solid black;
+  `
 
 const GridHeader = styled.section`
   grid-area: header;
+  border-bottom: 1px solid black;
+  text-align: right;
 
   ${MEDIA.PHONE`
     display: none;
@@ -42,46 +52,63 @@ const GridHeader = styled.section`
 
 const GridFilters = styled.section`
   grid-area: filters;
+  min-width: 0;
+  border-bottom: 1px solid black;
 `
 
 const GridSearch = styled.section`
   grid-area: search;
+  height: 2.7rem;
+  border-bottom: 1px solid black;
+`
+
+const ContactLink = styled.a`
+  display: inline-block;
+  line-height: 1.75;
+  padding-top: 1.7rem;
+  padding-bottom: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 `
 
 const MailIconLink = styled.a`
   display: none;
+  position: absolute;
+  right: 0;
+  top: 0.75rem;
+  padding: 1rem;
 
   ${MEDIA.PHONE`
     display: inline-block;
   `}
 `
 
-const Header = ({ siteTitle }) => {
+const Header = () => {
   const { setCategory } = useContext(FilterContext)
 
   return (
     <Grid>
-      <GridLogo className="bb br-ns">
-        <StyledHeader className="ma0">
-          <Link to="/" onClick={() => setCategory()} className="link near-black ttc db ph3 pb3 pt4 nowrap" tabIndex="-1">
+      <GridLogo>
+        <HeaderFirst>
+          <Link to="/" onClick={() => setCategory()} tabIndex="-1">
             William L<span className="dn-m">indvall</span>
           </Link>
-        </StyledHeader>
+        </HeaderFirst>
       </GridLogo>
-      <GridHeader className="bb tr-ns">
-        <a className="link near-black ph3 pb3-ns pt4-ns pv2 dib" href="mailto:w-lindvall@outlook.com">
+      <GridHeader>
+        <ContactLink href="mailto:w-lindvall@outlook.com">
             Contact me
-        </a>
+        </ContactLink>
       </GridHeader>
-      <MailIconLink className="absolute right-1 top-1 link near-black pa3" href="mailto:w-lindvall@outlook.com">
+      <MailIconLink href="mailto:w-lindvall@outlook.com">
         <span role="img" aria-label="Email">
             📧
         </span>
       </MailIconLink>
-      <GridFilters className="ma0 bb br-ns">
+      <GridFilters>
         <CategoryFilters />
       </GridFilters>
-      <GridSearch className="bb">
+      <GridSearch>
         <SearchForm />
       </GridSearch>
     </Grid>

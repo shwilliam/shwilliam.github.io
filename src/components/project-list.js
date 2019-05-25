@@ -6,9 +6,16 @@ import FilterContext from '../context/filter-context'
 
 import { TEXT } from '../constants/colors'
 
+import List from './list'
+
 const DateWrapper = styled.div`
   font-size: 0.85rem;
   color: ${TEXT.SECONDARY};
+`
+
+const ThirdHeader = styled.h3`
+  font-size: 1.2rem;
+  margin: 0;
 `
 
 function focusMainLink () {
@@ -81,7 +88,7 @@ const ProjectList = () => {
                 >clear</button>
               </div>
             }
-            <ol className="list dib w-100 ma0 pa0">
+            <List>
               {
                 filteredProjects.length
                   ? filteredProjects.map(({ node }) => {
@@ -105,7 +112,7 @@ const ProjectList = () => {
                           <DateWrapper>
                             {frontmatter.date}
                           </DateWrapper>
-                          <h3 className="ma0">{frontmatter.title}</h3>
+                          <ThirdHeader>{frontmatter.title}</ThirdHeader>
                           <div className="dn-ns">
                             {excerpt}
                           </div>
@@ -123,7 +130,7 @@ const ProjectList = () => {
                     </a>
                   </li>
               }
-            </ol>
+            </List>
           </section>
         )
       }}

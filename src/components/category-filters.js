@@ -2,6 +2,8 @@ import React, { useContext } from 'react'
 import { navigate } from 'gatsby'
 import FilterContext from '../context/filter-context'
 
+import List from './list'
+
 const CategoryFilters = () => {
   const { category: activeCategory, setCategory } = useContext(FilterContext)
 
@@ -10,7 +12,7 @@ const CategoryFilters = () => {
       <div className="ph3 pv2 fl dn dib-l gray">
       Filters:
       </div>
-      <ul className="list pv2 ph0 ma0 flex justify-around">
+      <List className="list pv2 ph0 ma0 flex justify-around">
         {
           [
             {
@@ -56,7 +58,7 @@ const CategoryFilters = () => {
             </li>
           ))
         }
-      </ul>
+      </List>
     </section>
   )
 }

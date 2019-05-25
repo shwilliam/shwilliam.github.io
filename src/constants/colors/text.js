@@ -5,7 +5,7 @@ export default {
   LIGHT: '#fff',
   LINK: '#0062ff',
   LINK_HOVER: '#0353e9',
-  LINK_VISITED: '#8a3ffc',
+  LINK_VISITED: '#0062ff',
   SUCCESS: '#24a148',
   INFO: '#054ada'
 }
