@@ -10,6 +10,7 @@ import '../styles/utilities.css'
 import MEDIA from '../constants/breakpoints'
 import { TEXT, UI } from '../constants/colors'
 
+import Dots from './dots'
 import Header from './header'
 import ProjectList from './project-list'
 
@@ -82,6 +83,7 @@ const Layout = ({ children }) => {
       `}
       render={data => (
         <StylesWrapper>
+          <Dots />
           <Header siteTitle={data.site.siteMetadata.title} />
           <Grid>
             <GridMain>
