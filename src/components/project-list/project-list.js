@@ -2,11 +2,61 @@ import React, { useContext, useEffect } from 'react'
 import { Link, StaticQuery, graphql } from 'gatsby'
 import Fuse from 'fuse.js'
 import styled from 'styled-components'
-import FilterContext from '../context/filter-context'
+import MEDIA, { BREAKPOINTS } from '../../constants/breakpoints'
+import { TEXT, UI } from '../../constants/colors'
+import FilterContext from '../../context/filter-context'
+import List from '../list'
+import TextButton from '../text-button'
+import HideOnDevice from '../hide-on-device'
 
-import { TEXT } from '../constants/colors'
+const ProjectListWrapper = styled.section`
+  border-right: 1px solid black;
 
-import List from './list'
+  ${MEDIA.PHONE`
+    border-right: none;
+  `}
+`
+
+const ProjectListItem = styled.li`
+  background-color: ${UI.GREY};
+  border-top: 1px solid black;
+
+  &:first-of-type {
+    border-top: none;
+  }
+
+  ${MEDIA.PHONE`
+    &:first-of-type {
+      border-top: 1px solid black;
+    }
+  `}
+
+  &:last-of-type {
+    border-bottom: 1px solid black;
+  }
+
+  &:hover {
+    background-color: ${UI.GREY_HOVER};
+  }
+
+  a {
+    display: inline-block;
+    padding: 1rem;
+    width: 100%;
+
+    &.active {
+      border-left: 0.2rem solid ${UI.FOCUS};
+    }
+  }
+`
+
+const QueryWrapper = styled.div`
+  display: flex;
+  justify-content: space-between;
+  background-color: ${UI.GREY};
+  padding: 0.4rem 1rem;
+  border-bottom: 1px solid black;
+`
 
 const DateWrapper = styled.div`
   font-size: 0.85rem;
@@ -16,6 +66,28 @@ const DateWrapper = styled.div`
 const ThirdHeader = styled.h3`
   font-size: 1.2rem;
   margin: 0;
+`
+
+const ContactLink = styled.a`
+  display: block;
+  color: ${TEXT.LINK};
+  padding-top: 1rem;
+  white-space: nowrap;
+
+  &.active {
+    border-left: 0.2rem solid ${UI.FOCUS};
+  }
+`
+
+const NoResultsListItem = styled.li`
+  padding: 1rem;
+  background-color: ${UI.GREY};
+  border-top: none;
+  border-bottom: 1px solid black;
+`
+
+const NoResultsWrapper = styled.div`
+  white-space: nowrap;
 `
 
 function focusMainLink () {
@@ -77,16 +149,15 @@ const ProjectList = () => {
         }
 
         return (
-          <section className="br-ns">
+          <ProjectListWrapper>
             {
-              query && <div className="pl3 pr2 bb-ns bg-light-gray flex justify-between">
+              query && <QueryWrapper>
                 &#39;{query}&#39;
-                <button
+                <TextButton
                   type="button"
                   onClick={() => setQuery('')}
-                  className="bg-transparent bn pointer dim"
-                >clear</button>
-              </div>
+                >clear</TextButton>
+              </QueryWrapper>
             }
             <List>
               {
@@ -95,43 +166,41 @@ const ProjectList = () => {
                     const { excerpt, frontmatter } = node
 
                     return (
-                      <li key={frontmatter.path} className="bb bt-0-ns bt">
+                      <ProjectListItem key={frontmatter.path}>
                         <Link
                           to={frontmatter.path}
                           onClick={() => {
-                            // if small
-                            if (typeof window.innerWidth === 'number' && window.innerWidth < 480) {
+                            if (typeof window !== 'undefined' && window.innerWidth < BREAKPOINTS.PHONE) {
                               // clear query & category
                               setCategory()
                               setQuery()
                             }
                           }}
-                          className="link pv2-ns pv4 dib near-black w-100 ph3-ns ph4 pv2 focus-bg"
-                          activeClassName="bl bw2"
+                          activeClassName="active"
                         >
                           <DateWrapper>
                             {frontmatter.date}
                           </DateWrapper>
                           <ThirdHeader>{frontmatter.title}</ThirdHeader>
-                          <div className="dn-ns">
+                          <HideOnDevice device="PHONE">
                             {excerpt}
-                          </div>
+                          </HideOnDevice>
                         </Link>
-                      </li>
+                      </ProjectListItem>
                     )
                   })
-                  : <li className="bb bt-0-ns bt pv2-ns pv4 near-black w-100 ph3-ns ph4 pv2 dib">
-                    <div className="mt1 b nowrap">
-                    No results
-                      <span className="ml2" role="img" aria-label="Crying emoji">😢</span>
-                    </div>
-                    <a className="db nowrap mb1 mt0-ns mt1 link" href={`mailto:w-lindvall@outlook.com?subject=Have you worked with ${query}?`}>
+                  : <NoResultsListItem>
+                    <NoResultsWrapper>
+                      No results
+                      <span role="img" aria-label="Crying emoji">😢</span>
+                    </NoResultsWrapper>
+                    <ContactLink href={`mailto:w-lindvall@outlook.com?subject=Have you worked with ${query}?`}>
                       Get in touch
-                    </a>
-                  </li>
+                    </ContactLink>
+                  </NoResultsListItem>
               }
             </List>
-          </section>
+          </ProjectListWrapper>
         )
       }}
     />

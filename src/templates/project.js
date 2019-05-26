@@ -16,25 +16,25 @@ export default function Template ({
     <Layout>
       <SEO title={frontmatter.title} keywords={[`project`]} />
       <header>
-        <h2 className="mb0">
+        <h2>
           {
             frontmatter.link
               ? (
-                <a className="f-subheadline-l lh-title link near-black" href={frontmatter.link} target="_blank" rel="noopener noreferrer">
+                <a href={frontmatter.link} target="_blank" rel="noopener noreferrer">
                   {frontmatter.title}
                 </a>
               )
               : frontmatter.title
           }
         </h2>
-        <div className="gray">{frontmatter.date}</div>
+        <div>{frontmatter.date}</div>
       </header>
       {
         frontmatter.category === 'photos'
           ? (
             <Carousel>
               {frontmatter.photos.split(', ').map((photo, i) => (
-                <figure className="mh0" key={photo}>
+                <figure key={photo}>
                   <figcaption className="sr-only">
                     {frontmatter.imgAlt.split(', ')[i]}
                   </figcaption>
@@ -45,7 +45,7 @@ export default function Template ({
             </Carousel>
           )
           : (
-            <figure className="mh0 mv4">
+            <figure>
               <figcaption className="sr-only">{frontmatter.imgAlt}</figcaption>
               {
                 !frontmatter.imgUrl && !frontmatter.image ? null
@@ -60,7 +60,7 @@ export default function Template ({
             </figure>
           )
       }
-      {/* TODO: use aria-live */}
+      {/* TODO: use aria-live? */}
       <section dangerouslySetInnerHTML={{ __html: html }}/>
     </Layout>
   )

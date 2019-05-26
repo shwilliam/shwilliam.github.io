@@ -1,36 +1,41 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { BREAKPOINTS } from '../constants/breakpoints'
+import FilterContext from '../context/filter-context'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 
-const IndexPage = () => (
-  <Layout>
+const IndexPage = () => {
+  // TODO: refactor
+  const { category, query } = useContext(FilterContext)
+
+  return <Layout>
     <SEO title="Home" keywords={[`home`]} />
-    <section className="dib-ns dn">
-      <span
-        className="pa2 fr cursor-default"
-        role="img"
-        aria-label="wave"
-      >
-      👋
-      </span>
-      <p className="pv3 pv4-l mt4 mh3 mh4-l">
-        Hej!
-        <br /><br />
-          I&#8217;m William (
-        <a className="link" href="https://github.com/shwilliam" target="_blank" rel="noopener noreferrer">
-          @shwilliam
-        </a>
-        {' '}on GitHub). I&nbsp;love the web and working to make it more fun, interesting
-        and exciting to use.
-        <br /><br />
-        Select a project from the left to read a bit more about it, or{' '}
-        <a className="link" href="mailto:w-lindvall@outlook.com">
-          get it touch
-        </a>
-        {' '}if you&#8217;re looking for something in particular!
-      </p>
-    </section>
+    {
+      typeof window !== 'undefined' && window.innerWidth < BREAKPOINTS.PHONE && (category || query)
+        ? null
+        : <section>
+          <span role="img" aria-label="wave">
+            👋
+          </span>
+          <p>
+            Hej!
+            <br /><br />
+            I&#8217;m William (
+            <a href="https://github.com/shwilliam" target="_blank" rel="noopener noreferrer">
+              @shwilliam
+            </a>
+            {' '}on GitHub). I&nbsp;love the web and working to make it more fun, interesting
+            and exciting to use.
+            <br /><br />
+            Select a project from the left to read a bit more about it, or{' '}
+            <a href="mailto:w-lindvall@outlook.com">
+              get it touch
+            </a>
+            {' '}if you&#8217;re looking for something in particular!
+          </p>
+        </section>
+    }
   </Layout>
-)
+}
 
 export default IndexPage

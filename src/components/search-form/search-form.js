@@ -1,6 +1,16 @@
 import React from 'react'
 import { navigate } from 'gatsby'
-import FilterContext from '../context/filter-context'
+import styled from 'styled-components'
+import FilterContext from '../../context/filter-context'
+import { BREAKPOINTS } from '../../constants/breakpoints'
+
+const SearchInput = styled.input`
+  border: none;
+  background-color: none;
+  width: 100%;
+  height: 100%;
+  padding: 0.7rem 1rem;
+`
 
 class SearchForm extends React.Component {
   constructor (props) {
@@ -8,6 +18,7 @@ class SearchForm extends React.Component {
     this.state = {
       query: ''
     }
+
     this.handleInput = this.handleInput.bind(this)
     this.makeSearch = this.makeSearch.bind(this)
   }
@@ -21,29 +32,28 @@ class SearchForm extends React.Component {
     this.context.setQuery(this.state.query)
     this.setState({ query: '' })
 
-    // if small
-    if (typeof window.innerWidth === 'number' && window.innerWidth < 480) {
+    if (
+      typeof window !== 'undefined' &&
+       window.innerWidth < BREAKPOINTS.PHONE
+    ) {
       // close open article
-      navigate(
-        '/'
-      )
+      navigate('/')
     }
   }
 
   render () {
     return (
       <form onSubmit={this.makeSearch}>
-        <label className="sr-only" htmlFor="search-input">Search for a project</label>
-        <input
+        <label className="sr-only" htmlFor="search-input">
+          Search for a project
+        </label>
+        <SearchInput
           id="search-input"
           name="search-input"
           type="search"
-          className="input-reset bn ph3 pv2 ma0 w-100 lh-copy"
-          // TODO: if small replace w 🔎
           placeholder="Search..."
           value={this.state.query}
           onChange={this.handleInput}
-          // TODO: if small, fill width on focus
         />
       </form>
     )

@@ -1,12 +1,12 @@
 import React, { useContext } from 'react'
-import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
-import CategoryFilters from './category-filters'
-import SearchForm from './search-form'
-import FilterContext from '../context/filter-context'
+import PropTypes from 'prop-types'
 import styled from 'styled-components'
-
-import MEDIA from '../constants/breakpoints'
+import MEDIA from '../../constants/breakpoints'
+import FilterContext from '../../context/filter-context'
+import CategoryFilters from '../category-filter/category-filters'
+import SearchForm from '../search-form'
+import HideOnDevice from '../hide-on-device'
 
 const HeaderFirst = styled.h1`
   font-size: 1.4rem;
@@ -44,10 +44,6 @@ const GridHeader = styled.section`
   grid-area: header;
   border-bottom: 1px solid black;
   text-align: right;
-
-  ${MEDIA.PHONE`
-    display: none;
-  `}
 `
 
 const GridFilters = styled.section`
@@ -91,15 +87,17 @@ const Header = () => {
       <GridLogo>
         <HeaderFirst>
           <Link to="/" onClick={() => setCategory()} tabIndex="-1">
-            William L<span className="dn-m">indvall</span>
+            William L<HideOnDevice device="TABLET">indvall</HideOnDevice>
           </Link>
         </HeaderFirst>
       </GridLogo>
-      <GridHeader>
-        <ContactLink href="mailto:w-lindvall@outlook.com">
+      <HideOnDevice device="PHONE">
+        <GridHeader>
+          <ContactLink href="mailto:w-lindvall@outlook.com">
             Contact me
-        </ContactLink>
-      </GridHeader>
+          </ContactLink>
+        </GridHeader>
+      </HideOnDevice>
       <MailIconLink href="mailto:w-lindvall@outlook.com">
         <span role="img" aria-label="Email">
             📧

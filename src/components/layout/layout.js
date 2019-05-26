@@ -2,17 +2,13 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { StaticQuery, graphql } from 'gatsby'
 import styled from 'styled-components'
-
-import '../styles/tachyons.min.css'
-import '../styles/index.css'
-import '../styles/utilities.css'
-
-import MEDIA from '../constants/breakpoints'
-import { TEXT, UI } from '../constants/colors'
-
-import Dots from './dots'
-import Header from './header'
-import ProjectList from './project-list'
+import '../../styles/index.css'
+import '../../styles/utilities.css'
+import MEDIA from '../../constants/breakpoints'
+import { TEXT, UI } from '../../constants/colors'
+import Dots from '../dots'
+import Header from '../header'
+import ProjectList from '../project-list'
 
 const StylesWrapper = styled.div`
   color: ${TEXT.PRIMARY};
@@ -36,7 +32,7 @@ const StylesWrapper = styled.div`
   }
 
   ${MEDIA.TABLET`
-    border: 1px solid transparent;
+    border: none;
   `}
 `
 
@@ -104,7 +100,10 @@ const Layout = ({ children }) => {
 }
 
 Layout.propTypes = {
-  children: PropTypes.node.isRequired
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node
+  ]).isRequired
 }
 
 export default Layout
