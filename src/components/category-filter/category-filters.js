@@ -1,36 +1,19 @@
 import React, { useContext } from 'react'
 import { navigate } from 'gatsby'
-import styled from 'styled-components'
-import MEDIA, { BREAKPOINTS } from '../../constants/breakpoints'
+import { BREAKPOINTS } from '../../constants/breakpoints'
 import FilterContext from '../../context/filter-context'
 import TextButton from '../text-button'
-import List from '../list'
-
-const FilterLabel = styled.label`
-  display: inline-block;
-  padding: 0.7rem 0rem 0.7rem 1rem;
-  float: left;
-
-  ${MEDIA.TABLET`
-    display: none;
-  `}
-`
-
-const FilterList = styled(List)`
-  display: flex;
-  justify-content: space-around;
-  margin: 0;
-  padding: 0.7rem 1rem;
-`
+import Label from './label'
+import FilterList from './filter-list'
 
 const CategoryFilters = () => {
   const { category: activeCategory, setCategory } = useContext(FilterContext)
 
   return (
     <section>
-      <FilterLabel>
+      <Label>
         Filters:
-      </FilterLabel>
+      </Label>
       <FilterList>
         {
           [

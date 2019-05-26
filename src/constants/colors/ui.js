@@ -1,7 +1,24 @@
 export default {
-  WHITE: '#fff',
-  GREY: '#f5f7fa',
-  GREY_HOVER: '#e5e5e5',
-  DISABLED: '#f3f3f3',
-  FOCUS: '#0062ff'
+  BG: '#fff',
+  INTERACTIVE: {
+    FOCUS: {
+      BORDER: '#0062ff'
+    },
+    PRIMARY: {
+      BG: {
+        COLOR: '#0062ff',
+        HOVER: '#0353e9'
+      },
+      TEXT: {
+        COLOR: '#fff',
+        HOVER: '#e5e5e5'
+      }
+    },
+    FIELD: {
+      BG: {
+        COLOR: '#f3f3f3',
+        DISABLED: '#bebebe'
+      }
+    }
+  }
 }

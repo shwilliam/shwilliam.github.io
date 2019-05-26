@@ -1,94 +1,18 @@
 import React, { useContext, useEffect } from 'react'
 import { Link, StaticQuery, graphql } from 'gatsby'
 import Fuse from 'fuse.js'
-import styled from 'styled-components'
-import MEDIA, { BREAKPOINTS } from '../../constants/breakpoints'
-import { TEXT, UI } from '../../constants/colors'
+import { BREAKPOINTS } from '../../constants/breakpoints'
 import FilterContext from '../../context/filter-context'
 import List from '../list'
-import TextButton from '../text-button'
 import HideOnDevice from '../hide-on-device'
-
-const ProjectListWrapper = styled.section`
-  border-right: 1px solid black;
-
-  ${MEDIA.PHONE`
-    border-right: none;
-  `}
-`
-
-const ProjectListItem = styled.li`
-  background-color: ${UI.GREY};
-  border-top: 1px solid black;
-
-  &:first-of-type {
-    border-top: none;
-  }
-
-  ${MEDIA.PHONE`
-    &:first-of-type {
-      border-top: 1px solid black;
-    }
-  `}
-
-  &:last-of-type {
-    border-bottom: 1px solid black;
-  }
-
-  &:hover {
-    background-color: ${UI.GREY_HOVER};
-  }
-
-  a {
-    display: inline-block;
-    padding: 1rem;
-    width: 100%;
-
-    &.active {
-      border-left: 0.2rem solid ${UI.FOCUS};
-    }
-  }
-`
-
-const QueryWrapper = styled.div`
-  display: flex;
-  justify-content: space-between;
-  background-color: ${UI.GREY};
-  padding: 0.4rem 1rem;
-  border-bottom: 1px solid black;
-`
-
-const DateWrapper = styled.div`
-  font-size: 0.85rem;
-  color: ${TEXT.SECONDARY};
-`
-
-const ThirdHeader = styled.h3`
-  font-size: 1.2rem;
-  margin: 0;
-`
-
-const ContactLink = styled.a`
-  display: block;
-  color: ${TEXT.LINK};
-  padding-top: 1rem;
-  white-space: nowrap;
-
-  &.active {
-    border-left: 0.2rem solid ${UI.FOCUS};
-  }
-`
-
-const NoResultsListItem = styled.li`
-  padding: 1rem;
-  background-color: ${UI.GREY};
-  border-top: none;
-  border-bottom: 1px solid black;
-`
-
-const NoResultsWrapper = styled.div`
-  white-space: nowrap;
-`
+import StyleWrapper from './style-wrapper'
+import ListItem, { NoResultsListItem } from './list-item'
+import SearchQuery from './search-query'
+import ClearButton from './clear-button'
+import Title from './title'
+import Date from './date'
+import ContactLink from './contact-link'
+import NoWrap from '../no-wrap'
 
 function focusMainLink () {
   const mainLink = document.querySelector('main').querySelector('a')
@@ -98,9 +22,15 @@ function focusMainLink () {
 const ProjectList = () => {
   const { category, setCategory, query, setQuery } = useContext(FilterContext)
 
-  useEffect(() => {
-    focusMainLink()
-  }, [])
+  useEffect(() => focusMainLink(), [])
+
+  const handleLinkClick = () => {
+    if (typeof window !== 'undefined' && window.innerWidth < BREAKPOINTS.PHONE) {
+      // clear query & category
+      setCategory()
+      setQuery()
+    }
+  }
 
   return (
     <StaticQuery
@@ -149,15 +79,15 @@ const ProjectList = () => {
         }
 
         return (
-          <ProjectListWrapper>
+          <StyleWrapper>
             {
-              query && <QueryWrapper>
+              query && <SearchQuery>
                 &#39;{query}&#39;
-                <TextButton
+                <ClearButton
                   type="button"
                   onClick={() => setQuery('')}
-                >clear</TextButton>
-              </QueryWrapper>
+                >clear</ClearButton>
+              </SearchQuery>
             }
             <List>
               {
@@ -166,41 +96,35 @@ const ProjectList = () => {
                     const { excerpt, frontmatter } = node
 
                     return (
-                      <ProjectListItem key={frontmatter.path}>
+                      <ListItem key={frontmatter.path}>
                         <Link
                           to={frontmatter.path}
-                          onClick={() => {
-                            if (typeof window !== 'undefined' && window.innerWidth < BREAKPOINTS.PHONE) {
-                              // clear query & category
-                              setCategory()
-                              setQuery()
-                            }
-                          }}
+                          onClick={handleLinkClick}
                           activeClassName="active"
                         >
-                          <DateWrapper>
+                          <Date>
                             {frontmatter.date}
-                          </DateWrapper>
-                          <ThirdHeader>{frontmatter.title}</ThirdHeader>
+                          </Date>
+                          <Title>{frontmatter.title}</Title>
                           <HideOnDevice device="PHONE">
                             {excerpt}
                           </HideOnDevice>
                         </Link>
-                      </ProjectListItem>
+                      </ListItem>
                     )
                   })
                   : <NoResultsListItem>
-                    <NoResultsWrapper>
+                    <NoWrap>
                       No results
                       <span role="img" aria-label="Crying emoji">😢</span>
-                    </NoResultsWrapper>
+                    </NoWrap>
                     <ContactLink href={`mailto:w-lindvall@outlook.com?subject=Have you worked with ${query}?`}>
                       Get in touch
                     </ContactLink>
                   </NoResultsListItem>
               }
             </List>
-          </ProjectListWrapper>
+          </StyleWrapper>
         )
       }}
     />

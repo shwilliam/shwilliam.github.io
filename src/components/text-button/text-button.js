@@ -5,7 +5,7 @@ const TextButton = styled.button`
   padding: 0;
   border: none;
   background-color: transparent;
-  color: ${TEXT.LINK};
+  color: ${TEXT.LINK.COLOR};
   cursor: pointer;
 
   &.inactive {
@@ -14,7 +14,7 @@ const TextButton = styled.button`
 
   &:hover {
     opacity: 1;
-    color: ${TEXT.LINK_HOVER};
+    color: ${TEXT.LINK.HOVER};
   }
 `
 

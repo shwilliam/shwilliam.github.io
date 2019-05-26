@@ -1,69 +1,13 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { StaticQuery, graphql } from 'gatsby'
-import styled from 'styled-components'
 import '../../styles/index.css'
 import '../../styles/utilities.css'
-import MEDIA from '../../constants/breakpoints'
-import { TEXT, UI } from '../../constants/colors'
 import Dots from '../dots'
 import Header from '../header'
 import ProjectList from '../project-list'
-
-const StylesWrapper = styled.div`
-  color: ${TEXT.PRIMARY};
-  background-color: ${UI.WHITE};
-  max-width: 1000px;
-  min-height: 100vh;
-  margin: 0 auto;
-  border: 1px solid ${UI.PRIMARY};
-
-  a {
-    color: ${TEXT.LINK};
-  }
-
-  a:visited {
-    color: ${TEXT.LINK_VISITED};
-  }
-
-  a:hover {
-    color: ${TEXT.LINK_HOVER};
-    text-decoration: none;
-  }
-
-  ${MEDIA.TABLET`
-    border: none;
-  `}
-`
-
-const Grid = styled.div`
-  display: grid;
-  grid-template-columns: 3fr 7fr;
-  grid-template-areas:
-    "sider main";
-
-  ${MEDIA.PHONE`
-    grid-template-columns: none;
-    grid-template-areas:
-      "main"
-      "sider";
-  `}
-`
-
-const GridMain = styled.div`
-  grid-area: main;
-  min-width: 0;
-  padding: 0 2.5rem;
-
-  ${MEDIA.PHONE`
-    padding: 0 2rem;
-  `}
-`
-
-const GridSider = styled.div`
-  grid-area: sider;
-  min-width: 0;
-`
+import StyleWrapper from './style-wrapper'
+import Grid, { GridMain, GridSider } from './Grid'
 
 const Layout = ({ children }) => {
   return (
@@ -78,7 +22,7 @@ const Layout = ({ children }) => {
         }
       `}
       render={data => (
-        <StylesWrapper>
+        <StyleWrapper>
           <Dots />
           <Header siteTitle={data.site.siteMetadata.title} />
           <Grid>
@@ -93,7 +37,7 @@ const Layout = ({ children }) => {
               <ProjectList/>
             </GridSider>
           </Grid>
-        </StylesWrapper>
+        </StyleWrapper>
       )}
     />
   )

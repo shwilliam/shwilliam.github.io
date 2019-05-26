@@ -1,16 +1,8 @@
 import React from 'react'
 import { navigate } from 'gatsby'
-import styled from 'styled-components'
 import FilterContext from '../../context/filter-context'
 import { BREAKPOINTS } from '../../constants/breakpoints'
-
-const SearchInput = styled.input`
-  border: none;
-  background-color: none;
-  width: 100%;
-  height: 100%;
-  padding: 0.7rem 1rem;
-`
+import Input from './input'
 
 class SearchForm extends React.Component {
   constructor (props) {
@@ -47,7 +39,7 @@ class SearchForm extends React.Component {
         <label className="sr-only" htmlFor="search-input">
           Search for a project
         </label>
-        <SearchInput
+        <Input
           id="search-input"
           name="search-input"
           type="search"
