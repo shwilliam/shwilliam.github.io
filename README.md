@@ -17,4 +17,5 @@
 - [X] 📸 Images optimized at build time
 - [X] 📂 React Context for global UI state
 - [X] 💅 Componentized styles w/ [`styled-components`](https://www.styled-components.com/)
+- [X] 🛑 Warns of and removes unused styles with [`Purgecss`](https://www.purgecss.com/)
 - [X] 💯 Tested with [Google Lighthouse](https://developers.google.com/web/tools/lighthouse/)
