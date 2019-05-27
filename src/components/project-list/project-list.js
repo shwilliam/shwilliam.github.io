@@ -5,6 +5,7 @@ import {BREAKPOINTS} from '../../constants/breakpoints'
 import FilterContext from '../../context/filter-context'
 import List from '../list'
 import HideOnDevice from '../hide-on-device'
+import NoWrap from '../no-wrap'
 import StyleWrapper from './style-wrapper'
 import ListItem, {NoResultsListItem} from './list-item'
 import SearchQuery from './search-query'
@@ -12,7 +13,6 @@ import ClearButton from './clear-button'
 import Title from './title'
 import Date from './date'
 import ContactLink from './contact-link'
-import NoWrap from '../no-wrap'
 
 function focusMainLink() {
   const mainLink = document.querySelector('main').querySelector('a')
@@ -45,7 +45,6 @@ const ProjectList = () => {
           ) {
             edges {
               node {
-                excerpt(pruneLength: 50)
                 html
                 frontmatter {
                   date(formatString: "DD-MM-YYYY")
@@ -94,7 +93,7 @@ const ProjectList = () => {
             <List>
               {filteredProjects.length ? (
                 filteredProjects.map(({node}) => {
-                  const {excerpt, frontmatter} = node
+                  const {frontmatter} = node
 
                   return (
                     <ListItem key={frontmatter.path}>
@@ -105,7 +104,6 @@ const ProjectList = () => {
                       >
                         <Date>{frontmatter.date}</Date>
                         <Title>{frontmatter.title}</Title>
-                        <HideOnDevice device="PHONE">{excerpt}</HideOnDevice>
                       </Link>
                     </ListItem>
                   )
