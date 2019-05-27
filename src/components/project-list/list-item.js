@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import MEDIA from '../../constants/breakpoints'
-import { UI } from '../../constants/colors'
+import {UI} from '../../constants/colors'
 
 const ListItem = styled.li`
   background-color: ${UI.GREY};

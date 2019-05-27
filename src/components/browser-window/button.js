@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 const Button = styled.span`
   &:before {
-    content: "";
+    content: '';
     position: relative;
     display: inline-block;
     width: 7px;

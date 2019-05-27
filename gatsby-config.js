@@ -2,21 +2,21 @@ module.exports = {
   siteMetadata: {
     title: `William L`,
     description: `Vancouver-based frontend developer`,
-    author: `William Lindvall (@shwilliam)`
+    author: `William Lindvall (@shwilliam)`,
   },
   plugins: [
     {
       resolve: `gatsby-plugin-typography`,
       options: {
-        pathToConfigModule: `src/utils/typography`
-      }
+        pathToConfigModule: `src/utils/typography`,
+      },
     },
     {
       resolve: `gatsby-plugin-purgecss`,
       options: {
         // develop: true, // uncomment when using `gatsby develop`
-        printRejected: true
-      }
+        printRejected: true,
+      },
     },
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-react-helmet`,
@@ -24,15 +24,15 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/projects`,
-        name: 'markdown-pages'
-      }
+        name: 'markdown-pages',
+      },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/images`
-      }
+        path: `${__dirname}/src/images`,
+      },
     },
     `gatsby-transformer-remark`,
     `gatsby-transformer-sharp`,
@@ -46,9 +46,9 @@ module.exports = {
         background_color: `#ffffff`,
         theme_color: `#000000`,
         display: `minimal-ui`,
-        icon: `src/images/blossom.png`
-      }
+        icon: `src/images/blossom.png`,
+      },
     },
-    `gatsby-plugin-offline`
-  ]
+    `gatsby-plugin-offline`,
+  ],
 }

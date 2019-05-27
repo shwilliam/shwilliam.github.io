@@ -1,15 +1,15 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { StaticQuery, graphql } from 'gatsby'
+import {StaticQuery, graphql} from 'gatsby'
 import '../../styles/index.css'
 import '../../styles/utilities.css'
 import Dots from '../dots'
 import Header from '../header'
 import ProjectList from '../project-list'
 import StyleWrapper from './style-wrapper'
-import Grid, { GridMain, GridSider } from './Grid'
+import Grid, {GridMain, GridSider} from './Grid'
 
-const Layout = ({ children }) => {
+const Layout = ({children}) => {
   return (
     <StaticQuery
       query={graphql`
@@ -28,13 +28,11 @@ const Layout = ({ children }) => {
           <Grid>
             <GridMain>
               <main>
-                <article>
-                  {children}
-                </article>
+                <article>{children}</article>
               </main>
             </GridMain>
             <GridSider>
-              <ProjectList/>
+              <ProjectList />
             </GridSider>
           </Grid>
         </StyleWrapper>
@@ -46,8 +44,8 @@ const Layout = ({ children }) => {
 Layout.propTypes = {
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),
-    PropTypes.node
-  ]).isRequired
+    PropTypes.node,
+  ]).isRequired,
 }
 
 export default Layout

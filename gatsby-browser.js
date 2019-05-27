@@ -1,13 +1,11 @@
 import React from 'react'
 // import Transition from './src/components/transition'
 
-import { FilterContextProvider } from './src/context/filter-context'
+import {FilterContextProvider} from './src/context/filter-context'
 
 // eslint-disable-next-line react/prop-types
-export const wrapRootElement = ({ element }) => (
-  <FilterContextProvider>
-    {element}
-  </FilterContextProvider>
+export const wrapRootElement = ({element}) => (
+  <FilterContextProvider>{element}</FilterContextProvider>
 )
 
 // full-page transition
@@ -21,7 +19,7 @@ export const wrapRootElement = ({ element }) => (
 export const onServiceWorkerUpdateReady = () => {
   const answer = window.confirm(
     `This site has been updated. ` +
-      `Please reload to display the latest version!`
+      `Please reload to display the latest version!`,
   )
 
   if (answer === true) {

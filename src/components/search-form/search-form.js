@@ -1,39 +1,39 @@
 import React from 'react'
-import { navigate } from 'gatsby'
+import {navigate} from 'gatsby'
 import FilterContext from '../../context/filter-context'
-import { BREAKPOINTS } from '../../constants/breakpoints'
+import {BREAKPOINTS} from '../../constants/breakpoints'
 import Input from './input'
 
 class SearchForm extends React.Component {
-  constructor (props) {
+  constructor(props) {
     super(props)
     this.state = {
-      query: ''
+      query: '',
     }
 
     this.handleInput = this.handleInput.bind(this)
     this.makeSearch = this.makeSearch.bind(this)
   }
 
-  handleInput ({ target }) {
-    this.setState({ query: target.value })
+  handleInput({target}) {
+    this.setState({query: target.value})
   }
 
-  makeSearch (e) {
+  makeSearch(e) {
     e.preventDefault()
     this.context.setQuery(this.state.query)
-    this.setState({ query: '' })
+    this.setState({query: ''})
 
     if (
       typeof window !== 'undefined' &&
-       window.innerWidth < BREAKPOINTS.PHONE
+      window.innerWidth < BREAKPOINTS.PHONE
     ) {
       // close open article
       navigate('/')
     }
   }
 
-  render () {
+  render() {
     return (
       <form onSubmit={this.makeSearch}>
         <label className="sr-only" htmlFor="search-input">

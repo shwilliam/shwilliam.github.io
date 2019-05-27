@@ -4,8 +4,7 @@ import MEDIA from '../../constants/breakpoints'
 const Grid = styled.div`
   display: grid;
   grid-template-columns: 3fr 7fr;
-  grid-template-areas:
-    "sider main";
+  grid-template-areas: 'sider main';
 
   ${MEDIA.PHONE`
     grid-template-columns: none;

@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { TEXT } from '../../constants/colors'
+import {TEXT} from '../../constants/colors'
 
 const TextButton = styled.button`
   padding: 0;

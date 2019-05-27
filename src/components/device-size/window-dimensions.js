@@ -1,17 +1,17 @@
-import { useEffect, useState } from 'react'
+import {useEffect, useState} from 'react'
 import PropTypes from 'prop-types'
 
 const isClient = typeof window !== 'undefined'
 
-const WindowDimensions = ({ children }) => {
+const WindowDimensions = ({children}) => {
   const [size, setSize] = useState({
     width: isClient && window.innerWidth,
-    height: isClient && window.innerHeight
+    height: isClient && window.innerHeight,
   })
   const updateSize = () =>
     setSize({
       width: window.innerWidth,
-      height: window.innerHeight
+      height: window.innerHeight,
     })
 
   useEffect(() => {
@@ -23,7 +23,7 @@ const WindowDimensions = ({ children }) => {
 }
 
 WindowDimensions.propTypes = {
-  children: PropTypes.func.isRequired
+  children: PropTypes.func.isRequired,
 }
 
 export default WindowDimensions

@@ -5,13 +5,13 @@ const SITE_URL = 'https://shwilliam.github.io/'
 
 const launchChromeAndRunLighthouse = (
   url,
-  opts = { chromeFlags: ['--headless'] },
-  config = null
+  opts = {chromeFlags: ['--headless']},
+  config = null,
 ) =>
-  chromeLauncher.launch({ chromeFlags: opts.chromeFlags }).then(chrome => {
+  chromeLauncher.launch({chromeFlags: opts.chromeFlags}).then(chrome => {
     opts.port = chrome.port
     return lighthouse(url, opts, config).then(results =>
-      chrome.kill().then(() => results.lhr)
+      chrome.kill().then(() => results.lhr),
     )
   })
 
@@ -19,7 +19,7 @@ let scores
 test.before(async t => {
   console.log(`Auditing ${SITE_URL}.\n`)
   scores = await launchChromeAndRunLighthouse(SITE_URL).then(
-    ({ categories }) => categories
+    ({categories}) => categories,
   )
 })
 

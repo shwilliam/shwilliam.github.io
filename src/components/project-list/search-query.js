@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { UI } from '../../constants/colors'
+import {UI} from '../../constants/colors'
 
 const SearchQuery = styled.div`
   display: flex;

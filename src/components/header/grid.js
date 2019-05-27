@@ -5,8 +5,8 @@ const Grid = styled.header`
   display: grid;
   grid-template-columns: 3fr 7fr;
   grid-template-areas:
-    "logo header"
-    "filters search";
+    'logo header'
+    'filters search';
 
   ${MEDIA.PHONE`
     grid-template-columns: none;
@@ -23,7 +23,7 @@ export const GridLogo = styled.section`
   grid-area: logo;
   min-width: 0;
   border-bottom: 1px solid black;
-  `
+`
 
 export const GridHeader = styled.section`
   grid-area: header;

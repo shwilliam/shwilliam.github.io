@@ -1,11 +1,11 @@
-import React, { useEffect } from 'react'
+import React, {useEffect} from 'react'
 import Siema from 'siema'
 import PropTypes from 'prop-types'
 
-const Carousel = ({ children, ...props }) => {
+const Carousel = ({children, ...props}) => {
   useEffect(() => {
     if (typeof window !== 'undefined') {
-        new Siema() // eslint-disable-line
+      new Siema() // eslint-disable-line
     }
   }, [])
 
@@ -17,7 +17,7 @@ const Carousel = ({ children, ...props }) => {
 }
 
 Carousel.propTypes = {
-  children: PropTypes.node.isRequired
+  children: PropTypes.node.isRequired,
 }
 
 export default Carousel

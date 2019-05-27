@@ -4,38 +4,38 @@ import PropTypes from 'prop-types'
 const defaultState = {
   category: undefined,
   query: undefined,
-  setCategory: () => {}
+  setCategory: () => {},
 }
 
 const FilterContext = React.createContext(defaultState)
 
 class FilterContextProvider extends React.Component {
-  constructor (props) {
+  constructor(props) {
     super(props)
     this.state = {
       category: undefined,
-      query: undefined
+      query: undefined,
     }
 
     this.setCategory = this.setCategory.bind(this)
     this.setQuery = this.setQuery.bind(this)
   }
 
-  setCategory (category) {
+  setCategory(category) {
     if (category === this.state.category) {
-      this.setState({ category: undefined })
+      this.setState({category: undefined})
     } else {
-      this.setState({ category })
+      this.setState({category})
     }
   }
 
-  setQuery (query = '') {
-    this.setState({ query })
+  setQuery(query = '') {
+    this.setState({query})
   }
 
-  render () {
-    const { children } = this.props
-    const { category, query } = this.state
+  render() {
+    const {children} = this.props
+    const {category, query} = this.state
 
     return (
       <FilterContext.Provider
@@ -43,7 +43,7 @@ class FilterContextProvider extends React.Component {
           category,
           query,
           setCategory: this.setCategory,
-          setQuery: this.setQuery
+          setQuery: this.setQuery,
         }}
       >
         {children}
@@ -53,9 +53,9 @@ class FilterContextProvider extends React.Component {
 }
 
 FilterContextProvider.propTypes = {
-  children: PropTypes.node.isRequired
+  children: PropTypes.node.isRequired,
 }
 
-export { FilterContextProvider }
+export {FilterContextProvider}
 
 export default FilterContext

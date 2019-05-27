@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { TEXT, UI } from '../../constants/colors'
+import {TEXT, UI} from '../../constants/colors'
 
 const ContactLink = styled.a`
   display: block;
