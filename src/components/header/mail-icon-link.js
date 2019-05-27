@@ -1,16 +1,23 @@
+import React from 'react'
 import styled from 'styled-components'
 import MEDIA from '../../constants/breakpoints'
+import Emoji from '../emoji'
 
-const MailIconLink = styled.a`
-  display: none;
+const Link = styled.a`
   position: absolute;
   right: 0;
-  top: 0.75rem;
-  padding: 1rem;
+  padding: 1.2rem 1rem 1rem 1rem;
 
+  display: none;
   ${MEDIA.PHONE`
     display: inline-block;
   `}
 `
+
+const MailIconLink = () => (
+  <Link href="mailto:w-lindvall@outlook.com">
+    <Emoji label="mail">📧</Emoji>
+  </Link>
+)
 
 export default MailIconLink

@@ -8,13 +8,8 @@ const TextButton = styled.button`
   color: ${TEXT.LINK.COLOR};
   cursor: pointer;
 
-  &.inactive {
-    opacity: 0.2;
-  }
-
   &:hover {
     opacity: 1;
-    color: ${TEXT.LINK.HOVER};
   }
 `
 

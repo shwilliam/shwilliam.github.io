@@ -8,6 +8,7 @@ const StyleWrapper = styled.div`
   min-height: 100vh;
   margin: 0 auto;
   background-color: ${UI.BG};
+  border: 1px solid black;
 
   a {
     color: ${TEXT.LINK.COLOR};

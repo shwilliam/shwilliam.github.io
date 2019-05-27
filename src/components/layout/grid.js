@@ -18,8 +18,8 @@ export default Grid
 
 export const GridMain = styled.div`
   grid-area: main;
+  padding: 0 2rem;
   min-width: 0;
-  padding: 0 2.5rem;
 
   ${MEDIA.PHONE`
     padding: 0 2rem;

@@ -4,7 +4,6 @@ import {TEXT, UI} from '../../constants/colors'
 const ContactLink = styled.a`
   display: block;
   color: ${TEXT.LINK.COLOR};
-  padding-top: 1rem;
   white-space: nowrap;
 
   &.active {

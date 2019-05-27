@@ -2,10 +2,16 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import {graphql} from 'gatsby'
 import Img from 'gatsby-image'
+import styled from 'styled-components'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import BrowserWindow from '../components/browser-window'
 import Carousel from '../components/carousel'
+
+const Title = styled.h2`
+  font-size: 1.2rem;
+  margin: 2rem 0 0.4rem 0;
+`
 
 export default function Template({data}) {
   const {markdownRemark} = data
@@ -14,7 +20,7 @@ export default function Template({data}) {
     <Layout>
       <SEO title={frontmatter.title} keywords={[`project`]} />
       <header>
-        <h2>
+        <Title>
           {frontmatter.link ? (
             <a
               href={frontmatter.link}
@@ -26,7 +32,7 @@ export default function Template({data}) {
           ) : (
             frontmatter.title
           )}
-        </h2>
+        </Title>
         <div>{frontmatter.date}</div>
       </header>
       {frontmatter.category === 'photos' ? (
@@ -54,7 +60,7 @@ export default function Template({data}) {
           )}
         </figure>
       )}
-      {/* TODO: use aria-live? */}
+      {/* TODO: ensure accessibility on navigation */}
       <section dangerouslySetInnerHTML={{__html: html}} />
     </Layout>
   )

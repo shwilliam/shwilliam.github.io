@@ -2,7 +2,8 @@ import React, {useContext} from 'react'
 import {navigate} from 'gatsby'
 import {BREAKPOINTS} from '../../constants/breakpoints'
 import FilterContext from '../../context/filter-context'
-import TextButton from '../text-button'
+import Emoji from '../emoji'
+import FilterButton from './filter-button'
 import Label from './label'
 import FilterList from './filter-list'
 
@@ -36,7 +37,7 @@ const CategoryFilters = () => {
           },
         ].map(category => (
           <li key={category.value}>
-            <TextButton
+            <FilterButton
               onClick={() => {
                 setCategory(category.value)
                 if (
@@ -56,10 +57,8 @@ const CategoryFilters = () => {
               `}
               type="button"
             >
-              <span role="img" aria-label={category.value}>
-                {category.emoji}
-              </span>
-            </TextButton>
+              <Emoji label={category.value}>{category.emoji}</Emoji>
+            </FilterButton>
           </li>
         ))}
       </FilterList>

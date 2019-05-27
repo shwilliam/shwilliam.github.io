@@ -14,33 +14,27 @@ const Header = () => {
   const {setCategory} = useContext(FilterContext)
 
   return (
-    <Grid>
-      <GridLogo>
-        <Title>
-          <Link to="/" onClick={() => setCategory()} tabIndex="-1">
-            William L<HideOnDevice device="TABLET">indvall</HideOnDevice>
-          </Link>
-        </Title>
-      </GridLogo>
-      <HideOnDevice device="PHONE">
+    <header>
+      <Grid>
+        <GridLogo>
+          <Title>
+            <Link to="/" onClick={() => setCategory()} tabIndex="-1">
+              William L<HideOnDevice device="TABLET">indvall</HideOnDevice>
+            </Link>
+          </Title>
+        </GridLogo>
         <GridHeader>
-          <ContactLink href="mailto:w-lindvall@outlook.com">
-            Contact me
-          </ContactLink>
+          <ContactLink>Contact me</ContactLink>
         </GridHeader>
-      </HideOnDevice>
-      <MailIconLink href="mailto:w-lindvall@outlook.com">
-        <span role="img" aria-label="Email">
-          📧
-        </span>
-      </MailIconLink>
-      <GridFilters>
-        <CategoryFilters />
-      </GridFilters>
-      <GridSearch>
-        <SearchForm />
-      </GridSearch>
-    </Grid>
+        <MailIconLink />
+        <GridFilters>
+          <CategoryFilters />
+        </GridFilters>
+        <GridSearch>
+          <SearchForm />
+        </GridSearch>
+      </Grid>
+    </header>
   )
 }
 

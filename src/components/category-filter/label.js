@@ -3,8 +3,8 @@ import MEDIA from '../../constants/breakpoints'
 
 const Label = styled.label`
   display: inline-block;
-  padding: 0.7rem 0rem 0.7rem 1rem;
   float: left;
+  padding: 0.2rem 1rem;
 
   ${MEDIA.TABLET`
     display: none;
