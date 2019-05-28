@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import MEDIA from '../../constants/breakpoints'
-import {TEXT, UI} from '../../constants/colors'
+import {UI} from '../../constants/colors'
 
 const Grid = styled.div`
   display: grid;

@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 const Emoji = ({label, children}) => (
   <span role="img" aria-label={label}>
@@ -6,5 +7,9 @@ const Emoji = ({label, children}) => (
   </span>
 )
 
-export default Emoji
+Emoji.propTypes = {
+  label: PropTypes.string.isRequired,
+  children: PropTypes.node.isRequired,
+}
 
+export default Emoji

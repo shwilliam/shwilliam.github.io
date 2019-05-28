@@ -1,7 +1,5 @@
-import React from 'react'
 import styled from 'styled-components'
 import TextButton from '../text-button'
-import {TEXT} from '../../constants/colors'
 
 const FilterButton = styled(TextButton)`
   display: inline-block;

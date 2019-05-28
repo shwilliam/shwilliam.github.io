@@ -48,13 +48,11 @@ const CategoryFilters = () => {
                   navigate('/')
                 }
               }}
-              className={`
-                ${
-                  activeCategory && category.value !== activeCategory
-                    ? 'inactive'
-                    : 'active'
-                }
-              `}
+              className={`${
+                activeCategory && category.value !== activeCategory
+                  ? 'inactive'
+                  : 'active'
+              }`}
               type="button"
             >
               <Emoji label={category.value}>{category.emoji}</Emoji>

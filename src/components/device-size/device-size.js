@@ -5,15 +5,15 @@ import WindowDimensions from './window-dimensions'
 
 const DeviceSize = ({children}) => (
   <WindowDimensions>
-    {({width}) =>
-      children(
-        width < BREAKPOINTS.MOBILE
-          ? 'MOBILE'
-          : width > BREAKPOINTS.DESKTOP
-          ? 'DESKTOP'
-          : 'TABLET',
-      )
-    }
+    {({width}) => {
+      if (width < BREAKPOINTS.MOBILE) {
+        return children('MOBILE')
+      } else if (width > BREAKPOINTS.DESKTOP) {
+        return children('DESKTOP')
+      } else {
+        return children('TABLET')
+      }
+    }}
   </WindowDimensions>
 )
 
