@@ -3,7 +3,6 @@ import {Link, StaticQuery, graphql} from 'gatsby'
 import Fuse from 'fuse.js'
 import {BREAKPOINTS} from '../../constants/breakpoints'
 import FilterContext from '../../context/filter-context'
-import List from '../list'
 import NoWrap from '../no-wrap'
 import StyleWrapper from './style-wrapper'
 import ListItem, {NoResultsListItem} from './list-item'
@@ -89,7 +88,7 @@ const ProjectList = () => {
                 </ClearButton>
               </SearchQuery>
             )}
-            <List>
+            <ul>
               {filteredProjects.length ? (
                 filteredProjects.map(({node}) => {
                   const {frontmatter} = node
@@ -122,7 +121,7 @@ const ProjectList = () => {
                   </ContactLink>
                 </NoResultsListItem>
               )}
-            </List>
+            </ul>
           </StyleWrapper>
         )
       }}

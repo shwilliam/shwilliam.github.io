@@ -5,6 +5,7 @@ import {UI} from '../../constants/colors'
 const ListItem = styled.li`
   background-color: ${UI.GREY};
   border-top: 1px solid black;
+  display: block;
 
   &:first-of-type {
     border-top: none;

@@ -6,8 +6,9 @@ category: tool
 link: https://github.com/shwilliam/vue-window-dimensions
 date: 2019-05-01T00:00:00-05:00
 ---
-![Package version](https://img.shields.io/npm/v/vue-window-dimensions.svg)
-![Minified size](https://img.shields.io/bundlephobia/min/vue-window-dimensions.svg)
+
+- ![Package version](https://img.shields.io/npm/v/vue-window-dimensions.svg)
+- ![Minified size](https://img.shields.io/bundlephobia/min/vue-window-dimensions.svg)
 
 [`vue-window-dimensions`](https://github.com/shwilliam/vue-window-dimensions) is a Vue component that exposes the width and height of your browser window.
 

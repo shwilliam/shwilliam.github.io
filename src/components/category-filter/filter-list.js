@@ -1,7 +1,6 @@
 import styled from 'styled-components'
-import List from '../list'
 
-const FilterList = styled(List)`
+const FilterList = styled.ul`
   display: flex;
   justify-content: space-around;
   margin: 0;
