@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import MEDIA from '../../constants/breakpoints'
+import {TEXT, UI} from '../../constants/colors'
 
 const Grid = styled.div`
   display: grid;
@@ -25,12 +26,14 @@ export const GridLogo = styled.section`
   grid-area: logo;
   min-width: 0;
   border-bottom: 1px solid black;
+  background-color: ${UI.INTERACTIVE.PRIMARY.BG.COLOR};
 `
 
 export const GridHeader = styled.section`
   min-width: 0;
   border-bottom: 1px solid black;
   text-align: right;
+  background-color: ${UI.INTERACTIVE.PRIMARY.BG.COLOR};
 
   ${MEDIA.PHONE`
     display: none;

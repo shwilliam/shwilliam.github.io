@@ -17,11 +17,11 @@ const Header = () => {
     <header>
       <Grid>
         <GridLogo>
-          <Title>
-            <Link to="/" onClick={() => setCategory()} tabIndex="-1">
+          <Link to="/" onClick={() => setCategory()} tabIndex="-1">
+            <Title>
               William L<HideOnDevice device="TABLET">indvall</HideOnDevice>
-            </Link>
-          </Title>
+            </Title>
+          </Link>
         </GridLogo>
         <GridHeader>
           <ContactLink>Contact me</ContactLink>

@@ -1,0 +1,10 @@
+import styled from 'styled-components'
+
+const SROnly = styled.div`
+  position: absolute;
+  clip: rect(1px, 1px, 1px, 1px);
+  left: -9999px;
+  top: -9999px;
+`
+
+export default SROnly

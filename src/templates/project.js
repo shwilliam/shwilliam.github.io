@@ -7,6 +7,7 @@ import Layout from '../components/layout'
 import SEO from '../components/seo'
 import BrowserWindow from '../components/browser-window'
 import Carousel from '../components/carousel'
+import SROnly from '../components/sr-only'
 
 const Title = styled.h2`
   font-size: 1.2rem;
@@ -39,16 +40,18 @@ export default function Template({data}) {
         <Carousel>
           {frontmatter.photos.split(', ').map((photo, i) => (
             <figure key={photo}>
-              <figcaption className="sr-only">
-                {frontmatter.imgAlt.split(', ')[i]}
-              </figcaption>
+              <SROnly>
+                <figcaption>{frontmatter.imgAlt.split(', ')[i]}</figcaption>
+              </SROnly>
               <img src={photo} />
             </figure>
           ))}
         </Carousel>
       ) : (
         <figure>
-          <figcaption className="sr-only">{frontmatter.imgAlt}</figcaption>
+          <SROnly>
+            <figcaption>{frontmatter.imgAlt}</figcaption>
+          </SROnly>
           {!frontmatter.imgUrl && !frontmatter.image ? null : (
             <BrowserWindow>
               {frontmatter.imgUrl ? (

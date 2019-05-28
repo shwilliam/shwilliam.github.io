@@ -6,7 +6,7 @@ import Emoji from '../emoji'
 const Link = styled.a`
   position: absolute;
   right: 0;
-  padding: 1.2rem 1rem 1rem 1rem;
+  padding: 1.4rem 1rem 1rem 1rem;
 
   display: none;
   ${MEDIA.PHONE`

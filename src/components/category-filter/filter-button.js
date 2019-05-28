@@ -5,7 +5,7 @@ import {TEXT} from '../../constants/colors'
 
 const FilterButton = styled(TextButton)`
   display: inline-block;
-  padding: 0.2rem 0;
+  padding: 0.4rem 0;
 
   &.inactive {
     opacity: 0.2;

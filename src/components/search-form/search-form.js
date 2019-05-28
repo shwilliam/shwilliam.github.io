@@ -2,6 +2,7 @@ import React from 'react'
 import {navigate} from 'gatsby'
 import FilterContext from '../../context/filter-context'
 import {BREAKPOINTS} from '../../constants/breakpoints'
+import SROnly from '../sr-only'
 import Input from './input'
 
 class SearchForm extends React.Component {
@@ -36,9 +37,9 @@ class SearchForm extends React.Component {
   render() {
     return (
       <form onSubmit={this.makeSearch}>
-        <label className="sr-only" htmlFor="search-input">
-          Search for a project
-        </label>
+        <SROnly>
+          <label htmlFor="search-input">Search for a project</label>
+        </SROnly>
         <Input
           id="search-input"
           name="search-input"
