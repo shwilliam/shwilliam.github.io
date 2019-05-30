@@ -3,9 +3,9 @@ import MEDIA from '../../constants/breakpoints'
 import {UI} from '../../constants/colors'
 
 const ListItem = styled.li`
+  display: block;
   background-color: ${UI.GREY};
   border-top: 1px solid black;
-  display: block;
 
   &:first-of-type {
     border-top: none;
@@ -33,6 +33,7 @@ const ListItem = styled.li`
 `
 
 export const NoResultsListItem = styled.li`
+  display: block;
   padding: 1rem;
   background-color: ${UI.GREY};
   border-top: none;

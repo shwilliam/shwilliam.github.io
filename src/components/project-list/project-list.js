@@ -7,6 +7,7 @@ import NoWrap from '../no-wrap'
 import StyleWrapper from './style-wrapper'
 import ListItem, {NoResultsListItem} from './list-item'
 import SearchQuery from './search-query'
+import QueryString from './query-string'
 import ClearButton from './clear-button'
 import Title from './title'
 import Date from './date'
@@ -82,7 +83,7 @@ const ProjectList = () => {
           <StyleWrapper>
             {query && (
               <SearchQuery>
-                &#39;{query}&#39;
+                <QueryString>&#39;{query}&#39;</QueryString>
                 <ClearButton type="button" onClick={() => setQuery('')}>
                   clear
                 </ClearButton>

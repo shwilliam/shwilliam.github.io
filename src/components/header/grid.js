@@ -23,13 +23,15 @@ const Grid = styled.div`
 export default Grid
 
 export const GridLogo = styled.section`
+  position: relative;
   grid-area: logo;
-  min-width: 0;
+  overflow: visible;
   border-bottom: 1px solid black;
   background-color: ${UI.INTERACTIVE.PRIMARY.BG.COLOR};
 `
 
 export const GridHeader = styled.section`
+  position: relative;
   min-width: 0;
   border-bottom: 1px solid black;
   text-align: right;
