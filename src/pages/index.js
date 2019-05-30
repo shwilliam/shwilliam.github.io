@@ -15,10 +15,10 @@ const IndexPage = () => {
       window.innerWidth < BREAKPOINTS.PHONE &&
       (category || query) ? null : (
         <section>
-          <span role="img" aria-label="wave">
-            👋
-          </span>
           <p>
+            <span role="img" aria-label="wave">
+              👋
+            </span>
             Hej!
             <br />
             <br />

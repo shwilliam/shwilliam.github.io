@@ -11,7 +11,15 @@ import SROnly from '../components/sr-only'
 
 const Title = styled.h2`
   font-size: 1.2rem;
-  margin: 2rem 0 0.4rem 0;
+  margin: 0.4rem 0 0.4rem 0;
+`
+
+const PhotoContainer = styled.figure`
+  text-align: center;
+`
+
+const Photo = styled.img`
+  max-height: 400px;
 `
 
 export default function Template({data}) {
@@ -39,12 +47,12 @@ export default function Template({data}) {
       {frontmatter.category === 'photos' ? (
         <Carousel>
           {frontmatter.photos.split(', ').map((photo, i) => (
-            <figure key={photo}>
+            <PhotoContainer key={photo}>
               <SROnly>
                 <figcaption>{frontmatter.imgAlt.split(', ')[i]}</figcaption>
               </SROnly>
-              <img src={photo} />
-            </figure>
+              <Photo src={photo} />
+            </PhotoContainer>
           ))}
         </Carousel>
       ) : (
@@ -55,7 +63,7 @@ export default function Template({data}) {
           {!frontmatter.imgUrl && !frontmatter.image ? null : (
             <BrowserWindow>
               {frontmatter.imgUrl ? (
-                <img src={frontmatter.imgUrl} />
+                <Photo src={frontmatter.imgUrl} />
               ) : (
                 <Img fluid={frontmatter.image.childImageSharp.fluid} />
               )}
