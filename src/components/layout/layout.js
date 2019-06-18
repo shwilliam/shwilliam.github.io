@@ -6,7 +6,7 @@ import '../../styles/index.css'
 import Header from '../header'
 import ProjectList from '../project-list'
 import StyleWrapper from './style-wrapper'
-import Grid, {GridMain, GridSider} from './Grid'
+import Grid, {GridMain, GridSider} from './grid'
 
 const Layout = ({children}) => {
   return (
