@@ -1,28 +1,12 @@
 import React from 'react'
-// import Transition from './src/components/transition'
+import AppProvider from 'store/provider'
+import wrapPageElementWithTransition from 'helpers/wrapPageElement'
 
-import {FilterContextProvider} from './src/context/filter-context'
-
+// React Context in Browser
 // eslint-disable-next-line react/prop-types
-export const wrapRootElement = ({element}) => (
-  <FilterContextProvider>{element}</FilterContextProvider>
-)
-
-// full-page transition
-// eslint-disable-next-line react/prop-types
-// export const wrapPageElement = ({ element, props }) => (
-//   <Transition {...props}>
-//     {element}
-//   </Transition>
-// )
-
-export const onServiceWorkerUpdateReady = () => {
-  const answer = window.confirm(
-    `This site has been updated. ` +
-      `Please reload to display the latest version!`,
-  )
-
-  if (answer === true) {
-    window.location.reload()
-  }
+export const wrapRootElement = ({element}) => {
+  return <AppProvider>{element}</AppProvider>
 }
+
+// Page Transitions
+export const wrapPageElement = wrapPageElementWithTransition

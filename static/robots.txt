@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://shwilliam.github.io/sitemap.xml

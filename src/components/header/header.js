@@ -1,45 +1,45 @@
-import React, {useContext} from 'react'
-import {Link} from 'gatsby'
+import React from 'react'
 import PropTypes from 'prop-types'
-import FilterContext from '../../context/filter-context'
-import CategoryFilters from '../category-filter/category-filters'
-import SearchForm from '../search-form'
-import HideOnDevice from '../hide-on-device'
-import Title from './title'
-import Grid, {GridLogo, GridHeader, GridFilters, GridSearch} from './grid'
-import ContactLink from './contact-link'
-import MailIconLink from './mail-icon-link'
+import {Link} from 'gatsby'
+import posed from 'react-pose'
+import {Container} from './header.css'
+import Title from 'components/title'
+import Nav from 'components/header/nav'
 
-const Header = () => {
-  const {setCategory} = useContext(FilterContext)
+const AnimatedContainer = posed.div({
+  enter: {
+    y: 0,
+    transition: {
+      ease: 'easeInOut',
+    },
+  },
+  exit: {
+    y: '-100%',
+    transition: {
+      ease: 'easeInOut',
+    },
+  },
+})
 
-  return (
-    <header>
-      <Grid>
-        <GridLogo>
-          <Link to="/" onClick={() => setCategory()} tabIndex="-1">
-            <Title>
-              William L<HideOnDevice device="TABLET">indvall</HideOnDevice>
-            </Title>
-          </Link>
-        </GridLogo>
-        <GridHeader>
-          <ContactLink>Contact me</ContactLink>
-        </GridHeader>
-        <MailIconLink />
-        <GridFilters>
-          <CategoryFilters />
-        </GridFilters>
-        <GridSearch>
-          <SearchForm />
-        </GridSearch>
-      </Grid>
-    </header>
-  )
-}
+const Header = ({title}) => (
+  <AnimatedContainer>
+    <Container>
+      <Link to="/">
+        <Title as="h1">
+          <span role="img" aria-label="Laptop">
+            💻
+          </span>
+          {title}
+        </Title>
+      </Link>
+
+      <Nav />
+    </Container>
+  </AnimatedContainer>
+)
 
 Header.propTypes = {
-  siteTitle: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
 }
 
 export default Header

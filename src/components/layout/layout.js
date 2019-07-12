@@ -1,49 +1,42 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import {StaticQuery, graphql} from 'gatsby'
-import '../../styles/reset.css'
-import '../../styles/index.css'
-import Header from '../header'
-import ProjectList from '../project-list'
-import StyleWrapper from './style-wrapper'
-import Grid, {GridMain, GridSider} from './grid'
+import Head from 'components/head'
+import Header from 'components/header'
+import {Container} from './layout.css'
+import 'styles/global.css'
+import 'styles/reset.css'
 
-const Layout = ({children}) => {
-  return (
-    <StaticQuery
-      query={graphql`
-        query SiteTitleQuery {
-          site {
-            siteMetadata {
-              title
-            }
-          }
-        }
-      `}
-      render={data => (
-        <StyleWrapper>
-          <Header siteTitle={data.site.siteMetadata.title} />
-          <Grid>
-            <GridMain>
-              <main>
-                <article>{children}</article>
-              </main>
-            </GridMain>
-            <GridSider>
-              <ProjectList />
-            </GridSider>
-          </Grid>
-        </StyleWrapper>
-      )}
-    />
-  )
-}
+const Layout = ({data, children}) => (
+  <Container>
+    <Head />
+    <Header title={data.site.siteMetadata.siteTitle} />
+    {children}
+  </Container>
+)
 
 Layout.propTypes = {
-  children: PropTypes.oneOfType([
-    PropTypes.arrayOf(PropTypes.node),
-    PropTypes.node,
-  ]).isRequired,
+  children: PropTypes.node.isRequired,
+  data: PropTypes.object.isRequired,
 }
 
-export default Layout
+const LayoutWithQuery = props => (
+  <StaticQuery
+    query={graphql`
+      query LayoutQuery {
+        site {
+          siteMetadata {
+            siteTitle
+          }
+        }
+      }
+    `}
+    render={data => <Layout data={data} {...props} />}
+  />
+)
+
+LayoutWithQuery.propTypes = {
+  children: PropTypes.node.isRequired,
+}
+
+export default LayoutWithQuery

@@ -1,47 +1,47 @@
-import React, {useContext} from 'react'
-import {BREAKPOINTS} from '../constants/breakpoints'
-import FilterContext from '../context/filter-context'
-import Layout from '../components/layout'
-import SEO from '../components/seo'
+import React from 'react'
+import PropTypes from 'prop-types'
+import Layout from 'components/layout'
+import Box from 'components/box'
+import Title from 'components/title'
+import Gallery from 'components/gallery'
+import IOWave from 'components/io-wave'
+import Modal from 'containers/modal'
+import {graphql} from 'gatsby'
 
-const IndexPage = () => {
-  // TODO: refactor
-  const {category, query} = useContext(FilterContext)
+const Index = ({data}) => (
+  <Layout>
+    <Box>
+      <Title as="h2" size="large">
+        {data.homeJson.content.childMarkdownRemark.rawMarkdownBody}
+      </Title>
+      <Modal>hello from modal</Modal>
+    </Box>
+    <Gallery items={data.homeJson.gallery} />
+    <div style={{height: '50vh'}} />
+    <IOWave />
+  </Layout>
+)
 
-  return (
-    <Layout>
-      <SEO title="Home" keywords={[`home`]} />
-      {typeof window !== 'undefined' &&
-      window.innerWidth < BREAKPOINTS.PHONE &&
-      (category || query) ? null : (
-        <section>
-          <p>
-            <span role="img" aria-label="wave">
-              👋
-            </span>
-            Hej!
-            <br />
-            <br />
-            I&#8217;m William (
-            <a
-              href="https://github.com/shwilliam"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              @shwilliam
-            </a>{' '}
-            on GitHub). I&nbsp;love the web and working to make it more fun,
-            interesting and exciting to use.
-            <br />
-            <br />
-            Select a project from the left to read a bit more about it, or{' '}
-            <a href="mailto:w-lindvall@outlook.com">get it touch</a> if
-            you&#8217;re looking for something in particular!
-          </p>
-        </section>
-      )}
-    </Layout>
-  )
+Index.propTypes = {
+  data: PropTypes.object.isRequired,
 }
 
-export default IndexPage
+export default Index
+
+export const query = graphql`
+  query HomepageQuery {
+    homeJson {
+      title
+      content {
+        childMarkdownRemark {
+          html
+          rawMarkdownBody
+        }
+      }
+      gallery {
+        title
+        copy
+      }
+    }
+  }
+`

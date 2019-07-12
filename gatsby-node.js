@@ -1,4 +1,24 @@
 const path = require('path')
+const DirectoryNamedWebpackPlugin = require('directory-named-webpack-plugin')
+
+exports.onCreateWebpackConfig = ({
+  stage,
+  getConfig,
+  rules,
+  loaders,
+  actions,
+}) => {
+  actions.setWebpackConfig({
+    resolve: {
+      modules: [path.resolve(__dirname, 'src'), 'node_modules'],
+      plugins: [
+        new DirectoryNamedWebpackPlugin({
+          exclude: /node_modules/,
+        }),
+      ],
+    },
+  })
+}
 
 exports.createPages = ({boundActionCreators, graphql}) => {
   const {createPage} = boundActionCreators
@@ -10,6 +30,7 @@ exports.createPages = ({boundActionCreators, graphql}) => {
       allMarkdownRemark(
         sort: {order: DESC, fields: [frontmatter___date]}
         limit: 1000
+        filter: {fileAbsolutePath: {regex: "/(/projects).*\\\\.md/"}}
       ) {
         edges {
           node {

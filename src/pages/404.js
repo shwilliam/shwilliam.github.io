@@ -1,12 +1,11 @@
 import React from 'react'
-import Layout from '../components/layout'
-import SEO from '../components/seo'
+import Box from 'components/box'
+import Layout from 'components/layout'
 
-const NotFoundPage = () => (
+const NotFound = () => (
   <Layout>
-    <SEO title="404" />
-    404
+    <Box>Not found.</Box>
   </Layout>
 )
 
-export default NotFoundPage
+export default NotFound

@@ -1,35 +1,15 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import {graphql} from 'gatsby'
-import Img from 'gatsby-image'
-import styled from 'styled-components'
-import Layout from '../components/layout'
-import SEO from '../components/seo'
-import BrowserWindow from '../components/browser-window'
-import Carousel from '../components/carousel'
-import SROnly from '../components/sr-only'
-
-const Title = styled.h2`
-  font-size: 1.2rem;
-  margin: 0.4rem 0 0.4rem 0;
-`
-
-const PhotoContainer = styled.figure`
-  text-align: center;
-`
-
-const Photo = styled.img`
-  max-height: 400px;
-`
 
 export default function Template({data}) {
   const {markdownRemark} = data
   const {frontmatter, html} = markdownRemark
+
   return (
-    <Layout>
-      <SEO title={frontmatter.title} keywords={[`project`]} />
+    <>
       <header>
-        <Title>
+        <h2>
           {frontmatter.link ? (
             <a
               href={frontmatter.link}
@@ -41,39 +21,13 @@ export default function Template({data}) {
           ) : (
             frontmatter.title
           )}
-        </Title>
+        </h2>
         <div>{frontmatter.date}</div>
       </header>
-      {frontmatter.category === 'photos' ? (
-        <Carousel>
-          {frontmatter.photos.split(', ').map((photo, i) => (
-            <PhotoContainer key={photo}>
-              <SROnly>
-                <figcaption>{frontmatter.imgAlt.split(', ')[i]}</figcaption>
-              </SROnly>
-              <Photo src={photo} />
-            </PhotoContainer>
-          ))}
-        </Carousel>
-      ) : (
-        <figure>
-          <SROnly>
-            <figcaption>{frontmatter.imgAlt}</figcaption>
-          </SROnly>
-          {!frontmatter.imgUrl && !frontmatter.image ? null : (
-            <BrowserWindow>
-              {frontmatter.imgUrl ? (
-                <Photo src={frontmatter.imgUrl} />
-              ) : (
-                <Img fluid={frontmatter.image.childImageSharp.fluid} />
-              )}
-            </BrowserWindow>
-          )}
-        </figure>
-      )}
+
       {/* TODO: ensure accessibility on navigation */}
       <section dangerouslySetInnerHTML={{__html: html}} />
-    </Layout>
+    </>
   )
 }
 
