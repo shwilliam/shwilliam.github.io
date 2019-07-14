@@ -3,7 +3,7 @@ path: /project/poke-js
 title: Poke JS
 description: A small reactivity system
 category: tool
-link: https://github.com/shwilliam/poke-js
+source: https://github.com/shwilliam/poke-js
 date: 2019-04-24T00:00:00-05:00
 ---
 

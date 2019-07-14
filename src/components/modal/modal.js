@@ -1,8 +1,8 @@
 import React, {useEffect} from 'react'
 import PropTypes from 'prop-types'
-import {Button, Close} from './modal.css'
 import {Dialog} from '@reach/dialog'
 import VisuallyHidden from '@reach/visually-hidden'
+import {Close} from './modal.css'
 
 import '@reach/dialog/styles.css'
 
@@ -36,7 +36,7 @@ const Modal = ({children, open, showModal, hideModal}) => {
 
   return (
     <>
-      <Button onClick={showModal}>Show Modal</Button>
+      <button onClick={showModal}>Show Modal</button>
 
       <Dialog isOpen={open}>
         <Close onClick={hideModal}>

@@ -3,7 +3,7 @@ path: /project/vue-window-dimensions
 title: Vue-window-dimensions
 description: Declaratively use window dimensions in Vuejs
 category: tool
-link: https://github.com/shwilliam/vue-window-dimensions
+source: https://github.com/shwilliam/vue-window-dimensions
 date: 2019-05-01T00:00:00-05:00
 ---
 

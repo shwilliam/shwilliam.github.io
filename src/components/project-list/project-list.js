@@ -1,5 +1,14 @@
 import React from 'react'
-import {Link, StaticQuery, graphql} from 'gatsby'
+import {StaticQuery, graphql} from 'gatsby'
+import GitHubButton from 'react-github-btn'
+import LinkButton from 'components/link-button'
+import {
+  ProjectActions,
+  ProjectLink,
+  ProjectList as StyledProjectList,
+  ProjectListItem,
+  ProjectTitle,
+} from './project-list.css'
 
 const ProjectList = () => (
   <StaticQuery
@@ -12,10 +21,11 @@ const ProjectList = () => (
         ) {
           edges {
             node {
-              html
               frontmatter {
                 date(formatString: "DD-MM-YYYY")
                 path
+                link
+                source
                 title
                 category
               }
@@ -28,20 +38,46 @@ const ProjectList = () => (
       const projects = data.allMarkdownRemark.edges
 
       return (
-        <ul>
+        <StyledProjectList>
           {projects.map(({node}) => {
             const {frontmatter} = node
 
             return (
-              <li key={frontmatter.path}>
-                <Link to={frontmatter.path}>
-                  <p>{frontmatter.title}</p>
-                  <p>{frontmatter.date}</p>
-                </Link>
-              </li>
+              <ProjectListItem key={frontmatter.path}>
+                <ProjectTitle>
+                  <ProjectLink
+                    to={frontmatter.path}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {frontmatter.title}
+                  </ProjectLink>
+                </ProjectTitle>
+
+                <ProjectActions>
+                  {frontmatter.link && (
+                    <LinkButton
+                      href={frontmatter.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Link
+                    </LinkButton>
+                  )}
+                  {frontmatter.source && (
+                    <GitHubButton
+                      href={frontmatter.source}
+                      data-size="large"
+                      // data-show-count="true"
+                    >
+                      Source
+                    </GitHubButton>
+                  )}
+                </ProjectActions>
+              </ProjectListItem>
             )
           })}
-        </ul>
+        </StyledProjectList>
       )
     }}
   />

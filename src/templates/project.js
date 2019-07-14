@@ -25,7 +25,6 @@ export default function Template({data}) {
         <div>{frontmatter.date}</div>
       </header>
 
-      {/* TODO: ensure accessibility on navigation */}
       <section dangerouslySetInnerHTML={{__html: html}} />
     </>
   )
