@@ -9,6 +9,7 @@ const About = ({data}) => (
   <Layout>
     <Head pageTitle={data.aboutJson.title} />
     <Box>
+      <img alt="Alexis and I" src={data.aboutJson.imgUrl} />
       <div
         dangerouslySetInnerHTML={{
           __html: data.aboutJson.content.childMarkdownRemark.html,
@@ -28,6 +29,7 @@ export const query = graphql`
   query AboutQuery {
     aboutJson {
       title
+      imgUrl
       content {
         childMarkdownRemark {
           html
