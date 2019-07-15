@@ -4,12 +4,14 @@ import {graphql} from 'gatsby'
 import Layout from 'components/layout'
 import {BoxCenter} from 'components/box'
 import Head from 'components/head'
+import Title from 'components/title'
 import ProjectList from 'components/project-list'
 
 const About = ({data}) => (
   <Layout>
     <Head pageTitle={data.workJson.title} />
     <BoxCenter>
+      <Title as="h2">Open Source Projects</Title>
       <ProjectList />
     </BoxCenter>
   </Layout>

@@ -1,9 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Layout from 'components/layout'
-import Box from 'components/box'
+import Box, {BoxCenter} from 'components/box'
 import WelcomeText from 'components/welcome-text'
-import Gallery from 'components/gallery'
+import Title from 'components/title'
+import OSList from 'components/os-list'
+import VisList from 'components/vis-list'
 import {graphql} from 'gatsby'
 
 const Index = ({data}) => (
@@ -13,8 +15,16 @@ const Index = ({data}) => (
         {data.homeJson.content.childMarkdownRemark.html}
       </WelcomeText>
     </Box>
-    <Gallery items={data.homeJson.gallery} />
-    <div style={{height: '50vh'}} />
+
+    <BoxCenter>
+      <Title as="h2">Open Source Projects</Title>
+      <OSList />
+    </BoxCenter>
+
+    <BoxCenter>
+      <Title as="h2">Data Visualizations</Title>
+      <VisList />
+    </BoxCenter>
   </Layout>
 )
 

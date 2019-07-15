@@ -1,6 +1,6 @@
 ---
 path: /project/poke-js
-title: poke-js
+title: 👉 poke-js
 description: A small reactivity system
 category: os
 source: https://github.com/shwilliam/poke-js

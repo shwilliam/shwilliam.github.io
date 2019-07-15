@@ -10,18 +10,27 @@ export const ProjectActions = styled.div`
   & > * {
     margin-left: 0.5rem;
   }
+
+  ${MEDIA.TABLET`
+    flex-direction: column;
+
+    & > * {
+      width: 100%;
+      margin-left: 0;
+    }
+  `};
 `
 
 export const ProjectContent = styled.div`
   flex-grow: 1;
   margin-right: 2rem;
-`
 
-export const ProjectDescription = styled.div`
   ${MEDIA.TABLET`
-    display: none;
+    margin-right: 1rem;
   `};
 `
+
+export const ProjectDescription = styled.div``
 
 export const ProjectLink = styled(Link)`
   text-decoration: none;
@@ -42,8 +51,10 @@ export const ProjectListItem = styled.li`
   }
 `
 
-export const ProjectTitle = styled.h2`
+export const ProjectTitle = styled.h3`
   font-size: 1rem;
   font-weight: 800;
   flex-grow: 1;
+  margin: 0;
+  padding-bottom: 0.5rem;
 `

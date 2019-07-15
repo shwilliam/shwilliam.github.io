@@ -6,23 +6,21 @@ import {
   ProjectActions,
   ProjectContent,
   ProjectDescription,
-  // ProjectLink,
   ProjectList as StyledProjectList,
   ProjectListItem,
   ProjectTitle,
-} from './project-list.css'
+} from '../project-list/project-list.css'
 
-// TODO: DRY up project lists
-const ProjectList = () => (
+const VisList = () => (
   <StaticQuery
     query={graphql`
       query {
         allMarkdownRemark(
           sort: {order: DESC, fields: [frontmatter___date]}
-          limit: 1000
+          limit: 5
           filter: {
             fileAbsolutePath: {regex: "/(/projects).*\\\\.md/"}
-            frontmatter: {category: {eq: "os"}}
+            frontmatter: {featured: {eq: "vis"}}
           }
         ) {
           edges {
@@ -33,8 +31,8 @@ const ProjectList = () => (
                 link
                 source
                 title
-                category
                 excerpt
+                featured
               }
             }
           }
@@ -52,15 +50,7 @@ const ProjectList = () => (
             return (
               <ProjectListItem key={frontmatter.path}>
                 <ProjectContent>
-                  <ProjectTitle>
-                    {/* <ProjectLink
-                      to={frontmatter.path}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    > */}
-                    {frontmatter.title}
-                    {/* </ProjectLink> */}
-                  </ProjectTitle>
+                  <ProjectTitle>{frontmatter.title}</ProjectTitle>
 
                   <ProjectDescription>{frontmatter.excerpt}</ProjectDescription>
                 </ProjectContent>
@@ -94,4 +84,4 @@ const ProjectList = () => (
   />
 )
 
-export default ProjectList
+export default VisList

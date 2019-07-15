@@ -1,6 +1,6 @@
 ---
 path: /project/vue-shiny-button
-title: vue-shiny-button
+title: 🤳 vue-shiny-button
 description: A button so shiny you can see your own reflection
 category: os
 source: https://github.com/shwilliam/vue-shiny-button

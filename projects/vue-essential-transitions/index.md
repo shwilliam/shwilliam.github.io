@@ -1,6 +1,6 @@
 ---
 path: /project/vue-essential-transitions
-title: vue-essential-transitions
+title: 🍃 vue-essential-transitions
 description: Collection of Vue transitions for quick prototyping
 category: os
 source: https://github.com/shwilliam/vue-essential-transitions

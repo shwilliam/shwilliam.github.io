@@ -1,6 +1,6 @@
 ---
 path: /project/vue-window-dimensions
-title: vue-window-dimensions
+title: ↔ vue-window-dimensions
 description: Declaratively use window dimensions in Vuejs
 category: os
 source: https://github.com/shwilliam/vue-window-dimensions

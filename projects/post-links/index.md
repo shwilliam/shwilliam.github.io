@@ -1,6 +1,6 @@
 ---
 path: /project/post-links
-title: post-links
+title: 🔗 post-links
 description: Easily link to external websites from your Instagram posts
 category: os
 link: https://github.com/shwilliam/post-links/blob/master/README.md
