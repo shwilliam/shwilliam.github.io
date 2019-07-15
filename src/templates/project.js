@@ -1,32 +1,37 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import {graphql} from 'gatsby'
+import Layout from 'components/layout'
+import Box from 'components/box'
+import Title from 'components/title'
 
 export default function Template({data}) {
   const {markdownRemark} = data
   const {frontmatter, html} = markdownRemark
 
   return (
-    <>
-      <header>
-        <h2>
-          {frontmatter.link ? (
-            <a
-              href={frontmatter.link}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {frontmatter.title}
-            </a>
-          ) : (
-            frontmatter.title
-          )}
-        </h2>
-        <div>{frontmatter.date}</div>
-      </header>
+    <Layout>
+      <Box>
+        <header>
+          <Title as="h2" size="large">
+            {frontmatter.link ? (
+              <a
+                href={frontmatter.link}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {frontmatter.title}
+              </a>
+            ) : (
+              frontmatter.title
+            )}
+          </Title>
+          <div>{frontmatter.date}</div>
+        </header>
 
-      <section dangerouslySetInnerHTML={{__html: html}} />
-    </>
+        <section dangerouslySetInnerHTML={{__html: html}} />
+      </Box>
+    </Layout>
   )
 }
 
@@ -73,7 +78,6 @@ export const pageQuery = graphql`
         }
         imgUrl
         imgAlt
-        photos
       }
     }
   }

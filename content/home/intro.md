@@ -1,1 +1,3 @@
-Hej! I’m William Lindvall, a Vancouver-based web developer.
+Hej! 👋
+
+I’m William, a Vancouver-based web developer.

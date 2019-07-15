@@ -4,6 +4,8 @@ import GitHubButton from 'react-github-btn'
 import LinkButton from 'components/link-button'
 import {
   ProjectActions,
+  ProjectContent,
+  ProjectDescription,
   ProjectLink,
   ProjectList as StyledProjectList,
   ProjectListItem,
@@ -17,7 +19,10 @@ const ProjectList = () => (
         allMarkdownRemark(
           sort: {order: DESC, fields: [frontmatter___date]}
           limit: 1000
-          filter: {fileAbsolutePath: {regex: "/(/projects).*\\\\.md/"}}
+          filter: {
+            fileAbsolutePath: {regex: "/(/projects).*\\\\.md/"}
+            frontmatter: {category: {eq: "os"}}
+          }
         ) {
           edges {
             node {
@@ -28,6 +33,7 @@ const ProjectList = () => (
                 source
                 title
                 category
+                excerpt
               }
             }
           }
@@ -44,15 +50,19 @@ const ProjectList = () => (
 
             return (
               <ProjectListItem key={frontmatter.path}>
-                <ProjectTitle>
-                  <ProjectLink
-                    to={frontmatter.path}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    {frontmatter.title}
-                  </ProjectLink>
-                </ProjectTitle>
+                <ProjectContent>
+                  <ProjectTitle>
+                    <ProjectLink
+                      to={frontmatter.path}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {frontmatter.title}
+                    </ProjectLink>
+                  </ProjectTitle>
+
+                  <ProjectDescription>{frontmatter.excerpt}</ProjectDescription>
+                </ProjectContent>
 
                 <ProjectActions>
                   {frontmatter.link && (

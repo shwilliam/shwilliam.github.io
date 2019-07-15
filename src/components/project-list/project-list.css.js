@@ -1,10 +1,26 @@
 import styled from 'styled-components'
 import {Link} from 'gatsby'
+import MEDIA from 'helpers/mediaTemplates'
 
 export const ProjectActions = styled.div`
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+
   & > * {
     margin-left: 0.5rem;
   }
+`
+
+export const ProjectContent = styled.div`
+  flex-grow: 1;
+  margin-right: 2rem;
+`
+
+export const ProjectDescription = styled.div`
+  ${MEDIA.TABLET`
+    display: none;
+  `};
 `
 
 export const ProjectLink = styled(Link)`

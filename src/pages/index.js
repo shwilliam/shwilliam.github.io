@@ -2,23 +2,19 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Layout from 'components/layout'
 import Box from 'components/box'
-import Title from 'components/title'
+import WelcomeText from 'components/welcome-text'
 import Gallery from 'components/gallery'
-import IOWave from 'components/io-wave'
-import Modal from 'containers/modal'
 import {graphql} from 'gatsby'
 
 const Index = ({data}) => (
   <Layout>
     <Box>
-      <Title as="h2" size="large">
-        {data.homeJson.content.childMarkdownRemark.rawMarkdownBody}
-      </Title>
-      <Modal>hello from modal</Modal>
+      <WelcomeText>
+        {data.homeJson.content.childMarkdownRemark.html}
+      </WelcomeText>
     </Box>
     <Gallery items={data.homeJson.gallery} />
     <div style={{height: '50vh'}} />
-    <IOWave />
   </Layout>
 )
 
@@ -35,7 +31,6 @@ export const query = graphql`
       content {
         childMarkdownRemark {
           html
-          rawMarkdownBody
         }
       }
       gallery {
