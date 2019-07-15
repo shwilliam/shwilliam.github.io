@@ -1,12 +1,13 @@
 ---
 path: /project/vue-essential-transitions
-title: Vue essential transitions
+title: vue-essential-transitions
 description: Collection of Vue transitions for quick prototyping
-category: tool
+category: os
 source: https://github.com/shwilliam/vue-essential-transitions
 date: 2019-02-10T00:00:00-05:00
 imgUrl: https://user-images.githubusercontent.com/38357771/54794660-f08ccd00-4c1e-11e9-86f7-195b16c810e9.gif
 imgAlt: Transition examples
+excerpt: Collection of Vue transition styles for quick prototyping
 ---
 
 - ![Package version](https://img.shields.io/npm/v/vue-essential-transitions.svg)

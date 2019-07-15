@@ -1,13 +1,14 @@
 ---
 path: /project/post-links
-title: Instagram post links
+title: post-links
 description: Easily link to external websites from your Instagram posts
-category: experiment
+category: os
 link: https://github.com/shwilliam/post-links/blob/master/README.md
 source: https://github.com/shwilliam/post-links/
 date: 2019-03-12T00:00:00-05:00
 imgUrl: https://user-images.githubusercontent.com/38357771/55280205-65c36680-52df-11e9-951e-62ad3e8a8224.gif
 imgAlt: Overview example
+excerpt: Easily link to external websites from your Instagram posts
 ---
 
 It seems like everyone and everything has an Instagram account. Businesses, schools, clubs, Instagram-based shops; There's absolutely everything.
