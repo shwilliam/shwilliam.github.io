@@ -1,8 +1,13 @@
 import styled from 'styled-components'
+import MEDIA from 'helpers/mediaTemplates'
 
 export const Container = styled.nav`
   ul {
     display: flex;
+
+    ${MEDIA.TABLET`
+      margin-top: 1rem;
+    `};
 
     li {
       text-transform: uppercase;

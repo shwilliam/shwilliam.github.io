@@ -15,6 +15,6 @@ export const Text = styled.span`
   line-height: 1.2;
 
   ${MEDIA.TABLET`
-    font-size: ${({size}) => () => (size === 'large' ? '2.6rem' : '2rem')};
+    font-size: ${({size}) => () => (size === 'large' ? '2.2rem' : '2rem')};
   `};
 `

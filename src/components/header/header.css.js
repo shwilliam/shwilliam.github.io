@@ -5,16 +5,16 @@ export const Container = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 4rem 4rem 2rem 4rem;
+  padding: 4rem 4rem 1rem 4rem;
 
   a {
     text-decoration: none;
     white-space: nowrap;
-    color: #757575;
+    color: #757575 !important;
 
     h1,
     &:hover {
-      color: #000;
+      color: #000 !important;
     }
   }
 

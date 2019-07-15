@@ -6,6 +6,7 @@ import WelcomeText from 'components/welcome-text'
 import Title from 'components/title'
 import OSList from 'components/os-list'
 import VisList from 'components/vis-list'
+import {GatsbyLinkButton} from 'components/link-button'
 import {graphql} from 'gatsby'
 
 const Index = ({data}) => (
@@ -19,10 +20,11 @@ const Index = ({data}) => (
     <BoxCenter>
       <Title as="h2">Open Source Projects</Title>
       <OSList />
+      <GatsbyLinkButton to="/work">More</GatsbyLinkButton>
     </BoxCenter>
 
     <BoxCenter>
-      <Title as="h2">Data Visualizations</Title>
+      <Title as="h2">Visualizations</Title>
       <VisList />
     </BoxCenter>
   </Layout>
