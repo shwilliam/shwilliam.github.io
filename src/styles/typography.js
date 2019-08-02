@@ -1,24 +1,12 @@
 import Typography from 'typography'
-import wordpressKubrickTheme from 'typography-theme-wordpress-kubrick'
+import typographyThemeGithub from 'typography-theme-github'
 
-wordpressKubrickTheme.overrideThemeStyles = ({rhythm}, options) => ({
-  a: {
-    color: '#000000 !important',
-    textDecoration: 'underline',
-  },
-  'ul, ol': {
-    marginLeft: 0,
-    paddingLeft: 0,
-    textIndent: 0,
-  },
-  li: {
-    margin: 0,
-  },
-  'li::before': {
-    content: "'' !important",
+typographyThemeGithub.overrideThemeStyles = ({rhythm}, options) => ({
+  'h1,h2,h3,h4,h5,h6': {
+    borderBottom: 'none',
   },
 })
 
-const typography = new Typography(wordpressKubrickTheme)
+const typography = new Typography(typographyThemeGithub)
 
 export default typography
