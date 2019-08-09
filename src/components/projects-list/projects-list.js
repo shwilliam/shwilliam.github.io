@@ -5,7 +5,7 @@ import {
   ProjectActions,
   ProjectContent,
   ProjectDescription,
-  ProjectLink,
+  // ProjectLink,
   ProjectList as StyledProjectList,
   ProjectListItem,
   ProjectTitle,
@@ -18,17 +18,17 @@ const ProjectsList = projects => (
 
       return (
         <ProjectListItem key={frontmatter.path}>
-          <ProjectLink
+          {/* <ProjectLink
             to={frontmatter.path}
             target="_blank"
             rel="noopener noreferrer"
-          >
-            <ProjectContent>
-              <ProjectTitle>{frontmatter.title}</ProjectTitle>
+          > */}
+          <ProjectContent>
+            <ProjectTitle>{frontmatter.title}</ProjectTitle>
 
-              <ProjectDescription>{frontmatter.excerpt}</ProjectDescription>
-            </ProjectContent>
-          </ProjectLink>
+            <ProjectDescription>{frontmatter.excerpt}</ProjectDescription>
+          </ProjectContent>
+          {/* </ProjectLink> */}
 
           <ProjectActions>
             {frontmatter.link && (

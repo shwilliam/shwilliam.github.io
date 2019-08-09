@@ -51,10 +51,6 @@ export const ProjectListItem = styled.li`
   justify-content: space-between;
   padding: 1.5rem 0;
 
-  &:hover {
-    opacity: 0.8;
-  }
-
   &:not(:last-child) {
     border-bottom: 2px solid #f2f2f2;
   }
