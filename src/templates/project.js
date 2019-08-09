@@ -13,7 +13,7 @@ export default function Template({data}) {
     <Layout>
       <Box>
         <header>
-          <Title as="h2" size="large">
+          <Title as="h2">
             {frontmatter.link ? (
               <a
                 href={frontmatter.link}

@@ -4,7 +4,7 @@ import Title from 'components/title'
 import {TextContent} from './welcome-text.css'
 
 const WelcomeText = ({children}) => (
-  <Title as="h2" size="large">
+  <Title as="h2">
     <TextContent
       dangerouslySetInnerHTML={{
         __html: children,
