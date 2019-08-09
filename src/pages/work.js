@@ -6,6 +6,7 @@ import {BoxCenter} from 'components/box'
 import Head from 'components/head'
 import Title from 'components/title'
 import OSProjects from 'containers/queries/os-projects'
+import Microsites from 'containers/queries/microsites'
 import ProjectsList from 'components/projects-list'
 
 const Work = ({data}) => (
@@ -14,6 +15,13 @@ const Work = ({data}) => (
     <BoxCenter>
       <Title as="h2">Open Source Libraries</Title>
       <OSProjects render={ProjectsList} />
+    </BoxCenter>
+
+    <BoxCenter>
+      <Title as="h2" id="microsites">
+        Microsites
+      </Title>
+      <Microsites render={ProjectsList} />
     </BoxCenter>
   </Layout>
 )

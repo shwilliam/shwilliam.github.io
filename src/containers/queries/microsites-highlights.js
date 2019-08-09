@@ -8,10 +8,10 @@ const Microsites = ({render}) => (
       query {
         allMarkdownRemark(
           sort: {order: DESC, fields: [frontmatter___date]}
-          limit: 1000
+          limit: 5
           filter: {
             fileAbsolutePath: {regex: "/(/projects).*\\\\.md/"}
-            frontmatter: {category: {eq: "site"}}
+            frontmatter: {featured: {eq: "site"}}
           }
         ) {
           edges {

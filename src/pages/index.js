@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import {graphql} from 'gatsby'
 import OSHighlights from 'containers/queries/os-highlights'
-import Microsites from 'containers/queries/microsites'
+import MicrositesHighlights from 'containers/queries/microsites-highlights'
 import ProjectsList from 'components/projects-list'
 import Layout from 'components/layout'
 import Box, {BoxCenter} from 'components/box'
@@ -26,7 +26,8 @@ const Index = ({data}) => (
 
     <BoxCenter>
       <Title as="h2">Microsites</Title>
-      <Microsites render={ProjectsList} />
+      <MicrositesHighlights render={ProjectsList} />
+      <GatsbyLinkButton to="/work#microsites">More</GatsbyLinkButton>
     </BoxCenter>
   </Layout>
 )
