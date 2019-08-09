@@ -12,3 +12,5 @@ excerpt: An interactive scatterplot exploring the gender pay gap in the US
 ---
 
 A simple, interactive visualization of the gender pay gap in the US, made with D3.
+
+The data used is sourced the Bureau of Labor Statistics (US) and includes the salaries of full-time employees as of 2014. I also think it is important to note that the data used does not take into consideration the specific jobs performed within each occupation.

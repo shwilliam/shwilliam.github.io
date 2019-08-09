@@ -11,7 +11,36 @@ excerpt: Declarative, direction-aware hover in VueJS
 featured: os
 ---
 
-- ![Package version](https://img.shields.io/npm/v/vue-direction.svg)
-- ![Minified size](https://img.shields.io/bundlephobia/min/vue-direction.svg)
-
 [`vue-direction`](https://github.com/shwilliam/vue-direction) is a component that allows you to easily use users' mouse movement direction in your app. It utilizes Vue's [scoped-slots](https://vuejs.org/v2/guide/components-slots.html) syntax to expose x- and y-axis mouse direction that can be passed to the components that require them.
+
+## Installation
+
+Install the component via npm by running `npm i vue-direction` or `yarn add vue-direction`.
+
+## Usage
+
+Import, register and place the component in your Vue app.
+
+```html
+<template>
+  <VueDirection>
+    <template slot-scope="{ mouseDirection }">
+      <!-- do something with 'mouseDirection' -->
+      {{ mouseDirection.x }}
+      {{ mouseDirection.y }}
+    </template>
+  <VueDirection/>
+</template>
+```
+
+```js
+import VueDirection from 'vue-direction'
+
+export default {
+  components: {
+    VueDirection,
+  },
+}
+```
+
+[![Try it on codesandbox](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/3x46lrlk1q)

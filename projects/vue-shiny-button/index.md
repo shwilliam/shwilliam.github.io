@@ -10,7 +10,40 @@ imgalt: component example
 excerpt: A super shiny & incredibly useful Vue button component
 ---
 
-- ![Package version](https://img.shields.io/npm/v/vue-shiny-button.svg)
-- ![Minified size](https://img.shields.io/bundlephobia/min/vue-shiny-button.svg)
-
 [`vue-shiny-button`](https://github.com/shwilliam/vue-shiny-button) is a super shiny and incredibly unuseful Vue button component.
+
+## Installation
+
+Install the package from npm by running `npm i vue-shiny-button` or `yarn add vue-shiny-button`.
+
+## Usage
+
+Import and register the component to use it in your app's templates.
+
+```html
+<template>
+  <VueShinyButton @click="..." />
+</template>
+```
+
+```js
+import VueShinyButton from 'vue-shiny-button'
+
+export default {
+  components: {
+    VueShinyButton,
+  },
+}
+```
+
+## Accessibility
+
+Apply attributes, such as aria-labels, directly on the element to apply them to the button.
+
+```html
+<template>
+  <VueShinyButton aria-label="Send message" />
+</template>
+```
+
+[![Try it on CodeSandbox](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/ol9q8jyw4q?fontsize=14)
