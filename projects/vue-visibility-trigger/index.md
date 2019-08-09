@@ -6,6 +6,7 @@ category: os
 source: https://github.com/shwilliam/vue-visibility-trigger
 date: 2018-10-14T00:00:00-05:00
 excerpt: Declarative Vue component that emits an event when scrolled into view
+featured: os
 ---
 
 - ![Package version](https://img.shields.io/npm/v/vue-visibility-trigger.svg)

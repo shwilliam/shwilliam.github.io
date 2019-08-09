@@ -5,23 +5,24 @@ import Layout from 'components/layout'
 import {BoxCenter} from 'components/box'
 import Head from 'components/head'
 import Title from 'components/title'
-import ProjectList from 'components/project-list'
+import OSProjects from 'containers/queries/os-projects'
+import ProjectsList from 'components/projects-list'
 
-const About = ({data}) => (
+const Work = ({data}) => (
   <Layout>
     <Head pageTitle={data.workJson.title} />
     <BoxCenter>
-      <Title as="h2">Open Source Projects</Title>
-      <ProjectList />
+      <Title as="h2">Open Source Libraries</Title>
+      <OSProjects render={ProjectsList} />
     </BoxCenter>
   </Layout>
 )
 
-About.propTypes = {
+Work.propTypes = {
   data: PropTypes.object.isRequired,
 }
 
-export default About
+export default Work
 
 export const query = graphql`
   query WorkQuery {

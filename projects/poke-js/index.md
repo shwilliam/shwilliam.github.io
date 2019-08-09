@@ -6,6 +6,7 @@ category: os
 source: https://github.com/shwilliam/poke-js
 date: 2019-04-24T00:00:00-05:00
 excerpt: A small reactivity system
+featured: os
 ---
 
 - ![Package version](https://img.shields.io/npm/v/poke-js.svg)

@@ -2,7 +2,7 @@
 path: /project/explore-spotify
 title: 🎵 Explore Spotify graph
 description: Interactive Spotify recommendation graph
-category: visualization
+category: site
 link: https://explore-spotify.netlify.com/
 source: https://github.com/shwilliam/explore-spotify
 date: 2018-12-10T00:00:00-05:00

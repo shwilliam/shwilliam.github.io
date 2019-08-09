@@ -1,13 +1,14 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import {graphql} from 'gatsby'
+import OSHighlights from 'containers/queries/os-highlights'
+import Microsites from 'containers/queries/microsites'
+import ProjectsList from 'components/projects-list'
 import Layout from 'components/layout'
 import Box, {BoxCenter} from 'components/box'
 import WelcomeText from 'components/welcome-text'
 import Title from 'components/title'
-import OSList from 'components/os-list'
-import VisList from 'components/vis-list'
 import {GatsbyLinkButton} from 'components/link-button'
-import {graphql} from 'gatsby'
 
 const Index = ({data}) => (
   <Layout>
@@ -18,14 +19,14 @@ const Index = ({data}) => (
     </Box>
 
     <BoxCenter>
-      <Title as="h2">Open Source Projects</Title>
-      <OSList />
+      <Title as="h2">Open Source Libraries</Title>
+      <OSHighlights render={ProjectsList} />
       <GatsbyLinkButton to="/work">More</GatsbyLinkButton>
     </BoxCenter>
 
     <BoxCenter>
-      <Title as="h2">Visualizations</Title>
-      <VisList />
+      <Title as="h2">Microsites</Title>
+      <Microsites render={ProjectsList} />
     </BoxCenter>
   </Layout>
 )

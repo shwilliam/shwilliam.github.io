@@ -3,8 +3,8 @@ import PropTypes from 'prop-types'
 import Title from 'components/title'
 import {TextContent} from './welcome-text.css'
 
-const WelcomeText = ({children, ...props}) => (
-  <Title as="h2" size="large" {...props}>
+const WelcomeText = ({children}) => (
+  <Title as="h2" size="large">
     <TextContent
       dangerouslySetInnerHTML={{
         __html: children,
