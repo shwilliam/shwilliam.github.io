@@ -5,7 +5,7 @@ export const Container = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 4rem 4rem 1rem 4rem;
+  padding: 4rem 4rem 0 4rem;
 
   a {
     text-decoration: none;

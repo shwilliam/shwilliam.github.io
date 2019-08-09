@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import {graphql} from 'gatsby'
+import GitHubButton from 'react-github-btn'
 import OSHighlights from 'containers/queries/os-highlights'
 import MicrositesHighlights from 'containers/queries/microsites-highlights'
 import ProjectsList from 'components/projects-list'
@@ -16,6 +17,13 @@ const Index = ({data}) => (
       <WelcomeText>
         {data.homeJson.content.childMarkdownRemark.html}
       </WelcomeText>
+      <GitHubButton
+        href="https://github.com/shwilliam"
+        data-size="large"
+        aria-label="Follow me on GitHub"
+      >
+        Follow
+      </GitHubButton>
     </Box>
 
     <BoxCenter>

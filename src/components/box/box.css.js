@@ -2,11 +2,11 @@ import styled from 'styled-components'
 import MEDIA from 'helpers/mediaTemplates'
 
 export const Container = styled.div`
-  padding: 2rem 4rem;
+  padding: 3rem 4rem 4rem 4rem;
   max-width: 1000px;
 
   ${MEDIA.TABLET`
-    padding: 2rem 2rem;
+    padding: 2rem 2rem 3rem 2rem;
   `};
 `
 
