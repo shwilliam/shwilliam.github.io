@@ -22,7 +22,6 @@ export const ProjectActions = styled.div`
 `
 
 export const ProjectContent = styled.div`
-  flex-grow: 1;
   margin-right: 2rem;
 
   ${MEDIA.TABLET`
@@ -33,7 +32,13 @@ export const ProjectContent = styled.div`
 export const ProjectDescription = styled.div``
 
 export const ProjectLink = styled(Link)`
-  text-decoration: none;
+  &,
+  &:hover,
+  &:visited {
+    flex-grow: 1;
+    color: inherit;
+    text-decoration: none;
+  }
 `
 
 export const ProjectList = styled.ul`
@@ -45,6 +50,10 @@ export const ProjectListItem = styled.li`
   display: flex;
   justify-content: space-between;
   padding: 1.5rem 0;
+
+  &:hover {
+    opacity: 0.8;
+  }
 
   &:not(:last-child) {
     border-bottom: 2px solid #f2f2f2;
