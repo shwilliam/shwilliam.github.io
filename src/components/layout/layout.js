@@ -4,7 +4,6 @@ import {StaticQuery, graphql} from 'gatsby'
 import Head from 'components/head'
 import Header from 'components/header'
 import {Container} from './layout.css'
-import 'styles/global.css'
 import 'styles/reset.css'
 
 const Layout = ({data, children}) => (

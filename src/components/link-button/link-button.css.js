@@ -1,7 +1,6 @@
 import styled from 'styled-components'
 import {Link} from 'gatsby'
 
-// DRY this up
 export const StyledLink = styled.a`
   display: inline-block;
   -webkit-appearance: none;
@@ -14,7 +13,7 @@ export const StyledLink = styled.a`
   line-height: 1.333;
   vertical-align: top;
   text-align: center;
-  margin: 0 0 0.13rem 0;
+  margin: 0 0 0.44rem 0;
   padding: 5px 10px;
   transition: 0.2s background-color ease;
   text-decoration: none;
@@ -40,7 +39,7 @@ export const StyledGatsbyLink = styled(Link)`
   line-height: 1.333;
   vertical-align: top;
   text-align: center;
-  margin: 0 0 0.13rem 0;
+  margin: 0 0 0.44rem 0;
   padding: 5px 10px;
   transition: 0.2s background-color ease;
   text-decoration: none;
