@@ -1,24 +1,34 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import {Link} from 'gatsby'
-import {Container} from './header.css'
+import useWindowScroll from 'hooks/useWindowScroll'
 import Title from 'components/title'
+import WidthContainer from 'components/width-container'
 import Nav from 'components/header/nav'
+import {Container, FlexContainer} from './header.css'
 
-const Header = ({title}) => (
-  <Container>
-    <Link to="/">
-      <Title as="h1">
-        <span role="img" aria-label="Laptop">
-          💻
-        </span>
-        {title}
-      </Title>
-    </Link>
+const Header = ({title}) => {
+  const [isScrolled] = useWindowScroll()
 
-    <Nav />
-  </Container>
-)
+  return (
+    <Container className={isScrolled ? 'scrolled' : ''}>
+      <WidthContainer>
+        <FlexContainer>
+          <Link to="/">
+            <Title as="h1">
+              <span role="img" aria-label="Laptop">
+                💻
+              </span>
+              {title}
+            </Title>
+          </Link>
+
+          <Nav />
+        </FlexContainer>
+      </WidthContainer>
+    </Container>
+  )
+}
 
 Header.propTypes = {
   title: PropTypes.string.isRequired,

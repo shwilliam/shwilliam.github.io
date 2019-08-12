@@ -3,15 +3,15 @@ import PropTypes from 'prop-types'
 import {StaticQuery, graphql} from 'gatsby'
 import Head from 'components/head'
 import Header from 'components/header'
-import {Container} from './layout.css'
+import WidthContainer from 'components/width-container'
 import 'styles/reset.css'
 
 const Layout = ({data, children}) => (
-  <Container>
+  <>
     <Head />
     <Header title={data.site.siteMetadata.siteTitle} />
-    {children}
-  </Container>
+    <WidthContainer>{children}</WidthContainer>
+  </>
 )
 
 Layout.propTypes = {
