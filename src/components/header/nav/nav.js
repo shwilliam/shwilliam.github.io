@@ -1,9 +1,9 @@
 import React from 'react'
 import {Link} from 'gatsby'
-import {Container} from './nav.css'
+import {Wrapper} from './nav.css'
 
 const Nav = () => (
-  <Container>
+  <Wrapper>
     <ul>
       <li>
         <Link to="/about">Me</Link>
@@ -17,7 +17,7 @@ const Nav = () => (
         </a>
       </li>
     </ul>
-  </Container>
+  </Wrapper>
 )
 
 export default Nav

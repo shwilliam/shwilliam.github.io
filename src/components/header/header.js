@@ -3,19 +3,19 @@ import PropTypes from 'prop-types'
 import {Link} from 'gatsby'
 import useWindowScroll from 'hooks/useWindowScroll'
 import Title from 'components/title'
-import WidthContainer from 'components/width-container'
+import WidthWrapper from 'components/width-wrapper'
 import Nav from 'components/header/nav'
-import {Container, FlexContainer} from './header.css'
+import {Wrapper, FlexWrapper} from './header.css'
 
 const Header = ({title}) => {
   const [isScrolled] = useWindowScroll()
 
   return (
-    <Container className={isScrolled ? 'scrolled' : ''}>
-      <WidthContainer>
-        <FlexContainer>
+    <Wrapper className={isScrolled ? 'scrolled' : ''}>
+      <WidthWrapper>
+        <FlexWrapper>
           <Link to="/">
-            <Title as="h1">
+            <Title>
               <span role="img" aria-label="Laptop">
                 💻
               </span>
@@ -24,9 +24,9 @@ const Header = ({title}) => {
           </Link>
 
           <Nav />
-        </FlexContainer>
-      </WidthContainer>
-    </Container>
+        </FlexWrapper>
+      </WidthWrapper>
+    </Wrapper>
   )
 }
 

@@ -1,7 +1,7 @@
-import {Container, ContainerCenter} from './box.css'
+import {Wrapper, WrapperCenter} from './box.css'
 
-const Box = Container
-const BoxCenter = ContainerCenter
+const Box = Wrapper
+const BoxCenter = WrapperCenter
 
 export default Box
 export {BoxCenter}

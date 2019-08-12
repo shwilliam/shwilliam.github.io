@@ -4,7 +4,7 @@ import {Title, Copy} from './item.css'
 
 const Item = ({title, copy}) => (
   <div>
-    <Title>{title}</Title>
+    <Title as="span">{title}</Title>
     <Copy>{copy}</Copy>
   </div>
 )

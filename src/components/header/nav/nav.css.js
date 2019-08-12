@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import MEDIA from 'helpers/mediaTemplates'
 
-export const Container = styled.nav`
+export const Wrapper = styled.nav`
   ul {
     display: flex;
 

@@ -22,20 +22,20 @@ const Index = ({data}) => (
         data-size="large"
         aria-label="Follow me on GitHub"
       >
-        Follow
+        Follow me
       </GitHubButton>
     </Box>
 
     <BoxCenter>
       <Title as="h2">Open Source Libraries</Title>
       <OSHighlights render={ProjectsList} />
-      <GatsbyLinkButton to="/work">More</GatsbyLinkButton>
+      <GatsbyLinkButton to="/work">More projects</GatsbyLinkButton>
     </BoxCenter>
 
     <BoxCenter>
       <Title as="h2">Microsites</Title>
       <MicrositesHighlights render={ProjectsList} />
-      <GatsbyLinkButton to="/work#microsites">More</GatsbyLinkButton>
+      <GatsbyLinkButton to="/work#microsites">More projects</GatsbyLinkButton>
     </BoxCenter>
   </Layout>
 )

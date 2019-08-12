@@ -1,7 +1,7 @@
 import styled from 'styled-components'
-import {Text} from '../title/title.css'
+import {TextStyles} from 'components/title'
 
-export const TextContent = styled(Text)`
+export const TextContent = styled(TextStyles)`
   margin-top: 4rem;
 
   > * {

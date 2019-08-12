@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import MEDIA from 'helpers/mediaTemplates'
 
-export const Container = styled.div`
+export const Wrapper = styled.div`
   padding-top: 1rem;
   padding-bottom: 3rem;
   max-width: 1000px;
@@ -12,6 +12,6 @@ export const Container = styled.div`
   `};
 `
 
-export const ContainerCenter = styled(Container)`
+export const WrapperCenter = styled(Wrapper)`
   margin: 0 auto;
 `
