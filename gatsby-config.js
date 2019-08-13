@@ -55,11 +55,9 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-webpack-size`,
     {
-      resolve: `gatsby-plugin-react-svg`,
+      resolve: `gatsby-source-filesystem`,
       options: {
-        rule: {
-          include: /images\/.*\.svg$/,
-        },
+        path: `${__dirname}/src/images/`,
       },
     },
   ],

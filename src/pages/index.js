@@ -55,10 +55,6 @@ export const query = graphql`
           html
         }
       }
-      gallery {
-        title
-        copy
-      }
     }
   }
 `

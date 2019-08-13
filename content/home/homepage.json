@@ -1,18 +1,4 @@
 {
   "title": "Home",
-  "content": "intro.md",
-  "gallery": [
-    {
-      "title": "vue-direction",
-      "copy": "Declarative, direction-aware hover component"
-    },
-    {
-      "title": "poke-js",
-      "copy": "A small reactivity system"
-    },
-    {
-      "title": "Tumblr clone",
-      "copy": "Full-stack Tumblr clone"
-    }
-  ]
+  "content": "intro.md"
 }
