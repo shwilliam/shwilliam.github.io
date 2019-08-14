@@ -7,7 +7,7 @@ const Image = () => {
     query {
       placeholderImage: file(relativePath: {eq: "gondola.jpg"}) {
         childImageSharp {
-          fluid(maxWidth: 960) {
+          fluid(maxWidth: 960, quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -18,7 +18,7 @@ const Image = () => {
   return (
     <Img
       fluid={data.placeholderImage.childImageSharp.fluid}
-      style={{zIndex: -1}}
+      style={{minWidth: '65%', zIndex: -1}}
     />
   )
 }

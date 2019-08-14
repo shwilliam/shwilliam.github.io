@@ -8,6 +8,7 @@ export const Wrapper = styled.header`
   height: 10rem;
   background-color: #fff;
   transition: all 0.2s ease-in-out;
+  z-index: 999;
 
   &.scrolled {
     padding-top: 1.6rem;
