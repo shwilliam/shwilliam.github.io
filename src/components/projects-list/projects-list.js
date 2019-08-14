@@ -1,7 +1,8 @@
 import React from 'react'
 import GitHubButton from 'react-github-btn'
-import LinkButton from 'components/link-button'
 import {Consumer} from 'store/createContext'
+import LinkButton from 'components/link-button'
+import Tag from 'components/tag'
 import {
   ProjectActions,
   ProjectContent,
@@ -47,6 +48,12 @@ const ProjectsList = projects => (
                   <ProjectTitle>{frontmatter.title}</ProjectTitle>
 
                   <ProjectDescription>{frontmatter.excerpt}</ProjectDescription>
+
+                  {frontmatter.tech.split(' ').map(tag => (
+                    <Tag key={tag} value={tag}>
+                      {tag}
+                    </Tag>
+                  ))}
                 </ProjectContent>
                 {/* </ProjectLink> */}
 
