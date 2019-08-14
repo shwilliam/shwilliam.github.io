@@ -13,7 +13,7 @@ export const StyledLink = styled.a`
   line-height: 1.333;
   vertical-align: top;
   text-align: center;
-  margin: 0 0 0.44rem 0;
+  margin: 0 0 0.57rem 0;
   padding: 5px 10px;
   transition: 0.2s background-color ease;
   text-decoration: none;
