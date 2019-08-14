@@ -54,6 +54,10 @@ export const ProjectListItem = styled.li`
   &:not(:last-child) {
     border-bottom: 2px solid #f2f2f2;
   }
+
+  &.dim {
+    opacity: 0.5;
+  }
 `
 
 export const ProjectTitle = styled.h3`

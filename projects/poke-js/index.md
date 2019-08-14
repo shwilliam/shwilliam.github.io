@@ -1,8 +1,8 @@
 ---
 path: /project/poke-js
 title: 👉 poke-js
-description: A small reactivity system
 category: os
+tech: vanilla
 source: https://github.com/shwilliam/poke-js
 date: 2019-04-24T00:00:00-05:00
 excerpt: A small reactivity system

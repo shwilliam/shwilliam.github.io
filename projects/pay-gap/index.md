@@ -1,8 +1,8 @@
 ---
 path: /project/pay-gap
 title: 📈 Gender pay gap
-description: An interactive visualization of the gender pay gap
 category: site
+tech: d3
 link: https://pay-gap.netlify.com/
 source: https://github.com/shwilliam/gender-pay-gap
 date: 2018-12-19T00:00:00-05:00

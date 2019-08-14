@@ -1,8 +1,8 @@
 ---
 path: /project/lagom-css
 title: 👒 Lagom CSS
-description: Functional, utility-first CSS library
 category: os
+tech: stylus
 link: https://shwilliam.github.io/lagom-css/
 source: https://github.com/shwilliam/lagom-css/
 date: 2019-05-22T00:00:00-05:00

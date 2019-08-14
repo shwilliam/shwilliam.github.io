@@ -3,14 +3,18 @@ import PropTypes from 'prop-types'
 import {Provider} from './createContext'
 
 const AppProvider = ({children}) => {
-  const [isOpen, setIsOpen] = useState(false)
+  const [activeCategory, setActiveCategory] = useState(null)
+
+  const onCategorySelect = e =>
+    e.target.value === activeCategory
+      ? setActiveCategory(null)
+      : setActiveCategory(e.target.value)
 
   return (
     <Provider
       value={{
-        open: isOpen,
-        showModal: () => setIsOpen(true),
-        hideModal: () => setIsOpen(false),
+        activeCategory,
+        onCategorySelect,
       }}
     >
       {children}

@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import {StaticQuery, graphql} from 'gatsby'
 
-const Projects = ({render}) => (
+const Microsites = ({render}) => (
   <StaticQuery
     query={graphql`
       query {
@@ -11,7 +11,7 @@ const Projects = ({render}) => (
           limit: 1000
           filter: {
             fileAbsolutePath: {regex: "/(/projects).*\\\\.md/"}
-            frontmatter: {category: {eq: "os"}}
+            frontmatter: {category: {eq: "site"}}
           }
         ) {
           edges {
@@ -22,8 +22,9 @@ const Projects = ({render}) => (
                 link
                 source
                 title
-                category
                 excerpt
+                featured
+                tech
               }
             }
           }
@@ -34,8 +35,8 @@ const Projects = ({render}) => (
   />
 )
 
-Projects.propTypes = {
+Microsites.propTypes = {
   render: PropTypes.func.isRequired,
 }
 
-export default Projects
+export default Microsites

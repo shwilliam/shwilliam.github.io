@@ -3,6 +3,7 @@ path: /project/new-conversations
 title: 📷 New Conversations
 description: Open conversations in images
 category: site
+tech: vue
 link: http://new-conversations.com/
 source: https://github.com/shwilliam/new-conversations
 date: 2019-03-19T00:00:00-05:00

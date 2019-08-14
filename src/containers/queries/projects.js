@@ -2,16 +2,16 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import {StaticQuery, graphql} from 'gatsby'
 
-const Microsites = ({render}) => (
+const Projects = ({render}) => (
   <StaticQuery
     query={graphql`
       query {
         allMarkdownRemark(
           sort: {order: DESC, fields: [frontmatter___date]}
-          limit: 5
+          limit: 1000
           filter: {
             fileAbsolutePath: {regex: "/(/projects).*\\\\.md/"}
-            frontmatter: {featured: {eq: "site"}}
+            frontmatter: {category: {eq: "os"}}
           }
         ) {
           edges {
@@ -22,8 +22,9 @@ const Microsites = ({render}) => (
                 link
                 source
                 title
+                category
                 excerpt
-                featured
+                tech
               }
             }
           }
@@ -34,8 +35,8 @@ const Microsites = ({render}) => (
   />
 )
 
-Microsites.propTypes = {
+Projects.propTypes = {
   render: PropTypes.func.isRequired,
 }
 
-export default Microsites
+export default Projects

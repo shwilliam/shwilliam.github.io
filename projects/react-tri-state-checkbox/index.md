@@ -1,8 +1,8 @@
 ---
 path: /project/react-tri-state-checkbox
 title: ☑ Tri-State Checkbox
-description: A mixed-state checkbox based on the WAI-ARIA Authoring Practices's tri-state checkbox
 category: os
+tech: react
 link: https://codesandbox.io/s/react-tri-state-checkbox-demo-8j7mo?fontsize=14
 source: https://github.com/shwilliam/react-tri-state-checkbox
 date: 2019-08-10T00:00:00-05:00

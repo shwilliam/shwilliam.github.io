@@ -1,8 +1,8 @@
 ---
 path: /project/aeropress
 title: 💧 AeroPress animation
-description: Animated instructional graphic
 category: site
+tech: vue
 link: https://how-to-aeropress.netlify.com/
 source: https://github.com/shwilliam/aeropress
 date: 2019-01-14T00:00:00-05:00

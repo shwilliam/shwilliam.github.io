@@ -1,8 +1,8 @@
 ---
 path: /project/espresso
 title: ☕ Espresso type visualization
-description: Visualizing common espresso coffees
 category: site
+tech: d3
 link: https://shwilliam.github.io/espresso/
 source: https://github.com/shwilliam/espresso
 date: 2018-12-18T00:00:00-05:00

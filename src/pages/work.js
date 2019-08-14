@@ -5,23 +5,15 @@ import Layout from 'components/layout'
 import {BoxCenter} from 'components/box'
 import Head from 'components/head'
 import Title from 'components/title'
-import OSProjects from 'containers/queries/os-projects'
-import Microsites from 'containers/queries/microsites'
+import Projects from 'containers/queries/projects'
 import ProjectsList from 'components/projects-list'
 
 const Work = ({data}) => (
   <Layout>
     <Head pageTitle={data.workJson.title} />
     <BoxCenter>
-      <Title as="h2">Open Source Libraries</Title>
-      <OSProjects render={ProjectsList} />
-    </BoxCenter>
-
-    <BoxCenter>
-      <Title as="h2" id="microsites">
-        Microsites
-      </Title>
-      <Microsites render={ProjectsList} />
+      <Title as="h2">Projects</Title>
+      <Projects render={ProjectsList} />
     </BoxCenter>
   </Layout>
 )
