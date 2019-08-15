@@ -6,16 +6,17 @@ import {BoxCenter} from 'components/box'
 import Head from 'components/head'
 import Title from 'components/title'
 import Projects from 'containers/queries/projects'
-import ProjectsList from 'components/projects-list'
+import {ProjectsListWithFilter} from 'components/projects-list'
 import CategoryFilter from 'components/category-filter'
 
 const Work = ({data}) => (
   <Layout>
     <Head pageTitle={data.workJson.title} />
+    {/* TODO: refactor to use content from `about.json` */}
     <BoxCenter>
-      <Title as="h2">Projects</Title>
+      <Title as="h2">Open-Source Projects</Title>
       <CategoryFilter />
-      <Projects render={ProjectsList} />
+      <Projects render={ProjectsListWithFilter} />
     </BoxCenter>
   </Layout>
 )

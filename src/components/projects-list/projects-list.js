@@ -13,19 +13,17 @@ import {
   ProjectTitle,
 } from './projects-list.css'
 
-const ProjectsList = projects => (
+const ProjectsList = (projects, filter = false) => (
   <Consumer>
     {({activeCategory}) => (
       <StyledProjectList>
         {projects
           .sort(({node}) => {
+            if (!filter) return false
             if (!activeCategory) return false
 
-            const {frontmatter} = node
-
-            return !frontmatter.tech.split(' ').includes(activeCategory)
+            return !node.frontmatter.tech.split(' ').includes(activeCategory)
           })
-          .slice(0, 5) // TODO: ensure all projects in active category are displayed
           .map(({node}) => {
             const {frontmatter} = node
 
@@ -34,6 +32,7 @@ const ProjectsList = projects => (
                 key={frontmatter.path}
                 className={
                   activeCategory &&
+                  filter &&
                   !frontmatter.tech.split(' ').includes(activeCategory)
                     ? 'dim'
                     : ''
@@ -84,5 +83,9 @@ const ProjectsList = projects => (
     )}
   </Consumer>
 )
+
+export const ProjectsListWithFilter = projects =>
+  // TODO: refactor this to be more explicit
+  ProjectsList(projects, true)
 
 export default ProjectsList
