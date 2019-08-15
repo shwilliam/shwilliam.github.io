@@ -1,3 +1,4 @@
-import {Tag} from './tag.css'
+import {Tag, TagButton} from './tag.css'
 
+export {TagButton}
 export default Tag

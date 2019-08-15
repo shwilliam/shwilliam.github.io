@@ -27,11 +27,19 @@ export const Tag = styled.span`
   display: inline-block;
   font-size: 0.8rem;
   color: ${({value}) => colors[value].text};
-  background: ${({value}) => colors[value].bg};
+  background-color: ${({value}) => colors[value].bg};
   border-color: ${({value}) => colors[value].border};
   margin-right: 8px;
   padding: 0 7px;
   border: 1px solid #d9d9d9;
   border-radius: 4px;
   white-space: nowrap;
+`
+
+export const TagButton = styled(Tag)`
+  cursor: pointer;
+  background-color: ${({active, value}) =>
+    active ? colors[value].bg : 'transparent'};
+  border-color: ${({active, value}) =>
+    active ? colors[value].border : 'transparent'};
 `
