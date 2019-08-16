@@ -15,6 +15,7 @@ const AppProvider = ({children}) => {
       value={{
         activeCategory,
         onCategorySelect,
+        setActiveCategory,
       }}
     >
       {children}

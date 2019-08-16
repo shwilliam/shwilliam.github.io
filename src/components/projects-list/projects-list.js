@@ -15,7 +15,7 @@ import {
 
 const ProjectsList = (projects, filter = false) => (
   <Consumer>
-    {({activeCategory}) => (
+    {({activeCategory, setActiveCategory}) => (
       <StyledProjectList>
         {projects
           .sort(({node}) => {
@@ -49,7 +49,11 @@ const ProjectsList = (projects, filter = false) => (
                   <ProjectDescription>{frontmatter.excerpt}</ProjectDescription>
 
                   {frontmatter.tech.split(' ').map(tag => (
-                    <Tag key={tag} value={tag}>
+                    <Tag
+                      key={tag}
+                      value={tag}
+                      onClick={() => setActiveCategory(tag)}
+                    >
                       {tag}
                     </Tag>
                   ))}
