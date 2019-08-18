@@ -52,7 +52,7 @@ const ProjectsList = (projects, filter = false) => (
                     <Tag
                       key={tag}
                       value={tag}
-                      onClick={() => setActiveCategory(tag)}
+                      onClick={() => filter && setActiveCategory(tag)}
                     >
                       {tag}
                     </Tag>
