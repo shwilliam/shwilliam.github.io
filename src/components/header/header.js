@@ -6,6 +6,7 @@ import Title from 'components/title'
 import WidthWrapper from 'components/width-wrapper'
 import Nav from 'components/header/nav'
 import {Wrapper, FlexWrapper} from './header.css'
+import ImgAvatar from 'components/img-avatar'
 
 const Header = ({title}) => {
   const [isScrolled] = useWindowScroll()
@@ -16,9 +17,7 @@ const Header = ({title}) => {
         <FlexWrapper>
           <Link to="/">
             <Title>
-              <span role="img" aria-label="Laptop">
-                💻
-              </span>
+              <ImgAvatar />
               {title}
             </Title>
           </Link>

@@ -9,12 +9,8 @@ export const Wrapper = styled.nav`
       margin-top: 1rem;
     `};
 
-    li {
-      text-transform: uppercase;
-
-      & + li {
-        margin-left: 3rem;
-      }
+    li + li {
+      margin-left: 3rem;
     }
   }
 `

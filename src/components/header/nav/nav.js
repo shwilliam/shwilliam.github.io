@@ -6,14 +6,14 @@ const Nav = () => (
   <Wrapper>
     <ul>
       <li>
-        <Link to="/about">Me</Link>
+        <Link to="/about">me</Link>
       </li>
       <li>
-        <Link to="/work">Work</Link>
+        <Link to="/work">work</Link>
       </li>
       <li>
         <a href="https://github.com/shwilliam/shwilliam.github.io/tree/dev">
-          Source
+          source
         </a>
       </li>
     </ul>
