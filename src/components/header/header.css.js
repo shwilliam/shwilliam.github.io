@@ -5,7 +5,7 @@ export const Wrapper = styled.header`
   padding-top: 2.4rem;
   position: sticky;
   top: 0;
-  height: 9rem;
+  height: 8rem;
   background-color: #fff;
   transition: all 0.2s ease-in-out;
   z-index: 999;
@@ -13,7 +13,7 @@ export const Wrapper = styled.header`
   &.scrolled {
     padding-top: 1.4rem;
     margin-bottom: 2rem;
-    height: 8rem;
+    height: 7rem;
     box-shadow: 1px 2px 18px rgba(0, 0, 0, 0.1);
   }
 

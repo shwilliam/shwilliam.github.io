@@ -1,20 +1,19 @@
 import React from 'react'
-import {Link} from 'gatsby'
-import {Wrapper} from './nav.css'
+import {Wrapper, NavInternalLink, NavLink} from './nav.css'
 
 const Nav = () => (
   <Wrapper>
     <ul>
       <li>
-        <Link to="/about">me</Link>
+        <NavInternalLink to="/about">me</NavInternalLink>
       </li>
       <li>
-        <Link to="/work">work</Link>
+        <NavInternalLink to="/work">work</NavInternalLink>
       </li>
       <li>
-        <a href="https://github.com/shwilliam/shwilliam.github.io/tree/dev">
+        <NavLink href="https://github.com/shwilliam/shwilliam.github.io/tree/dev">
           source
-        </a>
+        </NavLink>
       </li>
     </ul>
   </Wrapper>

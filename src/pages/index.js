@@ -5,14 +5,15 @@ import GitHubButton from 'react-github-btn'
 import FeaturedProjects from 'containers/queries/featured-projects'
 import ProjectsList from 'components/projects-list'
 import Layout from 'components/layout'
-import Box, {BoxCenter} from 'components/box'
+import {BoxCenter} from 'components/box'
+import Banner from 'components/banner'
 import WelcomeText from 'components/welcome-text'
 import Title from 'components/title'
 import {GatsbyLinkButton} from 'components/link-button'
 
 const Index = ({data}) => (
   <Layout>
-    <Box>
+    <Banner>
       <WelcomeText>
         {data.homeJson.content.childMarkdownRemark.html}
       </WelcomeText>
@@ -23,7 +24,7 @@ const Index = ({data}) => (
       >
         Follow me
       </GitHubButton>
-    </Box>
+    </Banner>
 
     <BoxCenter>
       <Title as="h2">Open-Source Libraries</Title>
