@@ -25,15 +25,17 @@ const colors = {
 
 export const Tag = styled.span`
   display: inline-block;
-  font-size: 0.8rem;
-  color: ${({value}) => colors[value].text};
-  background-color: ${({value}) => colors[value].bg};
-  border-color: ${({value}) => colors[value].border};
-  margin-right: 8px;
-  padding: 0 7px;
+  position: relative;
+  bottom: 0.16rem;
+  padding: 0 0.4rem;
+  line-height: 1.3;
   border: 1px solid #d9d9d9;
   border-radius: 4px;
   white-space: nowrap;
+  font-size: 0.7rem;
+  color: ${({value}) => colors[value].text};
+  background-color: ${({value}) => colors[value].bg};
+  border-color: ${({value}) => colors[value].border};
 `
 
 export const TagButton = styled(Tag)`

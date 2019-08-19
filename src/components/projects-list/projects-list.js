@@ -45,9 +45,6 @@ const ProjectsList = (projects, filter = false) => (
                 > */}
                 <ProjectContent>
                   <ProjectTitle>{frontmatter.title}</ProjectTitle>
-
-                  <ProjectDescription>{frontmatter.excerpt}</ProjectDescription>
-
                   {frontmatter.tech.split(' ').map(tag => (
                     <Tag
                       key={tag}
@@ -57,6 +54,8 @@ const ProjectsList = (projects, filter = false) => (
                       {tag}
                     </Tag>
                   ))}
+
+                  <ProjectDescription>{frontmatter.excerpt}</ProjectDescription>
                 </ProjectContent>
                 {/* </ProjectLink> */}
 

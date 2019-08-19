@@ -27,7 +27,7 @@ const Index = ({data}) => (
     </Banner>
 
     <BoxCenter>
-      <Title as="h2">Open-Source Libraries</Title>
+      <Title as="h2">Featured Projects</Title>
       <FeaturedProjects render={ProjectsList} />
       <GatsbyLinkButton to="/work">More projects</GatsbyLinkButton>
     </BoxCenter>

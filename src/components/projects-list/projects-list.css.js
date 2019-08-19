@@ -49,7 +49,7 @@ export const ProjectList = styled.ul`
 export const ProjectListItem = styled.li`
   display: flex;
   justify-content: space-between;
-  padding: 1.5rem 0;
+  padding: 1.2rem 0 1.5rem 0;
 
   &:not(:last-child) {
     border-bottom: 2px solid #f2f2f2;
@@ -63,7 +63,11 @@ export const ProjectListItem = styled.li`
 export const ProjectTitle = styled.h3`
   font-size: 1rem;
   font-weight: 800;
-  flex-grow: 1;
   margin: 0;
+  padding-right: 0.5rem;
   padding-bottom: 0.5rem;
+
+  ${MEDIA.MIN_PHONE`
+    display: inline-block;
+  `}
 `

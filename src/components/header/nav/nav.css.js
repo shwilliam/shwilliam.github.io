@@ -13,7 +13,7 @@ export const Wrapper = styled.nav`
     }
 
     li + li {
-      margin-left: 3rem;
+      margin-left: 2rem;
     }
   }
 `

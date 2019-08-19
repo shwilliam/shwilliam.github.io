@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import MEDIA from 'helpers/mediaTemplates'
 import Box from 'components/box'
 
 export const Wrapper = styled(Box)`
@@ -7,7 +8,12 @@ export const Wrapper = styled(Box)`
   justify-content: center;
   padding-top: 0;
   padding-bottom: 0;
-  margin-top: 0;
-  margin-bottom: 0;
-  height: 75vh;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+
+  ${MEDIA.MIN_TABLET`
+    margin-top: 6rem;
+    height: 55vh;
+    margin-bottom: 0;
+  `}
 `
