@@ -16,7 +16,7 @@ export const WrapperCenter = styled(Wrapper)`
   margin: 0 auto;
 `
 
-export const WrapperFlex = styled(Wrapper)`
+export const WrapperFlexReverse = styled(Wrapper)`
   ${MEDIA.MIN_TABLET`
     display: flex;
     flex-direction: column-reverse;

@@ -1,8 +1,8 @@
-import {Wrapper, WrapperCenter, WrapperFlex} from './box.css'
+import {Wrapper, WrapperCenter, WrapperFlexReverse} from './box.css'
 
 const Box = Wrapper
 const BoxCenter = WrapperCenter
-const BoxFlex = WrapperFlex
+const BoxFlexReverse = WrapperFlexReverse
 
 export default Box
-export {BoxCenter, BoxFlex}
+export {BoxCenter, BoxFlexReverse}

@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import {Link} from 'gatsby'
 import MEDIA from 'helpers/mediaTemplates'
 
 export const ProjectActions = styled.div`
@@ -31,25 +30,14 @@ export const ProjectContent = styled.div`
 
 export const ProjectDescription = styled.div``
 
-export const ProjectLink = styled(Link)`
-  &,
-  &:hover,
-  &:visited {
-    flex-grow: 1;
-    color: inherit;
-    text-decoration: none;
-  }
-`
-
 export const ProjectList = styled.ul`
   width: 100%;
   text-align: left;
 `
 
 export const ProjectListItem = styled.li`
-  display: flex;
-  justify-content: space-between;
   padding: 1.2rem 0 1.5rem 0;
+  overflow: hidden;
 
   &:not(:last-child) {
     border-bottom: 2px solid #f2f2f2;
@@ -70,4 +58,9 @@ export const ProjectTitle = styled.h3`
   ${MEDIA.MIN_PHONE`
     display: inline-block;
   `}
+`
+
+export const ProjectFlexWrapper = styled.div`
+  display: flex;
+  justify-content: space-between;
 `
