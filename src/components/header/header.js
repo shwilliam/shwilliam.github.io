@@ -7,12 +7,14 @@ import WidthWrapper from 'components/width-wrapper'
 import Nav from 'components/header/nav'
 import {Wrapper, FlexWrapper} from './header.css'
 import ImgAvatar from 'components/img-avatar'
+import WIP from 'components/wip'
 
 const Header = ({title}) => {
   const [isScrolled] = useWindowScroll()
 
   return (
     <Wrapper className={isScrolled ? 'scrolled' : ''}>
+      <WIP>Work in progress! ⚠️</WIP>
       <WidthWrapper>
         <FlexWrapper>
           <Link to="/">
