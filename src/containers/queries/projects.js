@@ -25,7 +25,6 @@ const Projects = ({render}) => (
                 category
                 excerpt
                 tech
-                imgUrl
               }
             }
           }

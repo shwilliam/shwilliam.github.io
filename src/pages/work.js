@@ -6,7 +6,7 @@ import {BoxCenter} from 'components/box'
 import Head from 'components/head'
 import Title from 'components/title'
 import Projects from 'containers/queries/projects'
-import {ProjectsListWithFilter} from 'components/projects-list'
+import ProjectsList from 'components/projects-list'
 import CategoryFilter from 'components/category-filter'
 
 const Work = ({data}) => (
@@ -16,7 +16,7 @@ const Work = ({data}) => (
     <BoxCenter>
       <Title as="h2">Open-Source Projects</Title>
       <CategoryFilter />
-      <Projects render={ProjectsListWithFilter} />
+      <Projects render={ProjectsList} />
     </BoxCenter>
   </Layout>
 )

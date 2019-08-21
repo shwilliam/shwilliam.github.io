@@ -26,6 +26,7 @@ const Projects = ({render}) => (
                 excerpt
                 tech
                 imgUrl
+                imgAlt
               }
             }
           }

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import {graphql} from 'gatsby'
 import GitHubButton from 'react-github-btn'
 import FeaturedProjects from 'containers/queries/featured-projects'
-import ProjectsList from 'components/projects-list'
+import ProjectsGrid from 'components/projects-grid'
 import Layout from 'components/layout'
 import {BoxCenter} from 'components/box'
 import Banner from 'components/banner'
@@ -28,8 +28,8 @@ const Index = ({data}) => (
 
     <BoxCenter>
       <Title as="h2">Featured Projects</Title>
-      <FeaturedProjects render={ProjectsList} />
-      <GatsbyLinkButton to="/work">More projects</GatsbyLinkButton>
+      <FeaturedProjects render={ProjectsGrid} />
+      <GatsbyLinkButton to="/work">More work</GatsbyLinkButton>
     </BoxCenter>
   </Layout>
 )

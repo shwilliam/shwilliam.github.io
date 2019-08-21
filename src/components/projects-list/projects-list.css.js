@@ -37,7 +37,6 @@ export const ProjectList = styled.ul`
 
 export const ProjectListItem = styled.li`
   padding: 1.2rem 0 1.5rem 0;
-  overflow: hidden;
 
   &:not(:last-child) {
     border-bottom: 2px solid #f2f2f2;
