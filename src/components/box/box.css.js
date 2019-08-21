@@ -27,3 +27,7 @@ export const WrapperFlexReverse = styled(Wrapper)`
     }
   `};
 `
+
+export const WrapperNoWrap = styled.span`
+  white-space: nowrap;
+`

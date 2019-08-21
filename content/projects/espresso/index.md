@@ -6,8 +6,6 @@ tech: d3
 link: https://shwilliam.github.io/espresso/
 source: https://github.com/shwilliam/espresso
 date: 2018-12-18T00:00:00-05:00
-image: espresso-image.png
-imgAlt: Project screengrab
 excerpt: Simple visualization of common espresso coffees
 ---
 

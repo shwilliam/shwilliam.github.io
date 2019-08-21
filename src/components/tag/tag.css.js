@@ -21,12 +21,18 @@ const colors = {
     bg: '#fff7e6',
     border: '#ffd591',
   },
+  graphql: {
+    text: '#722ed1',
+    bg: '#f9f0ff',
+    border: '#d3adf7',
+  },
 }
 
 export const Tag = styled.span`
   display: inline-block;
   position: relative;
   bottom: 0.16rem;
+  margin-left: 0.5rem;
   padding: 0 0.4rem;
   line-height: 1.3;
   border: 1px solid #d9d9d9;

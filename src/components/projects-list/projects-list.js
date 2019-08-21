@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import GitHubButton from 'react-github-btn'
 import {Consumer} from 'store/createContext'
 import LinkButton from 'components/link-button'
+import {BoxNoWrap} from 'components/box'
 import Tag from 'components/tag'
 import Peek from 'components/peek'
 import {
@@ -47,15 +48,19 @@ const ProjectsList = (projects, filter = false) => {
                   <ProjectFlexWrapper>
                     <ProjectContent>
                       <ProjectTitle>{frontmatter.title}</ProjectTitle>
-                      {frontmatter.tech.split(' ').map(tag => (
-                        <Tag
-                          key={tag}
-                          value={tag}
-                          onClick={() => filter && setActiveCategory(tag)}
-                        >
-                          {tag}
-                        </Tag>
-                      ))}
+                      {frontmatter.tech && (
+                        <BoxNoWrap>
+                          {frontmatter.tech.split(' ').map(tag => (
+                            <Tag
+                              key={tag}
+                              value={tag}
+                              onClick={() => filter && setActiveCategory(tag)}
+                            >
+                              {tag}
+                            </Tag>
+                          ))}
+                        </BoxNoWrap>
+                      )}
                       <ProjectDescription>
                         {frontmatter.excerpt}
                       </ProjectDescription>
