@@ -4,7 +4,7 @@ title: 👁 vue-visibility-trigger
 category: os
 tech: vue
 source: https://github.com/shwilliam/vue-visibility-trigger
-link: https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/qkyolorn6w?module=%2Fsrc%2FApp.vue
+link: https://codesandbox.io/s/qkyolorn6w?module=%2Fsrc%2FApp.vue
 date: 2018-10-14T00:00:00-05:00
 excerpt: Declarative Vue component that emits an event when scrolled into view
 featured: os

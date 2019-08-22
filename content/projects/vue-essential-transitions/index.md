@@ -4,7 +4,7 @@ title: 🍃 vue-essential-transitions
 category: os
 tech: vue
 source: https://github.com/shwilliam/vue-essential-transitions
-link: https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/rl27rwmxjo
+link: https://codesandbox.io/s/rl27rwmxjo
 date: 2019-02-10T00:00:00-05:00
 excerpt: Collection of Vue transition styles for quick prototyping
 ---

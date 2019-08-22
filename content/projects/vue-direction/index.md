@@ -4,7 +4,7 @@ title: 👋 vue-direction
 category: os
 tech: vue
 source: https://github.com/shwilliam/vue-direction
-link: https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/3x46lrlk1q
+link: https://codesandbox.io/s/3x46lrlk1q
 date: 2019-03-10T00:00:00-05:00
 imgUrl: https://user-images.githubusercontent.com/38357771/53678998-b326c680-3c94-11e9-8e4f-f65feee8651f.gif
 imgAlt: Component example use

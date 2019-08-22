@@ -3,7 +3,6 @@ path: /project/post-links
 title: 🔗 post-links
 category: os
 tech: react
-link: https://github.com/shwilliam/post-links/blob/master/README.md
 source: https://github.com/shwilliam/post-links/
 date: 2019-03-12T00:00:00-05:00
 excerpt: Easily link to external websites from your Instagram posts
