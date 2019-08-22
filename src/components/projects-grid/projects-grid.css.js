@@ -3,12 +3,8 @@ import MEDIA from 'helpers/mediaTemplates'
 
 export const ProjectActions = styled.div`
   position: absolute;
-  bottom: 0;
+  top: 1.2rem;
   right: 1.2rem;
-
-  ${MEDIA.MIN_TABLET`
-    right: unset;
-  `}
 `
 
 export const ProjectDescription = styled.div``
@@ -25,9 +21,8 @@ export const ProjectsGrid = styled.div`
 
 export const ProjectsGridItem = styled.div`
   position: relative;
-  padding: 1.2rem 1.2rem 3rem 1.2rem;
+  padding: 1.2rem;
   border: 1px solid #f2f2f2;
-  overflow: hidden;
 
   &:not(:last-of-type) {
     border-bottom: none;
@@ -45,15 +40,17 @@ export const ProjectsGridItem = styled.div`
 `
 
 export const ProjectTitle = styled.h3`
+  display: inline-block;
   font-size: 1rem;
   font-weight: 800;
   margin: 0;
+  padding-right: 1rem;
 `
 
 export const ProjectImageWrapper = styled.div`
-  width: 80%;
+  height: 80%;
   margin: 0 auto;
-  padding: 1rem;
+  padding: 1rem 0;
   display: flex;
   align-items: center;
   justify-content: center;

@@ -7,6 +7,8 @@ source: https://github.com/shwilliam/poke-js
 link: https://codesandbox.io/s/94l470xr3w?autoresize=1&fontsize=12&hidenavigation=1
 date: 2019-04-24T00:00:00-05:00
 excerpt: A small reactivity system
+imgUrl: https://user-images.githubusercontent.com/38357771/63480606-50460900-c447-11e9-8584-1fd3b1325e75.gif
+imgAlt: Implementation example
 featured: os
 ---
 

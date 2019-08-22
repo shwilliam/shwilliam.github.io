@@ -32,11 +32,11 @@ const ProjectsGrid = projects => (
                 </BoxNoWrap>
               )}
 
+              <ProjectDescription>{frontmatter.excerpt}</ProjectDescription>
+
               <ProjectImageWrapper>
                 <img src={frontmatter.imgUrl} alt={frontmatter.imgAlt} />
               </ProjectImageWrapper>
-
-              <ProjectDescription>{frontmatter.excerpt}</ProjectDescription>
 
               <ProjectActions>
                 {frontmatter.source && (
@@ -44,9 +44,7 @@ const ProjectsGrid = projects => (
                     href={frontmatter.source}
                     data-size="large"
                     // data-show-count="true"
-                  >
-                    Source
-                  </GitHubButton>
+                  />
                 )}
               </ProjectActions>
             </ProjectsGridItem>
