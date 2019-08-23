@@ -45,13 +45,6 @@ module.exports = {
     },
     `gatsby-transformer-remark`,
     `gatsby-plugin-styled-components`,
-    {
-      resolve: `gatsby-plugin-purgecss`,
-      options: {
-        develop: true, // uncomment when using `gatsby develop`
-        printRejected: true,
-      },
-    },
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-webpack-size`,
