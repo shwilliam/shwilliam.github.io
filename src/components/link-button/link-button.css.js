@@ -2,6 +2,7 @@ import styled from 'styled-components'
 import {Link} from 'gatsby'
 
 export const StyledLink = styled.a`
+  font-size: 12px;
   display: inline-block;
   -webkit-appearance: none;
   background-color: #fff;
@@ -9,11 +10,10 @@ export const StyledLink = styled.a`
   border: 1px solid rgba(27, 31, 35, 0.35);
   border-radius: 0.25rem;
   cursor: pointer;
-  font-size: 12px;
   line-height: 1.333;
   vertical-align: top;
   text-align: center;
-  margin: 0 0 0.57rem 0;
+  margin: 0 0 0.38rem 0;
   padding: 5px 10px;
   transition: 0.2s background-color ease;
   text-decoration: none;
@@ -28,6 +28,7 @@ export const StyledLink = styled.a`
 `
 
 export const StyledGatsbyLink = styled(Link)`
+  font-size: 12px;
   display: inline-block;
   -webkit-appearance: none;
   background-color: #fff;
@@ -35,11 +36,9 @@ export const StyledGatsbyLink = styled(Link)`
   border: 1px solid rgba(27, 31, 35, 0.35);
   border-radius: 0.25rem;
   cursor: pointer;
-  font-size: 12px;
   line-height: 1.333;
   vertical-align: top;
   text-align: center;
-  margin: 0 0 0.44rem 0;
   padding: 5px 10px;
   transition: 0.2s background-color ease;
   text-decoration: none;

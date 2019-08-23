@@ -1,51 +1,29 @@
 import styled from 'styled-components'
 import MEDIA from 'helpers/mediaTemplates'
 
-export const Wrapper = styled.header`
-  padding-top: 2.4rem;
+export const StyledHeader = styled.header`
+  padding-top: 3rem;
+  padding-bottom: 0.75rem;
   position: sticky;
   top: 0;
-  height: 8rem;
   background-color: #fff;
-  transition: all 0.2s ease-in-out;
   z-index: 999;
+  transition: padding-top 0.2s ease-in-out;
 
   &.scrolled {
-    padding-top: 1.4rem;
-    margin-bottom: 2rem;
-    height: 7rem;
+    margin-bottom: 3rem;
+    padding-top: 1.5rem;
     box-shadow: 1px 2px 18px rgba(0, 0, 0, 0.1);
   }
-
-  ${MEDIA.MIN_TABLET`
-    height: 6rem;
-    &.scrolled {
-      height: 5rem;
-    }
-  `};
 `
 
-export const FlexWrapper = styled.div`
+export const StyledHeaderLayout = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-direction: column;
 
-  a {
-    text-decoration: none;
-    white-space: nowrap;
-    color: #757575 !important;
-
-    h1,
-    &:hover {
-      color: #000 !important;
-    }
-  }
-
-  [role='img'] {
-    margin-right: 0.75rem;
-  }
-
-  ${MEDIA.TABLET`
-    flex-direction: column;
+  ${MEDIA.MIN_TABLET`
+    flex-direction: row;
   `};
 `

@@ -2,21 +2,21 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import {graphql} from 'gatsby'
 import Layout from 'components/layout'
-import Box, {BoxFlexReverse} from 'components/box'
+import {FlexReverse} from 'components/utils'
 import Head from 'components/head'
 import ImgAbout from 'components/img-about'
 
 const About = ({data}) => (
   <Layout>
     <Head pageTitle={data.aboutJson.title} />
-    <BoxFlexReverse>
+    <FlexReverse>
       <ImgAbout />
-      <Box
+      <div
         dangerouslySetInnerHTML={{
           __html: data.aboutJson.content.childMarkdownRemark.html,
         }}
       />
-    </BoxFlexReverse>
+    </FlexReverse>
   </Layout>
 )
 

@@ -8,7 +8,7 @@ const Projects = ({render}) => (
       query {
         allMarkdownRemark(
           sort: {order: DESC, fields: [frontmatter___date]}
-          limit: 1000
+          limit: 999
           filter: {
             fileAbsolutePath: {regex: "/(/projects).*\\\\.md/"}
             frontmatter: {category: {eq: "os"}}

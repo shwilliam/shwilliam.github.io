@@ -1,27 +1,20 @@
 import styled from 'styled-components'
 import {Link} from 'gatsby'
-import MEDIA from 'helpers/mediaTemplates'
 
-export const Wrapper = styled.nav`
+export const StyledNav = styled.nav`
   ul {
     display: flex;
 
-    li {
-      ${MEDIA.MIN_TABLET`
-        margin-top: 0.8rem;
-    `};
-    }
-
     li + li {
-      margin-left: 2rem;
+      margin-left: 1.5rem;
     }
   }
 `
 
-export const NavInternalLink = styled(Link)`
-  padding: 0.4rem;
+export const StyledInternalLink = styled(Link)`
+  padding: 0.75rem;
 `
 
-export const NavLink = styled.a`
-  padding: 0.4rem;
+export const StyledLink = styled.a`
+  padding: 0.75rem;
 `

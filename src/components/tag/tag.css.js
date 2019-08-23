@@ -30,8 +30,6 @@ const colors = {
 
 export const Tag = styled.span`
   display: inline-block;
-  position: relative;
-  bottom: 0.16rem;
   padding: 0 0.4rem;
   line-height: 1.3;
   border: 1px solid #d9d9d9;
@@ -41,10 +39,6 @@ export const Tag = styled.span`
   color: ${({value}) => colors[value].text};
   background-color: ${({value}) => colors[value].bg};
   border-color: ${({value}) => colors[value].border};
-
-  & + & {
-    margin-left: 0.5rem;
-  }
 `
 
 export const TagButton = styled(Tag)`

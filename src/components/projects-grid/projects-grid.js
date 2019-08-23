@@ -1,15 +1,11 @@
 import React from 'react'
 import GitHubButton from 'react-github-btn'
 import {Consumer} from 'store/createContext'
-import {BoxNoWrap} from 'components/box'
+import {NoWrap} from 'components/utils'
 import Tag from 'components/tag'
 import {
-  ProjectActions,
-  ProjectDescription,
   ProjectsGrid as StyledProjectsGrid,
-  ProjectsGridItem,
-  ProjectTitle,
-  ProjectImageWrapper,
+  ProjectHeader,
 } from './projects-grid.css'
 
 const ProjectsGrid = projects => (
@@ -20,34 +16,28 @@ const ProjectsGrid = projects => (
           const {frontmatter} = node
 
           return (
-            <ProjectsGridItem key={frontmatter.path}>
-              <ProjectTitle>{frontmatter.title}</ProjectTitle>
-              {frontmatter.tech && (
-                <BoxNoWrap>
-                  {frontmatter.tech.split(' ').map(tag => (
-                    <Tag key={tag} value={tag}>
-                      {tag}
-                    </Tag>
-                  ))}
-                </BoxNoWrap>
-              )}
-
-              <ProjectDescription>{frontmatter.excerpt}</ProjectDescription>
-
-              <ProjectImageWrapper>
-                <img src={frontmatter.imgUrl} alt={frontmatter.imgAlt} />
-              </ProjectImageWrapper>
-
-              <ProjectActions>
-                {frontmatter.source && (
-                  <GitHubButton
-                    href={frontmatter.source}
-                    data-size="large"
-                    // data-show-count="true"
-                  />
+            <div key={frontmatter.path}>
+              <ProjectHeader>
+                <h3>{frontmatter.title}</h3>
+                {frontmatter.tech && (
+                  <NoWrap>
+                    {frontmatter.tech.split(' ').map(tag => (
+                      <Tag key={tag} value={tag}>
+                        {tag}
+                      </Tag>
+                    ))}
+                  </NoWrap>
                 )}
-              </ProjectActions>
-            </ProjectsGridItem>
+              </ProjectHeader>
+              <div>{frontmatter.excerpt}</div>
+              {frontmatter.source && (
+                <GitHubButton
+                  href={frontmatter.source}
+                  data-size="large"
+                  // data-show-count="true"
+                />
+              )}
+            </div>
           )
         })}
       </StyledProjectsGrid>

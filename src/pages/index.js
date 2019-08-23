@@ -5,18 +5,15 @@ import GitHubButton from 'react-github-btn'
 import FeaturedProjects from 'containers/queries/featured-projects'
 import ProjectsGrid from 'components/projects-grid'
 import Layout from 'components/layout'
-import {BoxCenter} from 'components/box'
+import {Center} from 'components/utils'
 import Banner from 'components/banner'
-import WelcomeText from 'components/welcome-text'
-import Title from 'components/title'
 import {GatsbyLinkButton} from 'components/link-button'
 
 const Index = ({data}) => (
   <Layout>
     <Banner>
-      <WelcomeText>
-        {data.homeJson.content.childMarkdownRemark.html}
-      </WelcomeText>
+      {data.homeJson.heading}
+      {data.homeJson.subheading}
       <GitHubButton
         href="https://github.com/shwilliam"
         data-size="large"
@@ -26,11 +23,11 @@ const Index = ({data}) => (
       </GitHubButton>
     </Banner>
 
-    <BoxCenter>
-      <Title as="h2">Featured Projects</Title>
+    <Center>
+      <h2>Featured Projects</h2>
       <FeaturedProjects render={ProjectsGrid} />
       <GatsbyLinkButton to="/work">More work</GatsbyLinkButton>
-    </BoxCenter>
+    </Center>
   </Layout>
 )
 
@@ -44,11 +41,8 @@ export const query = graphql`
   query HomepageQuery {
     homeJson {
       title
-      content {
-        childMarkdownRemark {
-          html
-        }
-      }
+      heading
+      subheading
     }
   }
 `

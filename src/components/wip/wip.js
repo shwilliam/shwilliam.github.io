@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-const WIP = styled.span`
+export default styled.span`
   position: absolute;
   top: 0;
   right: 0;
@@ -9,5 +9,3 @@ const WIP = styled.span`
   color: white;
   background-color: red;
 `
-
-export default WIP

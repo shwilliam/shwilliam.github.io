@@ -46,12 +46,6 @@ module.exports = {
     `gatsby-transformer-remark`,
     `gatsby-plugin-styled-components`,
     {
-      resolve: `gatsby-plugin-typography`,
-      options: {
-        pathToConfigModule: `src/styles/typography`,
-      },
-    },
-    {
       resolve: `gatsby-plugin-purgecss`,
       options: {
         develop: true, // uncomment when using `gatsby develop`

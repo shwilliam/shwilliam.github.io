@@ -1,8 +1,9 @@
 import React from 'react'
 import {Consumer} from 'store/createContext'
 import {TagButton} from 'components/tag'
-import SROnly from 'components/sr-only'
+import {SROnly} from 'components/utils'
 
+// TODO: DRY up
 const CategoryFilter = () => (
   <Consumer>
     {({activeCategory, onCategorySelect}) => (

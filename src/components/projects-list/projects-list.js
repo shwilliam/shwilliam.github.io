@@ -2,22 +2,14 @@ import React from 'react'
 import GitHubButton from 'react-github-btn'
 import {Consumer} from 'store/createContext'
 import LinkButton from 'components/link-button'
-import {BoxNoWrap} from 'components/box'
+import {NoWrap, FlexBetween, Dim} from 'components/utils'
 import Tag from 'components/tag'
-import {
-  ProjectActions,
-  ProjectContent,
-  ProjectDescription,
-  ProjectList as StyledProjectList,
-  ProjectListItem,
-  ProjectTitle,
-  ProjectFlexWrapper,
-} from './projects-list.css'
+import {ProjectActions, ProjectContent, ProjectTitle} from './projects-list.css'
 
 const ProjectsList = projects => (
   <Consumer>
     {({activeCategory, setActiveCategory}) => (
-      <StyledProjectList>
+      <ul>
         {projects
           .sort(({node}) => {
             if (!activeCategory) return false
@@ -28,7 +20,7 @@ const ProjectsList = projects => (
             const {frontmatter} = node
 
             return (
-              <ProjectListItem
+              <Dim
                 key={frontmatter.path}
                 className={
                   activeCategory &&
@@ -37,52 +29,52 @@ const ProjectsList = projects => (
                     : ''
                 }
               >
-                <ProjectFlexWrapper>
-                  <ProjectContent>
-                    <ProjectTitle>{frontmatter.title}</ProjectTitle>
-                    {frontmatter.tech && (
-                      <BoxNoWrap>
-                        {frontmatter.tech.split(' ').map(tag => (
-                          <Tag
-                            key={tag}
-                            value={tag}
-                            onClick={() => setActiveCategory(tag)}
-                          >
-                            {tag}
-                          </Tag>
-                        ))}
-                      </BoxNoWrap>
-                    )}
-                    <ProjectDescription>
-                      {frontmatter.excerpt}
-                    </ProjectDescription>
-                  </ProjectContent>
+                <li>
+                  <FlexBetween>
+                    <ProjectContent>
+                      <ProjectTitle>{frontmatter.title}</ProjectTitle>
+                      {frontmatter.tech && (
+                        <NoWrap>
+                          {frontmatter.tech.split(' ').map(tag => (
+                            <Tag
+                              key={tag}
+                              value={tag}
+                              onClick={() => setActiveCategory(tag)}
+                            >
+                              {tag}
+                            </Tag>
+                          ))}
+                        </NoWrap>
+                      )}
+                      <p>{frontmatter.excerpt}</p>
+                    </ProjectContent>
 
-                  <ProjectActions>
-                    {frontmatter.link && (
-                      <LinkButton
-                        href={frontmatter.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        Link
-                      </LinkButton>
-                    )}
-                    {frontmatter.source && (
-                      <GitHubButton
-                        href={frontmatter.source}
-                        data-size="large"
-                        // data-show-count="true"
-                      >
-                        Source
-                      </GitHubButton>
-                    )}
-                  </ProjectActions>
-                </ProjectFlexWrapper>
-              </ProjectListItem>
+                    <ProjectActions>
+                      {frontmatter.link && (
+                        <LinkButton
+                          href={frontmatter.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          Link
+                        </LinkButton>
+                      )}
+                      {frontmatter.source && (
+                        <GitHubButton
+                          href={frontmatter.source}
+                          data-size="large"
+                          // data-show-count="true"
+                        >
+                          Source
+                        </GitHubButton>
+                      )}
+                    </ProjectActions>
+                  </FlexBetween>
+                </li>
+              </Dim>
             )
           })}
-      </StyledProjectList>
+      </ul>
     )}
   </Consumer>
 )
