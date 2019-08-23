@@ -1,8 +1,8 @@
 import styled from 'styled-components'
 
 export default styled.span`
-  position: absolute;
-  top: 0;
+  position: fixed;
+  top: 1.5rem;
   right: 0;
   margin: 0.2rem;
   padding: 0.1rem 0.5rem;
