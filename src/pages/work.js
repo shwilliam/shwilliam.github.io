@@ -13,7 +13,9 @@ const Work = ({data}) => (
     <Head pageTitle={data.workJson.title} />
     <Center>
       <h2>{data.workJson.title}</h2>
-      <CategoryFilter />
+      <CategoryFilter
+        filters={['react', 'vue', 'graphql', 'stylus', 'vanilla']}
+      />
       <Projects render={ProjectsList} />
     </Center>
   </Layout>

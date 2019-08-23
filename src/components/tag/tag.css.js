@@ -11,6 +11,11 @@ const colors = {
     bg: '#f6ffed',
     border: '#b7eb8f',
   },
+  graphql: {
+    text: '#722ed1',
+    bg: '#f9f0ff',
+    border: '#d3adf7',
+  },
   stylus: {
     text: '#f5222d',
     bg: '#fff1f0',
@@ -20,11 +25,6 @@ const colors = {
     text: '#fa8c16',
     bg: '#fff7e6',
     border: '#ffd591',
-  },
-  graphql: {
-    text: '#722ed1',
-    bg: '#f9f0ff',
-    border: '#d3adf7',
   },
 }
 
