@@ -21,10 +21,12 @@ export const ProjectActions = styled.div`
 `
 
 export const ProjectContent = styled.div`
-  margin-right: 1.5rem;
+  margin-top: 11px;
+  margin-bottom: 22px;
+  margin-right: 3rem;
 
   ${MEDIA.MIN_TABLET`
-    margin-right: 3rem;
+    margin-right: 6rem;
   `};
 `
 

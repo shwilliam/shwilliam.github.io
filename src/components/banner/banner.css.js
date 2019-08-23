@@ -6,23 +6,38 @@ export const Wrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   margin-right: 0;
+  padding-top: 4.5rem;
+  padding-bottom: 3rem;
 
   ${MEDIA.MIN_PHONE`
     margin-right: 3rem;
+    padding-bottom: 4.5rem;
   `}
 
   ${MEDIA.MIN_TABLET`
-    // height: 55vh;
     display: flex;
     margin-right: 35%;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  `}
+
+  ${MEDIA.MIN_DESKTOP`
+    padding-top: 9rem;
+    padding-bottom: 7.5rem;
   `}
 `
 
 export const WrapperHeading = styled.p`
   font-size: 36px;
   font-weight: bold;
+  margin-bottom: 0.75rem;
+
+  ${MEDIA.MIN_TABLET`
+    margin-bottom: 1.5rem;
+  `}
 `
 
 export const WrapperSubheading = styled.p`
   font-size: 18px;
+  margin-bottom: 1.5rem;
 `

@@ -3,11 +3,18 @@ import MEDIA from 'helpers/mediaTemplates'
 
 export const ProjectsGrid = styled.div`
   display: grid;
+  grid-gap: 44px;
   grid-auto-flow: row dense;
 
   ${MEDIA.MIN_TABLET`
     grid-template-columns: repeat(2, 1fr);
   `}
+`
+
+export const ProjectLink = styled.a`
+  &:hover {
+    opacity: 0.5;
+  }
 `
 
 export const ProjectHeader = styled.div`

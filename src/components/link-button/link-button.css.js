@@ -40,6 +40,7 @@ export const StyledGatsbyLink = styled(Link)`
   vertical-align: top;
   text-align: center;
   padding: 5px 10px;
+  margin-top: 1.5rem;
   transition: 0.2s background-color ease;
   text-decoration: none;
 

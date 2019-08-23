@@ -1,10 +1,10 @@
 import React from 'react'
-import GitHubButton from 'react-github-btn'
 import {Consumer} from 'store/createContext'
 import {NoWrap} from 'components/utils'
 import Tag from 'components/tag'
 import {
   ProjectsGrid as StyledProjectsGrid,
+  ProjectLink,
   ProjectHeader,
 } from './projects-grid.css'
 
@@ -16,7 +16,7 @@ const ProjectsGrid = projects => (
           const {frontmatter} = node
 
           return (
-            <div key={frontmatter.path}>
+            <ProjectLink key={frontmatter.path} href={frontmatter.source}>
               <ProjectHeader>
                 <h3>{frontmatter.title}</h3>
                 {frontmatter.tech && (
@@ -30,14 +30,7 @@ const ProjectsGrid = projects => (
                 )}
               </ProjectHeader>
               <div>{frontmatter.excerpt}</div>
-              {frontmatter.source && (
-                <GitHubButton
-                  href={frontmatter.source}
-                  data-size="large"
-                  // data-show-count="true"
-                />
-              )}
-            </div>
+            </ProjectLink>
           )
         })}
       </StyledProjectsGrid>

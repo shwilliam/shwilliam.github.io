@@ -4,16 +4,17 @@ import {StaticQuery, graphql} from 'gatsby'
 import Head from 'components/head'
 import Header from 'components/header'
 import WidthWrapper from 'components/width-wrapper'
+import {LayoutWrapper} from './layout.css'
 
 import 'styles/reset.css'
 import 'styles/fonts.css'
 
 const Layout = ({data, children}) => (
-  <>
+  <LayoutWrapper>
     <Head />
     <Header title={data.site.siteMetadata.siteTitle} />
     <WidthWrapper>{children}</WidthWrapper>
-  </>
+  </LayoutWrapper>
 )
 
 Layout.propTypes = {
