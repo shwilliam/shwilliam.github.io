@@ -1,7 +1,7 @@
 ---
 path: /project/pay-gap
 title: 📈 Gender pay gap
-category: site
+category: os
 tech: d3
 link: https://pay-gap.netlify.com/
 source: https://github.com/shwilliam/gender-pay-gap

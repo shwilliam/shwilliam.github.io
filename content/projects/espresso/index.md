@@ -1,7 +1,7 @@
 ---
 path: /project/espresso
 title: ☕ Espresso type visualization
-category: site
+category: os
 tech: d3
 link: https://shwilliam.github.io/espresso/
 source: https://github.com/shwilliam/espresso

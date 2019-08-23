@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import MEDIA from 'helpers/mediaTemplates'
 
 const colors = {
   react: {
@@ -11,10 +12,20 @@ const colors = {
     bg: '#f6ffed',
     border: '#b7eb8f',
   },
-  graphql: {
+  gatsby: {
     text: '#722ed1',
     bg: '#f9f0ff',
     border: '#d3adf7',
+  },
+  graphql: {
+    text: '#eb2f96',
+    bg: '#fff0f6',
+    border: '#ffadd2',
+  },
+  d3: {
+    text: '#fa8c16',
+    bg: '#fff7e6',
+    border: '#ffd591;',
   },
   stylus: {
     text: '#f5222d',
@@ -22,15 +33,18 @@ const colors = {
     border: '#ffa39e',
   },
   vanilla: {
-    text: '#fa8c16',
-    bg: '#fff7e6',
-    border: '#ffd591',
+    text: '#faad14',
+    bg: '#fffbe6',
+    border: '#ffe58f',
   },
 }
 
 export const Tag = styled.span`
+  position: relative;
+  bottom: ${({variant}) => (variant === 'large' ? '0.2rem' : '-0.3rem')};
   display: inline-block;
   padding: 0 0.4rem;
+  margin-right: 0.75rem;
   line-height: 1.3;
   border: 1px solid #d9d9d9;
   border-radius: 4px;
@@ -39,6 +53,9 @@ export const Tag = styled.span`
   color: ${({value}) => colors[value].text};
   background-color: ${({value}) => colors[value].bg};
   border-color: ${({value}) => colors[value].border};
+  ${MEDIA.MIN_PHONE`
+    margin-bottom: 0.5rem;
+  `}
 `
 
 export const TagButton = styled(Tag)`
@@ -47,4 +64,5 @@ export const TagButton = styled(Tag)`
     active ? colors[value].bg : 'transparent'};
   border-color: ${({active, value}) =>
     active ? colors[value].border : 'transparent'};
+  margin-bottom: 0;
 `

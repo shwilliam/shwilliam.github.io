@@ -3,11 +3,12 @@ import PropTypes from 'prop-types'
 import {Consumer} from 'store/createContext'
 import {TagButton} from 'components/tag'
 import {SROnly} from 'components/utils'
+import {Fieldset} from './category-filter.css'
 
 const CategoryFilter = ({filters}) => (
   <Consumer>
     {({activeCategory, onCategorySelect}) => (
-      <fieldset>
+      <Fieldset>
         {filters.map(filter => (
           <label key={filter}>
             <SROnly>
@@ -25,7 +26,7 @@ const CategoryFilter = ({filters}) => (
             </TagButton>
           </label>
         ))}
-      </fieldset>
+      </Fieldset>
     )}
   </Consumer>
 )

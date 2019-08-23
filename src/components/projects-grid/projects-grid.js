@@ -6,6 +6,7 @@ import {
   ProjectsGrid as StyledProjectsGrid,
   ProjectLink,
   ProjectHeader,
+  ProjectTitle,
 } from './projects-grid.css'
 
 const ProjectsGrid = projects => (
@@ -18,7 +19,7 @@ const ProjectsGrid = projects => (
           return (
             <ProjectLink key={frontmatter.path} href={frontmatter.source}>
               <ProjectHeader>
-                <h3>{frontmatter.title}</h3>
+                <ProjectTitle>{frontmatter.title}</ProjectTitle>
                 {frontmatter.tech && (
                   <NoWrap>
                     {frontmatter.tech.split(' ').map(tag => (

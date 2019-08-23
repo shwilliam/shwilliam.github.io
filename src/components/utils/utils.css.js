@@ -6,15 +6,37 @@ export const WrapperCenter = styled.div`
 `
 
 export const WrapperFlexReverse = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin-top: 3rem;
+
+  & > * + * {
+    margin-top: 1.5rem;
+  }
+
   ${MEDIA.MIN_TABLET`
-    display: flex;
-    flex-direction: column-reverse;
+    flex-direction: row-reverse;
+
+    & > * + * {
+      margin-top: 0;
+      margin-right: 4.5rem;
+    }
+  `};
+
+  ${MEDIA.MIN_DESKTOP`
+    margin-top: 6rem;
+
+    & > * + * {
+      margin-top: 3rem;
+    }
   `};
 `
 
 export const WrapperFlexBetween = styled.div`
-  display: flex;
-  justify-content: space-between;
+  ${MEDIA.MIN_PHONE`
+    display: flex;
+    justify-content: space-between;
+  `}
 `
 
 export const WrapperNoWrap = styled.span`
@@ -29,6 +51,6 @@ export const WrapperSROnly = styled.span`
 
 export const WrapperDim = styled.span`
   &.dim {
-    opacity: 0.5;
+    opacity: 0.7;
   }
 `

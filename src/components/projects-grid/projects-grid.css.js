@@ -5,6 +5,7 @@ export const ProjectsGrid = styled.div`
   display: grid;
   grid-gap: 44px;
   grid-auto-flow: row dense;
+  margin-top: 0.75rem;
 
   ${MEDIA.MIN_TABLET`
     grid-template-columns: repeat(2, 1fr);
@@ -23,5 +24,14 @@ export const ProjectHeader = styled.div`
 
   ${MEDIA.MIN_TABLET`
     flex-direction: column-reverse;
+  `}
+`
+
+export const ProjectTitle = styled.h3`
+  display: block;
+  white-space: nowrap;
+
+  ${MEDIA.MIN_PHONE`
+    display: inline-block;
   `}
 `

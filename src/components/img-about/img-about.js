@@ -18,7 +18,7 @@ const Image = () => {
   return (
     <Img
       fluid={data.placeholderImage.childImageSharp.fluid}
-      style={{minWidth: '65%', zIndex: -1}}
+      style={{minWidth: '45%', zIndex: -1}}
       alt="Alexis and I in a gondola"
     />
   )

@@ -40,6 +40,7 @@ const ProjectsList = projects => (
                               key={tag}
                               value={tag}
                               onClick={() => setActiveCategory(tag)}
+                              variant="large"
                             >
                               {tag}
                             </Tag>

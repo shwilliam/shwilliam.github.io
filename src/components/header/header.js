@@ -6,7 +6,6 @@ import WidthWrapper from 'components/width-wrapper'
 import Nav from 'components/header/nav'
 import ImgAvatar from 'components/img-avatar'
 import {NoWrap} from 'components/utils'
-import WIP from 'components/wip'
 import {StyledHeader, StyledHeaderLayout} from './header.css'
 
 const Header = ({title}) => {
@@ -14,7 +13,6 @@ const Header = ({title}) => {
 
   return (
     <StyledHeader className={isScrolled ? 'scrolled' : ''}>
-      <WIP>Work in progress ⚠️</WIP>
       <WidthWrapper>
         <StyledHeaderLayout>
           <Link to="/">

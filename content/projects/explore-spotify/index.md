@@ -1,7 +1,7 @@
 ---
 path: /project/explore-spotify
 title: 🎵 Explore Spotify graph
-category: site
+category: draft
 tech: react d3
 link: https://explore-spotify.netlify.com/
 source: https://github.com/shwilliam/explore-spotify
