@@ -6,14 +6,14 @@ import FeaturedProjects from 'containers/queries/featured-projects'
 import ProjectsGrid from 'components/projects-grid'
 import Layout from 'components/layout'
 import {Center} from 'components/utils'
-import Banner from 'components/banner'
+import Banner, {BannerHeading, BannerSubheading} from 'components/banner'
 import {GatsbyLinkButton} from 'components/link-button'
 
 const Index = ({data}) => (
   <Layout>
     <Banner>
-      {data.homeJson.heading}
-      {data.homeJson.subheading}
+      <BannerHeading>{data.homeJson.heading}</BannerHeading>
+      <BannerSubheading>{data.homeJson.subheading}</BannerSubheading>
       <GitHubButton
         href="https://github.com/shwilliam"
         data-size="large"

@@ -9,11 +9,6 @@ export const WrapperFlexReverse = styled.div`
   ${MEDIA.MIN_TABLET`
     display: flex;
     flex-direction: column-reverse;
-
-    * {
-      padding-top: 0;
-      padding-bottom: 1rem;
-    }
   `};
 `
 
