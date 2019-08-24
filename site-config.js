@@ -8,7 +8,7 @@ module.exports = {
   themeColor: `#000`,
   backgroundColor: `#fff`,
   pathPrefix: null,
-  logo: path.resolve(__dirname, 'src/images/blossom.png'),
+  logo: path.resolve(__dirname, 'src/images/avatar.png'),
   social: {
     twitter: `werlliam`,
   },
