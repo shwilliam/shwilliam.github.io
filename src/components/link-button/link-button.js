@@ -1,9 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import {StyledLink, StyledGatsbyLink} from './link-button.css'
+import {LinkStyled, GatsbyLink} from './link-button.css'
 
 const LinkButton = ({children, ...props}) => (
-  <StyledLink {...props}>{children}</StyledLink>
+  <LinkStyled {...props}>{children}</LinkStyled>
 )
 
 LinkButton.propTypes = {
@@ -11,7 +11,7 @@ LinkButton.propTypes = {
 }
 
 export const GatsbyLinkButton = ({children, ...props}) => (
-  <StyledGatsbyLink {...props}>{children}</StyledGatsbyLink>
+  <GatsbyLink {...props}>{children}</GatsbyLink>
 )
 
 GatsbyLinkButton.propTypes = {

@@ -1,5 +1,4 @@
 ---
-path: /project/vue-loading-button
 title: 👇 vue-loading-button
 category: os
 tech: vue

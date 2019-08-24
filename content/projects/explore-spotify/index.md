@@ -1,5 +1,4 @@
 ---
-path: /project/explore-spotify
 title: 🎵 Explore Spotify graph
 category: draft
 tech: react d3

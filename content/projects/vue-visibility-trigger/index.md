@@ -1,5 +1,4 @@
 ---
-path: /project/vue-visibility-trigger
 title: 👁 vue-visibility-trigger
 category: os
 tech: vue

@@ -1,5 +1,4 @@
 ---
-path: /project/mini-tumblr-clone
 title: 🖼 mini-tumblr-clone
 category: os
 tech: react graphql

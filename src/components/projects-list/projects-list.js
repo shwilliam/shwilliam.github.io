@@ -2,9 +2,14 @@ import React from 'react'
 import GitHubButton from 'react-github-btn'
 import {Consumer} from 'store/createContext'
 import LinkButton from 'components/link-button'
-import {NoWrap, FlexBetween, Dim} from 'components/utils'
+import {NoWrap, Dim} from 'components/utils'
 import Tag from 'components/tag'
-import {ProjectActions, ProjectContent, ProjectTitle} from './projects-list.css'
+import {
+  ProjectsListItem,
+  ProjectActions,
+  ProjectContent,
+  ProjectTitle,
+} from './projects-list.css'
 
 const ProjectsList = projects => (
   <Consumer>
@@ -29,49 +34,47 @@ const ProjectsList = projects => (
                     : ''
                 }
               >
-                <li>
-                  <FlexBetween>
-                    <ProjectContent>
-                      <ProjectTitle>{frontmatter.title}</ProjectTitle>
-                      {frontmatter.tech && (
-                        <NoWrap>
-                          {frontmatter.tech.split(' ').map(tag => (
-                            <Tag
-                              key={tag}
-                              value={tag}
-                              onClick={() => setActiveCategory(tag)}
-                              variant="large"
-                            >
-                              {tag}
-                            </Tag>
-                          ))}
-                        </NoWrap>
-                      )}
-                      <p>{frontmatter.excerpt}</p>
-                    </ProjectContent>
+                <ProjectsListItem>
+                  <ProjectContent>
+                    <ProjectTitle>{frontmatter.title}</ProjectTitle>
+                    {frontmatter.tech && (
+                      <NoWrap>
+                        {frontmatter.tech.split(' ').map(tag => (
+                          <Tag
+                            key={tag}
+                            value={tag}
+                            onClick={() => setActiveCategory(tag)}
+                            variant="large"
+                          >
+                            {tag}
+                          </Tag>
+                        ))}
+                      </NoWrap>
+                    )}
+                    <p>{frontmatter.excerpt}</p>
+                  </ProjectContent>
 
-                    <ProjectActions>
-                      {frontmatter.link && (
-                        <LinkButton
-                          href={frontmatter.link}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          Link
-                        </LinkButton>
-                      )}
-                      {frontmatter.source && (
-                        <GitHubButton
-                          href={frontmatter.source}
-                          data-size="large"
-                          // data-show-count="true"
-                        >
-                          Source
-                        </GitHubButton>
-                      )}
-                    </ProjectActions>
-                  </FlexBetween>
-                </li>
+                  <ProjectActions>
+                    {frontmatter.link && (
+                      <LinkButton
+                        href={frontmatter.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Link
+                      </LinkButton>
+                    )}
+                    {frontmatter.source && (
+                      <GitHubButton
+                        href={frontmatter.source}
+                        data-size="large"
+                        // data-show-count="true"
+                      >
+                        Source
+                      </GitHubButton>
+                    )}
+                  </ProjectActions>
+                </ProjectsListItem>
               </Dim>
             )
           })}

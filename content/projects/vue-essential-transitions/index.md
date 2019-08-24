@@ -1,5 +1,4 @@
 ---
-path: /project/vue-essential-transitions
 title: 🍃 vue-essential-transitions
 category: os
 tech: vue

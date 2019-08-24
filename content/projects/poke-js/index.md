@@ -1,5 +1,4 @@
 ---
-path: /project/poke-js
 title: 👉 poke-js
 category: os
 tech: vanilla

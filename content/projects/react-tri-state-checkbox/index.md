@@ -1,5 +1,4 @@
 ---
-path: /project/react-tri-state-checkbox
 title: ☑ Tri-State Checkbox
 category: os
 tech: react

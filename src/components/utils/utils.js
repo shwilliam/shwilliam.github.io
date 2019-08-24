@@ -1,17 +1,17 @@
 import {
-  WrapperCenter,
-  WrapperFlexReverse,
-  WrapperFlexBetween,
-  WrapperNoWrap,
-  WrapperSROnly,
-  WrapperDim,
+  Center as CenterStyled,
+  FlexReverse as FlexReverseStyled,
+  NoWrap as NoWrapStyled,
+  SROnly as SROnlyStyled,
+  Dim as DimStyled,
+  Markdown as MarkdownStyled,
 } from './utils.css'
 
-const Center = WrapperCenter
-const FlexReverse = WrapperFlexReverse
-const FlexBetween = WrapperFlexBetween
-const NoWrap = WrapperNoWrap
-const SROnly = WrapperSROnly
-const Dim = WrapperDim
+const Center = CenterStyled
+const FlexReverse = FlexReverseStyled
+const NoWrap = NoWrapStyled
+const SROnly = SROnlyStyled
+const Dim = DimStyled
+const Markdown = MarkdownStyled
 
-export {Center, FlexReverse, FlexBetween, NoWrap, SROnly, Dim}
+export {Center, FlexReverse, NoWrap, SROnly, Dim, Markdown}

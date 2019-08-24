@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import {Link} from 'gatsby'
 
-export const StyledLink = styled.a`
+export const LinkStyled = styled.a`
   font-size: 12px;
   display: inline-block;
   -webkit-appearance: none;
@@ -27,7 +27,7 @@ export const StyledLink = styled.a`
   }
 `
 
-export const StyledGatsbyLink = styled(Link)`
+export const GatsbyLink = styled(Link)`
   font-size: 12px;
   display: inline-block;
   -webkit-appearance: none;

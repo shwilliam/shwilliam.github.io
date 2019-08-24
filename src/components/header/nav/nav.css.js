@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import {Link} from 'gatsby'
 
-export const StyledNav = styled.nav`
+export const Nav = styled.nav`
   ul {
     display: flex;
 
@@ -11,10 +11,10 @@ export const StyledNav = styled.nav`
   }
 `
 
-export const StyledInternalLink = styled(Link)`
+export const InternalLink = styled(Link)`
   padding: 0.75rem;
 `
 
-export const StyledLink = styled.a`
+export const LinkStyled = styled.a`
   padding: 0.75rem;
 `

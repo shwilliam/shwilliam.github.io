@@ -1,11 +1,11 @@
 import styled from 'styled-components'
 import MEDIA from 'helpers/mediaTemplates'
 
-export const WrapperCenter = styled.div`
+export const Center = styled.div`
   margin: 0 auto;
 `
 
-export const WrapperFlexReverse = styled.div`
+export const FlexReverse = styled.div`
   display: flex;
   flex-direction: column;
   margin-top: 3rem;
@@ -32,25 +32,24 @@ export const WrapperFlexReverse = styled.div`
   `};
 `
 
-export const WrapperFlexBetween = styled.div`
-  ${MEDIA.MIN_PHONE`
-    display: flex;
-    justify-content: space-between;
-  `}
-`
-
-export const WrapperNoWrap = styled.span`
+export const NoWrap = styled.span`
   white-space: nowrap;
 `
 
-export const WrapperSROnly = styled.span`
+export const SROnly = styled.span`
   position: absolute;
   clip: rect(1px, 1px, 1px, 1px);
   left: -9999px;
 `
 
-export const WrapperDim = styled.span`
+export const Dim = styled.span`
   &.dim {
     opacity: 0.7;
+  }
+`
+
+export const Markdown = styled.div`
+  a {
+    text-decoration: underline;
   }
 `

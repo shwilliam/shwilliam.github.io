@@ -1,5 +1,4 @@
 ---
-path: /project/espresso
 title: ☕ Espresso type visualization
 category: os
 tech: d3

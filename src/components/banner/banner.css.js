@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import MEDIA from 'helpers/mediaTemplates'
 
-export const Wrapper = styled.div`
+export const Banner = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -27,7 +27,7 @@ export const Wrapper = styled.div`
   `}
 `
 
-export const WrapperHeading = styled.p`
+export const BannerHeading = styled.p`
   font-size: 36px;
   font-weight: bold;
   margin-bottom: 0.75rem;
@@ -37,7 +37,7 @@ export const WrapperHeading = styled.p`
   `}
 `
 
-export const WrapperSubheading = styled.p`
+export const BannerSubheading = styled.p`
   font-size: 18px;
   margin-bottom: 1.5rem;
 `

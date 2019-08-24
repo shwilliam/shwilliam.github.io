@@ -1,5 +1,4 @@
 ---
-path: /project/vue-shiny-button
 title: 🤳 vue-shiny-button
 category: os
 tech: vue

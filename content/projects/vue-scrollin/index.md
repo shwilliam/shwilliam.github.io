@@ -1,5 +1,4 @@
 ---
-path: /project/vue-scrollin
 title: 🎰 vue-scrollin
 category: os
 tech: vue

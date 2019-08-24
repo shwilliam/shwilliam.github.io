@@ -1,5 +1,4 @@
 ---
-path: /project/post-links
 title: 🔗 post-links
 category: os
 tech: react

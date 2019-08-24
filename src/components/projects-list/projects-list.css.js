@@ -1,6 +1,13 @@
 import styled from 'styled-components'
 import MEDIA from 'helpers/mediaTemplates'
 
+export const ProjectsListItem = styled.li`
+  ${MEDIA.MIN_PHONE`
+    display: flex;
+    justify-content: space-between;
+  `}
+`
+
 export const ProjectActions = styled.div`
   display: flex;
   flex-direction: row;
@@ -22,7 +29,7 @@ export const ProjectActions = styled.div`
   ${MEDIA.MIN_TABLET`
     align-items: center;
     flex-direction: row;
-    margin-top: 2.2rem;
+    // margin-top: 2.2rem;
 
     & > * {
       margin-left: 0.75rem;

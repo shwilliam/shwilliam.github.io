@@ -1,5 +1,4 @@
 ---
-path: /project/create-readme-cli
 title: 📜 create-readme CLI
 category: os
 tech: vanilla

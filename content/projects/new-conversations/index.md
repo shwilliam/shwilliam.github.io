@@ -1,5 +1,4 @@
 ---
-path: /project/new-conversations
 title: 📷 New Conversations
 description: Open conversations in images
 category: os

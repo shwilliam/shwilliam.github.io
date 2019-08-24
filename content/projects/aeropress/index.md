@@ -1,5 +1,4 @@
 ---
-path: /project/aeropress
 title: 💧 AeroPress animation
 category: os
 tech: vue d3

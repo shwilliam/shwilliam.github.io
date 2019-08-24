@@ -3,7 +3,7 @@ import {Consumer} from 'store/createContext'
 import {NoWrap} from 'components/utils'
 import Tag from 'components/tag'
 import {
-  ProjectsGrid as StyledProjectsGrid,
+  ProjectsGrid as ProjectsGridStyled,
   ProjectLink,
   ProjectHeader,
   ProjectTitle,
@@ -12,7 +12,7 @@ import {
 const ProjectsGrid = projects => (
   <Consumer>
     {({activeCategory, setActiveCategory}) => (
-      <StyledProjectsGrid>
+      <ProjectsGridStyled>
         {projects.map(({node}) => {
           const {frontmatter} = node
 
@@ -34,7 +34,7 @@ const ProjectsGrid = projects => (
             </ProjectLink>
           )
         })}
-      </StyledProjectsGrid>
+      </ProjectsGridStyled>
     )}
   </Consumer>
 )

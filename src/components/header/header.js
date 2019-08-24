@@ -6,15 +6,15 @@ import WidthWrapper from 'components/width-wrapper'
 import Nav from 'components/header/nav'
 import ImgAvatar from 'components/img-avatar'
 import {NoWrap} from 'components/utils'
-import {StyledHeader, StyledHeaderLayout} from './header.css'
+import {Header as HeaderStyled, HeaderLayout} from './header.css'
 
 const Header = ({title}) => {
   const [isScrolled] = useWindowScroll()
 
   return (
-    <StyledHeader className={isScrolled ? 'scrolled' : ''}>
+    <HeaderStyled className={isScrolled ? 'scrolled' : ''}>
       <WidthWrapper>
-        <StyledHeaderLayout>
+        <HeaderLayout>
           <Link to="/">
             <NoWrap>
               <h1>
@@ -24,9 +24,9 @@ const Header = ({title}) => {
             </NoWrap>
           </Link>
           <Nav />
-        </StyledHeaderLayout>
+        </HeaderLayout>
       </WidthWrapper>
-    </StyledHeader>
+    </HeaderStyled>
   )
 }
 

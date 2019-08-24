@@ -1,5 +1,4 @@
 ---
-path: /project/pay-gap
 title: 📈 Gender pay gap
 category: os
 tech: d3

@@ -1,5 +1,4 @@
 ---
-path: /project/vue-window-dimensions
 title: ↔ vue-window-dimensions
 category: os
 tech: vue

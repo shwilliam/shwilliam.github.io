@@ -1,5 +1,4 @@
 ---
-path: /project/shwilliam.com
 title: 🌼 shwilliam.com
 category: os
 tech: react graphql gatsby

@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import MEDIA from 'helpers/mediaTemplates'
 
-export const StyledHeader = styled.header`
+export const Header = styled.header`
   padding-top: 3rem;
   padding-bottom: 1rem;
   position: sticky;
@@ -16,7 +16,7 @@ export const StyledHeader = styled.header`
   }
 `
 
-export const StyledHeaderLayout = styled.div`
+export const HeaderLayout = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;

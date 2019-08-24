@@ -1,5 +1,4 @@
 ---
-path: /project/vue-direction
 title: 👋 vue-direction
 category: os
 tech: vue

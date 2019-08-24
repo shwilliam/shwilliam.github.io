@@ -1,5 +1,4 @@
 ---
-path: /project/lagom-css
 title: 👒 Lagom CSS
 category: os
 tech: stylus
