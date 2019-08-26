@@ -17,7 +17,12 @@ const ProjectsGrid = projects => (
           const {frontmatter} = node
 
           return (
-            <ProjectLink key={frontmatter.path} href={frontmatter.source}>
+            <ProjectLink
+              key={frontmatter.path}
+              href={frontmatter.source}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <ProjectHeader>
                 <ProjectTitle>{frontmatter.title}</ProjectTitle>
                 {frontmatter.tech && (

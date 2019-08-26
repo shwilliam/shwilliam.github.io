@@ -2,10 +2,15 @@ import styled from 'styled-components'
 import MEDIA from 'helpers/mediaTemplates'
 
 export const ProjectsList = styled.ul`
+  list-style-type: none;
   padding: 0;
 `
 
 export const ProjectsListItem = styled.li`
+  &:hover {
+    opacity: 0.5;
+  }
+
   ${MEDIA.MIN_PHONE`
     display: flex;
     justify-content: space-between;
