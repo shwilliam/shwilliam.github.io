@@ -3,6 +3,7 @@ import {Link} from 'gatsby'
 import {Consumer} from 'store/createContext'
 import {
   BlogList as BlogListStyled,
+  BlogListItem,
   BlogListTitle,
   BlogListDate,
 } from './blog-list.css'
@@ -15,13 +16,13 @@ const BlogList = projects => (
           const {frontmatter} = node
 
           return (
-            <li key={frontmatter.path}>
+            <BlogListItem key={frontmatter.path}>
               <Link to={frontmatter.path}>
                 <BlogListTitle>{frontmatter.title}</BlogListTitle>
                 <BlogListDate>{frontmatter.date}</BlogListDate>
                 <p>{frontmatter.description}</p>
               </Link>
-            </li>
+            </BlogListItem>
           )
         })}
       </BlogListStyled>

@@ -1,5 +1,6 @@
 import {
   Center as CenterStyled,
+  VPadded as VPaddedStyled,
   FlexReverse as FlexReverseStyled,
   NoWrap as NoWrapStyled,
   SROnly as SROnlyStyled,
@@ -8,10 +9,11 @@ import {
 } from './utils.css'
 
 const Center = CenterStyled
+const VPadded = VPaddedStyled
 const FlexReverse = FlexReverseStyled
 const NoWrap = NoWrapStyled
 const SROnly = SROnlyStyled
 const Dim = DimStyled
 const Markdown = MarkdownStyled
 
-export {Center, FlexReverse, NoWrap, SROnly, Dim, Markdown}
+export {Center, VPadded, FlexReverse, NoWrap, SROnly, Dim, Markdown}

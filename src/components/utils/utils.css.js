@@ -5,6 +5,12 @@ export const Center = styled.div`
   margin: 0 auto;
 `
 
+export const VPadded = styled.span`
+  display: inline-block;
+  margin-top: 0.75rem;
+  margin-bottom: 3rem;
+`
+
 export const FlexReverse = styled.div`
   display: flex;
   flex-direction: column;

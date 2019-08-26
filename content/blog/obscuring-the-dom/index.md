@@ -1,11 +1,11 @@
 ---
 path: /blog/obscuring-the-dom
 date: 2019-08-25T00:00:00-05:00
-title: 👀 Obscuring the DOM
+title: 🙈 Obscuring the DOM
 description: Overview of common techniques to hide DOM elements and their affect on accessibility
 ---
 
-## 👀 Obscuring the DOM
+## 🙈 Obscuring the DOM
 
 ---
 
