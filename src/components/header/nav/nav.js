@@ -15,6 +15,9 @@ const Nav = () => (
         <InternalLinkStyled to="/work">work</InternalLinkStyled>
       </li>
       <li>
+        <InternalLinkStyled to="/blog">blog</InternalLinkStyled>
+      </li>
+      <li>
         <LinkStyled href="https://github.com/shwilliam/shwilliam.github.io">
           source
         </LinkStyled>
