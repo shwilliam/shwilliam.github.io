@@ -43,6 +43,13 @@ module.exports = {
         path: `${__dirname}/content/pages`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/content/blog`,
+        name: 'markdown-pages',
+      },
+    },
     `gatsby-transformer-remark`,
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-sharp`,

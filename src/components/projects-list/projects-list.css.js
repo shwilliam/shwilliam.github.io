@@ -1,6 +1,10 @@
 import styled from 'styled-components'
 import MEDIA from 'helpers/mediaTemplates'
 
+export const ProjectsList = styled.ul`
+  padding: 0;
+`
+
 export const ProjectsListItem = styled.li`
   ${MEDIA.MIN_PHONE`
     display: flex;

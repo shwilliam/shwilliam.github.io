@@ -5,6 +5,7 @@ import LinkButton from 'components/link-button'
 import {NoWrap, Dim} from 'components/utils'
 import Tag from 'components/tag'
 import {
+  ProjectsList as ProjectsListStyled,
   ProjectsListItem,
   ProjectActions,
   ProjectContent,
@@ -14,7 +15,7 @@ import {
 const ProjectsList = projects => (
   <Consumer>
     {({activeCategory, setActiveCategory}) => (
-      <ul>
+      <ProjectsListStyled>
         {projects
           .sort(({node}) => {
             if (!activeCategory) return false
@@ -78,7 +79,7 @@ const ProjectsList = projects => (
               </Dim>
             )
           })}
-      </ul>
+      </ProjectsListStyled>
     )}
   </Consumer>
 )

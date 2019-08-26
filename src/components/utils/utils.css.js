@@ -52,4 +52,8 @@ export const Markdown = styled.div`
   a {
     text-decoration: underline;
   }
+
+  h3 {
+    margin-top: 3rem;
+  }
 `
