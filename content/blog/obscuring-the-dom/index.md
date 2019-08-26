@@ -31,8 +31,6 @@ Which of these options is most appropriate can only be evaluated on a case-by-ca
 
 ### 1. Hidden for everyone
 
-<br />
-
 #### `display: none;`
 
 By far the most common way of hiding an element for everyone is to set its CSS `display` property to `none`. This will **hide the element visually** and make it **ignored by ATs**. This technique will also remove the targeted element from the document's normal flow, meaning that it will not take up any space on the webpage.
@@ -107,8 +105,6 @@ In the case that the target element is interactive, you will most likely want to
 Alternatively, you can use the HTML ARIA attributes, such as `aria-describedby` or `aria-labelledby`, to force screen-readers to announce information related to a hidden element.
 
 ### 3. Hidden for assistive technology (AT) users
-
-<br />
 
 #### `aria-hidden`
 

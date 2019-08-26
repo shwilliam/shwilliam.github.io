@@ -60,3 +60,13 @@ h3 {
   font-size: 24px;
   margin-right: 0.75rem;
 }
+
+h4 code {
+  display: inline-block;
+  margin-top: 1.5rem;
+}
+
+code {
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+}
