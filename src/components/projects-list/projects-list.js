@@ -2,7 +2,7 @@ import React from 'react'
 import GitHubButton from 'react-github-btn'
 import {Consumer} from 'store/createContext'
 import LinkButton from 'components/link-button'
-import {NoWrap, Dim} from 'components/utils'
+import {NoWrap} from 'components/utils'
 import Tag from 'components/tag'
 import {
   ProjectsList as ProjectsListStyled,
@@ -26,63 +26,47 @@ const ProjectsList = projects => (
             const {frontmatter} = node
 
             return (
-              <a
-                key={frontmatter.title}
-                href={frontmatter.source}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Dim
-                  className={
-                    activeCategory &&
-                    !frontmatter.tech.split(' ').includes(activeCategory)
-                      ? 'dim'
-                      : ''
-                  }
-                >
-                  <ProjectsListItem>
-                    <ProjectContent>
-                      <ProjectTitle>{frontmatter.title}</ProjectTitle>
-                      {frontmatter.tech && (
-                        <NoWrap>
-                          {frontmatter.tech.split(' ').map(tag => (
-                            <Tag
-                              key={tag}
-                              value={tag}
-                              onClick={() => setActiveCategory(tag)}
-                              variant="large"
-                            >
-                              {tag}
-                            </Tag>
-                          ))}
-                        </NoWrap>
-                      )}
-                      <p>{frontmatter.excerpt}</p>
-                    </ProjectContent>
+              <ProjectsListItem key={frontmatter.title}>
+                <ProjectContent>
+                  <ProjectTitle>{frontmatter.title}</ProjectTitle>
+                  {frontmatter.tech && (
+                    <NoWrap>
+                      {frontmatter.tech.split(' ').map(tag => (
+                        <Tag
+                          key={tag}
+                          value={tag}
+                          onClick={() => setActiveCategory(tag)}
+                          variant="large"
+                        >
+                          {tag}
+                        </Tag>
+                      ))}
+                    </NoWrap>
+                  )}
+                  <p>{frontmatter.excerpt}</p>
+                </ProjectContent>
 
-                    <ProjectActions>
-                      {frontmatter.link && (
-                        <LinkButton
-                          href={frontmatter.link}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          Link
-                        </LinkButton>
-                      )}
-                      {frontmatter.source && (
-                        <GitHubButton
-                          href={frontmatter.source}
-                          data-size="large"
-                          // data-show-count="true"
-                        >
-                          Source
-                        </GitHubButton>
-                      )}
-                    </ProjectActions>
-                  </ProjectsListItem>
-                </Dim>
-              </a>
+                <ProjectActions>
+                  {frontmatter.link && (
+                    <LinkButton
+                      href={frontmatter.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Link
+                    </LinkButton>
+                  )}
+                  {frontmatter.source && (
+                    <GitHubButton
+                      href={frontmatter.source}
+                      data-size="large"
+                      // data-show-count="true"
+                    >
+                      Source
+                    </GitHubButton>
+                  )}
+                </ProjectActions>
+              </ProjectsListItem>
             )
           })}
       </ProjectsListStyled>

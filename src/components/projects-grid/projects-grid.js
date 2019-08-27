@@ -18,7 +18,7 @@ const ProjectsGrid = projects => (
 
           return (
             <ProjectLink
-              key={frontmatter.path}
+              key={frontmatter.title}
               href={frontmatter.source}
               target="_blank"
               rel="noopener noreferrer"
