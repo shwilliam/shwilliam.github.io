@@ -18,9 +18,9 @@ const colors = {
     border: '#d3adf7',
   },
   graphql: {
-    text: '#eb2f96',
-    bg: '#fff0f6',
-    border: '#ffadd2',
+    text: '#fa541c',
+    bg: '#fff2e8',
+    border: '#ffbb96',
   },
   d3: {
     text: '#fa8c16',
@@ -31,6 +31,11 @@ const colors = {
     text: '#f5222d',
     bg: '#fff1f0',
     border: '#ffa39e',
+  },
+  wordpress: {
+    text: '#2f54eb',
+    bg: '#f0f5ff',
+    border: '#adc6ff',
   },
   vanilla: {
     text: '#faad14',

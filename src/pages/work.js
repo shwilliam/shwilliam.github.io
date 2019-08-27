@@ -21,6 +21,7 @@ const Work = ({data}) => (
           'gatsby',
           'd3',
           'stylus',
+          'wordpress',
           'vanilla',
         ]}
       />
