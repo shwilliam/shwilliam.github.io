@@ -2,7 +2,7 @@
 title: ☕ Espresso type visualization
 category: os
 tech: d3
-link: https://shwilliam.github.io/espresso/
+link: https://shwilliam.com/espresso/
 source: https://github.com/shwilliam/espresso
 date: 2018-12-18T00:00:00-05:00
 excerpt: Simple visualization of common espresso coffees

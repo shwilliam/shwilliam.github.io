@@ -4,7 +4,7 @@ module.exports = {
   siteTitle: `William Lindvall`,
   siteTitleShort: `@shwilliam`,
   siteDescription: `Vancouver-based front-end developer`,
-  siteUrl: `https://shwilliam.github.io`,
+  siteUrl: `https://shwilliam.com`,
   themeColor: `#000`,
   backgroundColor: `#fff`,
   pathPrefix: null,

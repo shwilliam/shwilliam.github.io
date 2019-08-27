@@ -17,8 +17,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `shwilliam.github.io`,
-        short_name: `shwilliam.github.io`,
+        name: `William Lindvall`,
+        short_name: `William L`,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#000000`,
