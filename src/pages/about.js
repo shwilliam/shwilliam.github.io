@@ -4,13 +4,13 @@ import {graphql} from 'gatsby'
 import Layout from 'components/layout'
 import {FlexReverse, Markdown} from 'components/utils'
 import Head from 'components/head'
-import ImgAbout from 'components/img-about'
+import ImageAbout from 'components/img-about'
 
 const About = ({data}) => (
   <Layout>
     <Head pageTitle={data.aboutJson.title} />
     <FlexReverse>
-      <ImgAbout />
+      <ImageAbout />
       <Markdown
         dangerouslySetInnerHTML={{
           __html: data.aboutJson.content.childMarkdownRemark.html,

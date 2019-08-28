@@ -4,7 +4,7 @@ import {Link} from 'gatsby'
 import useWindowScroll from 'hooks/useWindowScroll'
 import WidthWrapper from 'components/width-wrapper'
 import Nav from 'components/header/nav'
-import ImgAvatar from 'components/img-avatar'
+import ImageAvatar from 'components/img-avatar'
 import {NoWrap} from 'components/utils'
 import {Header as HeaderStyled, HeaderLayout} from './header.css'
 
@@ -15,10 +15,10 @@ const Header = ({title}) => {
     <HeaderStyled className={isScrolled ? 'scrolled' : ''}>
       <WidthWrapper>
         <HeaderLayout>
-          <Link to="/">
+          <Link to="/home">
             <NoWrap>
               <h1>
-                <ImgAvatar />
+                <ImageAvatar />
                 {title}
               </h1>
             </NoWrap>
