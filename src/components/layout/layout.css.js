@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 
 export const Layout = styled.div`
-  margin-bottom: 6rem;
+  background: #fcfcfc;
+  padding-bottom: 6rem;
 `

@@ -5,7 +5,7 @@ export const LinkStyled = styled.a`
   font-size: 12px;
   display: inline-block;
   -webkit-appearance: none;
-  background-color: #fff;
+  background-color: transparent;
   color: #757575 !important;
   border: 1px solid rgba(27, 31, 35, 0.35);
   border-radius: 0.25rem;
@@ -31,7 +31,7 @@ export const GatsbyLink = styled(Link)`
   font-size: 12px;
   display: inline-block;
   -webkit-appearance: none;
-  background-color: #fff;
+  background-color: transparent;
   color: #757575 !important;
   border: 1px solid rgba(27, 31, 35, 0.35);
   border-radius: 0.25rem;

@@ -6,7 +6,7 @@ export const Header = styled.header`
   padding-bottom: 1rem;
   position: sticky;
   top: 0;
-  background-color: #fff;
+  background: #fcfcfc;
   z-index: 999;
   transition: transform 0.2s ease-in-out;
 
