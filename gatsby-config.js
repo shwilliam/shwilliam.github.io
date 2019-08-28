@@ -26,6 +26,62 @@ module.exports = {
         icon: `src/images/icon.png`,
       },
     },
+    {
+      resolve: `gatsby-plugin-feed`,
+      options: {
+        query: `
+          {
+            site {
+              siteMetadata {
+                siteTitle
+                siteDescription
+                siteUrl
+                site_url: siteUrl
+              }
+            }
+          }
+        `,
+        feeds: [
+          {
+            serialize: ({query: {site, allMarkdownRemark}}) => {
+              return allMarkdownRemark.edges.map(edge => {
+                return Object.assign({}, edge.node.frontmatter, {
+                  description: edge.node.excerpt,
+                  date: edge.node.frontmatter.date,
+                  url: site.siteMetadata.siteUrl + edge.node.frontmatter.path,
+                  guid: site.siteMetadata.siteUrl + edge.node.frontmatter.path,
+                  custom_elements: [
+                    {'content:encoded': edge.node.rawMarkdownBody},
+                  ],
+                })
+              })
+            },
+            query: `
+              {
+                allMarkdownRemark(
+                  sort: { order: DESC, fields: [frontmatter___date] },
+                  filter: {fileAbsolutePath: {regex: "/(/blog).*\\\\.md/"}},
+                ) {
+                  edges {
+                    node {
+                      rawMarkdownBody
+                      frontmatter {
+                        path
+                        title
+                        date
+                        description
+                      }
+                    }
+                  }
+                }
+              }
+            `,
+            output: '/rss.xml',
+            title: 'William Lindvall Blog',
+          },
+        ],
+      },
+    },
     `gatsby-plugin-offline`,
     `gatsby-transformer-json`,
     `gatsby-plugin-eslint`,

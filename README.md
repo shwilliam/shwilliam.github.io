@@ -13,6 +13,7 @@
 - [x] 📶 Offline support
 - [x] 📝 Generated manifest
 - [x] 🔎 Optimized for SEO
+- [x] 🖨 RSS feed for blog posts
 - [x] ⛔ No-JS support
 - [x] 📸 Images optimized at build time
 - [x] 📂 React Context for global UI state

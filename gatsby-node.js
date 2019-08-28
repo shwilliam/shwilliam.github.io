@@ -20,7 +20,7 @@ exports.onCreateWebpackConfig = ({
   })
 }
 
-// creates project pages from template
+// creates blog pages from template
 exports.createPages = ({boundActionCreators, graphql}) => {
   const {createPage} = boundActionCreators
 
