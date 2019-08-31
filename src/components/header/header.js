@@ -2,30 +2,25 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import {Link} from 'gatsby'
 import useWindowScroll from 'hooks/useWindowScroll'
-import WidthWrapper from 'components/width-wrapper'
 import Nav from 'components/header/nav'
-import ImageAvatar from 'components/img-avatar'
-import {NoWrap} from 'components/utils'
-import {Header as HeaderStyled, HeaderLayout} from './header.css'
+import {NoWrap, SROnly} from 'components/utils'
+import {Header as HeaderStyled, HeaderLayout, HeaderTitle} from './header.css'
 
 const Header = ({title}) => {
   const [isScrolled] = useWindowScroll()
 
   return (
     <HeaderStyled className={isScrolled ? 'scrolled' : ''}>
-      <WidthWrapper>
-        <HeaderLayout>
-          <Link to="/home">
-            <NoWrap>
-              <h1>
-                <ImageAvatar />
-                {title}
-              </h1>
-            </NoWrap>
-          </Link>
-          <Nav />
-        </HeaderLayout>
-      </WidthWrapper>
+      <HeaderLayout>
+        <Link to="/home">
+          <NoWrap>
+            <HeaderTitle>
+              <SROnly>{title}</SROnly>W
+            </HeaderTitle>
+          </NoWrap>
+        </Link>
+        <Nav />
+      </HeaderLayout>
     </HeaderStyled>
   )
 }

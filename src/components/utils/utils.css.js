@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import MEDIA from 'helpers/mediaTemplates'
+import {blue} from 'constants/colors'
 
 export const Center = styled.div`
   margin: 0 auto;
@@ -55,7 +56,11 @@ export const Dim = styled.span`
 `
 
 export const Markdown = styled.div`
-  a {
+  padding-bottom: 3rem;
+
+  a,
+  a:visited {
+    color: ${blue};
     text-decoration: underline;
   }
 
