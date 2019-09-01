@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import MEDIA from 'helpers/mediaTemplates'
-import {blue} from 'constants/colors'
+import {blue, white} from 'constants/colors'
 import BREAKPOINTS from 'constants/breakpoints'
 
 export const Header = styled.header`
@@ -19,9 +19,12 @@ export const HeaderLayout = styled.div`
   justify-content: space-between;
 `
 
-export const HeaderTitle = styled.h1`
+export const HeaderTitle = styled.span`
+  font-size: 36px;
+  font-weight: bold;
+  display: inline-block;
   background-color: ${blue};
-  color: #fff;
+  color: ${white};
   max-width: ${BREAKPOINTS.DESKTOP}px;
   margin: 0 auto;
   padding: 0.3rem 0.9rem;

@@ -14,9 +14,10 @@ const Header = ({title}) => {
       <HeaderLayout>
         <Link to="/home">
           <NoWrap>
-            <HeaderTitle>
-              <SROnly>{title}</SROnly>W
-            </HeaderTitle>
+            <h1>
+              <SROnly>{title}</SROnly>
+            </h1>
+            <HeaderTitle>W</HeaderTitle>
           </NoWrap>
         </Link>
         <Nav />

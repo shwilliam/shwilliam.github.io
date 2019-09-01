@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import MEDIA from 'helpers/mediaTemplates'
-import {blue} from 'constants/colors'
+import {blue, white} from 'constants/colors'
 
 export const Center = styled.div`
   margin: 0 auto;
@@ -64,7 +64,21 @@ export const Markdown = styled.div`
     text-decoration: underline;
   }
 
+  mark {
+    background-color: ${blue};
+    color: ${white};
+  }
+
+  h2 {
+    margin-bottom: 1.5rem;
+  }
+
   h3 {
     margin-top: 3rem;
   }
+`
+
+export const Mark = styled.mark`
+  background-color: ${({inverse}) => (inverse ? white : blue)};
+  color: ${({inverse}) => (inverse ? '#222' : white)};
 `

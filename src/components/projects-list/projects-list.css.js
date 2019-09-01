@@ -52,7 +52,9 @@ export const ProjectContent = styled.div`
 `
 
 export const ProjectTitle = styled.h3`
-  ${MEDIA.MIN_PHONE`
+  display: block;
+
+  ${MEDIA.MIN_TABLET`
     display: inline-block;
   `}
 `

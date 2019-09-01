@@ -1,12 +1,12 @@
 import styled from 'styled-components'
 import {Link} from 'gatsby'
-import {blue} from 'constants/colors'
+import {blue, white} from 'constants/colors'
 
 export const Nav = styled.nav`
   height: 100%;
   flex-grow: 1;
   border-bottom: 1px solid ${blue};
-  background-color: #fcfcfc;
+  background-color: ${white};
 
   ul {
     display: flex;

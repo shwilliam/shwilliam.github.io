@@ -58,6 +58,7 @@ export const Tag = styled.span`
   color: ${({value}) => colors[value].text};
   background-color: ${({value}) => colors[value].bg};
   border-color: ${({value}) => colors[value].border};
+
   ${MEDIA.MIN_PHONE`
     margin-bottom: 0.5rem;
   `}

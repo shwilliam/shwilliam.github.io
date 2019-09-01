@@ -4,18 +4,24 @@ import {graphql} from 'gatsby'
 import GitHubButton from 'react-github-btn'
 import FeaturedProjects from 'containers/queries/featured-projects'
 import BlogPostsRecent from 'containers/queries/blog-posts-recent'
+import Layout from 'components/layout'
 import ProjectsGrid from 'components/projects-grid'
 import BlogList from 'components/blog-list'
-import Layout from 'components/layout'
-import {Center, VPadded} from 'components/utils'
+import Map from 'components/map'
+import {Center, VPadded, Mark} from 'components/utils'
 import Banner, {BannerHeading, BannerSubheading} from 'components/banner'
 import {GatsbyLinkButton} from 'components/link-button'
 
 const Home = ({data}) => (
   <Layout>
     <Banner>
-      <BannerHeading>{data.homeJson.heading}</BannerHeading>
-      <BannerSubheading>{data.homeJson.subheading}</BannerSubheading>
+      <Map />
+      <BannerHeading>
+        <Mark>{data.homeJson.heading}</Mark>
+      </BannerHeading>
+      <BannerSubheading>
+        <Mark inverse={true}>{data.homeJson.subheading}</Mark>
+      </BannerSubheading>
       <GitHubButton
         href="https://github.com/shwilliam"
         data-size="large"

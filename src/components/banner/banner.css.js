@@ -2,15 +2,16 @@ import styled from 'styled-components'
 import MEDIA from 'helpers/mediaTemplates'
 
 export const Banner = styled.div`
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-right: 0;
+  margin-right: 2rem;
   padding-top: 4.5rem;
   padding-bottom: 3rem;
 
   ${MEDIA.MIN_PHONE`
-    margin-right: 3rem;
+    margin-right: 4rem;
     padding-bottom: 4.5rem;
   `}
 

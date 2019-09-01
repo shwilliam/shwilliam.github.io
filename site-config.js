@@ -5,8 +5,8 @@ module.exports = {
   siteTitleShort: `@shwilliam`,
   siteDescription: `Vancouver-based front-end developer`,
   siteUrl: `https://shwilliam.com`,
-  themeColor: `#000`,
-  backgroundColor: `#fff`,
+  themeColor: `#05f`,
+  backgroundColor: `#fcfcfc`,
   pathPrefix: null,
   logo: path.resolve(__dirname, 'src/images/avatar.png'),
   social: {
