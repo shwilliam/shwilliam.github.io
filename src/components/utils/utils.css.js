@@ -79,6 +79,7 @@ export const Markdown = styled.div`
 `
 
 export const Mark = styled.mark`
+  font-weight: bold;
   background-color: ${({inverse}) => (inverse ? white : blue)};
   color: ${({inverse}) => (inverse ? '#222' : white)};
 `

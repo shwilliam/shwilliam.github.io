@@ -8,6 +8,7 @@ export const Layout = styled.div`
   bottom: 0;
   left: 0;
   height: calc(100vh - 2rem);
+  min-width: 320px;
   overflow-x: hidden;
   overflow-y: scroll;
   border: 1px solid ${blue};

@@ -17,7 +17,12 @@ const Home = ({data}) => (
     <Banner>
       <Map />
       <BannerHeading>
-        <Mark>{data.homeJson.heading}</Mark>
+        <p>
+          <Mark>Hej! 👋</Mark>
+        </p>
+        <p>
+          <Mark>{data.homeJson.heading}</Mark>
+        </p>
       </BannerHeading>
       <BannerSubheading>
         <Mark inverse={true}>{data.homeJson.subheading}</Mark>

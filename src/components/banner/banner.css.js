@@ -11,7 +11,7 @@ export const Banner = styled.div`
   padding-bottom: 3rem;
 
   ${MEDIA.MIN_PHONE`
-    margin-right: 4rem;
+    margin-right: 3rem;
     padding-bottom: 4.5rem;
   `}
 
@@ -28,9 +28,8 @@ export const Banner = styled.div`
   `}
 `
 
-export const BannerHeading = styled.p`
+export const BannerHeading = styled.div`
   font-size: 36px;
-  font-weight: bold;
   margin-bottom: 0.75rem;
 
   ${MEDIA.MIN_TABLET`
@@ -38,7 +37,7 @@ export const BannerHeading = styled.p`
   `}
 `
 
-export const BannerSubheading = styled.p`
+export const BannerSubheading = styled.div`
   font-size: 18px;
   margin-bottom: 1.5rem;
 `
