@@ -15,6 +15,7 @@ const CategoryFilter = ({filters}) => (
               <input
                 value={filter}
                 onChange={onCategorySelect}
+                onClick={onCategorySelect}
                 checked={activeCategory === filter}
                 name="category"
                 type="radio"

@@ -4,6 +4,7 @@ import {Provider} from './createContext'
 
 const AppProvider = ({children}) => {
   const [activeCategory, setActiveCategory] = useState(null)
+  console.log(activeCategory)
 
   const onCategorySelect = e =>
     e.target.value === activeCategory
