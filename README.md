@@ -17,6 +17,5 @@
 - [x] ⛔ No-JS support
 - [x] 📸 Images optimized at build time
 - [x] 📂 React Context for global UI state
-- [x] 💅 Componentized styles w/ [`styled-components`](https://www.styled-components.com/)
-- [x] 📈 Web analytics with [Google Analytics](https://analytics.google.com/)
-- [x] 💯 Tested with [Google Lighthouse](https://developers.google.com/web/tools/lighthouse/)
+- [x] 💅 Componentized styles with [`styled-components`](https://www.styled-components.com/)
+- [x] 💯 Test script audits site using [Google Lighthouse](https://developers.google.com/web/tools/lighthouse/)
