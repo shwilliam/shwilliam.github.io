@@ -7,6 +7,8 @@ description: Overview of common techniques to hide DOM elements and their affect
 
 ## 🙈 Obscuring the DOM
 
+---
+
 As a web developer, I can't think of a single project that I have worked on that didn't require some logic dealing with hiding or showing DOM elements. Be it as part of an accordion, some tabs, a simple toast notification or a modal, toggling DOM elements in and out of view is something I find myself implementing **all the time**.
 
 <br />

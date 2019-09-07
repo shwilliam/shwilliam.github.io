@@ -2,11 +2,10 @@ import styled from 'styled-components'
 import MEDIA from 'helpers/mediaTemplates'
 
 export const Banner = styled.div`
-  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-right: 2rem;
+  margin-right: 0;
   padding-top: 4.5rem;
   padding-bottom: 3rem;
 
@@ -28,8 +27,9 @@ export const Banner = styled.div`
   `}
 `
 
-export const BannerHeading = styled.div`
+export const BannerHeading = styled.p`
   font-size: 36px;
+  font-weight: bold;
   margin-bottom: 0.75rem;
 
   ${MEDIA.MIN_TABLET`
@@ -37,7 +37,7 @@ export const BannerHeading = styled.div`
   `}
 `
 
-export const BannerSubheading = styled.div`
+export const BannerSubheading = styled.p`
   font-size: 18px;
   margin-bottom: 1.5rem;
 `

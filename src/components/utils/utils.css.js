@@ -1,6 +1,5 @@
 import styled from 'styled-components'
 import MEDIA from 'helpers/mediaTemplates'
-import {blue, white} from 'constants/colors'
 
 export const Center = styled.div`
   margin: 0 auto;
@@ -56,30 +55,11 @@ export const Dim = styled.span`
 `
 
 export const Markdown = styled.div`
-  padding-bottom: 3rem;
-
-  a,
-  a:visited {
-    color: ${blue};
+  a {
     text-decoration: underline;
-  }
-
-  mark {
-    background-color: ${blue};
-    color: ${white};
-  }
-
-  h2 {
-    margin-bottom: 1.5rem;
   }
 
   h3 {
     margin-top: 3rem;
   }
-`
-
-export const Mark = styled.mark`
-  font-weight: bold;
-  background-color: ${({inverse}) => (inverse ? white : blue)};
-  color: ${({inverse}) => (inverse ? '#222' : white)};
 `
