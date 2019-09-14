@@ -17,6 +17,7 @@ const ProjectsList = projects => (
     {({activeCategory, setActiveCategory}) => (
       <ProjectsListStyled>
         {projects
+          .sort(({node}) => !node.frontmatter.priority)
           .sort(({node}) => {
             if (!activeCategory) return false
 

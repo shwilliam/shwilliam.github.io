@@ -9,4 +9,5 @@ excerpt: A mixed-state checkbox for React based on the WAI-ARIA Authoring Practi
 featured: os
 imgUrl: https://user-images.githubusercontent.com/38357771/63289330-b24e1500-c273-11e9-844b-7770fbec9d2a.gif
 imgAlt: Sample component usage
+priority: 1
 ---

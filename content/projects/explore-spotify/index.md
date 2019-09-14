@@ -1,6 +1,6 @@
 ---
 title: 🎵 Explore Spotify graph
-category: draft
+category: os
 tech: react d3
 link: https://explore-spotify.netlify.com/
 source: https://github.com/shwilliam/explore-spotify
