@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import {Link} from 'gatsby'
 
 export const Nav = styled.nav`
   ul {
@@ -12,12 +11,4 @@ export const Nav = styled.nav`
       margin-left: 1.5rem;
     }
   }
-`
-
-export const InternalLink = styled(Link)`
-  padding: 0.75rem;
-`
-
-export const LinkStyled = styled.a`
-  padding: 0.75rem;
 `

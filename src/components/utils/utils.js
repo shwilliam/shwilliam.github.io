@@ -6,6 +6,8 @@ import {
   SROnly as SROnlyStyled,
   Dim as DimStyled,
   Markdown as MarkdownStyled,
+  LinkStyled,
+  InternalLink as InternalLinkStyled,
 } from './utils.css'
 
 const Center = CenterStyled
@@ -15,5 +17,17 @@ const NoWrap = NoWrapStyled
 const SROnly = SROnlyStyled
 const Dim = DimStyled
 const Markdown = MarkdownStyled
+const Link = LinkStyled
+const InternalLink = InternalLinkStyled
 
-export {Center, VPadded, FlexReverse, NoWrap, SROnly, Dim, Markdown}
+export {
+  Center,
+  VPadded,
+  FlexReverse,
+  NoWrap,
+  SROnly,
+  Dim,
+  Markdown,
+  Link,
+  InternalLink,
+}

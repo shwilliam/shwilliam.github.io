@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import MEDIA from 'helpers/mediaTemplates'
+import {Link} from 'gatsby'
 
 export const Center = styled.div`
   margin: 0 auto;
@@ -61,5 +62,21 @@ export const Markdown = styled.div`
 
   h3 {
     margin-top: 3rem;
+  }
+`
+
+export const LinkStyled = styled.a`
+  padding: 0.75rem;
+
+  &:hover {
+    opacity: 0.7;
+  }
+`
+
+export const InternalLink = styled(Link)`
+  padding: 0.75rem;
+
+  &:hover {
+    opacity: 0.7;
   }
 `

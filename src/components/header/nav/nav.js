@@ -1,9 +1,6 @@
 import React from 'react'
-import {
-  Nav as NavStyled,
-  InternalLink as InternalLinkStyled,
-  LinkStyled,
-} from './nav.css'
+import {InternalLink as InternalLinkStyled, Link} from '../../utils'
+import {Nav as NavStyled} from './nav.css'
 
 const Nav = () => (
   <NavStyled>
@@ -18,9 +15,9 @@ const Nav = () => (
         <InternalLinkStyled to="/blog">blog</InternalLinkStyled>
       </li>
       <li>
-        <LinkStyled href="https://github.com/shwilliam/shwilliam.github.io">
+        <Link href="https://github.com/shwilliam/shwilliam.github.io">
           source
-        </LinkStyled>
+        </Link>
       </li>
     </ul>
   </NavStyled>
