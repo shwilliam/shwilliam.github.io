@@ -60,6 +60,10 @@ export const Markdown = styled.div`
     text-decoration: underline;
   }
 
+  h2 {
+    text-decoration: none;
+  }
+
   h3 {
     margin-top: 3rem;
   }
@@ -67,6 +71,7 @@ export const Markdown = styled.div`
 
 export const LinkStyled = styled.a`
   padding: 0.75rem;
+  white-space: nowrap;
 
   &:hover {
     opacity: 0.7;
@@ -75,6 +80,7 @@ export const LinkStyled = styled.a`
 
 export const InternalLink = styled(Link)`
   padding: 0.75rem;
+  white-space: nowrap;
 
   &:hover {
     opacity: 0.7;

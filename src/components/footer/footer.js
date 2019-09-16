@@ -7,6 +7,9 @@ const Footer = () => (
   <FooterStyled>
     <WidthWrapper>
       <FooterActions>
+        <Link href="mailto:w-lindvall@outlook.com?subject=Let's grab a coffee!">
+          Contact
+        </Link>
         <Link
           href="https://ko-fi.com/shwilliam"
           target="_blank"

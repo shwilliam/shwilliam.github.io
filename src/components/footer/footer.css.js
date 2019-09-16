@@ -12,7 +12,8 @@ export const Footer = styled.footer`
 `
 
 export const FooterActions = styled.div`
-  width: calc(10% + 200px);
+  width: calc(10% + 280px);
   display: flex;
   justify-content: space-between;
+  font-weight: 500;
 `

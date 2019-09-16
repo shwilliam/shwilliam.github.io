@@ -29,10 +29,11 @@ export const Banner = styled.div`
 
 export const BannerHeading = styled.p`
   font-size: 36px;
-  font-weight: bold;
+  font-weight: 700;
   margin-bottom: 0.75rem;
 
   ${MEDIA.MIN_TABLET`
+    font-weight: 800;
     margin-bottom: 1.5rem;
   `}
 `

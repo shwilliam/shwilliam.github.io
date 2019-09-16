@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import MEDIA from 'helpers/mediaTemplates'
 
 export const Header = styled.header`
-  padding-top: 2.4rem;
+  padding-top: 2.5rem;
   padding-bottom: 1rem;
   position: sticky;
   top: 0;
@@ -13,6 +13,7 @@ export const Header = styled.header`
   &.scrolled {
     transform: translateY(-1.5rem);
     box-shadow: 1px 2px 18px rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   }
 
   ${MEDIA.MIN_TABLET`

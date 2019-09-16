@@ -20,7 +20,11 @@ export const ProjectLink = styled.a`
 
 export const ProjectHeader = styled.div`
   display: flex;
-  flex-direction: row;
+  flex-direction: column-reverse;
+
+  ${MEDIA.MIN_PHONE`
+    flex-direction: row;
+  `}
 
   ${MEDIA.MIN_TABLET`
     flex-direction: column-reverse;
@@ -28,10 +32,10 @@ export const ProjectHeader = styled.div`
 `
 
 export const ProjectTitle = styled.h3`
-  display: block;
   white-space: nowrap;
+  margin-top: 0.4rem;
 
   ${MEDIA.MIN_PHONE`
-    display: inline-block;
+    margin-top: 0;
   `}
 `
