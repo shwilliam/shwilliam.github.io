@@ -9,8 +9,8 @@ const WidthWrapper = styled.div`
   padding-right: 0.75rem;
 
   ${MEDIA.MIN_PHONE`
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
+    padding-left: 2.2rem;
+    padding-right: 2.2rem;
   `}
 
   ${MEDIA.MIN_TABLET`
