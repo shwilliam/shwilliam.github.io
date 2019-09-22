@@ -1,6 +1,6 @@
 import React from 'react'
-import ImgSplash from 'components/img-splash'
+import Trump from 'components/splash'
 
-const Index = () => <ImgSplash />
+const Index = () => <Trump />
 
 export default Index

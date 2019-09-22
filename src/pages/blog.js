@@ -1,11 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import {graphql} from 'gatsby'
+import Head from 'containers/head'
+import BlogList from 'containers/blog-list'
 import Layout from 'components/layout'
 import {Center} from 'components/utils'
-import Head from 'components/head'
 import BlogPosts from 'containers/queries/blog-posts'
-import BlogList from 'components/blog-list'
 
 const Blog = ({data}) => (
   <Layout>

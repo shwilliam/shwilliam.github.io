@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import Img from 'gatsby-image'
 
-export const ImageSplashWrapper = styled.div`
+export const TrumpWrapper = styled.div`
   position: absolute;
   top: 0;
   right: 0;
@@ -14,7 +14,7 @@ export const ImageSplashWrapper = styled.div`
   justify-content: center;
 `
 
-export const ImageSplashStyled = styled(Img)`
+export const TrumpImg = styled(Img)`
   width: 90vw;
   max-width: 700px;
   zindex: -1;

@@ -1,12 +1,4 @@
-import {
-  Banner as BannerStyled,
-  BannerHeading as BannerHeadingStyled,
-  BannerSubheading as BannerSubheadingStyled,
-} from './banner.css'
-
-const Banner = BannerStyled
-const BannerHeading = BannerHeadingStyled
-const BannerSubheading = BannerSubheadingStyled
+import {Banner, BannerHeading, BannerSubheading} from './banner.css'
 
 export default Banner
 export {BannerHeading, BannerSubheading}

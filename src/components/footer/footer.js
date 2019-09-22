@@ -1,6 +1,5 @@
 import React from 'react'
-import WidthWrapper from 'components/width-wrapper'
-import {Link} from '../utils'
+import {WidthWrapper, Link} from '../utils'
 import {Footer as FooterStyled, FooterActions} from './footer.css'
 
 const Footer = () => (

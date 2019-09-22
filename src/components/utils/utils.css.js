@@ -1,42 +1,27 @@
 import styled from 'styled-components'
-import MEDIA from 'helpers/mediaTemplates'
 import {Link} from 'gatsby'
+import BREAKPOINTS from 'constants/breakpoints'
+import MEDIA from 'helpers/mediaTemplates'
+
+export const WidthWrapper = styled.div`
+  max-width: ${BREAKPOINTS.DESKTOP}px;
+  margin: 0 auto;
+  padding-left: 1.2rem;
+  padding-right: 1.2rem;
+
+  ${MEDIA.MIN_PHONE`
+    padding-left: 2.2rem;
+    padding-right: 2.2rem;
+  `}
+
+  ${MEDIA.MIN_TABLET`
+    padding-left: 3rem;
+    padding-right: 3rem;
+  `}
+`
 
 export const Center = styled.div`
   margin: 0 auto;
-`
-
-export const VPadded = styled.span`
-  display: inline-block;
-  margin-top: 0.75rem;
-  margin-bottom: 3rem;
-`
-
-export const FlexReverse = styled.div`
-  display: flex;
-  flex-direction: column;
-  margin-top: 3rem;
-
-  & > * + * {
-    margin-top: 1.5rem;
-  }
-
-  ${MEDIA.MIN_TABLET`
-    flex-direction: row-reverse;
-
-    & > * + * {
-      margin-top: 0;
-      margin-right: 4.5rem;
-    }
-  `};
-
-  ${MEDIA.MIN_DESKTOP`
-    margin-top: 6rem;
-
-    & > * + * {
-      margin-top: 3rem;
-    }
-  `};
 `
 
 export const NoWrap = styled.span`
@@ -85,4 +70,15 @@ export const InternalLink = styled(Link)`
   &:hover {
     opacity: 0.7;
   }
+`
+
+export const WIP = styled.p`
+  background-color: red;
+  color: #fff;
+  font-weight: 800;
+  position: fixed;
+  top: 0;
+  right: 1rem;
+  padding: 0.3rem 0.5rem;
+  z-index: 99999;
 `

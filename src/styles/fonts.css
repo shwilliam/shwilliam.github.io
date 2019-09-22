@@ -76,3 +76,11 @@ code {
   margin-top: 0.75rem;
   margin-bottom: 0.75rem;
 }
+
+code[class*='language-'] {
+  margin: 0;
+  padding: 0;
+  overflow: initial;
+  float: left;
+  min-width: 100%;
+}

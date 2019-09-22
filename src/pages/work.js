@@ -1,12 +1,12 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import {graphql} from 'gatsby'
+import Head from 'containers/head'
+import Projects from 'containers/queries/projects'
+import ProjectsList from 'containers/projects-list'
 import Layout from 'components/layout'
 import {Center} from 'components/utils'
-import Head from 'components/head'
-import Projects from 'containers/queries/projects'
-import ProjectsList from 'components/projects-list'
-import CategoryFilter from 'components/category-filter'
+import CategoryFilter from 'containers/category-filter'
 
 const Work = ({data}) => (
   <Layout>

@@ -1,8 +1,8 @@
 import React from 'react'
 import {useStaticQuery, graphql, Link} from 'gatsby'
-import {ImageSplashStyled, ImageSplashWrapper} from './img-splash.css'
+import {TrumpImg, TrumpWrapper} from './splash.css'
 
-const ImageSplash = () => {
+const Trump = () => {
   const data = useStaticQuery(graphql`
     query {
       placeholderImage: file(relativePath: {eq: "trump.png"}) {
@@ -16,16 +16,15 @@ const ImageSplash = () => {
   `)
 
   return (
-    <ImageSplashWrapper>
+    <TrumpWrapper>
       <Link to="/home">
-        <ImageSplashStyled
+        <TrumpImg
           fluid={data.placeholderImage.childImageSharp.fluid}
-          style={{}}
           alt="Trump calls out haters"
         />
       </Link>
-    </ImageSplashWrapper>
+    </TrumpWrapper>
   )
 }
 
-export default ImageSplash
+export default Trump
