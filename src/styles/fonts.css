@@ -67,9 +67,9 @@ h3 {
   margin-right: 0.75rem;
 }
 
-h4 code {
-  display: inline-block;
+h4 {
   margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
 }
 
 code {
@@ -78,9 +78,6 @@ code {
 }
 
 code[class*='language-'] {
-  margin: 0;
-  padding: 0;
-  overflow: initial;
-  float: left;
-  min-width: 100%;
+  /* margin: 0; */
+  /* padding: 0; */
 }
