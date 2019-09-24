@@ -12,7 +12,7 @@ export const Header = styled.header`
 
   &.scrolled {
     transform: translateY(-1.5rem);
-    box-shadow: 1px 2px 18px rgba(0, 0, 0, 0.1);
+    box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.05);
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   }
 
