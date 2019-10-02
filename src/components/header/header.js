@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import {Link} from 'gatsby'
 import useWindowScroll from 'hooks/useWindowScroll'
 import Nav from 'components/header/nav'
-import ImageAvatar from 'components/img-avatar'
+import TitleIcon from 'components/title-icon'
 import {WidthWrapper, NoWrap} from 'components/utils'
 import {Header as HeaderStyled, HeaderLayout} from './header.css'
 
@@ -17,7 +17,7 @@ const Header = ({title}) => {
           <Link to="/home">
             <NoWrap>
               <h1>
-                <ImageAvatar />
+                <TitleIcon label="Keyboard">⌨️</TitleIcon>
                 {title}
               </h1>
             </NoWrap>
