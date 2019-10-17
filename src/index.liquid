@@ -1,0 +1,28 @@
+---
+layout: templates/base.html
+---
+
+<h2>Work</h2>
+
+<ul>
+  {% for post in collections.posts %}
+    <li>
+      <h3>
+        <a
+          href="
+            {% if post.data.type == 'link' %}
+              {{post.data.link}}
+            {% else %}
+              {{post.url}}
+            {% endif %}
+          "
+        >
+          {{post.data.title}}
+        </a>
+      </h3>
+      <p>
+        {{post.data.description}}
+      </p>
+    </li>
+  {% endfor %}
+</ul>
