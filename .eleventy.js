@@ -9,8 +9,9 @@ module.exports = function(config) {
       output: 'dist',
       includes: 'includes',
     },
-    templateFormats: ['liquid', 'md', 'jpg', 'png', 'ico'],
+    templateFormats: ['liquid', 'md', 'css', 'ico', 'jpg', 'png', 'gif'],
     htmlTemplateEngine: 'liquid',
     markdownTemplateEngine: 'liquid',
+    passthroughFileCopy: true,
   }
 }
