@@ -1,7 +1,8 @@
 ---
-title: ✅ React Tri-State Checkbox
-date: 2019-08-25T00:00:00-05:00
+title: React Tri-State Checkbox
+date: 2019-10-28
 type: link
-link: https://github.com/shwilliam/react-tri-state-checkbox
-description: Bloop
+link: https://codesandbox.io/s/react-tri-state-checkbox-demo-8j7mo?fontsize=14
+source: https://github.com/shwilliam/react-tri-state-checkbox
+description: Mixed-state checkbox for React written in TypeScript, based on the WAI-ARIA Authoring Practices's tri-state checkbox
 ---

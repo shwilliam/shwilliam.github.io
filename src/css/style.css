@@ -1,0 +1,35 @@
+body {
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+.flamez {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flame {
+  margin: 0 auto;
+  width: 50%;
+  min-width: 300px;
+}
+
+.project-list {
+  margin: 20px;
+}
+
+.project-list__item-title {
+  display: flex;
+}
+
+.project-list__item--blog .project-list__item-link::before {
+  content: '✏️';
+}
+
+.project-list__item--link .project-list__item-link::before {
+  content: '🧩';
+}
+
+.project-list__item-title {
+  flex-shrink: 0;
+}

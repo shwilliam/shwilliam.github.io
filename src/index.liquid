@@ -2,12 +2,16 @@
 layout: templates/base.html
 ---
 
-<h2>Work</h2>
+<h2>Recent</h2>
 
-<ul>
-  {% for post in collections.posts %}
-    <li>
-      <h3>
+<ul class="project-list">
+  {% assign sortedPosts = collections.posts | reverse %}
+  {% for post in sortedPosts %}
+    <li
+      class="project-list__item project-list__item--{{post.data.type}}"
+    >
+
+      <h3 class="project-list__item-title">
         <a
           href="
             {% if post.data.type == 'link' %}
@@ -16,13 +20,16 @@ layout: templates/base.html
               {{post.url}}
             {% endif %}
           "
+          class="project-list__item-link"
         >
           {{post.data.title}}
         </a>
       </h3>
+
       <p>
         {{post.data.description}}
       </p>
+
     </li>
   {% endfor %}
 </ul>
