@@ -2,7 +2,7 @@
 layout: templates/base.html
 ---
 
-<h2>Recent</h2>
+<h2 class="sr-only">Recent</h2>
 
 <ul class="project-list">
   {% assign sortedPosts = collections.posts | reverse %}
@@ -11,24 +11,28 @@ layout: templates/base.html
       class="project-list__item project-list__item--{{post.data.type}}"
     >
 
-      <h3 class="project-list__item-title">
-        <a
-          href="
-            {% if post.data.type == 'link' %}
-              {{post.data.link}}
-            {% else %}
-              {{post.url}}
-            {% endif %}
-          "
-          class="project-list__item-link"
-        >
-          {{post.data.title}}
-        </a>
-      </h3>
+      <a
+        href="
+          {% if post.data.type == 'link' %}
+            {{post.data.source}}
+          {% else %}
+            {{post.url}}
+          {% endif %}
+        "
+        class="project-list__item-link"
+      >
+        <div class="project-list__item-icon"></div>
 
-      <p>
-        {{post.data.description}}
-      </p>
+        <div>
+          <h3 class="project-list__item-title">
+            {{post.data.title}}
+          </h3>
+
+          <p>
+            {{post.data.description}}
+          </p>
+        </div>
+      </a>
 
     </li>
   {% endfor %}

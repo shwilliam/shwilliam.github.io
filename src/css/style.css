@@ -1,11 +1,13 @@
 body {
-  max-width: 600px;
-  margin: 20px auto;
+  font-family: sans-serif;
+  max-width: 640px;
+  margin: 0 auto;
 }
 
 .flamez {
   display: flex;
   flex-wrap: wrap;
+  margin: 1.4rem 0.2rem;
 }
 
 .flame {
@@ -15,21 +17,34 @@ body {
 }
 
 .project-list {
-  margin: 20px;
+  margin: 2rem 1rem 2.8rem 1rem;
 }
 
-.project-list__item-title {
+.project-list__item {
+  margin: 1.4rem 1.2rem;
+}
+
+.project-list__item-link {
+  text-decoration: none;
   display: flex;
 }
 
-.project-list__item--blog .project-list__item-link::before {
+.project-list__item-link:hover .project-list__item-title,
+.project-list__item-link:focus .project-list__item-title {
+  text-decoration: underline;
+}
+
+.project-list__item-icon {
+  width: 2rem;
+  margin: 0.1rem 0.15rem 0 0;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.project-list__item--blog .project-list__item-icon::before {
   content: '✏️';
 }
 
-.project-list__item--link .project-list__item-link::before {
+.project-list__item--link .project-list__item-icon::before {
   content: '🧩';
-}
-
-.project-list__item-title {
-  flex-shrink: 0;
 }
