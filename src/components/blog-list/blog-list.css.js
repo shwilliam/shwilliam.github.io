@@ -7,6 +7,10 @@ export const BlogList = styled.ul`
 `
 
 export const BlogListItem = styled.li`
+  &:not(:first-of-type) {
+    margin-top: 44px;
+  }
+
   &:hover {
     opacity: 0.5;
   }
