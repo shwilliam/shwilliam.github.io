@@ -1,7 +1,11 @@
 body {
   font-family: sans-serif;
-  max-width: 640px;
+  max-width: 660px;
   margin: 0 auto;
+}
+
+main {
+  margin: 3.4rem 2.2rem 4.2rem 2.2rem;
 }
 
 .flamez {
@@ -23,12 +27,8 @@ body {
   justify-content: space-around;
 }
 
-.project-list {
-  margin: 2rem 1rem 2.8rem 1rem;
-}
-
 .project-list__item {
-  margin: 1.4rem 1.2rem;
+  margin: 1.4rem 0;
 }
 
 .project-list__item-link {
@@ -54,4 +54,8 @@ body {
 
 .project-list__item--link .project-list__item-icon::before {
   content: '🧩';
+}
+
+.project-list__item--site .project-list__item-icon::before {
+  content: '💻';
 }

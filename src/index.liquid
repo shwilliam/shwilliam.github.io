@@ -21,7 +21,11 @@ layout: templates/base.html
         "
         class="project-list__item-link"
       >
-        <div class="project-list__item-icon"></div>
+        <span
+          class="project-list__item-icon"
+          role="img"
+          aria-label="{{post.data.type}}"
+        ></span>
 
         <div>
           <h3 class="project-list__item-title">
