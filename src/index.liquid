@@ -2,42 +2,87 @@
 layout: templates/base.html
 ---
 
-<h2 class="sr-only">Recent</h2>
+<section>
+  <h2>Recent Contributions</h2>
 
-<ul class="project-list">
-  {% assign sortedPosts = collections.posts | reverse %}
-  {% for post in sortedPosts %}
-    <li
-      class="project-list__item project-list__item--{{post.data.type}}"
-    >
+  <ul class="list">
 
-      <a
-        href="
-          {% if post.data.type == 'link' %}
-            {{post.data.source}}
-          {% else %}
-            {{post.url}}
-          {% endif %}
-        "
-        class="project-list__item-link"
-      >
-        <span
-          class="project-list__item-icon"
-          role="img"
-          aria-label="{{post.data.type}}"
-        ></span>
+    {% for contribution in contributions %}
+      <li class="list__item">
 
-        <div>
-          <h3 class="project-list__item-title">
+        <a href="{{ contribution.repository.url }}">
+          {{ contribution.repository.owner.login }}/{{ contribution.repository.name }}
+        </a>
+
+        <a href="{{ contribution.url }}">
+          {{ contribution.title }}
+          (#{{ contribution.number }})
+        </a>
+
+      </li>
+    {% endfor %}
+
+  </ul>
+
+<section>
+  <h2>Blog</h2>
+
+  <ul class="list">
+    {% assign sortedPosts = collections.blog | reverse %}
+    {% for post in sortedPosts %}
+      <li class="list__item">
+        <a
+          href="{{post.url}}"
+          class="list__item-link"
+        >
+          <h3 class="list__item-title">
             {{post.data.title}}
           </h3>
-
           <p>
             {{post.data.description}}
           </p>
-        </div>
-      </a>
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+</section>
 
-    </li>
-  {% endfor %}
-</ul>
+<section>
+  <h2>Projects</h2>
+
+  <ul class="list">
+    {% assign sortedPosts = collections.projects | reverse %}
+    {% for post in sortedPosts %}
+      <li
+        class="list__item list__item--{{post.data.type}}"
+      >
+        <a
+          href="{{post.data.source}}"
+          class="list__item-link"
+        >
+          <span
+            class="list__item-icon"
+            role="img"
+            aria-label="{{post.data.type}}"
+          ></span>
+
+          <div>
+            <h3 class="list__item-title">
+              {{post.data.title}}
+            </h3>
+
+            <p>
+              {{post.data.description}}
+
+              {% if post.data.link %}
+                <a href="{{post.data.link}}">
+                  (demo)
+                </a>
+              {% endif %}
+            </p>
+          </div>
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+</section>

@@ -1,61 +1,102 @@
+:root {
+  --color__bg: #fff;
+  --color__brand: #222;
+}
+
 body {
   font-family: sans-serif;
   max-width: 660px;
   margin: 0 auto;
+  color: var(--color__brand);
 }
 
 main {
   margin: 3.4rem 2.2rem 4.2rem 2.2rem;
 }
 
-.flamez {
+.header {
   display: flex;
-  flex-wrap: wrap;
-  margin: 1.4rem 0.2rem;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-flow: wrap;
+  margin: 3.4rem 2.2rem 2.4rem 2.2rem;
 }
 
-.flame {
-  margin: 0 auto;
-  width: 50%;
-  min-width: 300px;
+.header__title {
+  line-height: 1;
+  font-size: 2.6rem;
+  padding: 0 3rem 0 0;
+  flex-shrink: 0;
 }
 
-.nav__list {
-  width: 80%;
-  margin: 0 auto;
+/* .flamez { */
+/*   display: flex; */
+/*   flex-wrap: wrap; */
+/*   margin: 1.4rem 0.2rem; */
+/* } */
+
+/* .flame { */
+/*   margin: 0 auto; */
+/*   width: 50%; */
+/*   min-width: 300px; */
+/* } */
+
+.header__nav {
+  flex-grow: 0;
+}
+
+.header__nav-list {
+  width: 70%;
   display: flex;
-  justify-content: space-around;
 }
 
-.project-list__item {
-  margin: 1.4rem 0;
+.header__nav-list a {
+  padding: 0 1.2rem;
 }
 
-.project-list__item-link {
+.header__nav-list li:last-child a {
+  padding-right: 0;
+}
+
+.header__nav-list li:first-child a {
+  padding-left: 0;
+}
+
+.list {
+  margin-bottom: 3rem;
+}
+
+.list__item {
+  margin: 1rem 0;
+}
+
+.list__item-link {
   text-decoration: none;
-  display: flex;
 }
 
-.project-list__item-link:hover .project-list__item-title,
-.project-list__item-link:focus .project-list__item-title {
+.list__item-title {
   text-decoration: underline;
 }
 
-.project-list__item-icon {
+.list__item-link:hover .list__item-title,
+.list__item-link:focus .list__item-title {
+}
+
+.list__item-icon {
   width: 2rem;
   margin: 0.1rem 0.15rem 0 0;
   font-size: 1.2rem;
   flex-shrink: 0;
 }
 
-.project-list__item--blog .project-list__item-icon::before {
+.list__item--blog .list__item-icon::before {
   content: '✏️';
 }
 
-.project-list__item--link .project-list__item-icon::before {
+.list__item--link .list__item-icon::before {
   content: '🧩';
 }
 
-.project-list__item--site .project-list__item-icon::before {
+.list__item--site .list__item-icon::before {
   content: '💻';
 }

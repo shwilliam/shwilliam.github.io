@@ -1,7 +1,6 @@
 ---
 title: Obscuring the DOM
 date: 2019-08-25
-type: blog
 description: Overview of common techniques to hide DOM elements and their affect on accessibility
 layout: templates/base.html
 ---
