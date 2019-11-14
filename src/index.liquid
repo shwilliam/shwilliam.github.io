@@ -10,13 +10,17 @@ layout: templates/base.html
     {% for contribution in contributions %}
       <li class="list__item">
 
-        <a href="{{ contribution.repository.url }}">
-          {{ contribution.repository.owner.login }}/{{ contribution.repository.name }}
-        </a>
+        <a class="link link--no-underline" href="{{ contribution.url }}">
+          <h3 class="link list__item-title">
+            {{ contribution.repository.owner.login }}/{{ contribution.repository.name }}
+            (#{{ contribution.number }})
+          </h3>
 
-        <a href="{{ contribution.url }}">
+          <span class="hidden hidden--mobile">
+            :
+          </span>
+
           {{ contribution.title }}
-          (#{{ contribution.number }})
         </a>
 
       </li>
@@ -31,13 +35,11 @@ layout: templates/base.html
     {% assign sortedPosts = collections.blog | reverse %}
     {% for post in sortedPosts %}
       <li class="list__item">
-        <a
-          href="{{post.url}}"
-          class="list__item-link"
-        >
-          <h3 class="list__item-title">
+        <a class="link link--no-underline" href="{{post.url}}">
+          <h3 class="link list__item-title">
             {{post.data.title}}
           </h3>
+
           <p>
             {{post.data.description}}
           </p>
@@ -56,31 +58,28 @@ layout: templates/base.html
       <li
         class="list__item list__item--{{post.data.type}}"
       >
-        <a
-          href="{{post.data.source}}"
-          class="list__item-link"
-        >
-          <span
-            class="list__item-icon"
-            role="img"
-            aria-label="{{post.data.type}}"
-          ></span>
+        <a class="link link--no-underline" href="{{post.data.source}}">
+          <h3>
+            <span
+              class="list__item-icon"
+              role="img"
+              aria-label="{{post.data.type}}"
+            ></span>
 
-          <div>
-            <h3 class="list__item-title">
+            <span class="link">
               {{post.data.title}}
-            </h3>
+            </span>
+          </h3>
 
-            <p>
-              {{post.data.description}}
+          <p>
+            {{post.data.description}}
+          </p>
 
-              {% if post.data.link %}
-                <a href="{{post.data.link}}">
-                  (demo)
-                </a>
-              {% endif %}
-            </p>
-          </div>
+          {% if post.data.link %}
+            <a class="link link--button" href="{{post.data.link}}">
+              demo
+            </a>
+          {% endif %}
         </a>
       </li>
     {% endfor %}

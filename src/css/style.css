@@ -3,15 +3,80 @@
   --color__brand: #222;
 }
 
+html,
 body {
   font-family: sans-serif;
-  max-width: 660px;
-  margin: 0 auto;
+  font-size: 16px;
   color: var(--color__brand);
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 main {
+  max-width: 80%;
   margin: 3.4rem 2.2rem 4.2rem 2.2rem;
+}
+
+a,
+a:visited,
+.link {
+  text-decoration: underline;
+  text-decoration-color: blue;
+  text-decoration-style: solid;
+}
+
+a:hover,
+a:focus,
+a:hover .link,
+*:focus .link {
+  text-decoration-style: wavy;
+}
+
+.link--blue,
+a.link--blue {
+  color: blue;
+  text-decoration: none;
+}
+
+.link--blue:hover,
+a.link--blue:hover,
+.link--blue:focus,
+a.link--blue:focus {
+  text-decoration: underline;
+}
+
+.link--block,
+a.link--block {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  background-color: blue;
+  padding: 0.05rem 0.2rem;
+}
+
+.link--button,
+a.link--button {
+  border: 1px solid blue;
+  text-decoration: none;
+  padding: 0.18rem 0.2rem 0 0.2rem;
+  border-radius: 5px;
+  color: blue;
+}
+
+.link--button:hover,
+a.link--button:hover,
+a:focus .link--button,
+a.link--button:focus {
+  background-color: blue;
+  color: #fff;
+}
+
+.link--no-underline {
+  text-decoration: none;
+}
+
+.hidden {
+  display: none;
 }
 
 .header {
@@ -26,7 +91,11 @@ main {
   line-height: 1;
   font-size: 2.6rem;
   padding: 0 3rem 0 0;
-  flex-shrink: 0;
+}
+
+.header__title-link,
+a.header__title-link {
+  padding: 0.55rem 0.45rem 0 0.45rem;
 }
 
 /* .flamez { */
@@ -48,18 +117,19 @@ main {
 .header__nav-list {
   width: 70%;
   display: flex;
+  margin-top: 1.2rem;
 }
 
 .header__nav-list a {
-  padding: 0 1.2rem;
+  margin: 0 1.2rem;
 }
 
 .header__nav-list li:last-child a {
-  padding-right: 0;
+  margin-right: 0;
 }
 
 .header__nav-list li:first-child a {
-  padding-left: 0;
+  margin-left: 0;
 }
 
 .list {
@@ -70,16 +140,9 @@ main {
   margin: 1rem 0;
 }
 
-.list__item-link {
-  text-decoration: none;
-}
-
 .list__item-title {
-  text-decoration: underline;
-}
-
-.list__item-link:hover .list__item-title,
-.list__item-link:focus .list__item-title {
+  display: block;
+  font-weight: 800;
 }
 
 .list__item-icon {
@@ -99,4 +162,23 @@ main {
 
 .list__item--site .list__item-icon::before {
   content: '💻';
+}
+
+@media (min-width: 640px) {
+  html,
+  body {
+    font-size: 18px;
+  }
+
+  .hidden--mobile {
+    display: unset;
+  }
+
+  .list__item-title {
+    display: inline-block;
+  }
+
+  .list__item-desc {
+    margin-left: 0.5rem;
+  }
 }
