@@ -1,5 +1,5 @@
 ---
-title: React Tri-State Checkbox
+title: React Tri-State Check&shy;box
 date: 2019-10-28
 type: link
 link: https://codesandbox.io/s/react-tri-state-checkbox-demo-8j7mo?fontsize=14

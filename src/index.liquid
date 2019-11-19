@@ -2,30 +2,40 @@
 layout: templates/base.html
 ---
 
+{% comment %}
+<section>
+  <p>Hey, I'm William a Vancouver-based web developer.</p>
+  <p>I specialize in writing modern JavaScript for the front-end that is accessible, performant and reusable.</p>
+
+  <h3>Usually thinking about</h3>
+  <ul>
+    <li>JavaScript (React, GraphQL)</li>
+    <li>Improving my workflow (Vim, tmux)</li>
+    <li>Mechanical keyboards (60% with MX browns)</li>
+  </ul>
+</section>
+{% endcomment %}
+
 <section>
   <h2>Recent Contributions</h2>
 
   <ul class="list">
-
     {% for contribution in contributions %}
       <li class="list__item">
-
-        <a class="link link--no-underline" href="{{ contribution.url }}">
-          <h3 class="link list__item-title">
+        <a class="link link--no-underline no-outline" href="{{ contribution.url }}">
+          <h3 class="link list__item-title hover-outline">
             {{ contribution.repository.owner.login }}/{{ contribution.repository.name }}
             (#{{ contribution.number }})
           </h3>
-
           <span class="hidden hidden--mobile">
             :
           </span>
-
-          {{ contribution.title }}
+          <span class="no-outline">
+            {{ contribution.title }}
+          </span>
         </a>
-
       </li>
     {% endfor %}
-
   </ul>
 
 <section>
@@ -35,12 +45,13 @@ layout: templates/base.html
     {% assign sortedPosts = collections.blog | reverse %}
     {% for post in sortedPosts %}
       <li class="list__item">
-        <a class="link link--no-underline" href="{{post.url}}">
-          <h3 class="link list__item-title">
-            {{post.data.title}}
-          </h3>
-
-          <p>
+        <a class="link link--no-underline no-outline" href="{{post.url}}">
+          <div class="list__item-header">
+            <h3 class="link list__item-title hover-outline">
+              {{post.data.title}}
+            </h3>
+          </div>
+          <p class="no-outline">
             {{post.data.description}}
           </p>
         </a>
@@ -58,28 +69,20 @@ layout: templates/base.html
       <li
         class="list__item list__item--{{post.data.type}}"
       >
-        <a class="link link--no-underline" href="{{post.data.source}}">
-          <h3>
-            <span
-              class="list__item-icon"
-              role="img"
-              aria-label="{{post.data.type}}"
-            ></span>
-
-            <span class="link">
+        <a class="link link--no-underline no-outline" href="{{post.data.source}}">
+          <div class="list__item-header">
+            <h3 class="list__item-title link hover-outline">
               {{post.data.title}}
-            </span>
-          </h3>
-
-          <p>
+            </h3>
+            {% if post.data.link %}
+              <a class="link link--button" href="{{post.data.link}}">
+                demo
+              </a>
+            {% endif %}
+          </div>
+          <p class="no-outline">
             {{post.data.description}}
           </p>
-
-          {% if post.data.link %}
-            <a class="link link--button" href="{{post.data.link}}">
-              demo
-            </a>
-          {% endif %}
         </a>
       </li>
     {% endfor %}
