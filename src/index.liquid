@@ -22,13 +22,13 @@ layout: templates/base.html
   <ul class="list">
     {% for contribution in contributions %}
       <li class="list__item">
-        <a class="link link--no-underline no-outline" href="{{ contribution.url }}">
-          <h3 class="link list__item-title hover-outline">
+        <a class="link link--no-underline" href="{{ contribution.url }}">
+          <h3 class="link list__item-title">
             {{ contribution.repository.owner.login }}/{{ contribution.repository.name }}
             (#{{ contribution.number }})
           </h3>
           <span class="hidden hidden--mobile-only list__item-title-suffix">:</span>
-          <span class="no-outline">
+          <span>
             {{ contribution.title }}
           </span>
         </a>
@@ -43,11 +43,11 @@ layout: templates/base.html
     {% assign sortedPosts = collections.blog | reverse %}
     {% for post in sortedPosts %}
       <li class="list__item">
-        <a class="link link--no-underline no-outline" href="{{post.url}}">
+        <a class="link link--no-underline" href="{{post.url}}">
           <h3 class="link list__item-title hover-outline">
             {{post.data.title}}
           </h3>
-          <p class="no-outline">
+          <p>
             {{post.data.description}}
           </p>
         </a>
@@ -65,11 +65,11 @@ layout: templates/base.html
       <li
         class="list__item list__item--{{post.data.type}}"
       >
-        <a class="link link--no-underline no-outline" href="{{post.data.source}}">
+        <a class="link link--no-underline" href="{{post.data.source}}">
           <h3 class="list__item-title link hover-outline">
             {{post.data.title}}
           </h3>
-          <p class="no-outline">
+          <p>
             {{post.data.description}}
           </p>
           <a class="link link--button" href="{{post.data.source}}">
@@ -85,3 +85,31 @@ layout: templates/base.html
     {% endfor %}
   </ul>
 </section>
+
+<section>
+  <h2 class="list__title">Elsewhere</h2>
+
+  <ul class="list">
+    <li class="list__item">
+      <a class="link" href="https://github.com/shwilliam`">
+        <h3 class="list__item-title link">
+          GitHub
+        </h3>
+      </a>
+    </li>
+    <li class="list__item">
+      <a class="link" href="https://www.linkedin.com/in/william-lindvall">
+        <h3 class="list__item-title link">
+          StinkedIn
+        </h3>
+      </a>
+    </li>
+    <li class="list__item">
+      <a class="link" href="{{post.data.source}}">
+        <h3 class="list__item-title link">
+        </h3>
+      </a>
+    </li>
+  </ul>
+</section>
+
