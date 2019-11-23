@@ -16,7 +16,7 @@ module.exports = function(config) {
       includes: 'includes',
       data: 'data',
     },
-    templateFormats: ['liquid', 'md', 'css', 'ico', 'jpg', 'png', 'gif'],
+    templateFormats: ['liquid', 'md', 'css', 'ico', 'jpg', 'png', 'gif', 'pdf'],
     htmlTemplateEngine: 'liquid',
     markdownTemplateEngine: 'liquid',
     passthroughFileCopy: true,
