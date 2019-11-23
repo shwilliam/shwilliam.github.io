@@ -8,7 +8,7 @@ html,
 body {
   scroll-behavior: smooth;
   text-rendering: optimizeSpeed;
-  line-height: 1.5;
+  line-height: 1.25;
 }
 
 body,
@@ -28,6 +28,14 @@ dd {
   margin: 0;
 }
 
+h1,
+h2,
+h3,
+h4 {
+  font-size: 1rem;
+  font-weight: normal;
+}
+
 button,
 input,
 select,
@@ -41,23 +49,9 @@ ol {
   padding: 0;
 }
 
-nav ol,
-nav ul {
-  list-style: none;
-}
-
-a:not([class]) {
-  /* default styles */
-  text-decoration-skip-ink: auto;
-}
-
 a,
 a:visited {
   color: inherit;
-}
-
-[disabled] {
-  cursor: not-allowed;
 }
 
 img,
@@ -68,19 +62,4 @@ video {
 
 textarea {
   resize: vertical;
-}
-
-.sr-only {
-  position: absolute;
-  left: -10000px;
-  top: auto;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-}
-
-.sr-only--focus:focus {
-  position: static;
-  width: auto;
-  height: auto;
 }

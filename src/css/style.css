@@ -1,13 +1,16 @@
 :root {
-  --color__bg: #fff;
-  --color__brand: #222;
+  --color__bg: #ffe;
+  --color__text: #222;
 }
 
-html,
-body {
+html {
   font-family: sans-serif;
   font-size: 16px;
-  color: var(--color__brand);
+  color: var(--color__text);
+  background-color: var(--color__bg);
+}
+
+body {
   max-width: 900px;
   margin: 0 auto;
 }
@@ -17,78 +20,56 @@ main {
   margin: 3.4rem 2.2rem 4.2rem 2.2rem;
 }
 
-a,
-a:visited,
-.link {
+.link,
+.link:visited {
   text-decoration: underline;
-  text-decoration-color: blue;
+  text-decoration-color: var(--color__text);
   text-decoration-style: solid;
 }
 
 a:hover,
-a:hover .link {
+.link:hover {
   text-decoration-style: wavy;
 }
 
-/* a:focus, */
-/* *:focus .link { */
-/*   outline-style: solid; */
-/*   outline-color: blue; */
-/*   outline-width: 0.1rem; */
-/* } */
-
-a:focus .hover-outline {
+.link:focus {
   outline-style: solid;
-  outline-color: blue;
+  outline-color: var(--color__text);
   outline-width: 0.1rem;
 }
 
-.no-outline {
-  outline: none !important;
+.sr-only {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
 }
 
-.link--blue,
-a.link--blue {
-  color: blue;
-  text-decoration: none;
-  position: relative;
-  top: 0.1rem;
-  padding: 0.28rem 0.38rem 0.14rem 0.38rem;
-}
-
-.link--blue:hover,
-a.link--blue:hover,
-.link--blue:focus,
-a.link--blue:focus {
-  background-color: blue;
-  color: #fff;
-}
-
-.link--block,
-a.link--block {
-  display: inline-block;
-  text-decoration: none;
-  color: #fff;
-  background-color: blue;
-  padding: 0.05rem 0.2rem;
+.sr-only--focus:focus {
+  position: static;
+  width: auto;
+  height: auto;
 }
 
 .link--button,
 a.link--button {
+  display: inline-block;
   font-size: 0.8rem;
-  margin: 0 1.4rem 0.28rem 1.4rem;
-  border: 1px solid blue;
+  border: 1px solid var(--color__text);
   text-decoration: none;
-  padding: 0.22rem 0.38rem 0.1rem 0.38rem;
-  color: blue;
+  padding: 0.2rem 0.38rem 0.08rem 0.38rem;
+  margin-top: 0.2rem;
+  color: var(--color__text);
 }
 
 .link--button:hover,
 a.link--button:hover,
 a:focus .link--button,
 a.link--button:focus {
-  background-color: blue;
-  color: #fff;
+  background-color: var(--color__text);
+  color: var(--color__bg);
 }
 
 .link--no-underline {
@@ -108,14 +89,14 @@ a.link--button:focus {
 }
 
 .header__title {
+  font-size: 1.45rem;
   line-height: 1;
-  font-size: 2.6rem;
   padding: 0 3rem 0 0;
 }
 
 .header__title-link,
 a.header__title-link {
-  padding: 0.55rem 0.45rem 0 0.45rem;
+  text-decoration: none;
 }
 
 /* .flamez { */
@@ -137,7 +118,7 @@ a.header__title-link {
 .header__nav-list {
   width: 70%;
   display: flex;
-  margin-top: 1.2rem;
+  margin-top: 0.6rem;
 }
 
 .header__nav-list a {
@@ -156,19 +137,17 @@ a.header__title-link {
   margin-bottom: 3rem;
 }
 
+.list__title {
+  font-size: 1.25rem;
+}
+
 .list__item {
-  margin: 1rem 0;
+  margin: 0.7rem 0;
 }
 
-.list__item-header {
-  display: flex;
-  align-items: center;
-  margin-bottom: 0.2rem;
-}
-
-.list__item-title {
-  display: block;
-  font-weight: 800;
+.list__item-title-suffix {
+  position: relative;
+  right: 0.2rem;
 }
 
 @media (min-width: 640px) {
@@ -177,15 +156,11 @@ a.header__title-link {
     font-size: 18px;
   }
 
-  .hidden--mobile {
+  .hidden--mobile-only {
     display: unset;
   }
 
   .list__item-title {
     display: inline-block;
-  }
-
-  .list__item-desc {
-    margin-left: 0.5rem;
   }
 }
