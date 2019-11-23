@@ -7,12 +7,6 @@ layout: templates/base.html
   <p>Hey, I'm William a Vancouver-based web developer.</p>
   <p>I specialize in writing modern JavaScript for the front-end that is accessible, performant and reusable.</p>
 
-  <h3>Usually thinking about</h3>
-  <ul>
-    <li>JavaScript (React, GraphQL)</li>
-    <li>Improving my workflow (Vim, tmux)</li>
-    <li>Mechanical keyboards (60% with MX browns)</li>
-  </ul>
 </section>
 {% endcomment %}
 
@@ -87,6 +81,28 @@ layout: templates/base.html
 </section>
 
 <section>
+  <h2 class="list__title">Usually thinking about</h2>
+
+  <ul class="list">
+    <li class="list__item list__item--dot">
+      <h3 class="list__item-title">
+        JavaScript (mostly React)
+      </h3>
+    </li>
+    <li class="list__item list__item--dot">
+      <h3 class="list__item-title">
+        Improving my workflow (Vim / tmux)
+      </h3>
+    </li>
+    <li class="list__item list__item--dot">
+      <h3 class="list__item-title">
+        Mechanical keyboards (60% with MX browns)
+      </h3>
+    </li>
+  </ul>
+</section>
+
+<section>
   <h2 class="list__title">Elsewhere</h2>
 
   <ul class="list">
@@ -101,12 +117,6 @@ layout: templates/base.html
       <a class="link" href="https://www.linkedin.com/in/william-lindvall">
         <h3 class="list__item-title link">
           StinkedIn
-        </h3>
-      </a>
-    </li>
-    <li class="list__item">
-      <a class="link" href="{{post.data.source}}">
-        <h3 class="list__item-title link">
         </h3>
       </a>
     </li>

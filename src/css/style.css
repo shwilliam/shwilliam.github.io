@@ -61,7 +61,7 @@ a.link--button {
   border: 1px solid var(--color__text);
   text-decoration: none;
   padding: 0.2rem 0.38rem 0.08rem 0.38rem;
-  margin-top: 0.2rem;
+  margin: 0.35rem 0.5rem 0 0;
   color: var(--color__text);
 }
 
@@ -90,17 +90,17 @@ a.link--button:focus {
 }
 
 .header {
-  margin: 2.4rem 1.4rem 1.4rem 1.4rem;
+  margin: 2.4rem 1.4rem 5rem 1.4rem;
   padding: 1rem;
   border: 2px solid var(--color__text);
-  max-width: 420px;
+  max-width: 460px;
 }
 
 .header__title {
   font-size: 1.8rem;
   line-height: 1;
   margin: 0.9rem 0 0 0;
-  padding: 0 3rem 0 0;
+  padding: 0 0.5rem 0 0;
 }
 
 .header__title-link,
@@ -130,28 +130,6 @@ a.header__title-link {
 /*   min-width: 300px; */
 /* } */
 
-/* .header__nav { */
-/*   flex-grow: 0; */
-/* } */
-
-/* .header__nav-list { */
-/*   width: 70%; */
-/*   display: flex; */
-/*   margin-top: 0.6rem; */
-/* } */
-
-/* .header__nav-list a { */
-/*   margin: 0 1.2rem; */
-/* } */
-
-/* .header__nav-list li:last-child a { */
-/*   margin-right: 0; */
-/* } */
-
-/* .header__nav-list li:first-child a { */
-/*   margin-left: 0; */
-/* } */
-
 .list {
   margin-bottom: 3rem;
 }
@@ -165,6 +143,15 @@ a.header__title-link {
   margin: 1.2rem 0;
 }
 
+.list__item-title {
+  margin-bottom: 0.35rem;
+}
+
+.list__item--dot {
+  list-style: disc;
+  margin-left: 1rem;
+}
+
 .list__item-title-suffix {
   position: relative;
   right: 0.2rem;
@@ -172,10 +159,15 @@ a.header__title-link {
 
 @media (min-width: 440px) {
   .header {
-    margin: 3.4rem 2.2rem 2.4rem 2.2rem;
+    margin: 4rem 2.2rem 6rem 2.2rem;
   }
+
   main {
     margin: 3.4rem 2.2rem 4.2rem 2.2rem;
+  }
+
+  .list {
+    margin-bottom: 4.5rem;
   }
 }
 
