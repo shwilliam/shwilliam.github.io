@@ -28,7 +28,7 @@ main {
   text-decoration-style: solid;
 }
 
-a:hover,
+a:hover .link,
 .link:hover {
   text-decoration-style: wavy;
 }
