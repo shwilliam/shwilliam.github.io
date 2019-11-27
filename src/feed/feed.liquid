@@ -1,0 +1,43 @@
+---
+permalink: rss.xml
+eleventyExcludeFromCollections: true
+metadata:
+  title: William Lindvall's Blog
+  url: https://shwilliam.com
+  author:
+    name: William Lindvall
+    email: w-lindvall@outlook.com
+  feed:
+    subtitle: Vancouver-based web developer
+    filename: rss.xml
+    path: /feed.xml
+    url: https://shwilliam.com/rss.xml
+    id: https://shwilliam.com/
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>{{ metadata.title }}</title>
+  <subtitle>{{ metadata.feed.subtitle }}</subtitle>
+  <link href="{{ metadata.feed.url }}" rel="self"/>
+  <link href="{{ metadata.url }}" />
+  {% assign latestPost = collections.blog | latest %}
+  <updated>{{ latestPost.date | toIsoString }}</updated>
+  <id>{{ metadata.feed.id }}</id>
+  <author>
+    <name>{{ metadata.author.name }}</name>
+    <email>{{ metadata.author.email }}</email>
+  </author>
+  {% assign orderedPosts = collections.blog | reverse %}
+  {% for post in orderedPosts %}
+    <entry>
+      <title>{{ post.data.title }}</title>
+      <link href="{{ metadata.url }}{{ post.url }}" />
+      <updated>{{ post.date | toIsoString }}</updated>
+      <id>{{ metadata.url }}{{ post.url }}</id>
+      <content type="html">
+        {{ post.templateContent | escape_once }}
+      </content>
+    </entry>
+  {% endfor %}
+</feed>
+
