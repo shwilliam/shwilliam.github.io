@@ -1,3 +1,5 @@
+const fs = require('fs')
+
 module.exports = function(config) {
   config.addCollection('projects', collection =>
     collection.getFilteredByGlob('src/projects/*.md'),
@@ -21,6 +23,8 @@ module.exports = function(config) {
 
   config.addLiquidFilter('toIsoString', d => new Date(d).toISOString())
 
+  fs.createReadStream('./src/CNAME').pipe(fs.createWriteStream('./dist/CNAME'))
+
   return {
     dir: {
       input: 'src',
@@ -28,7 +32,17 @@ module.exports = function(config) {
       includes: 'includes',
       data: 'data',
     },
-    templateFormats: ['liquid', 'md', 'css', 'ico', 'jpg', 'png', 'gif', 'pdf'],
+    templateFormats: [
+      'liquid',
+      'md',
+      'css',
+      'ico',
+      'jpg',
+      'png',
+      'gif',
+      'pdf',
+      'txt',
+    ],
     htmlTemplateEngine: 'liquid',
     markdownTemplateEngine: 'liquid',
     passthroughFileCopy: true,
