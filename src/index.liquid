@@ -51,7 +51,7 @@ changefreq: 'monthly'
     {% assign sortedPosts = collections.projects | reverse %}
     {% for post in sortedPosts %}
       <li
-        class="list__item list__item--{{post.data.type}}"
+        class="list__item"
       >
         <a class="link link--no-underline" href="{{post.data.source}}">
           <h3 class="list__item-title link hover-outline">
