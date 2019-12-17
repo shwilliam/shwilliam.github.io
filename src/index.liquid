@@ -5,26 +5,6 @@ changefreq: 'monthly'
 ---
 
 <section>
-  <h2 class="list__title">Recent Contributions</h2>
-
-  <ul class="list">
-    {% for contribution in contributions %}
-      <li class="list__item">
-        <a class="link link--no-underline" href="{{ contribution.url }}">
-          <h3 class="link list__item-title">
-            {{ contribution.repository.owner.login }}/{{ contribution.repository.name }}
-            (#{{ contribution.number }})
-          </h3>
-          <span class="hidden hidden--mobile-only list__item-title-suffix">:</span>
-          <span>
-            {{ contribution.title }}
-          </span>
-        </a>
-      </li>
-    {% endfor %}
-  </ul>
-
-<section>
   <h2 class="list__title">Blog</h2>
 
   <ul class="list">
@@ -45,7 +25,33 @@ changefreq: 'monthly'
 </section>
 
 <section>
-  <h2 class="list__title">Projects</h2>
+  <h2 class="list__title">Recent Contributions</h2>
+
+  <ul class="list">
+    {% for contribution in contributions %}
+      <li class="list__item">
+        <a class="link link--no-underline" href="{{ contribution.url }}">
+          <h3 class="link list__item-title">
+            {{ contribution.repository.owner.login }}/{{ contribution.repository.name }}
+            (#{{ contribution.number }})
+          </h3>
+          <span class="hidden hidden--mobile-only list__item-title-suffix">:</span>
+          <span>
+            {{ contribution.title }}
+          </span>
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+</section>
+
+<section>
+  <h2 class="list__title">
+    Projects 
+    <span class="italic small">
+      (selected)
+    </span>
+  </h2>
 
   <ul class="list">
     {% assign sortedPosts = collections.projects | reverse %}
@@ -57,14 +63,14 @@ changefreq: 'monthly'
           <h3 class="list__item-title link hover-outline">
             {{post.data.title}}
           </h3>
-          <p>
+          <p class="hidden-xl">
             {{post.data.description}}
           </p>
-          <a class="link link--button" href="{{post.data.source}}">
+          <a class="link link--button hidden hidden-xl" href="{{post.data.source}}">
             source
           </a>
           {% if post.data.link %}
-            <a class="link link--button" href="{{post.data.link}}">
+            <a class="link link--button hidden hidden-xl" href="{{post.data.link}}">
               demo
             </a>
           {% endif %}
@@ -72,6 +78,16 @@ changefreq: 'monthly'
       </li>
     {% endfor %}
   </ul>
+
+  <p class="italic">
+    See more on 
+    <a
+      href="https://github.com/shwilliam"
+      class="link"
+    >
+      GitHub
+    </a>
+  </p>
 </section>
 
 <section>
@@ -90,7 +106,7 @@ changefreq: 'monthly'
     </li>
     <li class="list__item list__item--dot">
       <h3 class="list__item-title">
-        Mechanical keyboards (60% with MX browns)
+        Mechanical keyboards (Preonic with Gateron browns)
       </h3>
     </li>
   </ul>

@@ -6,4 +6,5 @@ date: 2019-06-26
 source: https://github.com/shwilliam/mini-tumblr-clone
 priority: 0.5
 changefreq: 'monthly'
+featured: true
 ---

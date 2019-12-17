@@ -2,7 +2,9 @@ const fs = require('fs')
 
 module.exports = function(config) {
   config.addCollection('projects', collection =>
-    collection.getFilteredByGlob('src/projects/*.md'),
+    collection
+      .getFilteredByGlob('src/projects/*.md')
+      .filter(({data}) => !!data.featured),
   )
 
   config.addCollection('blog', collection =>
