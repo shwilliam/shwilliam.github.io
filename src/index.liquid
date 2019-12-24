@@ -4,3 +4,49 @@ priority: 1.0
 changefreq: 'monthly'
 ---
 
+<header id='header' class='header' data-state='open'>
+  <div class='header-content'>
+
+    <h1 class='header-title'>
+      <div>William</div>
+      <div>Lindvall</div>
+    </h1>
+
+    <nav class='nav'>
+      <ul class='nav-list'>
+        <li class='nav-item'>
+          <a href='/about' class='nav-link'>
+            about
+          </a>
+        </li>
+        <li class='nav-item'>
+          <a href='/blog' class='nav-link'>
+            blog
+          </a>
+        </li>
+        <li class='nav-item'>
+          <a href='/work' class='nav-link'>
+            work
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+  </div>
+</header>
+
+<script>
+  const navLinks = [...document.getElementsByClassName('nav-link')]
+  const header = document.getElementById('header')
+
+  navLinks.forEach(el => el.addEventListener('click', (e) => {
+    e.preventDefault()
+
+    header.dataset.state = 'collapsed'
+
+    window.setTimeout(() => {
+      window.location.href = el.href
+    }, 500)
+  }))
+</script>
+

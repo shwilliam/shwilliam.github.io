@@ -2,6 +2,7 @@
 *:before,
 *:after {
   box-sizing: border-box;
+  position: relative;
 }
 
 html,
@@ -16,6 +17,8 @@ h1,
 h2,
 h3,
 h4,
+h5,
+h6,
 p,
 ul,
 ol,
@@ -31,7 +34,9 @@ dd {
 h1,
 h2,
 h3,
-h4 {
+h4,
+h5,
+h6 {
   font-size: 1rem;
   font-weight: normal;
 }
@@ -58,8 +63,4 @@ img,
 video {
   max-width: 100%;
   display: block;
-}
-
-textarea {
-  resize: vertical;
 }
