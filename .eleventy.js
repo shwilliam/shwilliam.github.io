@@ -1,6 +1,6 @@
 const fs = require('fs')
 
-module.exports = function(config) {
+module.exports = config => {
   config.addCollection('projects', collection =>
     collection
       .getFilteredByGlob('src/projects/*.md')
@@ -38,12 +38,13 @@ module.exports = function(config) {
       'liquid',
       'md',
       'css',
+      'js',
       'ico',
-      'jpg',
-      'png',
-      'gif',
+      // 'jpg',
+      // 'png',
+      // 'gif',
       'pdf',
-      'txt',
+      // 'txt',
     ],
     htmlTemplateEngine: 'liquid',
     markdownTemplateEngine: 'liquid',

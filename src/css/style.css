@@ -9,14 +9,14 @@
 html,
 body {
   font-family: 'Libre Baskerville', serif;
-  font-size: 17px;
+  font-size: 32px;
   line-height: 1.5;
   color: var(--color__text);
   background-color: var(--color__bg);
   height: 100%;
 }
 
-.main {
+body {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -24,43 +24,57 @@ body {
   height: 100%;
 }
 
-.header {
-  min-width: 200px;
-  min-height: 200px;
-  border: 2px solid var(--color__ui);
-  transition: all 0.5s ease-in-out;
+.browser-window {
+  /* height: 382px; */
+  max-height: 90%;
+  border: 4px solid var(--color__ui);
+  background-color: var(--color__bg);
 }
 
-.header[data-state='open'] {
-  opacity: 1;
+.scrollable {
+  overflow-y: scroll;
 }
 
-.header[data-state='collapsed'] {
-  transform: scale(0) rotate(720deg);
-  opacity: 0;
-}
-
-.header:before {
-  content: '✕';
-  height: 1rem;
+.browser-window-header {
+  height: 1.2rem;
   display: flex;
   justify-content: flex-end;
   align-items: center;
   padding: 0.25rem;
-  border-bottom: 2px solid var(--color__ui);
+  border-bottom: 4px solid var(--color__ui);
+}
+
+.browser-window-close {
+  border: none;
+  background-color: transparent;
+  padding: 0.25rem;
+  line-height: 1;
+  /* TODO: force default cursor except for links if no js */
+  cursor: pointer;
 }
 
 .header-content {
-  padding: 0.75rem 1rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem 1rem 1.5rem 1rem;
 }
 
 .header-title {
-  font-size: 4rem;
+  font-size: 3.5rem;
   line-height: 1;
+  padding-right: 1rem;
+}
+
+.header-title-br::before {
+  content: '\A';
+  white-space: pre;
 }
 
 .nav-list {
   display: flex;
+  padding-bottom: 0.5rem;
 }
 
 .nav-item ~ .nav-item {
