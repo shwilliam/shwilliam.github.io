@@ -20,7 +20,7 @@ const welcomeWindowCloseBtn = document.getElementById('welcome-close')
 
 welcomeWindowCloseBtn.addEventListener('click', closeWindow)
 
-const createWindow = content => {
+const createWindow = (content, title) => {
   const browserWindow = document.createElement('div')
   browserWindow.classList.add('browser-window')
   browserWindow.classList.add('scrollable')
@@ -32,12 +32,17 @@ const createWindow = content => {
   const browserWindowHeader = document.createElement('div')
   browserWindowHeader.classList.add('browser-window-header')
 
+  const browserWindowTitle = document.createElement('h2')
+  browserWindowTitle.classList.add('browser-window-title')
+  browserWindowTitle.innerText = title
+
   const browserWindowClose = document.createElement('button')
   browserWindowClose.classList.add('browser-window-close')
   browserWindowClose.innerText = '✕'
   browserWindowClose.addEventListener('click', closeWindow)
 
   browserWindowHeader.appendChild(browserWindowClose)
+  browserWindowHeader.appendChild(browserWindowTitle)
   browserWindow.appendChild(browserWindowHeader)
   browserWindow.appendChild(browserWindowContent)
 
@@ -55,6 +60,6 @@ navLinks.forEach(el =>
 
     fetch(el.href)
       .then(d => d.text())
-      .then(createWindow)
+      .then(content => createWindow(content, el.innerText))
   }),
 )
