@@ -1,5 +1,15 @@
 // TODO: handle no js
 
+const windowWidth = () =>
+  window.innerWidth ||
+  document.documentElement.clientWidth ||
+  document.body.clientWidth
+
+const windowHeight = () =>
+  window.innerHeight ||
+  document.documentElement.clientHeight ||
+  document.body.clientHeight
+
 // window drag
 const makeDraggable = el => {
   let offset = [0, 0]
@@ -14,14 +24,17 @@ const makeDraggable = el => {
   }
   const onDrag = e => {
     if (isDown) {
-      const touch = e.changedTouches
       e.preventDefault()
-      el.style.left = touch
-        ? `${touch[0].clientX + offset[0]}px`
-        : `${e.clientX + offset[0]}px`
-      el.style.top = touch
-        ? `${touch[0].clientY + offset[1]}px`
-        : `${e.clientY + offset[1]}px`
+
+      const touch = e.changedTouches
+
+      const dragX = touch ? touch[0].clientX : e.clientX
+      el.style.left = `${dragX + offset[0]}px`
+
+      const dragY = touch ? touch[0].clientY : e.clientY
+      if (dragY > 0) {
+        el.style.top = `${dragY + offset[1]}px`
+      }
     }
   }
   const onDragEnd = () => (isDown = false)
@@ -85,21 +98,11 @@ const createWindow = (content, title) => {
   browserWindow.appendChild(browserWindowHeader)
   browserWindow.appendChild(browserWindowContent)
 
-  const windowWidth =
-    window.innerWidth ||
-    document.documentElement.clientWidth ||
-    document.body.clientWidth
+  const pseudoWindowWidth = windowWidth() * 0.8
+  const pseudoWindowHeight = windowHeight() * 0.9
 
-  const windowHeight =
-    window.innerHeight ||
-    document.documentElement.clientHeight ||
-    document.body.clientHeight
-
-  const pseudoWindowWidth = windowWidth * 0.8
-  const pseudoWindowHeight = windowHeight * 0.9
-
-  const maxOffsetX = windowWidth - pseudoWindowWidth
-  const maxOffsetY = windowHeight - pseudoWindowHeight
+  const maxOffsetX = windowWidth() - pseudoWindowWidth
+  const maxOffsetY = windowHeight() - pseudoWindowHeight
 
   const offsetX = maxOffsetX * Math.random()
   const offsetY = maxOffsetY * Math.random()
