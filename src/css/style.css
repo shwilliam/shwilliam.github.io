@@ -25,6 +25,7 @@ body {
 }
 
 .browser-window {
+  position: absolute;
   /* height: 382px; */
   max-height: 90%;
   width: 80%;
@@ -33,10 +34,6 @@ body {
 }
 
 /* TODO: shrink font/browser window on large window */
-
-.scrollable {
-  overflow-y: scroll;
-}
 
 .browser-window-header {
   position: sticky;
@@ -96,4 +93,8 @@ body {
 .nav-item ~ .nav-item {
   padding-left: 0.75rem;
   padding-left: 4vw;
+}
+
+.scrollable {
+  overflow-y: scroll;
 }

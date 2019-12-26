@@ -1,5 +1,37 @@
 // TODO: handle no js
 
+// window drag
+const makeDraggable = el => {
+  let offset = [0, 0]
+  let isDown = false
+
+  el.addEventListener(
+    'mousedown',
+    e => {
+      isDown = true
+
+      const offsetX = el.offsetLeft - e.clientX
+      const offsetY = el.offsetTop - e.clientY
+      offset = [offsetX, offsetY]
+    },
+    true,
+  )
+
+  document.addEventListener(
+    'mousemove',
+    e => {
+      if (isDown) {
+        e.preventDefault()
+        el.style.left = `${e.clientX + offset[0]}px`
+        el.style.top = `${e.clientY + offset[1]}px`
+      }
+    },
+    true,
+  )
+
+  document.addEventListener('mouseup', () => (isDown = false), true)
+}
+
 const closest = (el, selector, stopSelector = 'body') => {
   let match = null
   while (el) {
@@ -16,15 +48,19 @@ const closest = (el, selector, stopSelector = 'body') => {
 
 const closeWindow = e => closest(e.target, '.browser-window').remove()
 
+// welcome window
 const welcomeWindowCloseBtn = document.getElementById('welcome-close')
-
 welcomeWindowCloseBtn.addEventListener('click', closeWindow)
+const welcomeWindow = document.getElementById('welcome')
+makeDraggable(welcomeWindow)
 
+// window create
 let amountOpened = 0
 const createWindow = (content, title) => {
   const browserWindow = document.createElement('div')
   browserWindow.classList.add('browser-window')
   browserWindow.classList.add('scrollable')
+  makeDraggable(browserWindow)
 
   const browserWindowContent = document.createElement('div')
   browserWindowContent.classList.add('browser-window-content')
