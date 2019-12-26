@@ -47,8 +47,28 @@ const createWindow = (content, title) => {
   browserWindow.appendChild(browserWindowHeader)
   browserWindow.appendChild(browserWindowContent)
 
+  const windowWidth =
+    window.innerWidth ||
+    document.documentElement.clientWidth ||
+    document.body.clientWidth
+
+  const windowHeight =
+    window.innerHeight ||
+    document.documentElement.clientHeight ||
+    document.body.clientHeight
+
+  const pseudoWindowWidth = windowWidth * 0.8
+  const pseudoWindowHeight = windowHeight * 0.9
+
+  const maxOffsetX = windowWidth - pseudoWindowWidth
+  const maxOffsetY = windowHeight - pseudoWindowHeight
+
+  const offsetX = maxOffsetX * Math.random()
+  const offsetY = maxOffsetY * Math.random()
+
   browserWindow.style.position = 'absolute'
-  browserWindow.style.top = 0
+  browserWindow.style.left = `${offsetX}px`
+  browserWindow.style.top = `${offsetY}px`
   browserWindow.style.zIndex = ++amountOpened
 
   document.getElementById('main').appendChild(browserWindow)
