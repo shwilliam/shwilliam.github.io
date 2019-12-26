@@ -5,31 +5,33 @@ const makeDraggable = el => {
   let offset = [0, 0]
   let isDown = false
 
-  el.addEventListener(
-    'mousedown',
-    e => {
-      isDown = true
+  const onDragStart = e => {
+    const touch = e.changedTouches
+    const offsetX = el.offsetLeft - (touch ? touch[0].clientX : e.clientX)
+    const offsetY = el.offsetTop - (touch ? touch[0].clientY : e.clientY)
+    offset = [offsetX, offsetY]
+    isDown = true
+  }
+  const onDrag = e => {
+    if (isDown) {
+      const touch = e.changedTouches
+      e.preventDefault()
+      el.style.left = touch
+        ? `${touch[0].clientX + offset[0]}px`
+        : `${e.clientX + offset[0]}px`
+      el.style.top = touch
+        ? `${touch[0].clientY + offset[1]}px`
+        : `${e.clientY + offset[1]}px`
+    }
+  }
+  const onDragEnd = () => (isDown = false)
 
-      const offsetX = el.offsetLeft - e.clientX
-      const offsetY = el.offsetTop - e.clientY
-      offset = [offsetX, offsetY]
-    },
-    true,
-  )
-
-  document.addEventListener(
-    'mousemove',
-    e => {
-      if (isDown) {
-        e.preventDefault()
-        el.style.left = `${e.clientX + offset[0]}px`
-        el.style.top = `${e.clientY + offset[1]}px`
-      }
-    },
-    true,
-  )
-
-  document.addEventListener('mouseup', () => (isDown = false), true)
+  el.addEventListener('mousedown', onDragStart, true)
+  el.addEventListener('touchstart', onDragStart, true)
+  document.addEventListener('mousemove', onDrag, true)
+  document.addEventListener('touchmove', onDrag, true)
+  document.addEventListener('mouseup', onDragEnd, true)
+  document.addEventListener('touchend', onDragEnd, true)
 }
 
 const closest = (el, selector, stopSelector = 'body') => {
