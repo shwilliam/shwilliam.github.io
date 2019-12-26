@@ -1,5 +1,6 @@
 // TODO: handle no js
 
+let i = 0
 const closest = (el, selector, stopSelector = 'body') => {
   let match = null
   while (el) {
@@ -41,6 +42,8 @@ const makeDraggable = elHeader => {
     if (isDown) {
       e.preventDefault()
 
+      closest(e.target, '.browser-window').style.zIndex = ++i
+
       const touch = e.changedTouches
 
       const dragX = touch ? touch[0].clientX : e.clientX
@@ -68,15 +71,24 @@ const closeWindow = e => closest(e.target, '.browser-window').remove()
 const welcomeWindowCloseBtn = document.getElementById('welcome-close')
 welcomeWindowCloseBtn.addEventListener('click', closeWindow)
 
+const welcomeWindow = document.getElementById('welcome-window')
+welcomeWindow.addEventListener(
+  'click',
+  () => (welcomeWindow.style.zIndex = ++i),
+)
+
 const welcomeWindowHeader = document.getElementById('welcome-header')
 makeDraggable(welcomeWindowHeader)
 
 // window create
-let amountOpened = 0
 const createWindow = (content, title) => {
   const browserWindow = document.createElement('div')
   browserWindow.classList.add('browser-window')
   browserWindow.classList.add('scrollable')
+  browserWindow.addEventListener(
+    'click',
+    () => (browserWindow.style.zIndex = ++i),
+  )
 
   const browserWindowContent = document.createElement('div')
   browserWindowContent.classList.add('browser-window-content')
@@ -111,7 +123,7 @@ const createWindow = (content, title) => {
   browserWindow.style.position = 'absolute'
   browserWindow.style.left = `${offsetX}px`
   browserWindow.style.top = `${offsetY}px`
-  browserWindow.style.zIndex = ++amountOpened
+  browserWindow.style.zIndex = ++i
 
   document.getElementById('main').appendChild(browserWindow)
   makeDraggable(browserWindowHeader)
