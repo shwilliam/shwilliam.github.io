@@ -44,6 +44,7 @@ body {
   padding: 0.25rem;
   border-bottom: 4px solid var(--color__ui);
   background-color: var(--color__bg);
+  cursor: move;
 }
 
 .browser-window-close {

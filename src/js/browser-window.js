@@ -1,5 +1,19 @@
 // TODO: handle no js
 
+const closest = (el, selector, stopSelector = 'body') => {
+  let match = null
+  while (el) {
+    if (el.matches(selector)) {
+      match = el
+      break
+    } else if (stopSelector && el.matches(stopSelector)) {
+      break
+    }
+    el = el.parentElement
+  }
+  return match
+}
+
 const windowWidth = () =>
   window.innerWidth ||
   document.documentElement.clientWidth ||
@@ -11,7 +25,8 @@ const windowHeight = () =>
   document.body.clientHeight
 
 // window drag
-const makeDraggable = el => {
+const makeDraggable = elHeader => {
+  const el = closest(elHeader, '.browser-window')
   let offset = [0, 0]
   let isDown = false
 
@@ -39,26 +54,12 @@ const makeDraggable = el => {
   }
   const onDragEnd = () => (isDown = false)
 
-  el.addEventListener('mousedown', onDragStart, true)
-  el.addEventListener('touchstart', onDragStart, true)
+  elHeader.addEventListener('mousedown', onDragStart, true)
+  elHeader.addEventListener('touchstart', onDragStart, true)
   document.addEventListener('mousemove', onDrag, true)
   document.addEventListener('touchmove', onDrag, true)
   document.addEventListener('mouseup', onDragEnd, true)
   document.addEventListener('touchend', onDragEnd, true)
-}
-
-const closest = (el, selector, stopSelector = 'body') => {
-  let match = null
-  while (el) {
-    if (el.matches(selector)) {
-      match = el
-      break
-    } else if (stopSelector && el.matches(stopSelector)) {
-      break
-    }
-    el = el.parentElement
-  }
-  return match
 }
 
 const closeWindow = e => closest(e.target, '.browser-window').remove()
@@ -66,8 +67,9 @@ const closeWindow = e => closest(e.target, '.browser-window').remove()
 // welcome window
 const welcomeWindowCloseBtn = document.getElementById('welcome-close')
 welcomeWindowCloseBtn.addEventListener('click', closeWindow)
-const welcomeWindow = document.getElementById('welcome')
-makeDraggable(welcomeWindow)
+
+const welcomeWindowHeader = document.getElementById('welcome-header')
+makeDraggable(welcomeWindowHeader)
 
 // window create
 let amountOpened = 0
@@ -75,7 +77,6 @@ const createWindow = (content, title) => {
   const browserWindow = document.createElement('div')
   browserWindow.classList.add('browser-window')
   browserWindow.classList.add('scrollable')
-  makeDraggable(browserWindow)
 
   const browserWindowContent = document.createElement('div')
   browserWindowContent.classList.add('browser-window-content')
@@ -113,6 +114,7 @@ const createWindow = (content, title) => {
   browserWindow.style.zIndex = ++amountOpened
 
   document.getElementById('main').appendChild(browserWindow)
+  makeDraggable(browserWindowHeader)
 }
 
 const navLinks = [...document.getElementsByClassName('nav-link')]
