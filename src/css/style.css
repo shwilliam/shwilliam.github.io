@@ -14,6 +14,10 @@ body {
   color: var(--color__text);
   background-color: var(--color__bg);
   height: 100%;
+
+  /* prevent scroll */
+  overflow: hidden;
+  position: fixed;
 }
 
 body {
