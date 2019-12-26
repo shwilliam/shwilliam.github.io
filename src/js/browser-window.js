@@ -20,6 +20,7 @@ const welcomeWindowCloseBtn = document.getElementById('welcome-close')
 
 welcomeWindowCloseBtn.addEventListener('click', closeWindow)
 
+let amountOpened = 0
 const createWindow = (content, title) => {
   const browserWindow = document.createElement('div')
   browserWindow.classList.add('browser-window')
@@ -48,6 +49,7 @@ const createWindow = (content, title) => {
 
   browserWindow.style.position = 'absolute'
   browserWindow.style.top = 0
+  browserWindow.style.zIndex = ++amountOpened
 
   document.getElementById('main').appendChild(browserWindow)
 }
