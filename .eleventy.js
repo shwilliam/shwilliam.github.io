@@ -40,7 +40,7 @@ module.exports = config => {
       'css',
       'js',
       'ico',
-      // 'jpg',
+      'jpg',
       // 'png',
       // 'gif',
       'pdf',
