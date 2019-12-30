@@ -1,4 +1,5 @@
 // TODO: handle no js
+// TODO: fix text highlight on pseudo window move
 
 let i = 0
 const closest = (el, selector, stopSelector = 'body') => {
@@ -65,7 +66,20 @@ const makeDraggable = elHeader => {
   document.addEventListener('touchend', onDragEnd, true)
 }
 
-const closeWindow = e => closest(e.target, '.browser-window').remove()
+const closeWindow = e => {
+  const targetWindow = closest(e.target, '.browser-window')
+  const title = targetWindow.getElementsByClassName('browser-window-title')[0]
+    .innerText
+
+  const state = history.state
+  const openWindows = (state && state.windows) || []
+  const idx = openWindows && openWindows.indexOf(title)
+  const updatedOpenWindows = openWindows.splice(idx, 1)
+
+  history.pushState({windows: updatedOpenWindows}, '@shwilliam')
+
+  targetWindow.remove()
+}
 
 // welcome window
 const welcomeWindowCloseBtn = document.getElementById('welcome-close')
@@ -135,8 +149,28 @@ navLinks.forEach(el =>
   el.addEventListener('click', e => {
     e.preventDefault()
 
+    const title = el.innerText
+    const state = history.state
+    const openWindows = (state && state.windows) || []
+
     fetch(el.href)
       .then(d => d.text())
-      .then(content => createWindow(content, el.innerText))
+      .then(content => createWindow(content, title))
+      .then(() =>
+        history.pushState({windows: [...openWindows, title]}, '@shwilliam'),
+      )
   }),
 )
+
+// TODO: DRY up fetch & create pseudo window
+
+// open pseudo windows from history state
+const historyState = history.state
+const openWindows = historyState && historyState.windows
+
+openWindows &&
+  openWindows.forEach(windowTitle =>
+    fetch(`${document.location}${windowTitle}`)
+      .then(d => d.text())
+      .then(content => createWindow(content, windowTitle)),
+  )
