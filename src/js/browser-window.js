@@ -68,15 +68,20 @@ const makeDraggable = elHeader => {
 
 const closeWindow = e => {
   const targetWindow = closest(e.target, '.browser-window')
-  const title = targetWindow.getElementsByClassName('browser-window-title')[0]
-    .innerText
+  const targetWindowTitleBar = targetWindow.getElementsByClassName(
+    'browser-window-title',
+  )[0]
 
-  const state = history.state
-  const openWindows = (state && state.windows) || []
-  const idx = openWindows && openWindows.indexOf(title)
-  const updatedOpenWindows = openWindows.splice(idx, 1)
+  // closing welcome window
+  if (targetWindowTitleBar) {
+    const title = targetWindowTitleBar.innerText
+    const state = history.state
+    const openWindows = state ? state.windows : []
+    const idx = openWindows && openWindows.indexOf(title)
+    openWindows.splice(idx, 1)
 
-  history.pushState({windows: updatedOpenWindows}, '@shwilliam')
+    history.pushState({windows: openWindows}, '@shwilliam')
+  }
 
   targetWindow.remove()
 }
