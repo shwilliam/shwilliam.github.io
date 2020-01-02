@@ -4,20 +4,32 @@
   --color__bg: #fee;
   --color__text: #333;
   --color__ui: #333;
+  --color__focus: #f55;
 }
 
 html,
 body {
   font-family: 'Libre Baskerville', serif;
-  font-size: 24px;
-  line-height: 1.5;
+  font-size: 20px;
+  line-height: 1.25;
   color: var(--color__text);
   background-color: var(--color__bg);
   height: 100%;
 }
 
+:focus {
+  outline: var(--color__focus) solid 4px;
+  outline-offset: 0.8rem;
+}
+
+.list li:before {
+  content: '▸';
+  padding: 0 3px 0 2px;
+}
+
 .browser-window-container {
   display: flex;
+  padding: 1.6rem 0;
   justify-content: center;
   align-items: center;
   width: 100%;
@@ -32,75 +44,78 @@ body {
 
 .browser-window {
   position: absolute;
-  /* height: 382px; */
-  max-height: 90%;
-  width: 80%;
-  max-width: 700px;
+  top: 1.3rem;
+  bottom: 1.6rem;
+  width: 90%;
+  max-width: 900px;
   min-width: 300px;
   border: 4px solid var(--color__ui);
   background-color: var(--color__bg);
+  overflow: hidden;
 }
 
 .welcome-window {
-  min-height: 300px;
+  top: unset;
+  bottom: unset;
+  max-width: 715px;
+  min-height: 280px;
   max-height: 800px;
 }
-
-/* TODO: shrink font/browser window on large window */
 
 .browser-window-header {
   position: sticky;
   top: 0px;
-  height: 1.2rem;
+  height: 2rem;
   display: flex;
   align-items: center;
-  padding: 0.25rem;
   border-bottom: 4px solid var(--color__ui);
   background-color: var(--color__bg);
-  cursor: move;
+  z-index: 999;
 }
 
 .browser-window-close {
   position: absolute;
-  right: 0;
-  border: none;
-  background-color: transparent;
-  padding: 0.25rem;
-  line-height: 1;
-  /* TODO: force default cursor except for links if no js */
-  cursor: pointer;
+  right: 0.9rem;
+  text-decoration: none;
 }
 
 .browser-window-title {
   flex-basis: 100%;
   text-align: center;
   text-transform: capitalize;
-  font-size: 0.8rem;
+  font-weight: bold;
+  padding-top: 0.2rem;
 }
 
 .browser-window-content {
-  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 0.8rem 1rem 1rem 1rem;
+  padding: 0.75rem 1rem 0 1rem;
 }
 
 .header-title {
   font-size: 2.4rem;
   line-height: 1;
-  padding: 1rem 1rem 0.5rem 0;
+  padding: 1.6rem 1.6rem 1rem 0;
+  margin-top: 80px;
 }
 
 @media screen and (min-width: 420px) {
   .header-title {
-    font-size: 14.5vw;
+    font-size: 14vw;
   }
 }
 
 @media screen and (min-width: 1020px) {
   .header-title {
-    font-size: 5.6rem;
+    font-size: 6.2rem;
+  }
+}
+
+@media screen and (min-height: 200px) {
+  .header-title {
+    margin-top: 0;
   }
 }
 
@@ -111,26 +126,40 @@ body {
 
 .nav-list {
   display: flex;
-  padding-bottom: 0.5rem;
-  font-size: 1rem;
+  padding-bottom: 1.1rem;
+  font-size: 1.1rem;
 }
 
 @media screen and (min-width: 420px) {
   .nav-list {
-    font-size: 5vw;
+    font-size: 6vw;
   }
 }
 
 @media screen and (min-width: 1020px) {
   .nav-list {
-    font-size: 1.4rem;
+    font-size: 2.8rem;
   }
 }
 
 .nav-item ~ .nav-item {
-  padding-left: 0.75rem;
+  padding-left: 1.2rem;
+}
+
+.favorites-label {
+  margin-bottom: 1rem;
 }
 
 .scrollable {
   overflow-y: scroll;
+  position: absolute;
+  top: 1.2rem;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.disabled {
+  cursor: not-allowed;
+  color: var(--color__text);
 }

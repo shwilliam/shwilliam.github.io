@@ -1,62 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang='en'>
 <head>
-  <meta charset="UTF-8">
+  <meta charset='UTF-8'>
   <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
+    name='viewport'
+    content='width=device-width, initial-scale=1.0'
   >
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta name="Description" content="Vancouver-based web developer">
+  <meta http-equiv='X-UA-Compatible' content='ie=edge'>
+  <meta name='Description' content='Vancouver-based web developer'>
 
-  <link rel="icon" type="image/x-icon" href="./favicon.ico">
-  <link rel="stylesheet" href="/css/reset.css">
-  <link rel="stylesheet" href="/css/style.css">
-  <link rel="stylesheet" href="/css/syntax-highlight.css">
+  <link rel='icon' type='image/x-icon' href='./favicon.ico'>
+  <!-- TODO: inline appropriate stylesheets -->
+  <link rel='stylesheet' href='/css/reset.css'>
+  <link rel='stylesheet' href='/css/style.css'>
   <link
-    rel="alternate"
-    type="application/rss+xml"
+    rel='alternate'
+    type='application/rss+xml'
     title="William Lindvall's Blog"
-    href="/rss.xml"
+    href='/rss.xml'
   >
 
   <title>@shwilliam</title>
 </head>
+
 <body class='browser-window-container'>
 
   {{ content }}
 
-  <header id='welcome-window' class='browser-window welcome-window'>
-    <div id='welcome-header' class='browser-window-header'>
-      <button id='welcome-close' class='browser-window-close'>✕</button>
-    </div>
-
-    <div class='browser-window-content'>
-      <h1 class='header-title'>
-        William <span class='header-title-br'>Lindvall</span>
-      </h1>
-      <nav class='nav font-s'>
-        <ul class='nav-list'>
-          <li class='nav-item'>
-            <a href='/about' class='nav-link'>
-              about
-            </a>
-          </li>
-          <li class='nav-item'>
-            <a href='/blog' class='nav-link'>
-              blog
-            </a>
-          </li>
-          <li class='nav-item'>
-            <a href='/work' class='nav-link'>
-              work
-            </a>
-          </li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
-  <script type='text/javascript' src='/js/browser-window.js'></script>
 </body>
+
 </html>

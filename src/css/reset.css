@@ -63,3 +63,17 @@ video {
   max-width: 100%;
   display: block;
 }
+
+button {
+  border: none;
+  background-color: transparent;
+  padding: 0.25rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+p ~ p,
+img,
+video {
+  margin: 0.65rem 0;
+}

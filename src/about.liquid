@@ -1,37 +1,50 @@
 ---
+layout: templates/base.html
 priority: 1.0
 changefreq: 'monthly'
 ---
 
-<div>
-  <img src='/images/gondola.jpg' />
-</div>
+<main class='browser-window'>
+  <div class='browser-window-header'>
+    <h1 class='browser-window-title'>
+      About
+    </h1>
+    <a href='/' class='browser-window-close'>✕</a>
+  </div>
 
-<p>
-  This is my girlfriend and I in a cable car.
-</p>
+  <div class='browser-window-content scrollable'>
+    <div>
+      <img src='/images/gondola.jpg' />
+    </div>
 
-<p>
-  I love the web and working to make it more fun, interesting and exciting to use and develop for.
-</p>
+    <p>
+      This is my girlfriend and I in a cable car.
+    </p>
 
-<p id='favorites-label'>When I'm not working on a project I'm usually thinking about</p>
+    <p>
+      I love the web and working to make it more fun, interesting and exciting to use and develop for.
+    </p>
 
-<ul aria-labelledby='favorites-label'>
-  <li>
-    Open-source
-  </li>
-  <li>
-    JavaScript (probably React)
-  </li>
-  <li>
-    Improving my workflow (Vim / tmux)
-  </li>
-  <li>
-    Mechanical keyboards (currently a Preonic with Gateron browns)
-  </li>
-</ul>
+    <p id='favorites-label' class='favorites-label'>When I'm not working on a project I'm usually thinking about</p>
 
-<p>
-  For more of my work and to see what I'm currently up to, check my <a href='https://github.com/shwilliam'>GitHub</a>, or find me retweeting stuff on Twitter <a href='https://twitter.com/werlliam'>here</a>.
-</p>
+    <ul aria-labelledby='favorites-label' class='list'>
+      <li>
+        Open-source
+      </li>
+      <li>
+        JavaScript (probably React)
+      </li>
+      <li>
+        Improving my workflow (Vim / tmux)
+      </li>
+      <li>
+        Mechanical keyboards (currently a Preonic with Gateron browns)
+      </li>
+    </ul>
+
+    <p>
+      For more of my work and to see what I'm currently up to, check my <a href='https://github.com/shwilliam'>GitHub</a>, or find me retweeting stuff on Twitter <a href='https://twitter.com/werlliam'>here</a>.
+    </p>
+  </div>
+</main>
+
