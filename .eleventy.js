@@ -41,7 +41,7 @@ module.exports = config => {
       'js',
       'ico',
       'jpg',
-      // 'png',
+      'png',
       // 'gif',
       'pdf',
       // 'txt',
