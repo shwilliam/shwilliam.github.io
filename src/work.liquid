@@ -1,13 +1,16 @@
 ---
+layout: templates/base.html
 priority: 1.0
 changefreq: 'monthly'
 ---
 
-<ul>
+<h1>Recent Work</h1>
+
+<ul class='list'>
   {% assign sortedPosts = collections.projects | reverse %}
   {% for post in sortedPosts %}
     <li>
-      <h3>
+      <h3 class='inline'>
         {{post.data.title}}
       </h3>
       <p>

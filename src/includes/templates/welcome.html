@@ -10,9 +10,9 @@
   <meta name='Description' content='Vancouver-based web developer'>
 
   <link rel='icon' type='image/x-icon' href='./favicon.ico'>
+  <!-- TODO: inline appropriate stylesheets -->
   <link rel='stylesheet' href='/css/reset.css'>
   <link rel='stylesheet' href='/css/style.css'>
-  <link rel='stylesheet' href='/css/syntax-highlight.css'>
   <link
     rel='alternate'
     type='application/rss+xml'
@@ -22,19 +22,11 @@
 
   <title>@shwilliam</title>
 </head>
+
 <body class='browser-window-container'>
 
-  <main class='browser-window'>
-    <div class='browser-window-header'>
-      <a href='/' class='browser-window-close'>✕</a>
-    </div>
-
-    <div class='browser-window-content scrollable'>
-
-      {{ content }}
-
-    </div>
-  </main>
+  {{ content }}
 
 </body>
+
 </html>

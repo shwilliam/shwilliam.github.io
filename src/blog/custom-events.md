@@ -2,6 +2,7 @@
 title: Custom Events in JavaScript
 date: 2019-10-28
 description: A brief introduction to custom events in JavaScript
+layout: templates/base.html
 priority: 0.5
 changefreq: 'monthly'
 ---

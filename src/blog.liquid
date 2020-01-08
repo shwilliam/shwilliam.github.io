@@ -1,14 +1,17 @@
 ---
+layout: templates/base.html
 priority: 1.0
 changefreq: 'monthly'
 ---
 
-<ul>
+<h1>Blog Posts</h1>
+
+<ul class='list'>
   {% assign sortedPosts = collections.blog | reverse %}
   {% for post in sortedPosts %}
     <li>
-      <a href="{{post.url}}">
-        <h3>
+      <a href='{{post.url}}'>
+        <h3 class='inline'>
           {{post.data.title}}
         </h3>
         {% comment %} <p>{{post.data.description}}</p> {% endcomment %}
@@ -16,3 +19,4 @@ changefreq: 'monthly'
     </li>
   {% endfor %}
 </ul>
+

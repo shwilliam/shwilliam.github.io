@@ -43,9 +43,6 @@ body {
 }
 
 .browser-window {
-  position: absolute;
-  top: 1.3rem;
-  bottom: 1.6rem;
   width: 90%;
   max-width: 900px;
   min-width: 300px;
@@ -91,7 +88,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 0.75rem 1rem 0 1rem;
+  padding: 1.25rem 1rem 2rem 1rem;
 }
 
 .header-title {
@@ -152,11 +149,11 @@ body {
 
 .scrollable {
   overflow-y: scroll;
-  position: absolute;
-  top: 1.2rem;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  max-height: 85vh;
+}
+
+.inline {
+  display: inline;
 }
 
 .disabled {
