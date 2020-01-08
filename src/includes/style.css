@@ -91,7 +91,7 @@ body {
   padding: 1.25rem 1rem 2rem 1rem;
 }
 
-.header-title {
+.welcome-title {
   font-size: 2.4rem;
   line-height: 1;
   padding: 1.6rem 1.6rem 1rem 0;
@@ -99,24 +99,24 @@ body {
 }
 
 @media screen and (min-width: 420px) {
-  .header-title {
+  .welcome-title {
     font-size: 14vw;
   }
 }
 
 @media screen and (min-width: 1020px) {
-  .header-title {
+  .welcome-title {
     font-size: 6.2rem;
   }
 }
 
 @media screen and (min-height: 200px) {
-  .header-title {
+  .welcome-title {
     margin-top: 0;
   }
 }
 
-.header-title-br::before {
+.welcome-title-br::before {
   content: '\A';
   white-space: pre;
 }

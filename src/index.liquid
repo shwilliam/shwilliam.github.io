@@ -1,5 +1,5 @@
 ---
-layout: templates/welcome.html
+layout: templates/base.liquid
 priority: 1.0
 changefreq: 'monthly'
 ---
@@ -10,9 +10,27 @@ changefreq: 'monthly'
   </div>
 
   <div class='browser-window-content'>
-    <h1 class='header-title'>
-      William <span class='header-title-br'>Lindvall</span>
+    <h1 class='welcome-title'>
+      William <span class='welcome-title-br'>Lindvall</span>
     </h1>
+
+    {% comment %}
+    <p class='welcome-subtitle'>
+      web developer
+    </p>
+
+    <p class='welcome-info'>
+      React / Typescript / GraphQL / Node.js
+    </p>
+
+    <p class='welcome-info'>
+      <a
+        href="mailto:w-lindvall@outlook.com?subject=Let's%20grab%20a%20coffee!"
+      >
+        w-lindvall@outlook.com
+      </a>
+    </p>
+    {% endcomment %}
 
     <nav class='nav'>
       <ul class='nav-list'>

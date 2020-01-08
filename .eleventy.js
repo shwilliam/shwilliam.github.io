@@ -1,4 +1,5 @@
 const fs = require('fs')
+const CleanCSS = require('clean-css')
 
 module.exports = config => {
   config.addCollection('projects', collection =>
@@ -24,6 +25,8 @@ module.exports = config => {
   )
 
   config.addLiquidFilter('toIsoString', d => new Date(d).toISOString())
+
+  config.addFilter('cssmin', d => new CleanCSS({}).minify(d).styles)
 
   fs.createReadStream('./src/CNAME').pipe(fs.createWriteStream('./dist/CNAME'))
 
