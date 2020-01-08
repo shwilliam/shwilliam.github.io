@@ -147,6 +147,25 @@ body {
   margin-bottom: 1rem;
 }
 
+.contribution-title {
+  display: block;
+}
+
+@media screen and (min-width: 600px) {
+  .contribution-title {
+    display: inline-block;
+  }
+}
+
+.sr-only {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
 .scrollable {
   overflow-y: scroll;
   max-height: 85vh;
@@ -159,4 +178,14 @@ body {
 .disabled {
   cursor: not-allowed;
   color: var(--color__text);
+}
+
+.hidden {
+  display: none;
+}
+
+@media screen and (min-width: 600px) {
+  .hidden--mobile {
+    display: initial;
+  }
 }
