@@ -24,14 +24,14 @@
   {% endcapture %}
 
   <style>
-    {{css | cssmin}}
+    {{ css | cssmin }}
   </style>
 
-  <title>@shwilliam{% if title %}: {{title}}{% endif %}</title>
+  <title>@shwilliam{% if title %}: {{ title }}{% endif %}</title>
 </head>
 <body class='browser-window-container'>
 
-  {{content}}
+  {{ content }}
 
 </body>
 </html>
