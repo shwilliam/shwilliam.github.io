@@ -5,50 +5,54 @@ priority: 1.0
 changefreq: 'monthly'
 ---
 
-<h2>Recent Contributions</h2>
-<ul class='list'>
-  {% for contribution in contributions %}
-    <li>
-      <a href='{{ contribution.url }}'>
-        <h3 class='inline'>
-          {{ contribution.repository.owner.login }}/{{ contribution.repository.name }}
-          (#{{ contribution.number }})
-        </h3>
-        <span class='hidden hidden--mobile'>:</span>
-        <span class='contribution-title'>
-          {{ contribution.title }}
-        </span>
-      </a>
-    </li>
-  {% endfor %}
-</ul>
-
-<h2>Recent Work</h2>
-<ul class='list'>
-  {% assign sortedPosts = collections.projects | reverse %}
-  {% for post in sortedPosts %}
-    <li>
-      <h3 class='inline'>
-        {{post.data.title}}
-      </h3>
-      <p>
-        {{post.data.description}}
-      </p>
-      <a href='{{post.data.source}}'>
-        source
-      </a>
-      {% if post.data.link %}
-        <a href='{{post.data.link}}'>
-          demo
+<section class='section'>
+  <h2 class='title'>Recent Contributions</h2>
+  <ul class='list'>
+    {% for contribution in contributions %}
+      <li>
+        <a href='{{ contribution.url }}'>
+          <h3 class='inline'>
+            {{ contribution.repository.owner.login }}/{{ contribution.repository.name }}
+            (#{{ contribution.number }})
+          </h3>
+          <span class='hidden hidden--mobile'>:</span>
+          <span class='contribution-title'>
+            {{ contribution.title }}
+          </span>
         </a>
-      {% endif %}
-    </li>
-  {% endfor %}
-</ul>
+      </li>
+    {% endfor %}
+  </ul>
+</section>
 
-<p>
-  More on 
-  <a href='https://github.com/shwilliam'>
-    GitHub
-  </a>
-</p>
+<section class='section'>
+  <h2 class='title'>Recent Work</h2>
+  <ul class='list'>
+    {% assign sortedPosts = collections.projects | reverse %}
+    {% for post in sortedPosts %}
+      <li>
+        <h3 class='inline'>
+          {{post.data.title}}
+        </h3>
+        <p>
+          {{post.data.description}}
+        </p>
+        <a href='{{post.data.source}}'>
+          source
+        </a>
+        {% if post.data.link %}
+          <a href='{{post.data.link}}'>
+            demo
+          </a>
+        {% endif %}
+      </li>
+    {% endfor %}
+  </ul>
+
+  <p>
+    More on 
+    <a href='https://github.com/shwilliam'>
+      GitHub
+    </a>
+  </p>
+</section>

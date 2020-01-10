@@ -24,7 +24,7 @@ Below is some code from a simple React app that uses a `NameTag` component to re
 import React from 'react'
 
 const NameTag = ({name, bg}) => (
-  <div style={{backgroundColor: bg}}>
+  <div style={{ "{{backgroundColor: bg" }}}}>
     <p>My name is: {name}</p>
   </div>
 )
@@ -58,7 +58,7 @@ Nice! Our `<NameTag>` is reusable and neatly hides its slightly messier details 
 import React from 'react'
 
 const Title = ({title, bg}) => (
-  <div style={{backgroundColor: bg}}>
+  <div style={{ "{{backgroundColor: bg" }}}}>
     <h1>{title}</h1>
   </div>
 )
@@ -98,7 +98,7 @@ In our case, we simply want a component that wrap whatever we pass inside its ta
 import React from 'react'
 
 const Background = ({color, children}) => (
-  <div style={{backgroundColor: color}}>{children}</div>
+  <div style={{ "{{backgroundColor: color" }}}}>{children}</div>
 )
 
 export default Background
