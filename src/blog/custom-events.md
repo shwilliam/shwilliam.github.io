@@ -2,13 +2,9 @@
 title: Custom Events in JavaScript
 date: 2019-10-28
 description: A brief introduction to custom events in JavaScript
-layout: templates/scrollable.liquid
+layout: templates/blog-post.liquid
 priority: 0.5
 changefreq: 'monthly'
----
-
-## 📡 Custom events in JavaScript
-
 ---
 
 ![TIL Javascript supports custom events](/images/custom-events-tweet.png)
@@ -17,7 +13,7 @@ How did I miss this? No clue. Since I discovered this feature I have been playin
 
 Not only are you limited to using events fired by the browser, such as `'click'`, `'submit'`, `'scroll'`, but you can use the native `CustomEvent` constructor to create your own events.
 
-### Example
+## Example
 
 Let's see this in action by refactoring a simple callback-based example to utilize custom events. This example has two main components, a chat and a notification area that displays some information about the latest chat message.
 
@@ -25,15 +21,14 @@ Let's see this in action by refactoring a simple callback-based example to utili
 import Chat from './chat'
 import ChatForm from './chat-form'
 import Notifications from './notifications'
-;(() => {
-  const chat = Chat('chat')
-  const notifications = Notifications('notifications')
 
-  const chatForm = ChatForm('chat-form', message => {
-    chat.append(message)
-    notifications.notify(message)
-  })
-})()
+const chat = Chat('chat')
+const notifications = Notifications('notifications')
+
+const chatForm = ChatForm('chat-form', message => {
+  chat.append(message)
+  notifications.notify(message)
+})
 ```
 
 ```js
@@ -84,23 +79,22 @@ Now, we can add an event listener to our chat element that listens for `'new-mes
 import Chat from './chat'
 import ChatForm from './chat-form'
 import Notifications from './notifications'
-;(() => {
-  const chat = Chat('chat')
-  const chatForm = ChatForm('chat-form')
-  const notifications = Notifications('notifications')
 
-  chatForm.addEventListener('new-message', e => {
-    const message = e.detail.text()
+const chat = Chat('chat')
+const chatForm = ChatForm('chat-form')
+const notifications = Notifications('notifications')
 
-    chat.append(message)
-    notifications.notify(message)
-  })
-})()
+chatForm.addEventListener('new-message', e => {
+  const message = e.detail.text()
+
+  chat.append(message)
+  notifications.notify(message)
+})
 ```
 
 Due to the event-driven nature of a majority of our frontend programming, this native feature is very easy to get used to and use to clean up certain parts of our codebase in particular situations.
 
-### Browser support
+## Browser support
 
 The `CustomEvent` constructor is available in all major browsers with the only exception being Internet Explorer. Nonetheless, [this](https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent/CustomEvent#Polyfill) simple polyfill is available if you need it.
 

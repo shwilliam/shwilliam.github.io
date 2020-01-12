@@ -1,15 +1,10 @@
 ---
-path: /blog/react-children
-date: 2019-10-29
 title: A gentle introduction to React component composition
+date: 2019-10-29
 description: Learn to use `props.children` to create reusable components in React
-layout: templates/scrollable.liquid
+layout: templates/blog-post.liquid
 priority: 0.5
 changefreq: 'monthly'
----
-
-## 👶 A gentle introduction to React component composition
-
 ---
 
 Building front-end components using React provides developers with a great deal of flexibility in designing APIs that are highly reusable by exposing just the right amount of control to the user.
@@ -86,7 +81,7 @@ export default App
 
 It doesn't take long for us to spot some smells with our code at this point. Some of our code is now duplicated. What if there happened to be a bug in the way the background color had been implemented? The issue would have to be hunted down and fixed in various parts of the code. Let's see if we can refactor this app to make some more reusable components.
 
-### `props.children`
+## `props.children`
 
 When you use your React component in JSX, any elements inside the component's opening and closing tags is passed to that component as `props.children`. This allows a component to utilize and manipulate the content that is rendered based on what is passed.
 
@@ -140,7 +135,7 @@ const NameTag = ({name}) => <p>My name is: {name}</p>
 export default NameTag
 ```
 
-### "Prop-drilling"
+## "Prop-drilling"
 
 Using `children` we can also avoid "prop-drilling" which is another code-smell that tends to show up when getting started with React. "Prop-drilling" is the act of passing data through several components with `props`, when these components don't actually have anything to do with the piece of data their passing along.
 
@@ -150,6 +145,6 @@ Through utilizing what we've learned about `children`, we can now simplify our c
 
 If you came across any issue or have a question regarding this post, feel free to submit it [here](https://github.com/shwilliam/shwilliam.github.io/issues).
 
-### Further reading
+## Further reading
 
 If you want to learn more about this idea, the React docs mention it [here](https://reactjs.org/docs/composition-vs-inheritance.html) and [here](https://reactjs.org/docs/jsx-in-depth.html#children-in-jsx). Building on these concepts is [this](https://www.youtube.com/watch?v=hEGg-3pIHlE) great talk by Ryan Florence's from PhoenixJS a few years ago that I highly recommend. It explains a strategy of implementing "compound components" in React that implicitly share state between one another.

@@ -9,14 +9,14 @@ changefreq: 'monthly'
   <h2 class='title'>Recent Contributions</h2>
   <ul class='list'>
     {% for contribution in contributions %}
-      <li>
-        <a href='{{ contribution.url }}'>
-          <h3 class='inline'>
+      <li class='list__item--l'>
+        <a class='contribution__link' href='{{ contribution.url }}'>
+          <h3 class='contribution__info inline'>
             {{ contribution.repository.owner.login }}/{{ contribution.repository.name }}
             (#{{ contribution.number }})
           </h3>
           <span class='hidden hidden--mobile'>:</span>
-          <span class='contribution-title'>
+          <span class='contribution__title'>
             {{ contribution.title }}
           </span>
         </a>
@@ -31,20 +31,27 @@ changefreq: 'monthly'
     {% assign sortedPosts = collections.projects | reverse %}
     {% for post in sortedPosts %}
       <li>
-        <h3 class='inline'>
-          {{post.data.title}}
-        </h3>
-        <p>
+        <span class='work__header'>
+          <h3 class='inline'>
+            {{post.data.title}}
+          </h3>
+          <p class='work__subtitle'>
+            {{post.data.tech | spaceToSlash}}
+          </p>
+        </span>
+
+        <p class='work__description'>
           {{post.data.description}}
         </p>
-        <a href='{{post.data.source}}'>
-          source
-        </a>
-        {% if post.data.link %}
-          <a href='{{post.data.link}}'>
-            demo
-          </a>
-        {% endif %}
+
+        <div class='work__actions'>
+          <a class='button button--fill work__action' href='{{post.data.source}}'>source</a>
+          {% if post.data.link %}
+            <a class='button work__action' href='{{post.data.link}}'>
+              demo
+            </a>
+          {% endif %}
+        </div>
       </li>
     {% endfor %}
   </ul>

@@ -1,0 +1,21 @@
+---
+layout: templates/base.liquid
+---
+
+<main class='browser-window'>
+  <div class='browser-window-header'>
+    <p class='browser-window-title'>
+      {{ date | toIsoStringNoTimezone }}
+    </p>
+    <a href='/blog' class='browser-window-close'>✕</a>
+  </div>
+
+  <div class='browser-window-content scrollable'>
+    <h1 class='title'>
+      {{ title }}
+    </h1>
+
+    {{ content }}
+
+  </div>
+</main>

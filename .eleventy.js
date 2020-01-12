@@ -26,6 +26,16 @@ module.exports = config => {
 
   config.addLiquidFilter('toIsoString', d => new Date(d).toISOString())
 
+  config.addLiquidFilter('toIsoStringNoTimezone', d => {
+    const date = new Date(d)
+
+    return `${date.getUTCFullYear()}-${`0${date.getUTCMonth() + 1}`.slice(
+      -2,
+    )}-${`0${date.getUTCDate()}`.slice(-2)}`
+  })
+
+  config.addLiquidFilter('spaceToSlash', d => d.split(' ').join('/'))
+
   config.addFilter('cssmin', d => new CleanCSS({}).minify(d).styles)
 
   fs.createReadStream('./src/CNAME').pipe(fs.createWriteStream('./dist/CNAME'))
