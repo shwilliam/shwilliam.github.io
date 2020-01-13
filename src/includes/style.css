@@ -3,7 +3,33 @@
 
 @import url('https://fonts.googleapis.com/css?family=Libre+Baskerville&display=swap');
 
-:root {
+html {
+  --color__bg: #fee;
+  --color__text: #333;
+  --color__ui: #333;
+  --color__ui--dark: #000;
+  --color__focus: #f55;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    --color__bg: #333;
+    --color__text: #fee;
+    --color__ui: #fee;
+    /* TODO: rename */
+    --color__ui--dark: #fff;
+  }
+}
+
+html[data-theme='dark'] {
+  --color__bg: #333;
+  --color__text: #fee;
+  --color__ui: #fee;
+  /* TODO: rename */
+  --color__ui--dark: #fff;
+}
+
+html[data-theme='light'] {
   --color__bg: #fee;
   --color__text: #333;
   --color__ui: #333;
@@ -24,6 +50,33 @@ body {
 :focus {
   outline: var(--color__focus) solid 4px;
   outline-offset: 0.4rem;
+}
+
+.theme-toggle {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  font-size: 1.5rem;
+  padding: 0.5rem;
+}
+
+/* if no js falls back to user settings */
+.theme-toggle:after,
+html[data-theme='light'] .theme-toggle:after {
+  /* content: 'Seriously, pink?'; */
+  content: '🌚';
+}
+
+html[data-theme='dark'] .theme-toggle:after {
+  /* content: 'Hard to read?'; */
+  content: '🌞';
+}
+
+@media (prefers-color-scheme: dark) {
+  .theme-toggle:after {
+    /* content: 'Hard to read?'; */
+    content: '🌞';
+  }
 }
 
 .button {

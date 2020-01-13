@@ -31,7 +31,21 @@
 </head>
 <body class='browser-window-container'>
 
+  <button
+    id='theme-toggle'
+    name='theme-toggle'
+    class='theme-toggle'
+    type='button'
+  >
+    <p class='sr-only'>
+      Toggle theme
+    </p>
+  </button>
+
   {{ content }}
 
+  <script>
+    {% include theme-toggle.js %}
+  </script>
 </body>
 </html>
