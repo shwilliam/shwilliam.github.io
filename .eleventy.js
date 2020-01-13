@@ -7,8 +7,7 @@ module.exports = config => {
     collection
       .getFilteredByGlob('src/projects/*.md')
       .filter(({data}) => !!data.featured)
-      .sort(({data: data1}, {data: data2}) => data2.featured - data1.featured)
-      .map(d => console.log(d) || d),
+      .sort(({data: data1}, {data: data2}) => data2.featured - data1.featured),
   )
   config.addCollection('blog', collection =>
     collection.getFilteredByGlob('src/blog/*.md'),
@@ -18,8 +17,11 @@ module.exports = config => {
   config.addPlugin(require('@11ty/eleventy-plugin-syntaxhighlight'))
   config.addPlugin(require('@11ty/eleventy-plugin-rss'))
 
-  // copy CNAME
+  // copy files
   fs.createReadStream('./src/CNAME').pipe(fs.createWriteStream('./dist/CNAME'))
+  fs.createReadStream('./src/robots.txt').pipe(
+    fs.createWriteStream('./dist/robots.txt'),
+  )
 
   // filters
   config.addLiquidFilter(
