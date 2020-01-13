@@ -2,12 +2,13 @@
   "name": "shwilliam.github.io",
   "private": true,
   "description": "@shwilliam's personal website",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "license": "MIT",
   "author": "William L <w-lindvall@outlook.com>",
   "scripts": {
     "build": "eleventy",
-    "start": "eleventy --serve"
+    "start": "eleventy --serve",
+    "deploy": "npm run build && gh-pages -d dist -b master"
   },
   "repository": {
     "type": "git",

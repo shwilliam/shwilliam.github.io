@@ -88,6 +88,10 @@ body {
   padding-bottom: 1rem;
 }
 
+.list {
+  margin-bottom: 1rem;
+}
+
 .md li,
 .list li {
   margin-bottom: 0.15rem;
@@ -173,10 +177,10 @@ li li {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 1.25rem 1rem 1.15rem 1rem;
+  padding: 1.25rem 1rem 1.25rem 1rem;
 }
 
-@media screen and (min-width: 400px) {
+@media screen and (min-width: 600px) {
   .browser-window-container {
     overflow-x: hidden;
     padding: 1.6rem 0;
@@ -251,7 +255,7 @@ li li {
   padding-left: 1.25rem;
 }
 
-@media screen and (min-width: 420px) {
+@media screen and (min-width: 600px) {
   .nav-list {
     font-size: 6.7vw;
   }
@@ -315,17 +319,22 @@ li li {
   margin-bottom: 1rem;
 }
 
+.links__label {
+  margin-top: 1.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.links__description {
+  display: inline-block;
+}
+
 .title {
+  display: inline-block;
   font-size: 1.8rem;
   font-weight: bold;
   line-height: 1.25;
-  padding-bottom: 0.25rem;
-}
-
-@media screen and (min-width: 600px) {
-  .title {
-    font-size: 2.4rem;
-  }
+  margin-top: 0.2rem;
+  margin-bottom: 0.5rem;
 }
 
 @media screen and (min-width: 600px) {

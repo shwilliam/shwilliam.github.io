@@ -1,10 +1,11 @@
 ---
 title: Vue direction
 description: Declarative, direction-aware hover in VueJS
-tech: vue
+tech: Vue
 date: 2019-03-10
 source: https://github.com/shwilliam/vue-direction
 link: https://codesandbox.io/s/3x46lrlk1q
 priority: 0.5
 changefreq: 'monthly'
+featured: 3
 ---

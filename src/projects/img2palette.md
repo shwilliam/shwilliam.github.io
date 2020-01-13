@@ -7,5 +7,5 @@ source: https://github.com/shwilliam/img2palette
 link: https://img2palette.netlify.com/
 priority: 0.5
 changefreq: 'monthly'
-featured: true
+featured: 2
 ---

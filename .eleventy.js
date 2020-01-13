@@ -2,20 +2,26 @@ const fs = require('fs')
 const CleanCSS = require('clean-css')
 
 module.exports = config => {
+  // collections
   config.addCollection('projects', collection =>
     collection
       .getFilteredByGlob('src/projects/*.md')
-      .filter(({data}) => !!data.featured),
+      .filter(({data}) => !!data.featured)
+      .sort(({data: data1}, {data: data2}) => data2.featured - data1.featured)
+      .map(d => console.log(d) || d),
   )
-
   config.addCollection('blog', collection =>
     collection.getFilteredByGlob('src/blog/*.md'),
   )
 
+  // plugins
   config.addPlugin(require('@11ty/eleventy-plugin-syntaxhighlight'))
-
   config.addPlugin(require('@11ty/eleventy-plugin-rss'))
 
+  // copy CNAME
+  fs.createReadStream('./src/CNAME').pipe(fs.createWriteStream('./dist/CNAME'))
+
+  // filters
   config.addLiquidFilter(
     'latest',
     d =>
@@ -23,9 +29,7 @@ module.exports = config => {
         d.length - 1
       ],
   )
-
   config.addLiquidFilter('toIsoString', d => new Date(d).toISOString())
-
   config.addLiquidFilter('toIsoStringNoTimezone', d => {
     const date = new Date(d)
 
@@ -33,12 +37,8 @@ module.exports = config => {
       -2,
     )}-${`0${date.getUTCDate()}`.slice(-2)}`
   })
-
   config.addLiquidFilter('spaceToSlash', d => d.split(' ').join('/'))
-
   config.addFilter('cssmin', d => new CleanCSS({}).minify(d).styles)
-
-  fs.createReadStream('./src/CNAME').pipe(fs.createWriteStream('./dist/CNAME'))
 
   return {
     dir: {
@@ -47,18 +47,7 @@ module.exports = config => {
       includes: 'includes',
       data: 'data',
     },
-    templateFormats: [
-      'liquid',
-      'md',
-      'css',
-      'js',
-      'ico',
-      'jpg',
-      'png',
-      // 'gif',
-      'pdf',
-      // 'txt',
-    ],
+    templateFormats: ['liquid', 'md', 'css', 'js', 'ico', 'jpg', 'png', 'pdf'],
     htmlTemplateEngine: 'liquid',
     markdownTemplateEngine: 'liquid',
     passthroughFileCopy: true,

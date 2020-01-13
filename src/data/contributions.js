@@ -4,6 +4,7 @@ require('dotenv').config()
 const WHITELIST = ['sv.reactjs.org', 'vue-skip-to']
 
 module.exports = async function() {
+  // TODO: cache request
   const res = await fetch('https://api.github.com/graphql', {
     method: 'POST',
     headers: {

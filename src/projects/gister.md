@@ -1,7 +1,7 @@
 ---
 title: Gister
 description: Vanilla JS MVC Electron app for working with Gists
-tech: vanilla
+tech: JS
 date: 2019-08-23
 source: https://github.com/shwilliam/gister/
 priority: 0.5
