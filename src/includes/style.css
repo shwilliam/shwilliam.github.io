@@ -7,19 +7,19 @@ html {
   --color__bg: #fee;
   --color__text: #333;
   --color__ui: #333;
+  /* TODO: rename */
   --color__ui--dark: #000;
   --color__focus: #f55;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    --color__bg: #333;
-    --color__text: #fee;
-    --color__ui: #fee;
-    /* TODO: rename */
-    --color__ui--dark: #fff;
-  }
-}
+/* @media (prefers-color-scheme: dark) { */
+/*   html { */
+/*     --color__bg: #333; */
+/*     --color__text: #fee; */
+/*     --color__ui: #fee; */
+/*     --color__ui--dark: #fff; */
+/*   } */
+/* } */
 
 html[data-theme='dark'] {
   --color__bg: #333;
@@ -72,12 +72,12 @@ html[data-theme='dark'] .theme-toggle:after {
   content: '🌞';
 }
 
-@media (prefers-color-scheme: dark) {
-  .theme-toggle:after {
-    /* content: 'Hard to read?'; */
-    content: '🌞';
-  }
-}
+/* @media (prefers-color-scheme: dark) { */
+/*   .theme-toggle:after { */
+/*     /1* content: 'Hard to read?'; *1/ */
+/*     content: '🌞'; */
+/*   } */
+/* } */
 
 .button {
   display: inline-block;

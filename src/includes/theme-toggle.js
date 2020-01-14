@@ -1,6 +1,7 @@
 const htmlEl = document.firstElementChild
 const themeToggleEl = document.getElementById('theme-toggle')
-const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
+const prefersDark = false
+// const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
 
 htmlEl.dataset.theme = localStorage.getItem('theme')
 
