@@ -5,6 +5,14 @@ priority: 1.0
 changefreq: 'monthly'
 ---
 
+{% capture css %}
+  {% include work-page.css %}
+{% endcapture %}
+
+<style>
+  {{ css | cssmin }}
+</style>
+
 <section class='section'>
   <h2 class='title'>Recent Contributions</h2>
   <ul class='list'>

@@ -1,0 +1,68 @@
+.welcome-window {
+  width: unset;
+  top: unset;
+  right: unset;
+  bottom: unset;
+  left: unset;
+  width: 95%;
+  max-width: 715px;
+  min-height: 280px;
+  max-height: 100%;
+  overflow: scroll;
+}
+
+.welcome-title {
+  font-size: 4rem;
+  line-height: 1;
+  padding: 2.5rem 2.5rem 0 0;
+  margin-top: 80px;
+}
+
+.welcome-title-br::before {
+  content: '\A';
+  white-space: pre;
+}
+
+.nav-list {
+  display: flex;
+  padding-bottom: 2rem;
+  font-size: 1.5rem;
+}
+
+.nav-item ~ .nav-item {
+  padding-left: 1.25rem;
+}
+
+@media screen and (min-height: 200px) {
+  .welcome-title {
+    margin-top: 0;
+  }
+}
+
+@media screen and (min-width: 420px) {
+  .welcome-window {
+    width: unset;
+    max-height: 800px;
+  }
+  .welcome-title {
+    font-size: 17vw;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .nav-list {
+    font-size: 6.7vw;
+  }
+}
+
+@media screen and (min-width: 1020px) {
+  .welcome-title {
+    font-size: 8.5rem;
+  }
+  .nav-list {
+    font-size: 3.2rem;
+  }
+  .nav-item ~ .nav-item {
+    padding-left: 1.5rem;
+  }
+}

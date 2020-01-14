@@ -1,0 +1,16 @@
+.favorites-label {
+  margin-bottom: 0.25rem;
+}
+
+.links__list {
+  padding-bottom: 1rem;
+}
+
+.links__label {
+  margin-top: 1.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.links__description {
+  display: inline-block;
+}

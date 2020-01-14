@@ -5,6 +5,14 @@ priority: 1.0
 changefreq: 'monthly'
 ---
 
+{% capture css %}
+  {% include about-page.css %}
+{% endcapture %}
+
+<style>
+  {{ css | cssmin }}
+</style>
+
 <main class='browser-window browser-window--slim'>
   <div class='browser-window-header'>
     <h1 class='browser-window-title'>
@@ -52,7 +60,7 @@ changefreq: 'monthly'
 
     <h2 id='links__label' class='subtitle links__label'>Links</h2>
 
-    <ul aria-labelledby='links__label' class='list'>
+    <ul aria-labelledby='links__label' class='list links__list'>
       <li class='list__item--l'>
         <p class='links__description'>E-mail:</p>
         <a

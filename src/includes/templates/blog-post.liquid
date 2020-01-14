@@ -2,6 +2,14 @@
 layout: templates/base.liquid
 ---
 
+{% capture css %}
+  {% include syntax-highlight.css %}
+{% endcapture %}
+
+<style>
+  {{ css | cssmin }}
+</style>
+
 <main class='browser-window'>
   <div class='browser-window-header'>
     <p class='browser-window-title'>

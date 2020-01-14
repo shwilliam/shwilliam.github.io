@@ -1,0 +1,44 @@
+.contribution__title {
+  display: block;
+}
+
+.contribution__link {
+  text-decoration: none;
+}
+
+.contribution__info {
+  text-decoration: underline;
+}
+
+.work__list-item {
+  display: inline-block;
+  padding-bottom: 0.5rem;
+}
+
+.work__subtitle {
+  display: inline-block;
+  opacity: 0.55;
+  margin: 0 0.3rem;
+  position: relative;
+  bottom: 0.005rem;
+  font-size: 0.8rem;
+}
+
+.work__description {
+  padding-right: 8%;
+}
+
+.work__actions {
+  display: inline-block;
+  margin-top: 0.25rem;
+  margin-bottom: 1rem;
+}
+
+@media screen and (min-width: 600px) {
+  .contribution__link {
+    text-decoration: underline;
+  }
+  .contribution__title {
+    display: inline;
+  }
+}

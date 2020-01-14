@@ -17,10 +17,14 @@
     href='/rss.xml'
   >
 
+  <script>
+    {% include theme-toggle-check.js %}
+  </script>
+
   {% capture css %}
     {% include reset.css %}
-    {% include style.css %}
-    {% include syntax-highlight.css %}
+    {% include global.css %}
+    {% include welcome-page.css %}
   {% endcapture %}
 
   <style>
