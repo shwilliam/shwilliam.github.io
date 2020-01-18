@@ -1,5 +1,6 @@
 ---
 title: A gentle introduction to React component composition
+titleShort: React children
 date: 2019-10-29
 description: Learn to use `props.children` to create reusable components in React
 layout: templates/blog-post.liquid

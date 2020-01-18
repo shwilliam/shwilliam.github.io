@@ -1,5 +1,6 @@
 ---
 title: Getting started with finite-state machines in React
+titleShort: State machines
 date: 2020-01-16
 description: Simplify your UI logic with the finite-state machine pattern
 layout: templates/blog-post.liquid
@@ -87,6 +88,8 @@ It is therefore clear that in the example above, our button can be in only one o
 When we dispatch events the reducer first checks what state we are in, then performs any change to state if it is allowed. We can perform any logic or side effects based on events as they are dispatched in our `useEffect` switch statement, which in the example is fetching some data.
 
 Hopefully this post illustrated how this pattern can be used to clean up some of your code and prevent what should be impossible states in your components by explicitly declaring the transitions that are allowed.
+
+If you came across any issue or have a question regarding this post, feel free to submit it [here](https://github.com/shwilliam/shwilliam.github.io/issues).
 
 ## More on finite-state machines
 

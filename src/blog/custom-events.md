@@ -1,5 +1,6 @@
 ---
 title: Custom Events in JavaScript
+titleShort: Custom Events
 date: 2019-10-28
 description: A brief introduction to custom events in JavaScript
 layout: templates/blog-post.liquid

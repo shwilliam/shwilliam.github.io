@@ -13,12 +13,21 @@ layout: templates/base.liquid
 <main class='browser-window'>
   <div class='browser-window-header'>
     <p class='browser-window-title'>
-      {{ date | toIsoStringNoTimezone }}
+      Blog: {{ titleShort }}
     </p>
     <a href='/blog' class='browser-window-close'>✕</a>
   </div>
 
   <div class='browser-window-content scrollable md'>
+    <div class="subtitle__container">
+      <p class="subtitle subtitle--secondary">
+        {{ date | toIsoStringNoTimezone }}
+      </p>
+      <p class="subtitle subtitle--secondary">
+        {{ content | readingTime }}
+      </p>
+    </div>
+
     <h1 class='title'>
       {{ title }}
     </h1>

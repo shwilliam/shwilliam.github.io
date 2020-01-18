@@ -103,17 +103,19 @@ html[data-theme='dark'] .theme-toggle:after {
   border: 1px solid var(--color__ui--accent);
 }
 
+/* TODO: move md styles to other file */
+
 .md p,
 .md pre {
   display: block;
   line-height: 1.35;
 }
 
-.md p {
+.md > p {
   margin: 1rem 0 0.75rem 0;
 }
 
-.md p:last-child {
+.md > p:last-child {
   display: inline-block;
   padding-bottom: 1.5rem;
 }
@@ -133,6 +135,19 @@ html[data-theme='dark'] .theme-toggle:after {
   line-height: 1.25;
 }
 
+.subtitle__container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.md .subtitle--secondary {
+  font-size: 1rem;
+  font-weight: 400;
+  opacity: 0.7;
+  margin: 0 1rem 0 0;
+  padding: 0;
+}
+
 .md h3 {
   margin-top: 1.25rem;
 }
@@ -142,7 +157,20 @@ html[data-theme='dark'] .theme-toggle:after {
 }
 
 .image {
-  padding-bottom: 1rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.image__container {
+  position: relative;
+  padding-bottom: 78.26%;
+  margin-bottom: 1rem;
+  height: 0;
+  overflow: hidden;
 }
 
 .sr-only {
@@ -179,7 +207,7 @@ html[data-theme='dark'] .theme-toggle:after {
   font-weight: bold;
   line-height: 1.25;
   margin-top: 0.2rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
 }
 
 .list {
@@ -280,6 +308,12 @@ li li {
 }
 
 @media screen and (min-width: 600px) {
+  .subtitle__container {
+    justify-content: flex-start;
+  }
+  .md .subtitle--secondary {
+    margin-right: 1.5rem;
+  }
   .scrollable {
     max-height: 85vh;
   }
