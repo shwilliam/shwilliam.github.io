@@ -102,7 +102,7 @@ In certain situations, you will find yourself using HTML elements for solely dec
 To recap, we've gone over:
 
 1. Hidden for everyone
-   - `display: none` or HTML `hidden;`
+   - `display: none` or HTML `hidden`
    - `visibility: hidden;` for transitioning elements
 2. Hidden for screen users
    - Move offscreen (and clip)
