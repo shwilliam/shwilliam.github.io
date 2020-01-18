@@ -1,5 +1,6 @@
 const fs = require('fs')
 const CleanCSS = require('clean-css')
+const readingTime = require('reading-time')
 
 module.exports = config => {
   // collections
@@ -41,6 +42,7 @@ module.exports = config => {
   })
   config.addLiquidFilter('spaceToSlash', d => d.split(' ').join('/'))
   config.addFilter('cssmin', d => new CleanCSS({}).minify(d).styles)
+  config.addFilter('readingTime', d => readingTime(d).text)
 
   return {
     dir: {
