@@ -20,13 +20,12 @@
   >
 
   <script>
-    {% include theme-toggle-check.js %}
+    {% include js/theme-check.js %}
   </script>
 
   {% capture css %}
-    {% include reset.css %}
-    {% include global.css %}
-    {% include welcome-page.css %}
+    {% include css/reset.css %}
+    {% include css/global.css %}
   {% endcapture %}
 
   <style>
@@ -51,7 +50,7 @@
   {{ content }}
 
   <script>
-    {% include theme-toggle.js %}
+    {% include js/theme-toggle.js %}
   </script>
 </body>
 </html>

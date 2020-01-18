@@ -103,11 +103,15 @@ html[data-theme='dark'] .theme-toggle:after {
 }
 
 /* TODO: move md styles to other file */
+.md {
+  overflow: hidden;
+}
 
 .md p,
 .md pre {
   display: block;
   line-height: 1.35;
+  word-break: break-word;
 }
 
 .md > p {
@@ -138,6 +142,7 @@ html[data-theme='dark'] .theme-toggle:after {
 .subtitle__container {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 1rem;
 }
 
 .md .subtitle--secondary {
@@ -209,6 +214,10 @@ html[data-theme='dark'] .theme-toggle:after {
   line-height: 1.25;
   margin-top: 0.2rem;
   margin-bottom: 1rem;
+}
+
+.title--s {
+  margin-bottom: 0.25rem;
 }
 
 .list {

@@ -3,7 +3,7 @@ layout: templates/base.liquid
 ---
 
 {% capture css %}
-  {% include syntax-highlight.css %}
+  {% include css/syntax-highlight.css %}
 {% endcapture %}
 
 <style>
@@ -19,6 +19,9 @@ layout: templates/base.liquid
   </div>
 
   <div class='browser-window-content scrollable md'>
+    <h1 class='title title--s'>
+      {{ title }}
+    </h1>
     <div class="subtitle__container">
       <p class="subtitle subtitle--secondary">
         {{ date | toIsoStringNoTimezone }}
@@ -27,10 +30,6 @@ layout: templates/base.liquid
         {{ content | readingTime }}
       </p>
     </div>
-
-    <h1 class='title'>
-      {{ title }}
-    </h1>
 
     {{ content }}
 

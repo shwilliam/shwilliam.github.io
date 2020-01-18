@@ -1,4 +1,3 @@
-const fs = require('fs')
 const CleanCSS = require('clean-css')
 const readingTime = require('reading-time')
 
@@ -19,10 +18,9 @@ module.exports = config => {
   config.addPlugin(require('@11ty/eleventy-plugin-rss'))
 
   // copy files
-  fs.createReadStream('./src/CNAME').pipe(fs.createWriteStream('./dist/CNAME'))
-  fs.createReadStream('./src/robots.txt').pipe(
-    fs.createWriteStream('./dist/robots.txt'),
-  )
+  config.addPassthroughCopy('src/CNAME')
+  config.addPassthroughCopy('src/robots.txt')
+  config.addPassthroughCopy('src/favicon.ico')
 
   // filters
   config.addLiquidFilter(
@@ -51,7 +49,7 @@ module.exports = config => {
       includes: 'includes',
       data: 'data',
     },
-    templateFormats: ['liquid', 'md', 'css', 'js', 'ico', 'jpg', 'png', 'pdf'],
+    templateFormats: ['liquid', 'md', 'css', 'js', 'jpg', 'png', 'pdf'],
     htmlTemplateEngine: 'liquid',
     markdownTemplateEngine: 'liquid',
     passthroughFileCopy: true,
