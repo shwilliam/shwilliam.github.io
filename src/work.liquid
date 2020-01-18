@@ -19,7 +19,7 @@ changefreq: 'monthly'
     {% for contribution in contributions %}
       <li class='list__item--l'>
         <a class='contribution__link' href='{{ contribution.url }}'>
-          <h3 class='contribution__info inline'>
+          <h3 class='contribution__info'>
             {{ contribution.repository.owner.login }}/{{ contribution.repository.name }}
             (#{{ contribution.number }})
           </h3>
@@ -47,9 +47,11 @@ changefreq: 'monthly'
     {% for post in sortedPosts %}
       <li>
         <span class='work__header'>
-          <h3 class='inline'>
-            {{post.data.title}}
-          </h3>
+          <a class='work__title-link' href='{{post.data.source}}'>
+            <h3 class='work__title'>
+              {{post.data.title}}
+            </h3>
+          </a>
           <p class='work__subtitle'>
             {{post.data.tech | spaceToSlash}}
           </p>

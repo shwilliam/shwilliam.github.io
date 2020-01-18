@@ -7,12 +7,22 @@
 }
 
 .contribution__info {
+  display: inline-block;
   text-decoration: underline;
 }
 
 .work__list-item {
   display: inline-block;
   padding-bottom: 0.5rem;
+}
+
+.work__title {
+  display: inline-block;
+  text-decoration: underline;
+}
+
+.work__title-link {
+  text-decoration: none;
 }
 
 .work__subtitle {

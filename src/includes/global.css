@@ -1,7 +1,5 @@
 /* TODO: fix pseudo window height (eg. welcome window) */
 
-@import url('https://fonts.googleapis.com/css?family=Libre+Baskerville&display=swap');
-
 html {
   --color__bg: #fee;
   --color__text: #333;
@@ -38,7 +36,8 @@ html[data-theme='light'] {
 
 html,
 body {
-  font-family: 'Libre Baskerville', serif;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
   font-size: 20px;
   line-height: 1.25;
   color: var(--color__text);
@@ -130,8 +129,9 @@ html[data-theme='dark'] .theme-toggle:after {
 
 .md h2,
 .subtitle {
+  font-family: 'Libre Baskerville', serif;
   font-size: 1.8rem;
-  font-weight: bold;
+  font-weight: 700;
   line-height: 1.25;
 }
 
@@ -142,7 +142,7 @@ html[data-theme='dark'] .theme-toggle:after {
 
 .md .subtitle--secondary {
   font-size: 1rem;
-  font-weight: 400;
+  font-weight: 700;
   opacity: 0.7;
   margin: 0 1rem 0 0;
   padding: 0;
@@ -202,9 +202,10 @@ html[data-theme='dark'] .theme-toggle:after {
 }
 
 .title {
+  font-family: 'Libre Baskerville', serif;
   display: inline-block;
   font-size: 1.8rem;
-  font-weight: bold;
+  font-weight: 700;
   line-height: 1.25;
   margin-top: 0.2rem;
   margin-bottom: 1rem;
@@ -295,8 +296,7 @@ li li {
   flex-basis: 100%;
   text-align: center;
   text-transform: capitalize;
-  font-weight: bold;
-  padding-top: 0.2rem;
+  padding: 0.2rem 0 0.1rem 0;
   margin: 0 2rem;
 }
 
@@ -304,7 +304,13 @@ li li {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 1.25rem 1rem 1.25rem 1rem;
+  padding: 1rem 0.5rem;
+}
+
+@media screen and (min-width: 400px) {
+  .browser-window-content {
+    padding: 1.25rem 1rem;
+  }
 }
 
 @media screen and (min-width: 600px) {

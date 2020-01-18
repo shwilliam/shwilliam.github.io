@@ -12,7 +12,7 @@
 }
 
 .welcome-title {
-  font-size: 4rem;
+  font-size: 3.2rem;
   line-height: 1;
   margin-top: 80px;
   padding: 2.5rem 2.5rem 0 0;
@@ -39,25 +39,28 @@
   }
 }
 
-@media screen and (min-width: 420px) {
+@media screen and (min-width: 400px) {
   .welcome-window {
     width: unset;
     max-height: 800px;
   }
   .welcome-title {
-    font-size: 17vw;
+    font-size: 14vw;
   }
-}
-
-@media screen and (min-width: 600px) {
   .nav-list {
     font-size: 6.7vw;
   }
 }
 
+@media screen and (min-width: 600px) {
+  .nav-item ~ .nav-item {
+    padding-left: 1.75rem;
+  }
+}
+
 @media screen and (min-width: 1020px) {
   .welcome-title {
-    font-size: 8.5rem;
+    font-size: 7rem;
   }
   .nav-list {
     font-size: 3.2rem;
