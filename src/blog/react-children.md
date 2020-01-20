@@ -142,7 +142,7 @@ Using `children` we can also avoid "prop-drilling" which is another code-smell t
 
 For example, in our earlier version of our app, `<NameTag>` was being passed `bg` as a prop while this not what the component was designed for; This prop was solely introduced to handle a particular use case. This often occurs when multiple components depend on the same piece of data, often leading to brittle code that is a pain to refactor.
 
-Through utilizing what we've learned about `children`, we can now simplify our code by making our components more reusable and provide a more flexible API to handle a larger variety of use-cases.
+Through utilizing what we've learned about `children`, we can now simplify our code by making our components more composable and provide a more flexible API to handle a larger variety of use-cases.
 
 If you came across any issue or have a question regarding this post, feel free to submit it [here](https://github.com/shwilliam/shwilliam.github.io/issues).
 
