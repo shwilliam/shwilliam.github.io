@@ -1,82 +1,82 @@
 ---
-layout: templates/scrollable.liquid
+layout: templates/base.liquid
 title: work
 priority: 1.0
 changefreq: 'monthly'
 ---
 
-{% capture css %}
-  {% include css/work-page.css %}
-{% endcapture %}
+<main class='content'>
+  <div class='content__header'>
+    <a href='/' class='back'>Back</a>
+  </div>
 
-<style>
-  {{ css | cssmin }}
-</style>
-
-<section class='section'>
-  <h2 class='title'>Recent Contributions</h2>
-  <ul class='list'>
-    {% for contribution in contributions %}
-      <li class='list__item--l'>
-        <a class='contribution__link' href='{{ contribution.url }}'>
-          <h3 class='contribution__info'>
-            {{ contribution.repository.owner.login }}/{{ contribution.repository.name }}
-            (#{{ contribution.number }})
-          </h3>
-          <span class='hidden hidden--mobile'>:</span>
-          <span class='contribution__title'>
-            {{ contribution.title }}
-          </span>
-        </a>
-      </li>
-    {% endfor %}
-  </ul>
-
-  <p>
-    See more on 
-    <a href='https://github.com/shwilliam'>
-      GitHub
-    </a>
-  </p>
-</section>
-
-<section class='section'>
-  <h2 class='title'>Recent Work</h2>
-  <ul class='list'>
-    {% assign sortedPosts = collections.projects | reverse %}
-    {% for post in sortedPosts %}
-      <li>
-        <span class='work__header'>
-          <a class='work__title-link' href='{{post.data.source}}'>
-            <h3 class='work__title'>
-              {{post.data.title}}
-            </h3>
-          </a>
-          <p class='work__subtitle'>
-            {{post.data.tech | spaceToSlash}}
-          </p>
-        </span>
-
-        <p class='work__description'>
-          {{post.data.description}}
-        </p>
-
-        <div class='work__actions'>
-          <a class='button button--fill work__action' href='{{post.data.source}}'>source</a>
-          {% if post.data.link %}
-            <a class='button work__action' href='{{post.data.link}}'>
-              demo
+  <div class='content__main'>
+    <section class='section'>
+      <h1 class='subtitle'>Recent Contributions</h1>
+      <ul class='list'>
+        {% for contribution in contributions %}
+          <li class='list__item--l'>
+            <a class='contribution__link' href='{{ contribution.url }}'>
+              <h2 class='contribution__info'>
+                {{ contribution.repository.owner.login }}/{{ contribution.repository.name }}
+                (#{{ contribution.number }})
+              </h2>
+              <span class='hidden hidden--mobile'>:</span>
+              <span class='contribution__title'>
+                {{ contribution.title }}
+              </span>
             </a>
-          {% endif %}
-        </div>
-      </li>
-    {% endfor %}
-  </ul>
+          </li>
+        {% endfor %}
+      </ul>
 
-  <p>
-    See more on 
-    <a href='https://github.com/shwilliam'>
-      GitHub
-    </a>
-  </p>
-</section>
+      <p>
+        See more on 
+        <a href='https://github.com/shwilliam'>
+          GitHub
+        </a>
+      </p>
+    </section>
+
+    <section class='section'>
+      <h2 class='subtitle subtitle--padded'>Recent Work</h2>
+      <ul class='list'>
+        {% assign sortedPosts = collections.projects | reverse %}
+        {% for post in sortedPosts %}
+          <li>
+            <span class='work__header'>
+              <a class='work__title-link' href='{{post.data.source}}'>
+                <h2 class='work__title'>
+                  {{post.data.title}}
+                </h2>
+              </a>
+              <p class='work__subtitle'>
+                {{post.data.tech | spaceToSlash}}
+              </p>
+            </span>
+
+            <p class='work__description'>
+              {{post.data.description}}
+            </p>
+
+            <div class='work__actions'>
+              <a class='button button--fill work__action' href='{{post.data.source}}'>source</a>
+              {% if post.data.link %}
+                <a class='button work__action' href='{{post.data.link}}'>
+                  demo
+                </a>
+              {% endif %}
+            </div>
+          </li>
+        {% endfor %}
+      </ul>
+
+      <p>
+        See more on 
+        <a href='https://github.com/shwilliam'>
+          GitHub
+        </a>
+      </p>
+    </section>
+  </div>
+</main>

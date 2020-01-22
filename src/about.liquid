@@ -5,23 +5,16 @@ priority: 1.0
 changefreq: 'monthly'
 ---
 
-{% capture css %}
-  {% include css/about-page.css %}
-{% endcapture %}
-
-<style>
-  {{ css | cssmin }}
-</style>
-
-<main class='browser-window browser-window--slim'>
-  <div class='browser-window-header'>
-    <h1 class='browser-window-title'>
-      About
-    </h1>
-    <a href='/' class='browser-window-close'>✕</a>
+<main class='content'>
+  <div class='content__header'>
+    <a href='/' class='back'>Back</a>
   </div>
 
-  <div class='browser-window-content scrollable'>
+  <div class='content__main'>
+    <h1 class='title title--padded'>
+      About
+    </h1>
+
     <div class="image__container">
       <img
         class='image'
@@ -41,10 +34,10 @@ changefreq: 'monthly'
 
     <ul aria-labelledby='favorites-label' class='list'>
       <li>
-        Open-source
+        JavaScript (probably React)
       </li>
       <li>
-        JavaScript (probably React)
+        All things open-source
       </li>
       <li>
         Improving my workflow (Vim / tmux)
@@ -58,19 +51,19 @@ changefreq: 'monthly'
       For more of my work and to see what I'm currently up to, check my <a href='https://github.com/shwilliam'>GitHub</a>, or find me favoriting tweets <a href='https://twitter.com/werlliam'>here</a>.
     </p>
 
-    <h2 id='links__label' class='subtitle links__label'>Links</h2>
+    <h2 id='links__label' class='subtitle subtitle--padded'>Links</h2>
 
     <ul aria-labelledby='links__label' class='list links__list'>
       <li class='list__item--l'>
-        <p class='links__description'>E-mail:</p>
+        <p class='inline'>E-mail:</p>
         <a
-          href="mailto:ewlindvall@protonmail.com?subject=Let's%20grab%20a%20coffee!"
+          href="mailto:w-lindvall@outlook.com?subject=Let's%20grab%20a%20coffee!"
         >
-          ewlindvall@protonmail.com
+          w-lindvall@outlook.com
         </a>
       </li>
       <li class='list__item--l'>
-        <p class='links__description'>GitHub:</p>
+        <p class='inline'>GitHub:</p>
         <a
           target='_blank'
           rel='noopener noreferrer'
@@ -80,7 +73,7 @@ changefreq: 'monthly'
         </a>
       </li>
       <li class='list__item--l'>
-        <p class='links__description'>LinkedIn:</p>
+        <p class='inline'>LinkedIn:</p>
         <a
           target='_blank'
           rel='noopener noreferrer'
@@ -90,7 +83,7 @@ changefreq: 'monthly'
         </a>
       </li>
       <li class='list__item--l'>
-        <p class='links__description'>RSS:</p>
+        <p class='inline'>RSS:</p>
         <a
           target='_blank'
           rel='noopener noreferrer'
@@ -100,7 +93,7 @@ changefreq: 'monthly'
         </a>
       </li>
       <li class='list__item--l'>
-        <p class='links__description'>Resume:</p>
+        <p class='inline'>Resume:</p>
         <a
           href="/files/lindvall_william-resume.pdf"
           download
