@@ -7,7 +7,8 @@
     content='width=device-width, initial-scale=1.0'
   >
   <meta http-equiv='X-UA-Compatible' content='ie=edge'>
-  <meta name='Description' content='Vancouver-based web developer'>
+  <meta name='author' content='William Lindvall'>
+  <meta name='description' content='Vancouver-based web developer'>
 
   <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville:700|Open+Sans:400,400i,700&display=swap" rel="stylesheet">
 
@@ -32,7 +33,7 @@
     {{ css | cssmin }}
   </style>
 
-  <title>@shwilliam{% if title %}: {{ title }}{% endif %}</title>
+  <title>{% if title %}{{ title }}{% else %}@shwilliam{% endif %}</title>
 </head>
 <body>
 

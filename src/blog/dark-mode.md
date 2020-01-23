@@ -35,7 +35,7 @@ Let's set up a simple example site to walk through an implementation of a dark-m
 </html>
 ```
 
-In order to check if the user's device has dark-mode enabled and alter our CSS variables accordingly, we can use the CSS media feature `prefers-color-scheme` and check if its value is set to `dark`. This can match one of three values; `no-preference`, `light` or `dark`. Of the web features mentioned in this post, `prefers-color-scheme` has the worst browser support at the time of writing. While it is supported in the latest version of most browsers, Edge and IE **does not** support this CSS feature at all.
+In order to check if the user's device has dark-mode enabled and alter our CSS variables accordingly, we can use the CSS media feature `prefers-color-scheme` and check if its value is set to `dark`. This can match one of three values; `no-preference`, `light` or `dark`. Of the web features mentioned in this post, `prefers-color-scheme` has the worst browser support at the time of writing. While it is supported in the latest version of most browsers, Edge and IE **do not** support this CSS feature at all.
 
 ```css
 @media (prefers-color-scheme: dark) {
@@ -93,7 +93,7 @@ html[data-theme='light'] {
 }
 ```
 
-To persist the theme that the user select we can use the `[window.localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage)` to read and write to the current domain's `Storage` object.
+To persist the theme that the user select we can use the [`window.localStorage`](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage) to read and write to the current domain's `Storage` object.
 
 ```js
 const htmlEl = document.firstElementChild
