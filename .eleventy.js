@@ -7,7 +7,10 @@ module.exports = config => {
     collection
       .getFilteredByGlob('src/projects/*.md')
       .filter(({data}) => !!data.featured)
-      .sort(({data: data1}, {data: data2}) => data2.featured - data1.featured),
+      .sort(({date: data1}, {data: data2}) => data2.date - data1.date)
+      .sort(({data: data1}, {data: data2}) =>
+        data2 !== true ? data1.featured - data2.featured : 1,
+      ),
   )
   config.addCollection('blog', collection =>
     collection.getFilteredByGlob('src/blog/*.md'),

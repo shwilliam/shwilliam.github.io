@@ -7,5 +7,5 @@ source: https://github.com/shwilliam/vue-direction
 link: https://codesandbox.io/s/3x46lrlk1q
 priority: 0.5
 changefreq: 'monthly'
-featured: 3
+featured: true
 ---

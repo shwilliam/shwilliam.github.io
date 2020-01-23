@@ -7,5 +7,5 @@ source: https://github.com/shwilliam/aeropress
 link: https://how-to-aeropress.netlify.com/
 priority: 0.5
 changefreq: 'monthly'
-featured: 9
+featured: true
 ---

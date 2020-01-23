@@ -7,5 +7,5 @@ source: https://github.com/shwilliam/image-pixelator
 link: https://pixelator.netlify.com/
 priority: 0.5
 changefreq: 'monthly'
-featured: 2
+featured: true
 ---
