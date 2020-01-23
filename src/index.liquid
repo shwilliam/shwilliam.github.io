@@ -4,44 +4,31 @@ priority: 1.0
 changefreq: 'monthly'
 ---
 
-{% capture css %}
-  {% include css/welcome-page.css %}
-{% endcapture %}
-
-<style>
-  {{ css | cssmin }}
-</style>
-
-<main class='browser-window welcome-window'>
-  <div class='browser-window-header'>
-    <button disabled class='browser-window-close disabled'>✕</button>
-  </div>
-
-  <div class='browser-window-content'>
-    <h1 class='title welcome-title'>
-      William <span class='welcome-title-br'>Lindvall</span>
+<main class='content content--centered'>
+  <div class='content__main '>
+    <h1 class='title'>
+      William Lindvall
     </h1>
 
-    {% comment %}
-      web developer
-      React / Typescript / GraphQL / Node.js
-    {% endcomment %}
+    <p class='subtitle subtitle--secondary italic'>
+      <span class='dib'>React<span class='hidden hidden--mobile'> </span>/<span class='hidden hidden--mobile'> </span>Typescript<span class='hidden hidden--mobile'> </span>/</span><span class='hidden hidden--mobile'> </span><span class='dib'>Node.js<span class='hidden hidden--mobile'> </span>/<span class='hidden hidden--mobile'> </span>GraphQL</span>
+    </p>
 
     <nav class='nav'>
       <ul class='nav-list'>
         <li class='nav-item'>
           <a href='/about' class='nav-link'>
-            about
+            About
           </a>
         </li>
         <li class='nav-item'>
           <a href='/blog' class='nav-link'>
-            blog
+            Blog
           </a>
         </li>
         <li class='nav-item'>
           <a href='/work' class='nav-link'>
-            work
+            Work
           </a>
         </li>
       </ul>

@@ -1,29 +1,36 @@
 ---
-layout: templates/scrollable.liquid
+layout: templates/base.liquid
 title: Blog
 priority: 1.0
 changefreq: 'monthly'
 ---
 
-<h2 class='title'>Recent Posts</h2>
+<div class='content'>
+  <div class='content__header'>
+    <a href='/' class='back'>Back</a>
+  </div>
+  <main class='content__main'>
+    <h1 class='title'>Recent Posts</h1>
 
-<ul class='list'>
-  {% assign sortedPosts = collections.blog | reverse %}
-  {% for post in sortedPosts %}
-    <li>
-      <a href='{{post.url}}'>
-        <h3 class='inline'>
-          {{post.data.title}}
-        </h3>
-        {% comment %} <p>{{post.data.description}}</p> {% endcomment %}
+    <ul class='list'>
+      {% assign sortedPosts = collections.blog | reverse %}
+      {% for post in sortedPosts %}
+        <li>
+          <a href='{{post.url}}'>
+            <h2 class='inline'>
+              {{post.data.title}}
+            </h2>
+            {% comment %} <p>{{post.data.description}}</p> {% endcomment %}
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+
+    <p class='more'>
+      Subscribe to the 
+      <a href='/rss.xml'>
+        RSS feed
       </a>
-    </li>
-  {% endfor %}
-</ul>
-
-<p>
-  Subscribe to the 
-  <a href='/rss.xml'>
-    RSS feed
-  </a>
-</p>
+    </p>
+  </main>
+</div>

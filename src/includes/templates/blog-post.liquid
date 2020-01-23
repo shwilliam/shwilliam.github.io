@@ -10,28 +10,29 @@ layout: templates/base.liquid
   {{ css | cssmin }}
 </style>
 
-<main class='browser-window'>
-  <div class='browser-window-header'>
-    <p class='browser-window-title'>
-      Blog: {{ titleShort }}
-    </p>
-    <a href='/blog' class='browser-window-close'>✕</a>
+<main class='content'>
+  <div class='content__header'>
+    <a href='/blog' class='back'>Back</a>
   </div>
 
-  <div class='browser-window-content scrollable md'>
-    <h1 class='title title--s'>
+  <div class='content__main'>
+    <h1 class='title title--small'>
       {{ title }}
     </h1>
-    <div class="subtitle__container">
-      <p class="subtitle subtitle--secondary">
+
+    <div class="subtitle__container italic">
+      <p class="subtitle subtitle--secondary subtitle__container-item">
         {{ date | toIsoStringNoTimezone }}
       </p>
-      <p class="subtitle subtitle--secondary">
+      <p class="subtitle subtitle--secondary subtitle__container-item">
         {{ content | readingTime }}
       </p>
     </div>
 
-    {{ content }}
+    <div class='section md'>
 
+      {{ content }}
+
+    </div>
   </div>
 </main>
