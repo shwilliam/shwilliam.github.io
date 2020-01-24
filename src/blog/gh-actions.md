@@ -8,7 +8,9 @@ priority: 0.5
 changefreq: 'monthly'
 ---
 
-GitHub Actions were recently publicly released on November 13, which enable easy automation and orchestration of software workflows. In this post we will explore the value they can add by setting up an action that handles deployment of my [personal site](https://github.com/shwilliam/shwilliam.github.io).
+GitHub Actions were recently publicly released on November 13, which enable easy automation and orchestration of software workflows. In this post we will explore the value they can add by setting up an action that handles deployment of my [personal site](https://github.com/shwilliam/shwilliam.github.io), a static site built using Eleventy and hosted on GH Pages.
+
+If you wish to follow along, you can clone one of the many [Eleventy starter projects](https://www.11ty.dev/docs/starter/) to quickly get set up with a static site. Also, be sure to replace details such as the build script and deployment branch to correspond to those of your project.
 
 To get started, navigate to your repo on GitHub and open the 'Actions' tab. Here we can see an overview of popular actions used by the community. Selecting 'Set up a workflow yourself' opens up a sample YAML file in `.github/workflow/`. At the moment this won't do a whole lot but is helpful for getting a taste of the syntax we need to use.
 
@@ -49,7 +51,7 @@ on:
 
 ```
 
-Building the site also requires several external dependencies (such as `node-fetch` and `clean-css`) which we need to install before build, which is handled by `actions-eleventy`.
+The site's build process requires several external dependencies (such as `node-fetch` and `clean-css`) which we need to install before build, which is handled by `actions-eleventy`.
 
 ```yaml
 

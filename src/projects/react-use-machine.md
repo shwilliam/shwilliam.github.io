@@ -1,5 +1,5 @@
 ---
-title: React useMachine
+title: useMachine
 description: A small finite-state machine helper hook
 tech: React TypeScript
 date: 2020-01-17
