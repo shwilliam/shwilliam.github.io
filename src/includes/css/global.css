@@ -40,7 +40,6 @@ body {
 
 :focus {
   outline: var(--color__focus) solid 4px;
-  outline-offset: 0.4rem;
 }
 
 /* utils */
@@ -163,6 +162,10 @@ html[data-theme='dark'] .theme-toggle:after {
   opacity: 0.75;
   font-size: 1.2rem;
   font-weight: 400;
+}
+
+.subtitle--small {
+  font-size: 1rem;
 }
 
 .subtitle__container {
@@ -358,6 +361,31 @@ li li {
   .contribution__title {
     display: inline;
   }
+}
+
+/* blog list */
+.blog-list__item {
+  padding: 0.75rem 0;
+}
+
+.blog-list__title {
+  display: inline-block;
+  padding-bottom: 0.25rem;
+  font-family: 'Libre Baskerville', serif;
+  font-weight: 700;
+}
+
+.blog-list__link {
+  text-decoration: none;
+}
+
+.blog-list__description {
+  opacity: 0.75;
+}
+
+.blog-list__date {
+  font-size: 0.8rem;
+  opacity: 0.75;
 }
 
 /* blog post */

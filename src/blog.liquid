@@ -12,15 +12,16 @@ changefreq: 'monthly'
   <main class='content__main'>
     <h1 class='title'>Recent Posts</h1>
 
-    <ul class='list'>
+    <ul class='blog-list'>
       {% assign sortedPosts = collections.blog | reverse %}
       {% for post in sortedPosts %}
-        <li>
-          <a href='{{post.url}}'>
-            <h2 class='inline'>
+        <li class='blog-list__item'>
+          <p class='blog-list__date'>{{ post.data.date | toIsoStringNoTimezone }}</p>
+          <a class='blog-list__link' href='{{post.url}}'>
+            <h2 class='blog-list__title'>
               {{post.data.title}}
             </h2>
-            {% comment %} <p>{{post.data.description}}</p> {% endcomment %}
+            <p class='blog-list__description'>{{post.data.description}}</p>
           </a>
         </li>
       {% endfor %}
