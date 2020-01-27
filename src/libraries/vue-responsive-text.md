@@ -7,4 +7,5 @@ source: https://github.com/shwilliam/vue-responsive-text
 link: https://codesandbox.io/s/zx70w1o8rp?module=%2Fsrc%2FApp.vue
 priority: 0.5
 changefreq: 'monthly'
+featured: true
 ---

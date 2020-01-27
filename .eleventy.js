@@ -12,6 +12,15 @@ module.exports = config => {
         data2 !== true ? data1.featured - data2.featured : 1,
       ),
   )
+  config.addCollection('libraries', collection =>
+    collection
+      .getFilteredByGlob('src/libraries/*.md')
+      .filter(({data}) => !!data.featured)
+      .sort(({date: data1}, {data: data2}) => data2.date - data1.date)
+      .sort(({data: data1}, {data: data2}) =>
+        data2 !== true ? data1.featured - data2.featured : 1,
+      ),
+  )
   config.addCollection('blog', collection =>
     collection.getFilteredByGlob('src/blog/*.md'),
   )

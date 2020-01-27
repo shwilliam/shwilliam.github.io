@@ -7,4 +7,5 @@ source: https://github.com/shwilliam/vue-essential-transitions
 link: https://codesandbox.io/s/rl27rwmxjo
 priority: 0.5
 changefreq: 'monthly'
+featured: true
 ---

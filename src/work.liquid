@@ -39,7 +39,41 @@ changefreq: 'monthly'
     </section>
 
     <section class='section'>
-      <h2 class='subtitle subtitle--padded'>Recent Work</h2>
+      <h2 class='subtitle subtitle--padded'>Components & Libraries</h2>
+      <ul>
+        {% assign sortedPosts = collections.libraries | reverse %}
+        {% for post in sortedPosts %}
+          <li class='work__list-item'>
+            <span class='work__header'>
+              <a class='work__title-link' href='{{post.data.source}}'>
+                <h2 class='work__title'>
+                  {{post.data.title}}
+                </h2>
+              </a>
+              <p class='work__subtitle'>
+                {{post.data.tech | spaceToSlash}}
+              </p>
+            </span>
+
+            <p class='work__description'>
+              {{post.data.description}}
+            </p>
+
+            <div class='work__actions'>
+              <a class='button button--fill work__action' href='{{post.data.source}}'>source</a>
+              {% if post.data.link %}
+                <a class='button work__action' href='{{post.data.link}}'>
+                  demo
+                </a>
+              {% endif %}
+            </div>
+          </li>
+        {% endfor %}
+      </ul>
+    </section>
+
+    <section class='section'>
+      <h2 class='subtitle subtitle--padded'>Websites, Apps & Experiments</h2>
       <ul>
         {% assign sortedPosts = collections.projects | reverse %}
         {% for post in sortedPosts %}

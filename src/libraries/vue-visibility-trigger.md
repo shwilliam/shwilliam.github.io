@@ -7,4 +7,5 @@ source: https://github.com/shwilliam/vue-visibility-trigger
 link: https://codesandbox.io/s/qkyolorn6w?module=%2Fsrc%2FApp.vue
 priority: 0.5
 changefreq: 'monthly'
+featured: true
 ---
