@@ -149,7 +149,7 @@ html[data-theme='dark'] .theme-toggle:after {
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
   font-family: 'Libre Baskerville', serif;
-  font-size: 1.8rem;
+  font-size: 2rem;
   font-weight: 700;
 }
 
@@ -321,13 +321,14 @@ li li {
 }
 
 .work__list-item {
-  display: inline-block;
-  padding-bottom: 0.5rem;
+  display: block;
+  margin-bottom: 0.75rem;
 }
 
 .work__title {
   display: inline-block;
-  text-decoration: underline;
+  font-family: 'Libre Baskerville', serif;
+  font-weight: 700;
 }
 
 .work__title-link {
