@@ -2,7 +2,7 @@
 title: Implementing a simple and accessible dark mode
 titleShort: Dark mode
 date: 2020-01-22
-description: Implement a dark mode with CSS-variables and `prefers-color-scheme`
+description: Set up a dark mode toggle using CSS custom properties and `prefers-color-scheme`
 layout: templates/blog-post.liquid
 priority: 0.5
 changefreq: 'monthly'
