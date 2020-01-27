@@ -6,5 +6,5 @@ date: 2020-01-15
 source: https://github.com/shwilliam/coral
 priority: 0.5
 changefreq: 'monthly'
-featured: true
+featured: 6
 ---

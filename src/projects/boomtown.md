@@ -6,5 +6,5 @@ date: 2019-11-23
 source: https://github.com/shwilliam/boomtown
 priority: 0.5
 changefreq: 'monthly'
-featured: true
+featured: 10
 ---

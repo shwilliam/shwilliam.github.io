@@ -7,5 +7,5 @@ source: https://github.com/shwilliam/explore-spotify
 link: https://explore-spotify.netlify.com/
 priority: 0.5
 changefreq: 'monthly'
-featured: true
+featured: 3
 ---
