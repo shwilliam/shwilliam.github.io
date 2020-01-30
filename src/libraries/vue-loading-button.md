@@ -1,7 +1,7 @@
 ---
 title: Vue loading button
 description: Vue button with a slideout loading indicator
-tech: Vue
+tech: Vue.js
 date: 2019-02-04
 source: https://github.com/shwilliam/vue-loading-button
 link: https://codesandbox.io/s/4zywwyjxw7
