@@ -16,8 +16,8 @@ changefreq: 'monthly'
       {% assign sortedPosts = collections.blog | reverse %}
       {% for post in sortedPosts %}
         <li class='blog-list__item'>
-          <p class='blog-list__date'>{{ post.data.date | toIsoStringNoTimezone }}</p>
           <a class='blog-list__link' href='{{post.url}}'>
+            <p class='blog-list__date'>{{ post.data.date | toIsoStringNoTimezone }}</p>
             <h2 class='blog-list__title'>
               {{post.data.title}}
             </h2>
