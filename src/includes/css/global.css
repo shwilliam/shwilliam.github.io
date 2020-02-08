@@ -323,6 +323,7 @@ li li {
 /* work page */
 .contribution__title {
   display: block;
+  margin-left: 1rem;
 }
 
 .contribution__link {
@@ -367,12 +368,13 @@ li li {
   margin-bottom: 1rem;
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 780px) {
   .contribution__link {
     text-decoration: underline;
   }
   .contribution__title {
     display: inline;
+    margin-left: 0;
   }
 }
 
