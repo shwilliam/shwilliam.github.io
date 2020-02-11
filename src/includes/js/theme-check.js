@@ -1,4 +1,4 @@
 ;(() => {
   const htmlEl = document.firstElementChild
-  htmlEl.dataset.theme = localStorage.getItem('theme')
+  htmlEl.dataset.theme = localStorage.getItem('theme') || 'light'
 })()
