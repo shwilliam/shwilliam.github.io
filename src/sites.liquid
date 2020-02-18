@@ -5,8 +5,15 @@ priority: 1.0
 changefreq: 'monthly'
 ---
 
+{% capture css %}
+  {% include css/work.css %}
+{% endcapture %}
 
-<section class='site-content'>
+<style>
+  {{ css | cssmin }}
+</style>
+
+<section class='site-content site-content--l'>
   <h1 class='sr-only'>Websites, Apps & Experiments</h1>
 
   <ul class='work__grid padded'>

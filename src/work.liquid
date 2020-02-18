@@ -5,9 +5,17 @@ priority: 1.0
 changefreq: 'monthly'
 ---
 
+{% capture css %}
+  {% include css/work.css %}
+{% endcapture %}
+
+<style>
+  {{ css | cssmin }}
+</style>
+
 <h1 class='sr-only'>Components & Libraries</h1>
 
-<section class='site-content'>
+<section class='site-content site-content--l'>
   <h2 class='title padded'>Recent Contributions</h2>
   <ul>
     {% for contribution in contributions %}
@@ -27,8 +35,8 @@ changefreq: 'monthly'
 </section>
 
 <section>
-  <h2 class='title padded'>Components & Libraries</h2>
-  <ul class='work__grid'>
+  <h2 class='title padded padded--l'>Components & Libraries</h2>
+  <ul class='work__grid site-content site-content--l'>
     {% assign sortedPosts = collections.libraries | reverse %}
     {% for post in sortedPosts %}
       <li>
@@ -38,9 +46,6 @@ changefreq: 'monthly'
               {{post.data.title}}
             </h2>
           </a>
-          <p class='work__subtitle'>
-            {{post.data.tech | commaToSlash}}
-          </p>
         </span>
 
         <p class='work__description'>
