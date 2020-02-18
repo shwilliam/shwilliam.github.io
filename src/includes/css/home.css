@@ -1,0 +1,18 @@
+.contact-form__container {
+  margin: 20vh var(--spacing__h);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-form__input {
+  display: block;
+}
+
+.contact-form__recaptcha {
+  display: block;
+}
+
+.contact-form__submit {
+  margin: var(--spacing__v--l) 0;
+}
