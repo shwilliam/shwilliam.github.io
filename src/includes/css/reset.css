@@ -71,9 +71,3 @@ button {
   line-height: 1;
   cursor: pointer;
 }
-
-p ~ p,
-img,
-video {
-  margin: 0.65rem 0;
-}

@@ -22,8 +22,6 @@
   <meta property='og:image' content='/favicon.ico' />
   <meta property='og:description' content='Vancouver-based web developer' />
 
-  <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville:700|Open+Sans:400,400i,700&display=swap" rel="stylesheet">
-
   <link rel='icon' type='image/x-icon' href='/favicon.ico'>
   <link
     rel='alternate'
@@ -47,7 +45,54 @@
 
   <title>{% if title %}{{ title }}{% else %}@shwilliam{% endif %}</title>
 </head>
-<body>
+<body class='site-container'>
+
+  <header class='site-header'>
+    <a href='/' class='title title--main'>
+      William Lindvall
+    </a>
+
+    <nav>
+      <ul class='nav-list'>
+        <li class='nav-list__item'>
+          <a
+            href='/work'
+            class='nav-list__link title {% if page.fileSlug == 'work' %}title--accent{% endif %}'
+          >
+            Libraries & Components
+          </a>
+        </li>
+        <li class='nav-list__item'>
+          <a
+            href='/sites'
+            class='nav-list__link title {% if page.fileSlug == 'sites' %}title--accent{% endif %}'
+          >
+            Websites
+          </a>
+        </li>
+        <li class='nav-list__item'>
+          <a
+            href='/blog'
+            class='nav-list__link title {% if page.fileSlug == 'blog' %}title--accent{% endif %}'
+          >
+            Blog
+          </a>
+        </li>
+        <li class='nav-list__item'>
+          <a
+            href='/about'
+            class='nav-list__link title {% if page.fileSlug == 'about' %}title--accent{% endif %}'
+          >
+            About
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    {{ content }}
+  </main>
 
   <button
     id='theme-toggle'
@@ -59,8 +104,6 @@
       Toggle theme
     </p>
   </button>
-
-  {{ content }}
 
   <script>
     {% include js/theme-toggle.js %}

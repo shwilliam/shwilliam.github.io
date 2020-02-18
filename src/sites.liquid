@@ -1,35 +1,16 @@
 ---
 layout: templates/base.liquid
-title: Work
+title: Websites
 priority: 1.0
 changefreq: 'monthly'
 ---
 
-<h1 class='sr-only'>Components & Libraries</h1>
 
 <section class='site-content'>
-  <h2 class='title padded'>Recent Contributions</h2>
-  <ul>
-    {% for contribution in contributions %}
-      <li class='padded--s'>
-        <a class='contribution__link' href='{{ contribution.url }}'>
-          <h2 class='contribution__info'>
-            {{ contribution.repository.owner.login }}/{{ contribution.repository.name }}
-            (#{{ contribution.number }})
-          </h2><span class='hidden hidden--mobile'>:</span>
-          <span class='contribution__title'>
-            {{ contribution.title }}
-          </span>
-        </a>
-      </li>
-    {% endfor %}
-  </ul>
-</section>
+  <h1 class='sr-only'>Websites, Apps & Experiments</h1>
 
-<section>
-  <h2 class='title padded'>Components & Libraries</h2>
-  <ul class='work__grid'>
-    {% assign sortedPosts = collections.libraries | reverse %}
+  <ul class='work__grid padded'>
+    {% assign sortedPosts = collections.projects | reverse %}
     {% for post in sortedPosts %}
       <li>
         <span class='work__header'>
