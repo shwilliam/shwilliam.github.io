@@ -3,7 +3,7 @@
 }
 
 .blog-list__title {
-  color: var(--color__link);
+  color: var(--color__accent);
   text-decoration: underline;
   margin: var(--spacing__v--xl) var(--spacing__h) var(--spacing__v)
     var(--spacing__h);

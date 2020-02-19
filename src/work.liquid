@@ -16,7 +16,7 @@ changefreq: 'monthly'
 <h1 class='sr-only'>Components & Libraries</h1>
 
 <section class='site-content site-content--l'>
-  <h2 class='title padded'>Recent Contributions</h2>
+  <h2 class='title underline padded'>Recent Contributions</h2>
   <ul>
     {% for contribution in contributions %}
       <li class='padded--s'>
@@ -35,7 +35,7 @@ changefreq: 'monthly'
 </section>
 
 <section>
-  <h2 class='title padded padded--l'>Components & Libraries</h2>
+  <h2 class='title underline padded padded--l'>Components & Libraries</h2>
   <ul class='work__grid site-content site-content--l'>
     {% assign sortedPosts = collections.libraries | reverse %}
     {% for post in sortedPosts %}

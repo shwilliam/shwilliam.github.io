@@ -16,7 +16,13 @@ changefreq: 'monthly'
 <h1 class='sr-only'>William Lindvall</h1>
 
 <div class='contact-form__container'>
-  <form class='contact-form' name='contact' method='POST' data-netlify='true'>
+  <form
+    class='contact-form'
+    name='contact'
+    method='POST'
+    action='/#success'
+    data-netlify='true'
+  >
     <label class='sr-only' for='contact-form-message'>
       Send me anonymous message
     </label>
@@ -28,6 +34,7 @@ changefreq: 'monthly'
       rows='4'
       cols='28'
       autofocus
+      required
     ></textarea>
 
     <div class='contact-form__actions'>

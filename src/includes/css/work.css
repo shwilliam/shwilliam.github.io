@@ -6,7 +6,7 @@
 
 .work__title {
   padding: var(--spacing__v--l) 0;
-  text-decoration: underline;
+  color: var(--color__accent);
   display: inline-block;
   margin-right: var(--spacing__h);
 }
@@ -35,14 +35,17 @@
 
 .contribution__info {
   display: inline-block;
-  text-decoration: underline;
+  color: var(--color__accent);
+  /* text-decoration: underline; */
 }
 
 @media screen and (min-width: 750px) {
   .contribution__link {
-    text-decoration: underline;
+    /* text-decoration: underline; */
+    color: var(--color__accent);
   }
   .contribution__title {
     display: inline;
+    color: var(--color__accent);
   }
 }
