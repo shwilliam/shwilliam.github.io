@@ -36,9 +36,17 @@ changefreq: 'monthly'
         </p>
 
         <div class='work__actions'>
-          <a class='button button--fill work__action' href='{{post.data.source}}'>source</a>
+          <a class='button work__action' href='{{post.data.source}}'>
+            <span aria-hidden='true'>
+              {% include icons/github.svg %}
+            </span>
+            source
+          </a>
           {% if post.data.link %}
             <a class='button work__action' href='{{post.data.link}}'>
+              <span aria-hidden='true'>
+                {% include icons/compass.svg %}
+              </span>
               demo
             </a>
           {% endif %}

@@ -48,11 +48,11 @@
 <body class='site-container'>
 
   <header class='site-header'>
-    <a href='/' class='title title--main'>
+    <a href='/' class='title title--main {% if page.fileSlug == '' %}title--accent{% endif %} site-title'>
       William Lindvall
     </a>
 
-    <nav>
+    <nav class='site-nav'>
       <ul class='nav-list'>
         <li class='nav-list__item'>
           <a

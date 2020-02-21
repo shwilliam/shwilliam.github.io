@@ -7,6 +7,7 @@ changefreq: 'monthly'
 
 {% capture css %}
   {% include css/home.css %}
+  {% include css/paper.css %}
 {% endcapture %}
 
 <style>
@@ -15,32 +16,129 @@ changefreq: 'monthly'
 
 <h1 class='sr-only'>William Lindvall</h1>
 
-<div class='contact-form__container'>
-  <form
-    class='contact-form'
-    name='contact'
-    method='POST'
-    action='/#success'
-    data-netlify='true'
-  >
-    <label class='sr-only' for='contact-form-message'>
-      Send me anonymous message
-    </label>
-    <textarea
-      class='contact-form__input'
-      id='contact-form-message'
-      placeholder='Send me an anonymous message...'
-      name='message'
-      rows='4'
-      cols='28'
-      autofocus
-      required
-    ></textarea>
-
-    <div class='contact-form__actions'>
-      <button class='button button--fill contact-form__submit' type='submit'>
-        send
-      </button>
+<div id='contact-form-container' class='contact-form__container'>
+  <div data-view='overview' class='view contact-form__success-container'>
+    <div class='contact-form__success-message'>
+      <p>
+        Thanks! Your message was sent and I will get to it eventually.
+      </p>
+      <p>
+        In the meantime you can browse some of my <a href='/work'>projects</a> or send me an <a href="mailto:w-lindvall@outlook.com?subject=Let's%20grab%20a%20coffee!">email</a>.
+      </p>
     </div>
-  </form>
+    <button type='button' id='btn-reset' class='button button--fill contact-form__reset'>
+      Send another
+    </button>
+  </div>
+
+  <div class='folding-card__container' data-view='details'>
+    <div id='folding-card' class='fold'>
+      <div class='fold' style='--fold: 3'>
+        <div class='fold' style='--fold: 2'>
+          <div class='fold' style='--fold: 1'>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class='view-content'>
+      <div class='view-content-container'>
+        <form
+          class='contact-form paper'
+          name='contact'
+          method='POST'
+          action='/#success'
+          data-netlify='true'
+        >
+
+          <label class='sr-only' for='contact-form-message'>
+            Send me anonymous message
+          </label>
+
+          <div class='head'></div>
+
+          <textarea
+            class='contact-form__input'
+            id='contact-form-message'
+            placeholder='Send me an anonymous message...'
+            name='message'
+            rows='4'
+            maxlength='350'
+            cols='28'
+            autofocus
+            required
+          ></textarea>
+
+          <div class='contact-form__actions'>
+            <button class='button button--fill contact-form__submit' type='submit'>
+              send
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
 </div>
+
+<script>
+const containerEl = document.getElementById('contact-form-container')
+const foldingCardEl = document.getElementById('folding-card')
+const resetBtn = document.getElementById('btn-reset')
+const DURATION = 1500  // ms
+
+containerEl.style.setProperty('--duration', `${DURATION}ms`)
+
+function activate(state) {
+  containerEl.dataset.prevState = containerEl.dataset.state;
+  containerEl.dataset.state = state;
+
+  document.querySelectorAll(`[data-active]`)
+    .forEach(el => delete el.dataset.active)
+  document.querySelectorAll(`[data-view='${state}']`)
+    .forEach(el => el.dataset.active = true)
+}
+
+function flip(el, nextEl = el, layoutFn = () => {}) {
+  const rect = el.getBoundingClientRect()
+  layoutFn()
+
+  const lastRect = nextEl.getBoundingClientRect()
+  const dx = lastRect.x - rect.x
+  const dy = lastRect.y - rect.y
+  const dw = rect.width / lastRect.width
+  const dh = rect.height / lastRect.height
+
+  nextEl.style.setProperty('--dx', dx)
+  nextEl.style.setProperty('--dy', dy)
+  nextEl.style.setProperty('--dw', dw)
+  nextEl.style.setProperty('--dh', dh)
+
+  requestAnimationFrame(() => {
+    // [data-move="pending"]
+    nextEl.dataset.move = "pending"
+    requestAnimationFrame(() => {
+      // [data-move="moving"]
+      nextEl.dataset.move = "moving"
+    })
+  })
+}
+
+activate('details')
+
+resetBtn.addEventListener('click', () => {
+  activate('details')
+})
+
+if (window.location.hash.substr(1) === 'success') {
+  containerEl.dataset.transition = true
+
+  setTimeout(() => {
+    flip(foldingCardEl, resetBtn, () => {
+      containerEl.dataset.transitioning = false
+    })
+  }, DURATION)
+
+  activate('overview')
+  window.history.pushState({success: true}, 'Home', '/')
+}
+</script>

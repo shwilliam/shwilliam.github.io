@@ -1,9 +1,12 @@
 .blog__header {
   margin: var(--spacing__v) var(--spacing__h);
+  padding-left: var(--spacing__h--l);
+  padding-right: var(--spacing__h--l);
 }
 
 .article {
-  padding: var(--spacing__v) var(--spacing__h);
+  padding: var(--spacing__v) var(--spacing__h--l);
+  margin: var(--spacing__v) var(--spacing__h--l);
   line-height: 1.35;
 }
 

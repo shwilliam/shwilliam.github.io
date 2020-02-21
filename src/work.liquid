@@ -15,28 +15,28 @@ changefreq: 'monthly'
 
 <h1 class='sr-only'>Components & Libraries</h1>
 
-<section class='site-content site-content--l'>
-  <h2 class='title underline padded'>Recent Contributions</h2>
-  <ul>
-    {% for contribution in contributions %}
-      <li class='padded--s'>
-        <a class='contribution__link' href='{{ contribution.url }}'>
-          <h2 class='contribution__info'>
-            {{ contribution.repository.owner.login }}/{{ contribution.repository.name }}
-            (#{{ contribution.number }})
-          </h2><span class='hidden hidden--mobile'>:</span>
-          <span class='contribution__title'>
-            {{ contribution.title }}
-          </span>
-        </a>
-      </li>
-    {% endfor %}
-  </ul>
-</section>
+{% comment %} <section class='site-content site-content--l'> {% endcomment %}
+{% comment %}   <h2 class='title underline padded'>Recent Contributions</h2> {% endcomment %}
+{% comment %}   <ul> {% endcomment %}
+{% comment %}     {% for contribution in contributions %} {% endcomment %}
+{% comment %}       <li class='padded--s'> {% endcomment %}
+{% comment %}         <a class='contribution__link' href='{{ contribution.url }}'> {% endcomment %}
+{% comment %}           <h2 class='contribution__info'> {% endcomment %}
+{% comment %}             {{ contribution.repository.owner.login }}/{{ contribution.repository.name }} {% endcomment %}
+{% comment %}             (#{{ contribution.number }}) {% endcomment %}
+{% comment %}           </h2><span class='hidden hidden--mobile'>:</span> {% endcomment %}
+{% comment %}           <span class='contribution__title'> {% endcomment %}
+{% comment %}             {{ contribution.title }} {% endcomment %}
+{% comment %}           </span> {% endcomment %}
+{% comment %}         </a> {% endcomment %}
+{% comment %}       </li> {% endcomment %}
+{% comment %}     {% endfor %} {% endcomment %}
+{% comment %}   </ul> {% endcomment %}
+{% comment %} </section> {% endcomment %}
 
-<section>
-  <h2 class='title underline padded padded--l'>Components & Libraries</h2>
-  <ul class='work__grid site-content site-content--l'>
+<section class='site-content site-content--l'>
+  <h2 class='title underline padded'>Components & Libraries</h2>
+  <ul class='work__grid'>
     {% assign sortedPosts = collections.libraries | reverse %}
     {% for post in sortedPosts %}
       <li>
@@ -53,9 +53,17 @@ changefreq: 'monthly'
         </p>
 
         <div class='work__actions'>
-          <a class='button button--fill work__action' href='{{post.data.source}}'>source</a>
+          <a class='button work__action' href='{{post.data.source}}'>
+            <span aria-hidden='true'>
+              {% include icons/github.svg %}
+            </span>
+            source
+          </a>
           {% if post.data.link %}
             <a class='button work__action' href='{{post.data.link}}'>
+              <span aria-hidden='true'>
+                {% include icons/compass.svg %}
+              </span>
               demo
             </a>
           {% endif %}
