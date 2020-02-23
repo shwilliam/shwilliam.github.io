@@ -204,6 +204,6 @@ Finally, let's try to avoid an incorrect theme flash by checking for a theme in 
 
 [![Edit on CodeSandbox](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/dark-mode-toggle-phwrb?fontsize=14&hidenavigation=1&theme=dark)
 
-Thanks to some nice and new (but widely supported) web features, it doesn't take much to implement a dark-mode toggle. Now all that's left is to add a dark-theme to your next personal project and get with the theme-toggle checkbox styling!
+Thanks to some nice and new (but widely supported) web features, it doesn't take much to implement a dark-mode toggle. Now all that's left is to add a dark-theme to your next personal project!
 
 If you came across any issue or have a question regarding this post, feel free to submit it [here](https://github.com/shwilliam/shwilliam.github.io/issues).

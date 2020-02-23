@@ -8,7 +8,7 @@ priority: 0.5
 changefreq: 'monthly'
 ---
 
-![TIL Javascript supports custom events](/images/custom-events-tweet.png)
+![TIL Javascript supports custom events](https://shwilliam.com/images/custom-events-tweet.png)
 
 How did I miss this? No clue. Since I discovered this feature I have been playing around with its possibilities; most of all I love how easy it is to grasp and how effortlessly it allows us to clean up our often event-based code.
 
@@ -24,6 +24,7 @@ import ChatForm from './chat-form'
 import Notifications from './notifications'
 
 const chat = Chat('chat')
+
 const notifications = Notifications('notifications')
 
 const chatForm = ChatForm('chat-form', message => {
@@ -45,8 +46,6 @@ const ChatForm = (id, cb) => {
 
   return el
 }
-
-export default ChatForm
 ```
 
 Currently, we must pass a callback into the initialization of our chat in order that renders the new chat message and notification. This works great but let's see if we can create a more flexible API for our chat that allows us to listen to new messages.
@@ -70,8 +69,6 @@ const ChatForm = id => {
 
   return el
 }
-
-export default ChatForm
 ```
 
 Now, we can add an event listener to our chat element that listens for `'new-message'` events and reacts calls the appropriate methods on the `chat` and `notifications` instances.
@@ -82,12 +79,13 @@ import ChatForm from './chat-form'
 import Notifications from './notifications'
 
 const chat = Chat('chat')
+
 const chatForm = ChatForm('chat-form')
+
 const notifications = Notifications('notifications')
 
 chatForm.addEventListener('new-message', e => {
   const message = e.detail.text()
-
   chat.append(message)
   notifications.notify(message)
 })

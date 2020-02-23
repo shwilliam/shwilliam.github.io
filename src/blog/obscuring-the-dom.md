@@ -71,9 +71,7 @@ If you are hiding something with the intent of showing it eventually, you may wi
 
 ## 2. Hidden for screen users
 
-With minimalism dominating web design, it may seem natural to remove as many "inessential" elements as possible, often without considering the differing ways in which users navigate our site.
-
-To **clean up the visual UI but ensure elements are picked up by ATs**, the most common technique is to move an element offscreen, or hide without width or height 0. There are a plethora of CSS snippets that will achieve this, most of which are variations of the example shown below.
+To **clean up the visual UI but ensure elements are picked up by ATs** , the most common technique is to move an element offscreen, or hide without width or height 0. There are a plethora of CSS snippets that will achieve this, most of which are variations of the example shown below.
 
 ```css
 .sr-only {
@@ -95,19 +93,24 @@ Alternatively, you can use the HTML ARIA attributes, such as `aria-describedby` 
 
 ### `aria-hidden`
 
-In certain situations, you will find yourself using HTML elements for solely decorative purposes, for example icon fonts. In that case, you will want to ensure that these are **not picked up by ATs**. This can be done by simply setting the elements's `aria-hidden` attribute to `true`.
+In certain situations, you will find yourself using HTML elements for solely decorative purposes, for example icon fonts. In that case, you will want to ensure that these are **not picked up by ATs**. This can be done by simply setting the element's `aria-hidden` attribute to `true`.
 
 ## Summary
 
 To recap, we've gone over:
 
 1. Hidden for everyone
-   - `display: none` or HTML `hidden`
-   - `visibility: hidden;` for transitioning elements
+
+- `display: none` or HTML `hidden`
+- `visibility: hidden;` for transitioning elements
+
 2. Hidden for screen users
-   - Move offscreen (and clip)
+
+- Move offscreen (and clip)
+
 3. Hidden for assistive technology users
-   - `aria-hidden`
+
+- `aria-hidden`
 
 It is important to note that, as we are dealing with code that runs on many different browser engines, in different environments, based on a living specification, and will be interpreted by various assistive technologies, it is crucial that you test these approaches yourself. I like to keep [this](http://terrillthompson.com/tests/hiddencontent.html) page, created by Terrill Thompson, bookmarked for this purpose. It implements these techniques (and several more), which you can use to easily try them out.
 

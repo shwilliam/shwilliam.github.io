@@ -46,7 +46,7 @@ const App = () => (
 export default App
 ```
 
-Nice! Our `<NameTag>` is reusable and neatly hides its slightly messier details of its implementation. Our app component looks super clean and easy to read. However, let's say wanted to add a title to this app with a similar colored background as our `<NameTag>`. Let's create a new `Title` component and render it in our app.
+Nice! Our `NameTag` component is reusable and neatly hides its slightly messier details of its implementation. Our app component looks super clean and easy to read. However, let's say wanted to add a title to this app with a similar colored background as our `NameTag`. Let's create a new `Title` component and render it in our app.
 
 ```js
 // components/Title.js
@@ -71,7 +71,7 @@ import Title from './components/Title'
 
 const App = () => (
   <div>
-    <Title title="My app" bg="lightblue" />
+    <Title title="My app" bg="lightblue" />
     <NameTag name="William" bg="yellow" />
     <NameTag name="Greg" bg="pink" />
   </div>
@@ -110,7 +110,7 @@ import Background from './components/Background'
 const App = () => (
   <div>
     <Background color="blue">
-      <h1>My App</h1>
+      <h1>My App</h1>
     </Background>
 
     <Background color="yellow">
@@ -131,7 +131,7 @@ export default App
 
 import React from 'react'
 
-const NameTag = ({name}) => <p>My name is: {name}</p>
+const NameTag = ({name}) => <p>My name is: {name}</p>
 
 export default NameTag
 ```
@@ -140,7 +140,7 @@ export default NameTag
 
 Using `children` we can also avoid "prop-drilling" which is another code-smell that tends to show up when getting started with React. "Prop-drilling" is the act of passing data through several components with `props`, when these components don't actually have anything to do with the piece of data their passing along.
 
-For example, in our earlier version of our app, `<NameTag>` was being passed `bg` as a prop while this not what the component was designed for; This prop was solely introduced to handle a particular use case. This often occurs when multiple components depend on the same piece of data, often leading to brittle code that is a pain to refactor.
+For example, in our earlier version of our app, `NameTag` was being passed `bg` as a prop while this not what the component was designed for; This prop was solely introduced to handle a particular use case. This often occurs when multiple components depend on the same piece of data, often leading to brittle code that is a pain to refactor.
 
 Through utilizing what we've learned about `children`, we can now simplify our code by making our components more composable and provide a more flexible API to handle a larger variety of use-cases.
 

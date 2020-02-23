@@ -45,37 +45,35 @@ name: Deploy Eleventy site to GH Pages
 on:
   push:
     branches:
-    - dev
+      - dev
 
     [...]
-
 ```
 
 The site's build process requires several external dependencies (such as `node-fetch` and `clean-css`) which we need to install before build, which is handled by `actions-eleventy`.
 
 ```yaml
-
 [...]
 
 jobs:
   build:
 
-    runs-on: ubuntu-latest
+  runs-on: ubuntu-latest
 
-    steps:
-    - name: Checkout repo
-      uses: actions/checkout@v1
-    - name: Install deps
-      uses: bahmutov/npm-install@v1
-    - name: Build
-      uses: TartanLlama/actions-eleventy@v1.1
+  steps:
+  - name: Checkout repo
+  uses: actions/checkout@v1
+  - name: Install deps
+  uses: bahmutov/npm-install@v1
+  - name: Build
+  uses: TartanLlama/actions-eleventy@v1.1
 ```
 
 On build our site also fetches GH contribution data which currently uses an environment variable to consume a GH access token.
 
 To allow this to work in our action we must first set up a repository secret that we can then set as the value of the environment variable. To add the secret to our repo, navigate to 'Secrets' in the repository settings, and click 'Add a new secret'.
 
-![Add an access token](/images/gh-token.png)
+![Add an access token](https://shwilliam.com/images/gh-token.png)
 
 To provide this in our build step as an environment variable we can use `set-env` action and run this prior to build.
 
@@ -83,14 +81,14 @@ To provide this in our build step as an environment variable we can use `set-env
 jobs:
   build:
 
-    [...]
+  [...]
 
-    - name: Env variables
-      uses: allenevans/set-env@v1.0.0
-      with:
-        GH_TOKEN: ${{ "{{secrets.GH_TOKEN" }}}}
-    - name: Build
-      uses: TartanLlama/actions-eleventy@v1.1
+  - name: Env variables
+  uses: allenevans/set-env@v1.0.0
+  with:
+    GH_TOKEN: ${{secrets.GH_TOKEN}}
+  - name: Build
+  uses: TartanLlama/actions-eleventy@v1.1
 ```
 
 Finally, we run the `actions-gh-pages` action pushing our build files to `master`, passing the GH access token we configured, resulting in a YAML file that looks like the following:
@@ -115,7 +113,7 @@ jobs:
       - name: Env variables
         uses: allenevans/set-env@v1.0.0
         with:
-          GH_TOKEN: ${{ "{{secrets.GH_TOKEN" }}}}
+          GH_TOKEN: ${{secrets.GH_TOKEN}}
       - name: Build
         uses: TartanLlama/actions-eleventy@v1.1
       - name: Deploy
@@ -123,7 +121,7 @@ jobs:
         env:
           PUBLISH_DIR: dist
           PUBLISH_BRANCH: master
-          GITHUB_TOKEN: ${{ "{{secrets.GH_TOKEN" }}}}
+          GITHUB_TOKEN: ${{secrets.GH_TOKEN}}
 ```
 
 To add this workflow to our project we can commit this file right in the GitHub website by clicking the 'Start commit' button.

@@ -73,13 +73,13 @@ const LoadingButton = () => {
 
 When calling the `useMachine` hook to set up our state machine we are passing an object with the following shape:
 
-```json
+```yml
 {
-  <State>: {
-    <Event>: <Next state>,
-    ...
+  <STATE>: {
+    <EVENT>: <NEXT STATE>,
+    [...]
   },
-  ...
+  [...]
 }
 ```
 
