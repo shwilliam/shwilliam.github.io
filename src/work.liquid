@@ -5,112 +5,187 @@ priority: 1.0
 changefreq: 'monthly'
 ---
 
-<main class='content'>
-  <div class='content__header'>
-    <a href='/' class='back'>Back</a>
-  </div>
+{% capture css %}
+  {% include css/work.css %}
+{% endcapture %}
 
-  <div class='content__main'>
-    <section class='section'>
-      <h1 class='subtitle'>Recent Contributions</h1>
-      <ul class='list'>
-        {% for contribution in contributions %}
-          <li class='list__item--l'>
-            <a class='contribution__link' href='{{ contribution.url }}'>
-              <h2 class='contribution__info'>
-                {{ contribution.repository.owner.login }}/{{ contribution.repository.name }}
-                (#{{ contribution.number }})
-              </h2>
-              <span class='hidden hidden--mobile'>:</span>
-              <span class='contribution__title'>
-                {{ contribution.title }}
-              </span>
+<style>
+  {{ css | cssmin }}
+</style>
+
+<h1 class='sr-only'>Components & Libraries</h1>
+
+<div class='contribution__container'>
+  <section class='contribution__profile-overview site-content site-content--l'>
+    <div class='contribution__profile'>
+      <div class='contribution__profile-header'>
+        <a class='contribution__profile-link' href='https://github.com/shwilliam/' target='_blank' rel='noopener noreferrer'>
+          <div class='contribution__avatar-container'>
+            <img src='/images/social.png' alt=''>
+          </div>
+
+          <div class='contribution__profile-title'>
+            <p class='title title--accent title--main'>
+              @shwilliam
+            </p>
+
+            <p class='contribution__status'>
+              💫 a11y dreams
+            </p>
+
+            <ul class='contribution__orgs-list contribution__orgs-list--desktop'>
+              <li>
+                <a class='contribution__org' href='https://github.com/vue-a11y/' target='_blank' rel='noopener noreferrer'>
+                  <div class='contribution__org-img-container'>
+                    <img src='/images/vue-a11y.png' alt=''>
+                  </div>
+                  <p class='contribution__org-name'>
+                    Vue A11y
+                  </p>
+                </a>
+              </li>
+              <li>
+                <a class='contribution__org' href='https://github.com/redacademy/' target='_blank' rel='noopener noreferrer'>
+                  <div class='contribution__org-img-container'>
+                    <img src='/images/red.png' alt=''>
+                  </div>
+                  <p class='contribution__org-name'>
+                    RED Academy
+                  </p>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </a>
+
+        <ul class='contribution__stats-list'>
+          <li class='contribution__stats-item'>
+            <a class='contribution__stats-link' href='https://github.com/shwilliam?tab=repositories&type=source' target='_blank' rel='noopener noreferrer'>
+              <p class='contribution__stat-title'>
+                Repos
+              </p>
+              <p class='contribution__stat'>
+                <span class='contribution__stat-num'>{{github.repos}}</span>
+              </p>
             </a>
           </li>
-        {% endfor %}
-      </ul>
 
-      <p>
-        See more on 
-        <a href='https://github.com/shwilliam'>
-          GitHub
-        </a>
-      </p>
-    </section>
-
-    <section class='section'>
-      <h2 class='subtitle subtitle--padded'>Components & Libraries</h2>
-      <ul>
-        {% assign sortedPosts = collections.libraries | reverse %}
-        {% for post in sortedPosts %}
-          <li class='work__list-item'>
-            <span class='work__header'>
-              <a class='work__title-link' href='{{post.data.source}}'>
-                <h2 class='work__title'>
-                  {{post.data.title}}
-                </h2>
-              </a>
-              <p class='work__subtitle'>
-                {{post.data.tech | commaToSlash}}
+          <li class='contribution__stats-item'>
+            <a class='contribution__stats-link' href='https://www.npmjs.com/~shwilliam' target='_blank' rel='noopener noreferrer'>
+              <p class='contribution__stat-title'>
+                Downloads <span class='contribution__stat-info'>(npm)</span>
               </p>
-            </span>
-
-            <p class='work__description'>
-              {{post.data.description}}
-            </p>
-
-            <div class='work__actions'>
-              <a class='button button--fill work__action' href='{{post.data.source}}'>source</a>
-              {% if post.data.link %}
-                <a class='button work__action' href='{{post.data.link}}'>
-                  demo
-                </a>
-              {% endif %}
-            </div>
-          </li>
-        {% endfor %}
-      </ul>
-    </section>
-
-    <section class='section'>
-      <h2 class='subtitle subtitle--padded'>Websites, Apps & Experiments</h2>
-      <ul>
-        {% assign sortedPosts = collections.projects | reverse %}
-        {% for post in sortedPosts %}
-          <li class='work__list-item'>
-            <span class='work__header'>
-              <a class='work__title-link' href='{{post.data.source}}'>
-                <h2 class='work__title'>
-                  {{post.data.title}}
-                </h2>
-              </a>
-              <p class='work__subtitle'>
-                {{post.data.tech | commaToSlash}}
+              <p class='contribution__stat'>
+                <span class='contribution__stat-num'>23,335+</span> yearly
               </p>
-            </span>
-
-            <p class='work__description'>
-              {{post.data.description}}
-            </p>
-
-            <div class='work__actions'>
-              <a class='button button--fill work__action' href='{{post.data.source}}'>source</a>
-              {% if post.data.link %}
-                <a class='button work__action' href='{{post.data.link}}'>
-                  demo
-                </a>
-              {% endif %}
-            </div>
+              {% comment %}
+                TODO: make dynamic (`npm-api` + `download-stats`)
+              {% endcomment %}
+            </a>
           </li>
-        {% endfor %}
-      </ul>
+        </ul>
+      </div>
 
-      <p>
-        See more on 
-        <a href='https://github.com/shwilliam'>
-          GitHub
-        </a>
-      </p>
-    </section>
-  </div>
-</main>
+      <div class='contribution__profile-content contribution__profile-content--mobile'>
+        <p class='contribution__orgs-title'>Organizations</p>
+
+        <ul class='contribution__orgs-list'>
+          <li>
+            <a class='contribution__org' href='https://github.com/vue-a11y/' target='_blank' rel='noopener noreferrer'>
+              <div class='contribution__org-img-container'>
+                <img src='/images/vue-a11y.png' alt=''>
+              </div>
+              <p class='contribution__org-name'>
+                Vue A11y
+              </p>
+            </a>
+          </li>
+          <li>
+            <a class='contribution__org' href='https://github.com/redacademy/' target='_blank' rel='noopener noreferrer'>
+              <div class='contribution__org-img-container'>
+                <img src='/images/red.png' alt=''>
+              </div>
+              <p class='contribution__org-name'>
+                RED Academy
+              </p>
+            </a>
+          </li>
+        </ul>
+
+        <p class='contribution__list-title'>Recent Contributions</p>
+
+        <ul class='contribution__list'>
+          {% for contribution in contributions %}
+            <li class='padded--s'>
+              <a class='contribution__link' href='{{ contribution.url }}' target='_blank' rel='noopener noreferrer'>
+                <h2 class='contribution__info'>
+                  {{ contribution.repository.owner.login }}/{{ contribution.repository.name }}
+                  (#{{ contribution.number }})
+                </h2><span class='hidden hidden--mobile-s'>:</span>
+                <span class='contribution__title'>
+                  {{ contribution.title }}
+                </span>
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
+
+        <p class='contribution__list-footer'>
+          More on 
+          <a href='https://github.com/shwilliam' target='_blank' rel='noopener noreferrer'>
+            GitHub
+          </a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class='site-content site-content--l'>
+    <h2 class='title padded hidden hidden--desktop'>Libraries & Components</h2>
+    <ul class='work__grid'>
+      {% assign sortedPosts = collections.libraries | reverse %}
+      {% for post in sortedPosts %}
+        <li class='work__grid-item'>
+          <span class='work__header'>
+            <a class='work__title-link' href='{{post.data.source}}' target='_blank' rel='noopener noreferrer'>
+              <h2 class='work__title'>
+                <span class='work__title-icon' aria-hidden='true'>
+                  {% include icons/repo.svg %}
+                </span>
+                {{post.data.title}}
+              </h2>
+            </a>
+          </span>
+
+          <p class='work__description'>
+            {{post.data.description}}
+          </p>
+
+          <div class='work__actions'>
+            <a class='button work__action' href='{{post.data.source}}' target='_blank' rel='noopener noreferrer'>
+              <span aria-hidden='true'>
+                {% include icons/github.svg %}
+              </span>
+              source
+            </a>
+            {% if post.data.link %}
+              <a class='button work__action' href='{{post.data.link}}' target='_blank' rel='noopener noreferrer'>
+                <span aria-hidden='true'>
+                  {% include icons/compass.svg %}
+                </span>
+                demo
+              </a>
+            {% endif %}
+          </div>
+        </li>
+      {% endfor %}
+    </ul>
+
+    <p class='more'>
+      See more on 
+      <a href='https://github.com/shwilliam' target='_blank' rel='noopener noreferrer'>
+        GitHub
+      </a>
+    </p>
+  </section>
+</div>

@@ -1,38 +1,102 @@
 ---
 layout: templates/base.liquid
+title: Home
 priority: 1.0
 changefreq: 'monthly'
 ---
 
-<main class='content content--centered'>
-  <div class='content__main '>
-    <h1 class='title'>
-      William Lindvall
-    </h1>
+{% capture css %}
+  {% include css/article.css %}
+{% endcapture %}
 
-    <p class='subtitle subtitle--secondary italic'>
-      <span class='dib'>React<span class='hidden hidden--mobile'> </span>/<span class='hidden hidden--mobile'> </span>TypeScript<span class='hidden hidden--mobile'> </span>/</span><span class='hidden hidden--mobile'> </span><span class='dib'>Node<span class='hidden hidden--mobile'> </span>/<span class='hidden hidden--mobile'> </span>GraphQL</span>
-    </p>
+<style>
+  {{ css | cssmin }}
+</style>
 
-    <nav class='nav'>
-      <ul class='nav-list'>
-        <li class='nav-item'>
-          <a href='/blog' class='nav-link button button--fill'>
-            Blog
-          </a>
-        </li>
-        <li class='nav-item'>
-          <a href='/work' class='nav-link button button--fill'>
-            Work
-          </a>
-        </li>
-        <li class='nav-item'>
-          <a href='/about' class='nav-link button button--fill'>
-            About
-          </a>
-        </li>
-      </ul>
-    </nav>
-  </div>
-</main>
+<h1 class='sr-only'>
+  About
+</h1>
+
+<article class='article site-content'>
+  <p>
+    Hey! I'm William, a Swedish, frontend-leaning web developer, based in Vancouver, BC. I absolutely love the web and working to make it more fun, interesting and exciting to use and develop for.
+  <p>
+
+  <p>
+  Currently, teaching assistant at <a href='https://redacademy.com/vancouver/' target='_blank' rel='noopener noreferrer'>RED Academy</a> bootcamp and working on open-source components for <a href='https://vue-a11y.com/' target='_blank' rel='noopener noreferrer'>Vue A11y</a>.
+  </p>
+
+  <p id='favorites-label'>When I'm not working on a project I'm usually thinking about:</p>
+
+  <ul aria-labelledby='favorites-label'>
+    <li>
+      JavaScript (probably React)
+    </li>
+    <li>
+      All things open-source
+    </li>
+    <li>
+      Improving my workflow (Vim / tmux)
+    </li>
+    <li>
+      Mechanical keyboards (currently on a Preonic with Gateron browns)
+    </li>
+  </ul>
+
+  <p>
+    For more of my work and to see what I'm currently up to, check my <a href='https://github.com/shwilliam' target='_blank' rel='noopener noreferrer'>GitHub</a>, or find me retweeting (mostly) web-related things on <a href='https://twitter.com/werlliam' target='_blank' rel='noopener noreferrer'>Twitter</a>.
+  </p>
+
+  <h2 id='links__label' class='title'>Links</h2>
+
+  <ul aria-labelledby='links__label'>
+    <li>
+      <span class='inline'>E-mail:</span>
+      <a
+        href="mailto:w-lindvall@outlook.com?subject=Let's%20grab%20a%20coffee!"
+      >
+        w-lindvall@outlook.com
+      </a>
+    </li>
+    <li>
+      <span class='inline'>GitHub:</span>
+      <a
+        target='_blank'
+        rel='noopener noreferrer'
+        href='https://github.com/shwilliam'
+      >
+        @shwilliam
+      </a>
+    </li>
+    <li>
+      <span class='inline'>LinkedIn:</span>
+      <a
+        target='_blank'
+        rel='noopener noreferrer'
+        href='https://www.linkedin.com/in/william-lindvall'
+      >
+        /william-lindvall
+      </a>
+    </li>
+    <li>
+      <span class='inline'>RSS:</span>
+      <a
+        target='_blank'
+        rel='noopener noreferrer'
+        href='/rss.xml'
+      >
+        /rss.xml
+      </a>
+    </li>
+    <li>
+      <span class='inline'>Resume:</span>
+      <a
+        href="/files/lindvall_william-resume.pdf"
+        download
+      >
+        download
+      </a>
+    </li>
+  </ul>
+</article>
 

@@ -1,0 +1,28 @@
+.blog-list__item {
+  padding: 0 var(--spacing__h--l);
+  border-bottom: 1px var(--color__ui) solid;
+}
+
+.blog-list__title {
+  color: var(--color__accent);
+  text-decoration: underline;
+  margin: var(--spacing__v--xl) var(--spacing__h--l) var(--spacing__v)
+    var(--spacing__h--l);
+}
+
+.blog-list__link {
+  text-decoration: none;
+}
+
+.blog-list__date {
+  font-size: 0.85rem;
+  color: var(--color__text);
+  margin: var(--spacing__v) var(--spacing__h--l) var(--spacing__v--l)
+    var(--spacing__h--l);
+}
+
+.blog-list__description {
+  color: var(--color__text);
+  margin: var(--spacing__v--xl) var(--spacing__h--l) var(--spacing__v--xl)
+    var(--spacing__h--l);
+}

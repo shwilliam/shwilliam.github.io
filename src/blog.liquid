@@ -5,33 +5,36 @@ priority: 1.0
 changefreq: 'monthly'
 ---
 
-<div class='content'>
-  <div class='content__header'>
-    <a href='/' class='back'>Back</a>
-  </div>
-  <main class='content__main'>
-    <h1 class='title'>Recent Posts</h1>
+{% capture css %}
+  {% include css/blog.css %}
+{% endcapture %}
 
-    <ul class='blog-list'>
-      {% assign sortedPosts = collections.blog | reverse %}
-      {% for post in sortedPosts %}
-        <li class='blog-list__item'>
-          <a class='blog-list__link' href='{{post.url}}'>
-            <p class='blog-list__date'>{{ post.data.date | toIsoStringNoTimezone }}</p>
-            <h2 class='blog-list__title'>
-              {{post.data.title}}
-            </h2>
-            <p class='blog-list__description'>{{post.data.description}}</p>
-          </a>
-        </li>
-      {% endfor %}
-    </ul>
+<style>
+  {{ css | cssmin }}
+</style>
 
-    <p class='more'>
-      Subscribe to the 
-      <a href='/rss.xml'>
-        RSS feed
+<h1 class='sr-only'>Recent Posts</h1>
+
+<ul class='blog-list'>
+  {% assign sortedPosts = collections.blog | reverse %}
+  {% for post in sortedPosts %}
+    <li class='blog-list__item'>
+      <a class='blog-list__link' href='{{post.url}}'>
+        <h2 class='title blog-list__title'>
+          {{post.data.title}}
+        </h2>
+        <p class='blog-list__date'>{{ post.data.date | toIsoStringNoTimezone }}</p>
+        <p class='blog-list__description'>{{post.data.description}}</p>
       </a>
-    </p>
-  </main>
+    </li>
+  {% endfor %}
+</ul>
+
+<div class='site-content'>
+  <p class='more'>
+    Subscribe to the 
+    <a href='/rss.xml' target='_blank' rel='noopener noreferrer'>
+      RSS feed
+    </a>
+  </p>
 </div>

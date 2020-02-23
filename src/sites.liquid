@@ -1,0 +1,64 @@
+---
+layout: templates/base.liquid
+title: Websites
+priority: 1.0
+changefreq: 'monthly'
+---
+
+{% capture css %}
+  {% include css/work.css %}
+{% endcapture %}
+
+<style>
+  {{ css | cssmin }}
+</style>
+
+<section class='site-content site-content--l'>
+  <h1 class='sr-only'>Websites, Apps & Experiments</h1>
+
+  <ul class='work__grid'>
+    {% assign sortedPosts = collections.projects | reverse %}
+    {% for post in sortedPosts %}
+      <li class='work__grid-item'>
+        <span class='work__header'>
+          <a class='work__title-link' href='{{post.data.source}}' target='_blank' rel='noopener noreferrer'>
+            <h2 class='work__title'>
+              {{post.data.title}}
+            </h2>
+          </a>
+          <p class='work__subtitle'>
+            {{post.data.tech | commaToSlash}}
+          </p>
+        </span>
+
+        <p class='work__description'>
+          {{post.data.description}}
+        </p>
+
+        <div class='work__actions'>
+          <a class='button work__action' href='{{post.data.source}}' target='_blank' rel='noopener noreferrer'>
+            <span aria-hidden='true'>
+              {% include icons/github.svg %}
+            </span>
+            source
+          </a>
+          {% if post.data.link %}
+            <a class='button work__action' href='{{post.data.link}}' target='_blank' rel='noopener noreferrer'>
+              <span aria-hidden='true'>
+                {% include icons/compass.svg %}
+              </span>
+              demo
+            </a>
+          {% endif %}
+        </div>
+      </li>
+    {% endfor %}
+  </ul>
+
+  <p class='more'>
+    See more on 
+    <a href='https://github.com/shwilliam' target='_blank' rel='noopener noreferrer'>
+      GitHub
+    </a>
+  </p>
+</section>
