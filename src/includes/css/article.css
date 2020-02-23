@@ -55,6 +55,11 @@
   margin-top: var(--spacing__v--xxl);
 }
 
+.article a,
+.article a:visited {
+  text-decoration: none;
+}
+
 .article li {
   margin-bottom: var(--spacing__v);
 }

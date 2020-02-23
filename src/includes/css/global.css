@@ -77,8 +77,9 @@ body {
   padding: var(--spacing__v) 0;
 }
 
-.underline {
-  text-decoration: underline;
+.underline,
+a.underline {
+  text-decoration: underline !important;
 }
 
 @media screen and (min-width: 850px) {
