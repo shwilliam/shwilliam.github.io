@@ -45,59 +45,70 @@
 
   <title>{% if title %}{{ title }}{% else %}@shwilliam{% endif %}</title>
 </head>
-<body class='site-container'>
+<body>
+  <div class='site-container'>
+    <header class='site-header'>
+      <a href='/' class='title title--main {% if page.fileSlug == '' %}title--accent{% endif %} site-title'>
+        William Lindvall
+      </a>
 
-  <header class='site-header'>
-    <a href='/' class='title title--main {% if page.fileSlug == '' %}title--accent{% endif %} site-title'>
-      William Lindvall
-    </a>
+      <nav class='site-nav'>
+        <ul class='nav-list'>
+          <li class='nav-list__item'>
+            <a
+              href='/work'
+              class='nav-list__link title {% if page.fileSlug == 'work' %}title--accent{% endif %}'
+            >
+              Libraries & Components
+            </a>
+          </li>
+          <li class='nav-list__item'>
+            <a
+              href='/sites'
+              class='nav-list__link title {% if page.fileSlug == 'sites' %}title--accent{% endif %}'
+            >
+              Websites
+            </a>
+          </li>
+          <li class='nav-list__item'>
+            <a
+              href='/blog'
+              class='nav-list__link title {% if page.url contains 'blog' %}title--accent{% endif %}'
+            >
+              Blog
+            </a>
+          </li>
+          {% comment %} <li class='nav-list__item'> {% endcomment %}
+          {% comment %}   <a {% endcomment %}
+          {% comment %}     href='/about' {% endcomment %}
+          {% comment %}     class='nav-list__link title {% if page.fileSlug == 'about' %}title--accent{% endif %}' {% endcomment %}
+          {% comment %}   > {% endcomment %}
+          {% comment %}     About {% endcomment %}
+          {% comment %}   </a> {% endcomment %}
+          {% comment %} </li> {% endcomment %}
+          <li class='nav-list__item'>
+            <button
+              name='theme-toggle'
+              class='theme-toggle theme-toggle--inline hidden hidden--mobile'
+              type='button'
+            >
+              <p class='sr-only'>
+                Toggle theme
+              </p>
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </header>
 
-    <nav class='site-nav'>
-      <ul class='nav-list'>
-        <li class='nav-list__item'>
-          <a
-            href='/work'
-            class='nav-list__link title {% if page.fileSlug == 'work' %}title--accent{% endif %}'
-          >
-            Libraries & Components
-          </a>
-        </li>
-        <li class='nav-list__item'>
-          <a
-            href='/sites'
-            class='nav-list__link title {% if page.fileSlug == 'sites' %}title--accent{% endif %}'
-          >
-            Websites
-          </a>
-        </li>
-        <li class='nav-list__item'>
-          <a
-            href='/blog'
-            class='nav-list__link title {% if page.fileSlug == 'blog' %}title--accent{% endif %}'
-          >
-            Blog
-          </a>
-        </li>
-        <li class='nav-list__item'>
-          <a
-            href='/about'
-            class='nav-list__link title {% if page.fileSlug == 'about' %}title--accent{% endif %}'
-          >
-            About
-          </a>
-        </li>
-      </ul>
-    </nav>
-  </header>
-
-  <main>
-    {{ content }}
-  </main>
+    <main>
+      {{ content }}
+    </main>
+  </div>
 
   <button
-    id='theme-toggle'
     name='theme-toggle'
-    class='theme-toggle'
+    class='theme-toggle theme-toggle--floating hidden hidden--desktop'
     type='button'
   >
     <p class='sr-only'>

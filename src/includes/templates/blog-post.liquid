@@ -13,15 +13,14 @@ layout: templates/base.liquid
 
 <article>
   <header class='blog__header padded'>
-    <h1 class='title'>
+    <h1 class='blog__title'>
       {{ title }}
     </h1>
 
-    <p>
-      {{ date | toIsoStringNoTimezone }}
-    </p>
-    <p>
+    <p class='blog__subtitle'>
       {{ content | readingTime }}
+      <span class='blog__subtitle-separator'>•</span>
+      {{ date | toIsoStringNoTimezone }}
     </p>
   </header>
 
