@@ -1,3 +1,24 @@
+/* fonts */
+@font-face {
+  font-family: 'Avenir';
+  src: url('/fonts/AvenirMedium.woff2') format('woff2'),
+    url('/fonts/AvenirMedium.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Avenir';
+  src: url('/fonts/AvenirSemiBold.woff2') format('woff2'),
+    url('/fonts/AvenirSemiBold.woff') format('woff');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Avenir';
+  src: url('/fonts/AvenirMediumItalic.woff2') format('woff2'),
+    url('/fonts/AvenirMediumItalic.woff') format('woff');
+  font-style: italic;
+}
+
 /* variables */
 html,
 html[data-theme='light'] {
@@ -27,7 +48,8 @@ html[data-theme='dark'] {
 /* globals */
 html,
 body {
-  font-family: 'avenir next', 'avenir', 'Open Sans', sans-serif;
+  font-family: 'Avenir', 'Open Sans', sans-serif;
+  /* font-family: 'Source Sans Pro', serif; */
   font-weight: 400;
   font-size: 20px;
   line-height: 1.25;
