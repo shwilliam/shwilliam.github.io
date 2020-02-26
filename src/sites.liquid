@@ -6,48 +6,97 @@ changefreq: 'monthly'
 ---
 
 {% capture css %}
-  {% include css/work.css %}
+  {% include css/sites.css %}
 {% endcapture %}
 
 <style>
   {{ css | cssmin }}
 </style>
 
-<section class='site-content site-content--l'>
+<section class='site-content site-content--l site-content--full'>
   <h1 class='sr-only'>Websites, Apps & Experiments</h1>
 
-  <ul class='work__grid'>
+  <ul class='site-grid'>
     {% assign sortedPosts = collections.projects | reverse %}
     {% for post in sortedPosts %}
-      <li class='work__grid-item'>
-        <span class='work__header'>
-          <a class='work__title-link' href='{{post.data.source}}' target='_blank' rel='noopener noreferrer'>
-            <h2 class='work__title'>
-              {{post.data.title}}
+      <li class='site-grid__item'>
+        <a class='site-grid__link' href='{{post.data.source}}' target='_blank' rel='noopener noreferrer'>
+          <div class='site-grid__content'>
+            <div class='site-grid__icon-container'>
+              {% if post.data.icon %}
+                <img
+                  class='site-grid__icon'
+                  data-theme='light'
+                  src='/images/{{post.data.icon}}'
+                  style="--width: {{ post.data.iconWidth || '100%'}}"
+                >
+
+                {% if post.data.iconDark == 'invert' %}
+                  <img
+                    class='site-grid__icon invert'
+                    data-theme='dark'
+                    src='/images/{{post.data.icon}}'
+                    style="--width: {{ post.data.iconWidth || '100%'}}"
+                  >
+                {% else %}
+                  <img
+                    class='site-grid__icon'
+                    data-theme='dark'
+                    src='/images/{{post.data.iconDark}}'
+                    style="--width: {{ post.data.iconWidth || '100%'}}"
+                  >
+                {% endif %}
+              {% else %}
+                <span
+                  role='img'
+                  aria-label=''
+                  class='site-grid__icon'
+                  data-theme='light'
+                >
+                  {{ post.data.emoji }}
+                </span>
+                {% if post.data.emojiDark == 'invert' %}
+                  <span
+                    role='img'
+                    aria-label=''
+                    class='site-grid__icon invert'
+                    data-theme='dark'
+                  >
+                    {{ post.data.emoji }}
+                  </span>
+                {% else %}
+                  <span
+                    role='img'
+                    aria-label=''
+                    class='site-grid__icon'
+                    data-theme='dark'
+                  >
+                    {{ post.data.emoji }}
+                  </span>
+                {% endif %}
+              {% endif %}
+            </div>
+
+            <h2 class='site-grid__title'>
+              {{post.data.title}} <span class='site-grid__title-icon'>⟶</span>
             </h2>
-          </a>
-          <p class='work__subtitle'>
-            {{post.data.tech | commaToSlash}}
-          </p>
-        </span>
+            <p class='site-grid__subtitle'>
+              {{post.data.tech | commaToSlash}}
+            </p>
+          </div>
+        </a>
 
-        <p class='work__description'>
-          {{post.data.description}}
-        </p>
-
-        <div class='work__actions'>
-          <a class='button work__action' href='{{post.data.source}}' target='_blank' rel='noopener noreferrer'>
-            <span aria-hidden='true'>
+        <div class='site-grid__actions'>
+          <a class='site-grid__action' href='{{post.data.source}}' target='_blank' rel='noopener noreferrer'>
+            <span class='site-grid__action-icon' role='img' aria-label='Source'>
               {% include icons/github.svg %}
             </span>
-            source
           </a>
           {% if post.data.link %}
-            <a class='button work__action' href='{{post.data.link}}' target='_blank' rel='noopener noreferrer'>
-              <span aria-hidden='true'>
+            <a class='site-grid__action' href='{{post.data.link}}' target='_blank' rel='noopener noreferrer'>
+              <span class='site-grid__action-icon' role='img' aria-label='Demo'>
                 {% include icons/compass.svg %}
               </span>
-              demo
             </a>
           {% endif %}
         </div>

@@ -50,6 +50,11 @@ module.exports = config => {
       -2,
     )}-${`0${date.getUTCDate()}`.slice(-2)}`
   })
+  config.addLiquidFilter('toYear', d => {
+    const date = new Date(d)
+
+    return date.getFullYear()
+  })
   config.addLiquidFilter('commaToSlash', d => d.split(', ').join('/'))
   config.addFilter('cssmin', d => new CleanCSS({}).minify(d).styles)
   config.addFilter('readingTime', d => readingTime(d).text)
@@ -61,7 +66,7 @@ module.exports = config => {
       includes: 'includes',
       data: 'data',
     },
-    templateFormats: ['liquid', 'md', 'css', 'js', 'jpg', 'png', 'pdf'],
+    templateFormats: ['liquid', 'md', 'css', 'js', 'jpg', 'png', 'svg', 'pdf'],
     htmlTemplateEngine: 'liquid',
     markdownTemplateEngine: 'liquid',
     passthroughFileCopy: true,
