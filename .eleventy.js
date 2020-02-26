@@ -55,6 +55,12 @@ module.exports = config => {
 
     return date.getFullYear()
   })
+  config.addLiquidFilter('toDateString', d => {
+    const date = new Date(d)
+    const options = {month: 'long', day: 'numeric', year: 'numeric'}
+
+    return new Intl.DateTimeFormat('default', options).format(date)
+  })
   config.addLiquidFilter('commaToSlash', d => d.split(', ').join('/'))
   config.addFilter('cssmin', d => new CleanCSS({}).minify(d).styles)
   config.addFilter('readingTime', d => readingTime(d).text)

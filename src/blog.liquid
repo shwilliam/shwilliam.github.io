@@ -23,7 +23,9 @@ changefreq: 'monthly'
         <h2 class='title blog-list__title'>
           {{post.data.title}}
         </h2>
-        <p class='blog-list__date'>{{ post.data.date | toIsoStringNoTimezone }}</p>
+        <time class='blog-list__date' datetime='{{ post.data.date | toIsoString }}'>
+          {{ post.data.date | toDateString }}
+        </time>
         <p class='blog-list__description'>{{post.data.description}}</p>
       </a>
     </li>

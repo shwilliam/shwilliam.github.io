@@ -20,7 +20,9 @@ layout: templates/base.liquid
     <p class='blog__subtitle'>
       {{ content | readingTime }}
       <span class='blog__subtitle-separator'>•</span>
-      {{ date | toIsoStringNoTimezone }}
+      <time datetime='{{ date | toIsoString }}'>
+        {{ date | toDateString }}
+      </time>
     </p>
   </header>
 
