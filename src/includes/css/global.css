@@ -321,13 +321,13 @@ a.nav-list__link--active {
   }
   .title--main,
   a.title--main {
-    font-size: 1.4275rem;
+    font-size: 1.5rem;
   }
   .nav-list {
     display: flex;
     margin-top: var(--spacing__v);
   }
-  .nav-list__link {
+  a.nav-list__link {
     margin-left: calc(6 * var(--spacing__h--l));
   }
 }
