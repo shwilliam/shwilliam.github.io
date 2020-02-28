@@ -1,0 +1,72 @@
+main {
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.canvas {
+  margin: 0 auto;
+  max-height: 40vh;
+  border: 1px solid var(--color__ui);
+}
+
+.canvas__content {
+  width: 70%;
+  height: 40%;
+  display: flex;
+  flex-direction: column;
+}
+
+.canvas__container {
+  height: 95vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.canvas__wrapper {
+  flex-basis: 100%;
+}
+
+.canvas__actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: var(--spacing__h--l);
+}
+
+.canvas__action {
+  padding: calc(0.5 * var(--spacing__v)) var(--spacing__h--l);
+  margin: var(--spacing__v) var(--spacing__h);
+}
+
+.canvas__action:last-child {
+  margin-right: 0;
+}
+
+.canvas__help-text {
+  z-index: -999;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: var(--spacing__v--xxl);
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  transition: none;
+}
+
+.canvas__help-text-icon {
+  padding-right: var(--spacing__h--l);
+}
+
+[data-touched='true'] [data-view='untouched'] {
+  transition: transform 0.3s ease-in, opacity 0.3s ease-in-out;
+  opacity: 0;
+  transform: scaleX(0.5) scaleY(0.2);
+}

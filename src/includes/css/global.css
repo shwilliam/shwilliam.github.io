@@ -216,7 +216,7 @@ a.button:hover {
 }
 
 .button--fill,
-.button--fill:visited {
+a.button--fill:visited {
   background: var(--color__ui);
   color: var(--color__bg);
 }
@@ -224,6 +224,13 @@ a.button:hover {
 .button--fill:hover {
   color: var(--color__bg);
   background: var(--color__accent);
+  border: 1px solid var(--color__accent);
+}
+
+.button--accent,
+a.button--accent:visited {
+  background: var(--color__accent);
+  color: var(--color__bg);
   border: 1px solid var(--color__accent);
 }
 

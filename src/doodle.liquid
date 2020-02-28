@@ -1,0 +1,49 @@
+---
+layout: templates/base.liquid
+title: Doodle
+priority: 1.0
+changefreq: 'monthly'
+---
+
+{% capture css %}
+  {% include css/canvas.css %}
+{% endcapture %}
+
+<style>
+  {{ css | cssmin }}
+</style>
+
+<h1 class='sr-only'>
+  Doodle
+</h1>
+
+<div class='canvas__container' aria-hidden='true'>
+  <div class='canvas__content'>
+    <div
+      id='canvas-container'
+      class='canvas__wrapper'
+      data-touched='false'
+    >
+      <p class='canvas__help-text' data-view='untouched'>
+        <span class='canvas__help-text-icon' aria-role='img' aria-label='Pencil'>
+          ✏️
+        </span>
+        Send me a doodle 
+      </p>
+      <canvas id='canvas' class='canvas'></canvas>
+    </div>
+
+    <div class='canvas__actions'>
+      <button id='canvas-reset' class='button canvas__action' type='button'>
+        Reset
+      </button>
+      <button id='canvas-submit' class='button button--fill button--accent canvas__action' type='button'>
+        Send
+      </button>
+    </div>
+  </div>
+</div>
+
+<script>
+  {% include js/canvas.js %}
+</script>
