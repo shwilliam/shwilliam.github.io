@@ -61,7 +61,7 @@
           <li class='nav-list__item'>
             <a
               href='/libraries'
-              class='nav-list__link title {% if page.fileSlug == 'work' %}title--accent{% endif %}'
+              class='title nav-list__link {% if page.fileSlug contains 'libraries' %}nav-list__link--active{% endif %}'
             >
               Libraries
             </a>
@@ -69,7 +69,7 @@
           <li class='nav-list__item'>
             <a
               href='/projects'
-              class='nav-list__link title {% if page.fileSlug == 'sites' %}title--accent{% endif %}'
+              class='title nav-list__link {% if page.fileSlug contains 'projects' %}nav-list__link--active{% endif %}'
             >
               Websites & Apps
             </a>
@@ -77,7 +77,7 @@
           <li class='nav-list__item'>
             <a
               href='/blog'
-              class='nav-list__link title {% if page.url contains 'blog' %}title--accent{% endif %}'
+              class='title nav-list__link {% if page.url contains 'blog' %}nav-list__link--active{% endif %}'
             >
               Blog
             </a>
