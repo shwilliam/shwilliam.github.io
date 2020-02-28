@@ -43,19 +43,17 @@ a.site-grid__link:hover .site-grid__title {
 .site-grid__actions {
   display: none;
   height: 100%;
-  flex-direction: column;
   justify-content: center;
-  position: absolute;
-  top: calc(0.25 * var(--spacing__v));
-  bottom: var(--spacing__v);
-  right: var(--spacing__h--l);
+  align-items: center;
+  margin-right: var(--spacing__h--l);
 }
 
 a.site-grid__action {
+  position: relative;
+  top: calc(-0.8 * var(--spacing__v));
   text-decoration: none;
   color: var(--color__accent);
-  padding: calc(0.5 * var(--spacing__v)) calc(0.5 * var(--spacing__h)) 0
-    calc(0.5 * var(--spacing__h));
+  padding: var(--spacing__v--l) var(--spacing__h--l);
 }
 
 .site-grid__action-icon svg {
@@ -97,7 +95,7 @@ a.site-grid__action {
   max-width: var(--width);
 }
 
-@media screen and (min-width: 360px) {
+@media screen and (min-width: 420px) {
   .site-grid__actions {
     display: flex;
   }
