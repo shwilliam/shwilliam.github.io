@@ -116,6 +116,7 @@ a.site-grid__action {
     position: relative;
     display: inline-block;
     height: auto;
+    max-height: 70px;
     width: auto;
     margin-bottom: var(--spacing__v--xl);
   }
