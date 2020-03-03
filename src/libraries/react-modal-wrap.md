@@ -6,5 +6,5 @@ date: 2020-02-02
 source: https://github.com/shwilliam/react-modal-wrap
 priority: 0.5
 changefreq: 'monthly'
-featured: 3
+featured: 4
 ---
