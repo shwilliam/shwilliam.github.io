@@ -25,6 +25,7 @@ changefreq: 'monthly'
             <div class='site-grid__icon-container'>
               {% if post.data.icon %}
                 <img
+                  alt=''
                   class='site-grid__icon'
                   data-theme='light'
                   src='/images/{{post.data.icon}}'
@@ -33,6 +34,7 @@ changefreq: 'monthly'
 
                 {% if post.data.iconDark == 'invert' %}
                   <img
+                    alt=''
                     class='site-grid__icon invert'
                     data-theme='dark'
                     src='/images/{{post.data.icon}}'
@@ -40,6 +42,7 @@ changefreq: 'monthly'
                   >
                 {% else %}
                   <img
+                    alt=''
                     class='site-grid__icon'
                     data-theme='dark'
                     src='/images/{{post.data.iconDark}}'
