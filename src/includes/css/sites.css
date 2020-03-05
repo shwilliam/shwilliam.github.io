@@ -1,35 +1,34 @@
 .site-grid {
   display: grid;
   grid-template-columns: 1fr;
-  grid-auto-rows: 80px;
+  grid-template-rows: repeat(2, max-content);
   grid-gap: var(--spacing__v--l) 0;
 }
 
 .site-grid__item {
-  display: flex;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
   margin: 0 -1px -1px 0;
+  padding: calc(2 * var(--spacing__v--l)) 0;
   border: 1px solid #d1d5da;
   border-radius: 3px;
-  text-align: center;
 }
 
 a.site-grid__link {
   width: 100%;
   color: var(--color__text);
   text-decoration: none;
-}
-
-a.site-grid__link:hover .site-grid__title {
-  text-decoration: underline;
-}
-
-.site-grid__content {
-  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+}
+
+a.site-grid__link:hover .site-grid__title {
+  text-decoration: underline;
 }
 
 .site-grid__date {
@@ -41,28 +40,28 @@ a.site-grid__link:hover .site-grid__title {
 }
 
 .site-grid__actions {
-  display: none;
-  height: 100%;
-  justify-content: center;
-  align-items: center;
-  margin-right: var(--spacing__h--l);
+  display: inline-block;
+  margin: var(--spacing__v--l) 0 var(--spacing__v)
+    calc(14 * var(--spacing__h--l));
 }
 
 a.site-grid__action {
-  position: relative;
-  top: calc(-0.8 * var(--spacing__v));
+  padding: 0.125rem 0.5rem 0.065rem 0.2rem;
+  font-size: 0.65rem;
   text-decoration: none;
-  color: var(--color__accent);
-  padding: var(--spacing__v--l) var(--spacing__h--l);
+  color: var(--color__text);
 }
 
 .site-grid__action-icon svg {
-  width: 20px;
+  position: relative;
+  top: 0.75px;
+  height: 0.525rem;
 }
 
 .site-grid__title {
   color: var(--color__accent);
-  margin-left: calc(8.5 * var(--spacing__h--l));
+  margin-left: calc(14 * var(--spacing__h--l));
+  padding-bottom: calc(var(--spacing__v--l) / 2);
 }
 
 .site-grid__title-icon {
@@ -71,18 +70,21 @@ a.site-grid__action {
 }
 
 .site-grid__subtitle {
+  max-width: 65%;
+  text-align: left;
   font-style: italic;
   font-size: 0.85rem;
-  margin-left: calc(8.5 * var(--spacing__h--l));
+  margin-left: calc(14 * var(--spacing__h--l));
 }
 
 .site-grid__icon-container {
   position: absolute;
-  left: 0;
+  top: 0;
+  left: var(--spacing__h--l);
   height: 100%;
-  width: calc(8 * var(--spacing__h--l));
+  width: calc(12 * var(--spacing__h--l));
   margin: 0 auto;
-  padding: var(--spacing__v--l) calc(2 * var(--spacing__h--l));
+  padding: var(--spacing__v--xl) calc(2 * var(--spacing__h--l));
   display: flex;
   align-items: center;
   justify-content: center;
@@ -95,30 +97,31 @@ a.site-grid__action {
   max-width: var(--width);
 }
 
-@media screen and (min-width: 420px) {
-  .site-grid__actions {
-    display: flex;
+@media screen and (min-width: 500px) {
+  .site-grid__subtitle {
+    max-width: 75%;
   }
 }
 
-@media screen and (min-width: 550px) {
+@media screen and (min-width: 850px) {
   .site-grid {
     grid-gap: 0;
     grid-template-columns: repeat(auto-fill, minmax(375px, 1fr));
     grid-auto-rows: unset;
   }
-  .site-grid__content {
+  a.site-grid__link {
     align-items: center;
-    padding-bottom: calc(2 * var(--spacing__v--l));
   }
   .site-grid__icon-container {
     flex-basis: 70px;
     position: relative;
-    display: inline-block;
+    display: flex;
+    align-items: center;
     height: auto;
     max-height: 70px;
     width: auto;
-    margin-bottom: var(--spacing__v--xl);
+    margin: calc(var(--spacing__v--l) * 4.5) 0 var(--spacing__v--xl) 0;
+    padding: var(--spacing__v--l) calc(2 * var(--spacing__h));
   }
   .site-grid__icon {
     transform: scale(1.25);
@@ -127,8 +130,12 @@ a.site-grid__action {
   }
   .site-grid__item {
     display: inline-block;
-    height: 400px;
+    display: grid;
+    grid-template-rows: 250px 120px; /* subgrid fallback */
+    grid-template-rows: subgrid;
+    grid-row: span 2;
     border-radius: 0;
+    text-align: center;
   }
   .site-grid__title {
     margin-left: 0;
@@ -138,12 +145,16 @@ a.site-grid__action {
     display: initial;
   }
   .site-grid__subtitle {
-    margin-left: 0;
+    text-align: center;
+    margin: var(--spacing__v) auto var(--spacing__v--xl) auto;
+    width: 70%;
   }
   .site-grid__date {
     display: initial;
   }
   .site-grid__actions {
-    display: none;
+    margin-top: var(--spacing__v--xl);
+    margin-bottom: var(--spacing__v--xxl);
+    margin-left: 0;
   }
 }
