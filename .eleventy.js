@@ -61,7 +61,14 @@ module.exports = config => {
 
     return new Intl.DateTimeFormat('default', options).format(date)
   })
+  config.addLiquidFilter('splitCSV', d => d.split(', '))
   config.addLiquidFilter('commaToSlash', d => d.split(', ').join('/'))
+  config.addLiquidFilter('tagToClassSuffix', d =>
+    d
+      .toLowerCase()
+      .replace('.', '')
+      .replace(' ', '-'),
+  )
   config.addFilter('cssmin', d => new CleanCSS({}).minify(d).styles)
   config.addFilter('readingTime', d => readingTime(d).text)
 

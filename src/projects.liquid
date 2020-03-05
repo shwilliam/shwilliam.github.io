@@ -79,9 +79,20 @@ changefreq: 'monthly'
             {% endif %}
           </div>
 
-          <h2 class='site-grid__title'>
-            {{post.data.title}} <span class='site-grid__title-icon'>⟶</span>
-          </h2>
+          <div class='site-grid__header'>
+            <h2 class='site-grid__title'>
+              {{post.data.title}} <span class='site-grid__title-icon'>⟶</span>
+            </h2>
+
+            <ul class='site-grid__tags'>
+              {% assign tags = post.data.tech | splitCSV %}
+              {% for tag in tags %}
+                <li class='tag tag--{{tag | tagToClassSuffix}}'>
+                  {{tag}}
+                </li>
+              {% endfor %}
+            </ul>
+          </div>
 
           <p class='site-grid__subtitle'>
             {{post.data.description}}
