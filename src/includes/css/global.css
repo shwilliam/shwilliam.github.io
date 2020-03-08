@@ -393,7 +393,10 @@ a.nav-list__link--active {
     display: flex;
     justify-content: flex-end;
   }
-  .site-header,
+  .site-header {
+    padding: var(--spacing__v--xl) calc(2 * var(--spacing__h--l))
+      var(--spacing__v--xl) calc(2.5 * var(--spacing__h--l));
+  }
   .site-content {
     padding: var(--spacing__v--xl) calc(2 * var(--spacing__h--l));
   }
