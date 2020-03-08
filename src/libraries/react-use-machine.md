@@ -7,5 +7,5 @@ link: https://codesandbox.io/s/react-use-machine-1-lk2dj?fontsize=14&hidenavigat
 source: https://github.com/shwilliam/react-use-machine
 priority: 0.5
 changefreq: 'monthly'
-featured: 2
+featured: 8
 ---

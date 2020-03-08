@@ -7,5 +7,5 @@ link: https://shwilliam.com/lagom-css/
 source: https://github.com/shwilliam/lagom-css/
 priority: 0.5
 changefreq: 'monthly'
-featured: true
+featured: 6
 ---
