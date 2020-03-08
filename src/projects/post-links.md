@@ -1,7 +1,7 @@
 ---
 title: Post links
 description: Easily link to external websites from your Instagram posts
-tech: React
+tech: React, Firebase
 date: 2019-03-12
 source: https://github.com/shwilliam/post-links/
 icon: ig.svg

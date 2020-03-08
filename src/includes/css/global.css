@@ -38,7 +38,7 @@ html[data-theme='light'] {
   --color__focus: #2a7ae2;
 
   /* tag colors */
-  --color__css: ;
+  --color__css: #217cb140;
   --color__js: #f7df1e50;
   --color__react: #61daf650;
   --color__node: #3d883650;
@@ -50,6 +50,8 @@ html[data-theme='light'] {
   --color__electron: #9feaf950;
   --color__meteor: #fc502f50;
   --color__wordpress: #108ec240;
+  --color__nuxt: #1ac98540;
+  --color__firebase: #fec30a40;
   --color__tools: #d6d9e040;
 
   --spacing__v: 7.5px;
@@ -205,6 +207,14 @@ a.underline {
 
 .tag--wordpress {
   background-color: var(--color__wordpress);
+}
+
+.tag--nuxt {
+  background-color: var(--color__nuxt);
+}
+
+.tag--firebase {
+  background-color: var(--color__firebase);
 }
 
 .tag--tools {
