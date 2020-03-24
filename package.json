@@ -8,6 +8,8 @@
   "scripts": {
     "build": "eleventy",
     "start": "eleventy --serve",
+    "test": "jest",
+    "test:debug": "NODE_ENV=debug npm run test",
     "deploy": "npm run build && gh-pages -d dist -b master"
   },
   "repository": {
@@ -26,8 +28,11 @@
     "dotenv": "^8.2.0",
     "eslint": "^6.5.1",
     "gh-pages": "^2.2.0",
+    "jest": "^25.1.0",
+    "jest-cli": "^25.1.0",
     "node-fetch": "^2.6.0",
     "prettier": "^1.18.2",
+    "puppeteer": "^2.1.1",
     "reading-time": "^1.2.0"
   }
 }
