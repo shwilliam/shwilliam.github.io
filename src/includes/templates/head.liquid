@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang='en' data-fonts='loading'>
+<head>
+  <meta charset='UTF-8'>
+  <meta
+    name='viewport'
+    content='width=device-width, initial-scale=1.0'
+  >
+  <meta http-equiv='X-UA-Compatible' content='ie=edge'>
+  <meta name='author' content='William Lindvall'>
+  <meta name='description' content='Vancouver-based web developer'>
+
+  <meta name='twitter:card' value='summary'>
+  <meta name='twitter:site' content='@werlliam'>
+  <meta name='twitter:title' content='{{ title }}'>
+  <meta name='twitter:description' content='Vancouver-based web developer'>
+  <meta name='twitter:creator' content='@werlliam'>
+
+  <meta property='og:title' content='{{ title }}' />
+  <meta property='og:type' content='article' />
+  <meta property='og:url' content='https://shwilliam.com`' />
+  <meta property='og:image' content='/favicon.ico' />
+  <meta property='og:description' content='Vancouver-based web developer' />
+
+  <link rel='icon' type='image/x-icon' href='/favicon.ico'>
+  <link
+    rel='alternate'
+    type='application/rss+xml'
+    title="William Lindvall's Blog"
+    href='/rss.xml'
+  >
+
+  <title>{% if title %}{{ title }}{% else %}@shwilliam{% endif %}</title>
+
+  <script>
+    {% include js/theme-check.js %}
+  </script>

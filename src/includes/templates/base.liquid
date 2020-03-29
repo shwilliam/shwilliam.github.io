@@ -1,38 +1,4 @@
-<!DOCTYPE html>
-<html lang='en' data-fonts='loading'>
-<head>
-  <meta charset='UTF-8'>
-  <meta
-    name='viewport'
-    content='width=device-width, initial-scale=1.0'
-  >
-  <meta http-equiv='X-UA-Compatible' content='ie=edge'>
-  <meta name='author' content='William Lindvall'>
-  <meta name='description' content='Vancouver-based web developer'>
-
-  <meta name='twitter:card' value='summary'>
-  <meta name='twitter:site' content='@werlliam'>
-  <meta name='twitter:title' content='{{ title }}'>
-  <meta name='twitter:description' content='Vancouver-based web developer'>
-  <meta name='twitter:creator' content='@werlliam'>
-
-  <meta property='og:title' content='{{ title }}' />
-  <meta property='og:type' content='article' />
-  <meta property='og:url' content='https://shwilliam.com`' />
-  <meta property='og:image' content='/favicon.ico' />
-  <meta property='og:description' content='Vancouver-based web developer' />
-
-  <link rel='icon' type='image/x-icon' href='/favicon.ico'>
-  <link
-    rel='alternate'
-    type='application/rss+xml'
-    title="William Lindvall's Blog"
-    href='/rss.xml'
-  >
-
-  <script>
-    {% include js/theme-check.js %}
-  </script>
+{% include head.liquid %}
 
   {% capture css %}
     {% include css/reset.css %}
@@ -43,85 +9,10 @@
     {{ css | cssmin }}
   </style>
 
-  <title>{% if title %}{{ title }}{% else %}@shwilliam{% endif %}</title>
-
   <script>
     {% include js/fonts.js %}
   </script>
-</head>
-<body>
-  <div class='site-container'>
-    <header class='site-header'>
-      <a href='/' class='title title--main {% if page.fileSlug == '' %}title--accent{% endif %} site-title'>
-        William Lindvall
-      </a>
 
-      <nav class='site-nav'>
-        <ul class='nav-list'>
-          <li class='nav-list__item'>
-            <a
-              href='/libraries'
-              class='title nav-list__link {% if page.fileSlug contains 'libraries' %}nav-list__link--active{% endif %}'
-            >
-              Libraries
-            </a>
-          </li>
-          <li class='nav-list__item'>
-            <a
-              href='/projects'
-              class='title nav-list__link {% if page.fileSlug contains 'projects' %}nav-list__link--active{% endif %}'
-            >
-              Websites & Apps
-            </a>
-          </li>
-          <li class='nav-list__item'>
-            <a
-              href='/blog'
-              class='title nav-list__link {% if page.url contains 'blog' %}nav-list__link--active{% endif %}'
-            >
-              Blog
-            </a>
-          </li>
-          {% comment %} <li class='nav-list__item'> {% endcomment %}
-          {% comment %}   <a {% endcomment %}
-          {% comment %}     href='/about' {% endcomment %}
-          {% comment %}     class='nav-list__link title {% if page.fileSlug == 'about' %}title--accent{% endif %}' {% endcomment %}
-          {% comment %}   > {% endcomment %}
-          {% comment %}     About {% endcomment %}
-          {% comment %}   </a> {% endcomment %}
-          {% comment %} </li> {% endcomment %}
-          <li class='nav-list__item'>
-            <button
-              name='theme-toggle'
-              class='theme-toggle theme-toggle--inline hidden hidden--mobile'
-              type='button'
-            >
-              <p class='sr-only'>
-                Toggle theme
-              </p>
-            </button>
-          </li>
-        </ul>
-      </nav>
-    </header>
+  {{ content }}
 
-    <main>
-      {{ content }}
-    </main>
-  </div>
-
-  <button
-    name='theme-toggle'
-    class='theme-toggle theme-toggle--floating hidden hidden--desktop'
-    type='button'
-  >
-    <p class='sr-only'>
-      Toggle theme
-    </p>
-  </button>
-
-  <script>
-    {% include js/theme-toggle.js %}
-  </script>
-</body>
-</html>
+{% include body-end.liquid %}

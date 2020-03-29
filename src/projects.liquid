@@ -13,14 +13,16 @@ changefreq: 'monthly'
   {{ css | cssmin }}
 </style>
 
+{% include templates/body-start.liquid %}
+
 <section class='site-content site-content--l site-content--full'>
   <h1 class='sr-only'>Websites & Apps</h1>
 
   <ul class='site-grid'>
     {% assign sortedPosts = collections.projects | reverse %}
     {% for post in sortedPosts %}
-      <li class='site-grid__item'>
-        <a class='site-grid__link' href='{{post.data.source}}' target='_blank' rel='noopener noreferrer'>
+      <li class='site-grid__item-wrapper'>
+        <div class='site-grid__item'>
           <div class='site-grid__icon-container'>
             {% if post.data.icon %}
               <img
@@ -81,7 +83,14 @@ changefreq: 'monthly'
 
           <div class='site-grid__header'>
             <h2 class='site-grid__title'>
-              {{post.data.title}} <span class='site-grid__title-icon'>⟶</span>
+              <a
+                class='site-grid__title-link'
+                href='{{post.data.source}}'
+                target='_blank'
+                rel='noopener noreferrer'
+              >
+                {{post.data.title}} <span class='site-grid__title-icon'>⟶</span>
+              </a>
             </h2>
 
             <ul class='site-grid__tags'>
@@ -114,7 +123,7 @@ changefreq: 'monthly'
               source
             </a>
           </div>
-        </a>
+        </div>
       </li>
     {% endfor %}
   </ul>

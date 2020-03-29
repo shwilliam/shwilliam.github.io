@@ -13,56 +13,54 @@ changefreq: 'monthly'
   {{ css | cssmin }}
 </style>
 
-<h1 class='sr-only'>Components & Libraries</h1>
+{% include templates/body-start.liquid %}
 
 <div class='contribution__container'>
   <section class='contribution__profile-overview site-content site-content--l'>
     <div class='contribution__profile'>
       <div class='contribution__profile-header'>
-        <a
-          aria-label='GitHub portfolio'
-          class='contribution__profile-link'
-          href='https://github.com/shwilliam/'
-          target='_blank'
-          rel='noopener noreferrer'
-        >
-          <div class='contribution__avatar-container'>
-            <img src='/images/social.png' alt=''>
-          </div>
+        <div class='contribution__avatar-container'>
+          <img src='/images/social.png' alt=''>
+        </div>
 
-          <div class='contribution__profile-title'>
-            <p class='title title--accent title--main'>
-              @shwilliam
-            </p>
+        <div class='contribution__profile-title'>
+          <a
+            aria-label='GitHub portfolio'
+            class='title title--accent title--main'
+            href='https://github.com/shwilliam/'
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+            @shwilliam
+          </a>
 
-            <p class='contribution__status'>
-              💫 a11y dreams
-            </p>
+          <p class='contribution__status'>
+            💫 a11y dreams
+          </p>
 
-            <ul class='contribution__orgs-list contribution__orgs-list--desktop'>
-              <li>
-                <a class='contribution__org' href='https://github.com/vue-a11y/' target='_blank' rel='noopener noreferrer'>
-                  <div class='contribution__org-img-container'>
-                    <img src='/images/vue-a11y.png' alt=''>
-                  </div>
-                  <p class='contribution__org-name'>
-                    Vue A11y
-                  </p>
-                </a>
-              </li>
-              <li>
-                <a class='contribution__org' href='https://github.com/redacademy/' target='_blank' rel='noopener noreferrer'>
-                  <div class='contribution__org-img-container'>
-                    <img src='/images/red.png' alt=''>
-                  </div>
-                  <p class='contribution__org-name'>
-                    RED Academy
-                  </p>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </a>
+          <ul class='contribution__orgs-list contribution__orgs-list--desktop'>
+            <li>
+              <a class='contribution__org' href='https://github.com/vue-a11y/' target='_blank' rel='noopener noreferrer'>
+                <div class='contribution__org-img-container'>
+                  <img src='/images/vue-a11y.png' alt=''>
+                </div>
+                <p class='contribution__org-name'>
+                  Vue A11y
+                </p>
+              </a>
+            </li>
+            <li>
+              <a class='contribution__org' href='https://github.com/redacademy/' target='_blank' rel='noopener noreferrer'>
+                <div class='contribution__org-img-container'>
+                  <img src='/images/red.png' alt=''>
+                </div>
+                <p class='contribution__org-name'>
+                  RED Academy
+                </p>
+              </a>
+            </li>
+          </ul>
+        </div>
 
         <ul class='contribution__stats-list'>
           <li class='contribution__stats-item'>
@@ -124,10 +122,10 @@ changefreq: 'monthly'
           {% for contribution in contributions %}
             <li class='padded--s'>
               <a class='contribution__link' href='{{ contribution.url }}' target='_blank' rel='noopener noreferrer'>
-                <h2 class='contribution__info'>
+                <span class='contribution__info'>
                   {{ contribution.repository.owner.login }}/{{ contribution.repository.name }}
                   (#{{ contribution.number }})
-                </h2><span class='hidden hidden--mobile-s'>:</span>
+                </span><span class='hidden hidden--mobile-s'>:</span>
                 <span class='contribution__title'>
                   {{ contribution.title }}
                 </span>
@@ -147,21 +145,21 @@ changefreq: 'monthly'
   </section>
 
   <section class='site-content site-content--l'>
-    <h2 class='title padded hidden hidden--desktop'>Libraries & Components</h2>
+    <h1 class='title padded hidden hidden--desktop'>Libraries & Components</h1>
     <ul class='work__grid'>
       {% assign sortedPosts = collections.libraries | reverse %}
       {% for post in sortedPosts %}
         <li class='work__grid-item'>
-          <span class='work__header'>
-            <a class='work__title-link' href='{{post.data.source}}' target='_blank' rel='noopener noreferrer'>
-              <h2 class='work__title'>
+          <div class='work__header'>
+            <h2 class='work__title'>
+              <a class='work__title-link' href='{{post.data.source}}' target='_blank' rel='noopener noreferrer'>
                 <span class='work__title-icon' aria-hidden='true'>
                   {% include icons/repo.svg %}
                 </span>
                 {{post.data.title}}
-              </h2>
-            </a>
-          </span>
+              </a>
+            </h2>
+          </div>
 
           <p class='work__description'>
             {{post.data.description}}

@@ -8,13 +8,8 @@
 .work__title {
   font-weight: 500;
   padding: var(--spacing__v--l) 0;
-  color: var(--color__text);
   display: inline-block;
   margin-right: var(--spacing__h);
-}
-
-.work__title:hover {
-  color: var(--color__accent);
 }
 
 .work__title-icon svg {
@@ -30,8 +25,13 @@
   font-size: 14px;
 }
 
-.work__title-link {
+a.work__title-link {
+  color: var(--color__text);
   text-decoration: none;
+}
+
+a.work__title-link:hover {
+  color: var(--color__accent);
 }
 
 .work__description {
@@ -77,10 +77,6 @@ a.work__action {
 .contribution__profile {
   display: flex;
   flex-direction: column;
-}
-
-.contribution__profile-link {
-  text-decoration: none;
 }
 
 .contribution__profile-title {

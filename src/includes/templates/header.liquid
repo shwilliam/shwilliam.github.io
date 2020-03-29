@@ -1,0 +1,45 @@
+<header class='site-header'>
+  <a href='/' class='title title--main {% if page.fileSlug == '' %}title--accent{% endif %} site-title'>
+    William Lindvall
+  </a>
+
+  <nav class='site-nav'>
+    <ul class='nav-list'>
+      <li class='nav-list__item'>
+        <a
+          href='/libraries'
+          class='title nav-list__link {% if page.fileSlug contains 'libraries' %}nav-list__link--active{% endif %}'
+        >
+          Libraries
+        </a>
+      </li>
+      <li class='nav-list__item'>
+        <a
+          href='/projects'
+          class='title nav-list__link {% if page.fileSlug contains 'projects' %}nav-list__link--active{% endif %}'
+        >
+          Websites & Apps
+        </a>
+      </li>
+      <li class='nav-list__item'>
+        <a
+          href='/blog'
+          class='title nav-list__link {% if page.url contains 'blog' %}nav-list__link--active{% endif %}'
+        >
+          Blog
+        </a>
+      </li>
+      <li class='nav-list__item'>
+        <button
+          name='theme-toggle'
+          class='theme-toggle theme-toggle--inline hidden hidden--mobile'
+          type='button'
+        >
+          <span class='sr-only'>
+            Toggle theme
+          </span>
+        </button>
+      </li>
+    </ul>
+  </nav>
+</header>
