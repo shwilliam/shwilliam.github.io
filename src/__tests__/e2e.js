@@ -59,9 +59,9 @@ describe('libraries page', () => {
   beforeAll(async () => {
     await page.goto(`${LIVE_URL}/libraries`)
   })
-  test(`renders h1 with text 'Components & Libraries'`, async () => {
+  test(`renders h1 with text 'Libraries & Components'`, async () => {
     const html = await page.$eval('h1', e => e.innerHTML)
-    expect(html).toContain('Components &amp; Libraries')
+    expect(html).toContain('Libraries &amp; Components')
   }, 16000)
   test('no console logs', async () => {
     expect(logs.length).toBe(0)
