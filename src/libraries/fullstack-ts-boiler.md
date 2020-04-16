@@ -6,5 +6,5 @@ date: 2020-03-10
 source: https://github.com/shwilliam/fullstack-ts-boiler
 priority: 0.5
 changefreq: 'monthly'
-featured: 11
+featured: 12
 ---
