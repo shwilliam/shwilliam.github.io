@@ -1,0 +1,37 @@
+.photo-gallery {
+  display: flex;
+  flex-direction: column;
+}
+
+.photo-gallery__list {
+  display: flex;
+  align-items: flex-start;
+  overflow-x: scroll;
+  min-height: 500px;
+  max-height: 725px;
+  height: 50vw;
+}
+
+.photo-gallery__photo-container {
+  flex-shrink: 0;
+  display: inline-block;
+  height: 100%;
+  padding: var(--spacing__v--l) calc(2 * var(--spacing__h--l));
+}
+
+.photo-gallery__title {
+  padding: var(--spacing__v--l) calc(2 * var(--spacing__h--l));
+}
+
+.photo-gallery__photo {
+  height: 100%;
+  object-fit: contain;
+  object-position: top;
+  max-width: 90vw;
+}
+
+@media screen and (min-width: 850px) {
+  .photo-gallery {
+    flex-direction: column-reverse;
+  }
+}

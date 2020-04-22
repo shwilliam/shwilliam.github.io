@@ -1,0 +1,32 @@
+---
+layout: templates/base.liquid
+---
+
+{% capture css %}
+  {% include css/photo-gallery.css %}
+{% endcapture %}
+
+<style>
+  {{ css | cssmin }}
+</style>
+
+{% include body-start.liquid %}
+
+<article class='padded photo-gallery'>
+  <header>
+    <h1 class='photo-gallery__title'>
+      {{ title }}
+    </h1>
+  </header>
+
+  <ul class="photo-gallery__list">
+    {% for filename in images %}
+      <li class="photo-gallery__photo-container">
+        <img
+          class="photo-gallery__photo"
+          src="{{ filename | url_encode }}"
+        >
+      </li>
+    {% endfor %}
+  </ul>
+</article>
