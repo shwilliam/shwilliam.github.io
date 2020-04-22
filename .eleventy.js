@@ -21,6 +21,29 @@ module.exports = config => {
         data2 !== true ? data1.featured - data2.featured : 1,
       ),
   )
+  config.addCollection('photos', collection => {
+    const photosByYear = collection
+      .getFilteredByGlob('src/photos/**/*.md')
+      .reduce((photosByYear, project) => {
+        const year = new Date(project.data.date).getFullYear()
+
+        if (photosByYear[year]) {
+          return {
+            ...photosByYear,
+            [year]: [...photosByYear[year], project.data],
+          }
+        } else {
+          return {...photosByYear, [year]: [project.data]}
+        }
+      }, {})
+
+    return Object.entries(photosByYear)
+      .sort(([year1], [year2]) => year2 - year1)
+      .map(([year, projects]) => ({
+        year,
+        projects,
+      }))
+  })
   config.addCollection('blog', collection =>
     collection.getFilteredByGlob('src/blog/*.md'),
   )
