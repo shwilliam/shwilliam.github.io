@@ -1,0 +1,43 @@
+---
+layout: templates/base.liquid
+title: Photos
+priority: 1.0
+changefreq: 'monthly'
+---
+
+{% capture css %}
+  {% include css/photos-overview.css %}
+{% endcapture %}
+
+<style>
+  {{ css | cssmin }}
+</style>
+
+{% include templates/body-start.liquid %}
+
+<section class="site-content site-content--l site-content--full">
+  <h1 class='sr-only'>Photos</h1>
+
+  <header class="photos-overview__header" aria-hidden="true">
+    <p>Title</p>
+    <p>Year</p>
+  </header>
+
+  <ol>
+    {% assign projectByYears = collections.photos %}
+    {% for projectYear in projectByYears %}
+      <li class="photos-overview__year">
+        <ul>
+          {% for project in projectYear.projects  %}
+            <li>
+              <a class="photos-overview__project" href="{{project.slug}}">
+                <span>{{project.title}}</span>
+                <span>{{projectYear.year}}</span>
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
+      </li>
+    {% endfor %}
+  </ol>
+</section>
