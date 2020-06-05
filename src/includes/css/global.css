@@ -52,6 +52,8 @@ html[data-theme='light'] {
   --color__wordpress: #108ec240;
   --color__nuxt: #1ac98540;
   --color__firebase: #fec30a40;
+  --color__node: #32823150;
+  --color__express: #149dff50;
   --color__tools: #d6d9e040;
 
   --spacing__v: 7.5px;
@@ -215,6 +217,14 @@ a.underline {
 
 .tag--firebase {
   background-color: var(--color__firebase);
+}
+
+.tag--node {
+  background-color: var(--color__node);
+}
+
+.tag--express {
+  background-color: var(--color__express);
 }
 
 .tag--tools {
