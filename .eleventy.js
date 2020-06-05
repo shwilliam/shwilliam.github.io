@@ -108,6 +108,7 @@ module.exports = config => {
       'css',
       'js',
       'jpg',
+      'jpeg',
       'png',
       'svg',
       'pdf',
