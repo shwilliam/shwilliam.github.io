@@ -7,7 +7,7 @@
 
 .photos-overview__project,
 a.photos-overview__project {
-  padding: var(--spacing__v) 0;
+  padding: calc(var(--spacing__v) * 1.5) 0;
   border-top: 1px solid var(--color__ui);
   display: flex;
   justify-content: space-between;
