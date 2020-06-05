@@ -5,13 +5,57 @@
   <link href="https://shwilliam.com/rss.xml" rel="self"/>
   <link href="https://shwilliam.com" />
   
-  <updated>2020-01-22T00:00:00.000Z</updated>
+  <updated>2020-05-06T00:00:00.000Z</updated>
   <id>https://shwilliam.com/</id>
   <author>
     <name>William Lindvall</name>
     <email>w-lindvall@outlook.com</email>
   </author>
   
+  
+    <entry>
+      <title>Inclusive Stock Photos & Illustrations</title>
+      <link href="https://shwilliam.com/blog/inclusive-imagery/" />
+      <updated>2020-05-06T00:00:00.000Z</updated>
+      <id>https://shwilliam.com/blog/inclusive-imagery/</id>
+      <content type="html">
+        &lt;p&gt;From self-isolation in a small Vancouver apartment I watch communities across the globe gather and stand up against the systemic racism that, somehow, still plagues our world. I’m upset, angry, hurt, and, perhaps most of all, confused.&lt;/p&gt;
+&lt;p&gt;It’s imperative for us to reconsider our personal and professional practices and recognize the actions that we can all take to make a difference.&lt;/p&gt;
+&lt;p&gt;During the past few weeks I have been working with a small team to build out a new website for Sage Foundation, a non-profit dedicated to supporting and celebrating underrepresented communities in Vancouver. On several occasions throughout this project, I have been stumped by the lack of inclusive stock photographs and imagery available by many of the most popular services. I have compiled some of the better resources that I have found into the list below. If you are aware of any others please &lt;a href=&#34;https://github.com/shwilliam/shwilliam.github.io/issues&#34;&gt;let me know&lt;/a&gt; as I would love to keep adding more to the list.&lt;/p&gt;
+&lt;h2&gt;Illustrations&lt;/h2&gt;
+&lt;h3&gt;&lt;a href=&#34;https://www.blackillustrations.com/&#34;&gt;Black Illustrations&lt;/a&gt;&lt;/h3&gt;
+&lt;img src=&#34;/images/black-illustrations.png&#34; alt=&#34;&#34; width=&#34;500px&#34;&gt;
+&lt;br&gt;
+&lt;h3&gt;&lt;a href=&#34;https://www.openpeeps.com/&#34;&gt;Open Peeps&lt;/a&gt;&lt;/h3&gt;
+&lt;img src=&#34;/images/open-peeps.png&#34; alt=&#34;&#34; width=&#34;500px&#34;&gt;
+&lt;br&gt;
+&lt;h3&gt;&lt;a href=&#34;https://undraw.co/&#34;&gt;unDraw&lt;/a&gt;&lt;/h3&gt;
+&lt;img src=&#34;/images/undraw.png&#34; alt=&#34;&#34; width=&#34;500px&#34;&gt;
+&lt;br&gt;
+&lt;h2&gt;Photographs&lt;/h2&gt;
+&lt;h3&gt;&lt;a href=&#34;https://www.flickr.com/photos/wocintechchat/&#34;&gt;#WOCinTech (Creative Commons)&lt;/a&gt;&lt;/h3&gt;
+&lt;img src=&#34;/images/woc-in-tech.jpg&#34; alt=&#34;&#34; width=&#34;500px&#34;&gt;
+&lt;br&gt;
+&lt;h3&gt;&lt;a href=&#34;https://www.flickr.com/photos/wocintechchat/&#34;&gt;The Gender Spectrum by Vice (Creative Commons)&lt;/a&gt;&lt;/h3&gt;
+&lt;img src=&#34;/images/gender-spectrum-vice.jpeg&#34; alt=&#34;&#34; width=&#34;500px&#34;&gt;
+&lt;br&gt;
+&lt;h3&gt;&lt;a href=&#34;https://picnoi.com/&#34;&gt;Picnoi (Open License)&lt;/a&gt;&lt;/h3&gt;
+&lt;img src=&#34;/images/picnoi.jpg&#34; alt=&#34;&#34; width=&#34;500px&#34;&gt;
+&lt;br&gt;
+&lt;h3&gt;&lt;a href=&#34;https://www.nappy.co/&#34;&gt;Nappy (Creative Commons Zero)&lt;/a&gt;&lt;/h3&gt;
+&lt;img src=&#34;/images/nappy.jpg&#34; alt=&#34;&#34; width=&#34;500px&#34;&gt;
+&lt;h2&gt;Stay informed&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.reddit.com/r/BlackLivesMatter/&#34;&gt;/r/BlackLivesMatter&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://twitter.com/hashtag/BlackLivesMatter&#34;&gt;BlackLivesMatter&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;br&gt;
+&lt;p&gt;Please take care of one another and be safe.&lt;/p&gt;
+&lt;br&gt;
+&lt;p&gt;If you came across any issue or have a question regarding this post, feel free to submit it &lt;a href=&#34;https://github.com/shwilliam/shwilliam.github.io/issues&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+      </content>
+    </entry>
   
     <entry>
       <title>Implementing a simple and accessible dark mode</title>
