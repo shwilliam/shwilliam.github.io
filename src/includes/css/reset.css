@@ -71,3 +71,7 @@ button {
   line-height: 1;
   cursor: pointer;
 }
+
+[hidden] {
+  display: inline-block;
+}
