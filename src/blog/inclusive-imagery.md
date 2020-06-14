@@ -1,6 +1,6 @@
 ---
-title: Inclusive Stock Photos & Illustrations
-titleShort: Inclusive Stock Photos & Illustrations
+title: Inclusive Stock Photos &amp; Illustrations
+titleShort: Inclusive Stock Photos &amp; Illustrations
 date: 2020-05-06
 description: Better images and illustrations for your next project
 layout: templates/blog-post.liquid
