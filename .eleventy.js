@@ -51,6 +51,7 @@ module.exports = config => {
   // plugins
   config.addPlugin(require('@11ty/eleventy-plugin-syntaxhighlight'))
   config.addPlugin(require('@11ty/eleventy-plugin-rss'))
+  config.addPlugin(require('@11ty/eleventy-plugin-inclusive-language'))
 
   // copy files
   config.addPassthroughCopy('src/CNAME')
