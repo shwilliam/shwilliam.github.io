@@ -85,7 +85,11 @@ a.work__action {
 
 .contribution__avatar-container {
   width: 80px;
-  height: 80px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 }
 
 .contribution__avatar-container img {
@@ -206,6 +210,11 @@ a.contribution__link {
   font-size: 0.85rem;
 }
 
+html[data-theme='light'] .contribution__avatar-container img {
+  filter: sepia(50%) saturate(30%) hue-rotate(-20deg);
+  border: 1px solid #d1d5da;
+}
+
 @media screen and (min-width: 550px) {
   .contribution__title {
     display: inline;
@@ -244,11 +253,12 @@ a.contribution__link {
   }
   .contribution__avatar-container {
     width: 250px;
-    height: 250px;
+    height: 300px;
   }
   .contribution__avatar-container img {
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
+    border: none;
   }
   .contribution__profile {
     flex-direction: row;
