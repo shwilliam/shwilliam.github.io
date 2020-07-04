@@ -4,7 +4,7 @@
   "description": "@shwilliam's personal website",
   "version": "0.2.0",
   "license": "MIT",
-  "author": "William L <w-lindvall@outlook.com>",
+  "author": "William Lindvall <shwilliam@hey.com>",
   "scripts": {
     "build": "eleventy",
     "start": "eleventy --serve",
