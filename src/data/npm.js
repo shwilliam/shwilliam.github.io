@@ -4,7 +4,7 @@ const nightmare = Nightmare()
 module.exports = async function() {
   const URL = 'https://npm-stat.com/charts.html?author=shwilliam'
   const selector = 'table.alternating tr:last-of-type td:last-of-type'
-  let downloads
+  let downloads = 23191 // 202-07-02
 
   try {
     downloads = await nightmare
