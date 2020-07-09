@@ -22,10 +22,11 @@
         &lt;p&gt;A few hours ago, while perusing some new projects on GitHub, I came across an
 unusual-looking profile page.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://user-images.githubusercontent.com/38357771/87008102-17567600-c178-11ea-95dd-c4c1da1ca290.png&#34; alt=&#34;Tim Holman&#39;s GitHub profile showing a new public profile UI&#34;&gt;&lt;/p&gt;
-&lt;p&gt;It turns out that GitHub has an undocumented feature allowing users to render the
-&lt;code&gt;README&lt;/code&gt; of a &amp;quot;special&amp;quot; repository as a public profile on their profile. To set this up, create a
-repository with the same name as your GitHub username. In my case, I created a
-new repo with the name &lt;a href=&#34;https://github.com/shwilliam/shwilliam&#34;&gt;&lt;code&gt;shwilliam&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;It turns out that GitHub has recently rolled out an undocumented feature
+allowing users to render the &lt;code&gt;README&lt;/code&gt; of a &amp;quot;special&amp;quot; repository as a public
+profile on their profile. To set this up, create a repository with the same name
+as your GitHub username. In my case, I created a new repo with the name
+&lt;a href=&#34;https://github.com/shwilliam/shwilliam&#34;&gt;&lt;code&gt;shwilliam&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://user-images.githubusercontent.com/38357771/87008110-1ae9fd00-c178-11ea-935d-a4c1463c8e03.png&#34; alt=&#34;Prompt to share README to profile displayed on &amp;quot;special&amp;quot; repository create&#34;&gt;&lt;/p&gt;
 &lt;p&gt;If you navigate to your newly created repository (at
 &lt;a href=&#34;https://github.com/shwilliam/shwilliam&#34;&gt;github.com/username/username&lt;/a&gt;), you should
