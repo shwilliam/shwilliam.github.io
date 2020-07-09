@@ -1,8 +1,8 @@
 ---
-title: Using a "Special" Repository as a Public GitHub Profile
-titleShort: Use a "Special" Repository as a Public GitHub Profile
+title: Undocumented GitHub Public Profile Customization
+titleShort: Undocumented GitHub Profile Customization
 date: 2020-07-08
-description: An undocumented feature that allows personalization of your GitHub profile
+description: Use a "Special" Repository as a Public GitHub Profile
 layout: templates/blog-post.liquid
 priority: 0.5
 changefreq: 'monthly'
@@ -13,10 +13,11 @@ unusual-looking profile page.
 
 ![Tim Holman's GitHub profile showing a new public profile UI](https://user-images.githubusercontent.com/38357771/87008102-17567600-c178-11ea-95dd-c4c1da1ca290.png)
 
-It turns out that GitHub has an undocumented feature allowing users to render the
-`README` of a "special" repository as a public profile on their profile. To set this up, create a
-repository with the same name as your GitHub username. In my case, I created a
-new repo with the name [`shwilliam`](https://github.com/shwilliam/shwilliam).
+It turns out that GitHub has recently rolled out an undocumented feature
+allowing a subset of users to render the `README` of a "special" repository as a
+public profile on their profile. To set this up, create a repository with the
+same name as your GitHub username. In my case, I created a new repo with the name
+[`shwilliam`](https://github.com/shwilliam/shwilliam).
 
 ![Prompt to share README to profile displayed on "special" repository create](https://user-images.githubusercontent.com/38357771/87008110-1ae9fd00-c178-11ea-935d-a4c1463c8e03.png)
 
