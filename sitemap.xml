@@ -372,10 +372,4 @@
     <changefreq>monthly</changefreq>
     <priority>1</priority>
   </url>
-  <url>
-    <loc>https://shwilliam.com/blog/github-special-repository/</loc>
-    <lastmod>2020-07-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
 </urlset>
