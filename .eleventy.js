@@ -47,6 +47,9 @@ module.exports = config => {
   config.addCollection('blog', collection =>
     collection.getFilteredByGlob('src/blog/*.md'),
   )
+  config.addCollection('contributions', collection =>
+    collection.getFilteredByGlob('src/contributions/*.md'),
+  )
 
   // plugins
   config.addPlugin(require('@11ty/eleventy-plugin-syntaxhighlight'))

@@ -72,9 +72,6 @@ changefreq: 'monthly'
               <p class='contribution__stat'>
                 <span class='contribution__stat-num'>{{npm}}</span> yearly
               </p>
-              {% comment %}
-                TODO: make dynamic (`npm-api` + `download-stats`)
-              {% endcomment %}
             </a>
           </li>
         </ul>
@@ -99,15 +96,16 @@ changefreq: 'monthly'
         <p class='contribution__list-title'>Recent Contributions</p>
 
         <ul class='contribution__list'>
-          {% for contribution in contributions %}
+          {% assign sortedContributions = collections.contributions | reverse %}
+          {% for contribution in sortedContributions %}
             <li class='padded--s'>
-              <a class='contribution__link' href='{{ contribution.url }}' target='_blank' rel='noopener noreferrer'>
+              <a class='contribution__link' href='{{ contribution.data.url }}' target='_blank' rel='noopener noreferrer'>
                 <span class='contribution__info'>
-                  {{ contribution.repository.owner.login }}/{{ contribution.repository.name }}
-                  (#{{ contribution.number }})
+                  {{ contribution.data.owner }}/{{ contribution.data.repo }}
+                  (#{{ contribution.data.number }})
                 </span><span class='hidden hidden--mobile-s'>:</span>
                 <span class='contribution__title'>
-                  {{ contribution.title }}
+                  {{ contribution.data.title }}
                 </span>
               </a>
             </li>
