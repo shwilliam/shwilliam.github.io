@@ -217,6 +217,12 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://shwilliam.com/contributions/translate-forms-page/</loc>
+    <lastmod>2019-09-18</lastmod>
+    <changefreq></changefreq>
+    <priority></priority>
+  </url>
+  <url>
     <loc>https://shwilliam.com/blog/custom-events/</loc>
     <lastmod>2019-10-27</lastmod>
     <changefreq>monthly</changefreq>
@@ -371,5 +377,11 @@
     <lastmod>2020-06-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://shwilliam.com/contributions/vue-skip-to-v2/</loc>
+    <lastmod>2020-07-03</lastmod>
+    <changefreq></changefreq>
+    <priority></priority>
   </url>
 </urlset>
