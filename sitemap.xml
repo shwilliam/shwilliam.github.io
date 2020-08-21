@@ -295,7 +295,7 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://shwilliam.com/projects/kindred-notes/</loc>
+    <loc>https://shwilliam.com/projects/kindred-notes-app/</loc>
     <lastmod>2020-02-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -331,6 +331,12 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://shwilliam.com/libraries/react-use-css-var/</loc>
+    <lastmod>2020-05-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://shwilliam.com/libraries/react-rubber-slider/</loc>
     <lastmod>2020-05-24</lastmod>
     <changefreq>monthly</changefreq>
@@ -353,6 +359,24 @@
     <lastmod>2020-07-03</lastmod>
     <changefreq></changefreq>
     <priority></priority>
+  </url>
+  <url>
+    <loc>https://shwilliam.com/libraries/magic-emoji/</loc>
+    <lastmod>2020-07-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://shwilliam.com/libraries/gatsby-source-gh/</loc>
+    <lastmod>2020-07-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://shwilliam.com/projects/liten/</loc>
+    <lastmod>2020-07-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url>
   <url>
     <loc>https://shwilliam.com/blog/</loc>
