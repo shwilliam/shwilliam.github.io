@@ -1,5 +1,7 @@
 ---
+prefix: React
 title: ModalWrap
+brackets: true
 description: Style-agnostic primitives for building accessible modals based on WAI-ARIA Authoring Practices
 tech: React, TypeScript
 date: 2020-02-02

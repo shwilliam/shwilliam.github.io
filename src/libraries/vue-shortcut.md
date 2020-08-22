@@ -1,5 +1,6 @@
 ---
 title: vue-shortcut
+brackets: true
 description: Vue component that declaratively wraps @jkup's shortcut library
 tech: Vue.js
 date: 2019-02-01

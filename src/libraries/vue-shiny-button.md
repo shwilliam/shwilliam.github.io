@@ -1,5 +1,6 @@
 ---
 title: vue-shiny-button
+brackets: true
 description: A button so shiny you can see your own reflection
 tech: Vue.js
 date: 2019-03-11

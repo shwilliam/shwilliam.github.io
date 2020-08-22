@@ -1,5 +1,7 @@
 ---
+prefix: React
 title: TriStateCheckbox
+brackets: true
 description: Mixed-state checkbox components based on the WAI-ARIA Authoring Practices's tri-state checkbox
 tech: React, TypeScript
 date: 2019-10-28

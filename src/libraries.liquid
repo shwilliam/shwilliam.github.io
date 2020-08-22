@@ -133,7 +133,11 @@ changefreq: 'monthly'
                 <span class='work__title-icon' aria-hidden='true'>
                   {% include icons/repo.svg %}
                 </span>
-                {{post.data.title}}
+                {% if post.data.brackets %}
+                  {{post.data.prefix}} &lt;{{post.data.title}}/&gt;
+                {% else %}
+                  {{post.data.title}}
+                {% endif %}
               </a>
             </h2>
           </div>

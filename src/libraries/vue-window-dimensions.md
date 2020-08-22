@@ -1,5 +1,6 @@
 ---
 title: vue-window-dimensions
+brackets: true
 description: Declaratively use browser window dimensions in Vue
 tech: Vue.js
 date: 2019-05-01

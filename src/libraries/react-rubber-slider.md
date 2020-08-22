@@ -1,5 +1,7 @@
 ---
+prefix: React
 title: RubberSlider
+brackets: true
 description: A springy range input component
 tech: TypeScript, React, D3
 date: 2020-05-25

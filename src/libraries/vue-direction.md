@@ -1,5 +1,6 @@
 ---
 title: vue-direction
+brackets: true
 description: Declarative, direction-aware hover in Vue
 tech: Vue.js
 date: 2019-03-10
