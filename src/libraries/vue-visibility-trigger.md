@@ -1,5 +1,5 @@
 ---
-title: Vue visibility trigger
+title: vue-visibility-trigger
 description: Declarative Vue component that emits an event when scrolled into view
 tech: Vue.js
 date: 2018-10-14

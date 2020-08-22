@@ -9,5 +9,4 @@ iconDark: tent-dark.svg
 iconWidth: 2.4rem
 priority: 0.5
 changefreq: 'monthly'
-featured: 7
 ---

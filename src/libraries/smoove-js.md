@@ -7,5 +7,4 @@ demo: https://codesandbox.io/s/ancient-sun-shefs?fontsize=14&hidenavigation=1&th
 source: https://github.com/shwilliam/smoove-js
 priority: 0.5
 changefreq: 'monthly'
-featured: 7
 ---

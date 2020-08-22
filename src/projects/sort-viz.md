@@ -8,5 +8,4 @@ link: https://shwilliam.com/sort-viz/
 emoji: 📊
 priority: 0.5
 changefreq: 'monthly'
-featured: 4
 ---

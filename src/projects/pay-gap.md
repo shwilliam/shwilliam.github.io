@@ -8,5 +8,4 @@ link: https://pay-gap.netlify.com/
 emoji: 📈
 priority: 0.5
 changefreq: 'monthly'
-featured: true
 ---

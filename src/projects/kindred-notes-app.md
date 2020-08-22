@@ -9,5 +9,5 @@ iconDark: kindred-notes.svg
 iconWidth: 2.25rem
 priority: 0.5
 changefreq: 'monthly'
-featured: 11
+featured: 2
 ---

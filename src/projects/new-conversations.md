@@ -7,5 +7,4 @@ source: https://github.com/shwilliam/new-conversations
 emoji: 📷
 priority: 0.5
 changefreq: 'monthly'
-featured: true
 ---

@@ -9,5 +9,4 @@ iconDark: ig.svg
 iconWidth: 1.4rem
 priority: 0.5
 changefreq: 'monthly'
-featured: true
 ---

@@ -4,10 +4,10 @@ description: Spotify recommendations visualised through an interactive network d
 tech: React, D3
 date: 2018-12-10
 source: https://github.com/shwilliam/explore-spotify
-link: https://explore-spotify.netlify.com/
+demo: https://explore-spotify.netlify.com/
 emoji: 🎵
 emojiDark: invert
 priority: 0.5
 changefreq: 'monthly'
-featured: 3
+featured: true
 ---

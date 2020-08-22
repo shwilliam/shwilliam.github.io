@@ -10,5 +10,4 @@ iconDark: better-fe.png
 iconWidth: 2.15rem
 priority: 0.5
 changefreq: 'monthly'
-featured: 12
 ---

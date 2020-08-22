@@ -9,5 +9,4 @@ iconDark: invert
 iconWidth: 2.5rem
 priority: 0.5
 changefreq: 'monthly'
-featured: true
 ---

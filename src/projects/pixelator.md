@@ -10,5 +10,4 @@ iconDark: pixelator.png
 iconWidth: 2rem
 priority: 0.5
 changefreq: 'monthly'
-featured: 8
 ---
