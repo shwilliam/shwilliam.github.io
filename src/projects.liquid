@@ -108,12 +108,20 @@ changefreq: 'monthly'
           </p>
 
           <div class='site-grid__actions'>
-            {% if post.data.link %}
-              <a class='button site-grid__action' href='{{post.data.link}}' target='_blank' rel='noopener noreferrer'>
+            {% if post.data.demo %}
+              <a class='button site-grid__action' href='{{post.data.demo}}' target='_blank' rel='noopener noreferrer'>
                 <span class='site-grid__action-icon' aria-hidden='true' role='img' aria-label='Demo'>
                   {% include icons/compass.svg %}
                 </span>
                 demo
+              </a>
+            {% endif %}
+            {% if post.data.link %}
+              <a class='button site-grid__action' href='{{post.data.link}}' target='_blank' rel='noopener noreferrer'>
+                <span class='site-grid__action-icon' aria-hidden='true' role='img' aria-label='Link'>
+                  {% include icons/compass.svg %}
+                </span>
+                link
               </a>
             {% endif %}
             <a class='button site-grid__action' href='{{post.data.source}}' target='_blank' rel='noopener noreferrer'>
