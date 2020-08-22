@@ -48,6 +48,7 @@ html[data-theme='light'] {
   --color__gatsby: #002b8030;
   --color__graphql: #ff5bc840;
   --color__electron: #9feaf950;
+  --color__nextjs: #0d6cf930;
   --color__meteor: #fc502f50;
   --color__wordpress: #108ec240;
   --color__nuxt: #1ac98540;
@@ -201,6 +202,10 @@ a.underline {
 
 .tag--electron {
   background-color: var(--color__electron);
+}
+
+.tag--nextjs {
+  background-color: var(--color__nextjs);
 }
 
 .tag--meteor {
