@@ -80,20 +80,7 @@ a.work__action {
 }
 
 .contribution__profile-title {
-  margin: var(--spacing__v--l) calc(2.5 * var(--spacing__h--l));
-}
-
-.contribution__avatar-container {
-  width: 80px;
-  height: 100px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-}
-
-.contribution__avatar-container img {
-  border-radius: 3px;
+  margin: var(--spacing__v--l) 0;
 }
 
 .contribution__orgs-list {
@@ -210,11 +197,6 @@ a.contribution__link {
   font-size: 0.85rem;
 }
 
-html[data-theme='light'] .contribution__avatar-container img {
-  filter: sepia(50%) saturate(30%) hue-rotate(-20deg);
-  border: 1px solid #d1d5da;
-}
-
 @media screen and (min-width: 550px) {
   .contribution__title {
     display: inline;
@@ -251,15 +233,6 @@ html[data-theme='light'] .contribution__avatar-container img {
     border: 1px solid #d1d5da;
     border-radius: 3px;
   }
-  .contribution__avatar-container {
-    width: 250px;
-    height: 300px;
-  }
-  .contribution__avatar-container img {
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-    border: none;
-  }
   .contribution__profile {
     flex-direction: row;
   }
@@ -273,8 +246,8 @@ html[data-theme='light'] .contribution__avatar-container img {
     flex-basis: 0;
   }
   .contribution__profile-title {
-    margin-top: calc(2 * var(--spacing__v--l));
-    margin-bottom: var(--spacing__v--xl);
+    margin: calc(3 * var(--spacing__v--l)) calc(3.5 * var(--spacing__h--l))
+      var(--spacing__v--xl) calc(2.5 * var(--spacing__h--l));
   }
   .contribution__status {
     display: none;
