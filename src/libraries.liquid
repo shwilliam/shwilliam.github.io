@@ -19,6 +19,10 @@ changefreq: 'monthly'
   <section class='contribution__profile-overview site-content site-content--l'>
     <div class='contribution__profile'>
       <div class='contribution__profile-header'>
+        <div class='contribution__avatar-container'>
+          <img src='/images/me.jpg' alt=''>
+        </div>
+
         <div class='contribution__profile-title'>
           <a
             aria-label='GitHub portfolio'
@@ -32,19 +36,6 @@ changefreq: 'monthly'
           <p class='contribution__status'>
             💫 a11y dreams
           </p>
-
-          <ul class='contribution__orgs-list contribution__orgs-list--desktop'>
-            <li>
-              <a class='contribution__org' href='https://github.com/vue-a11y/' target='_blank' rel='noopener noreferrer'>
-                <div class='contribution__org-img-container'>
-                  <img src='/images/vue-a11y.png' alt=''>
-                </div>
-                <p class='contribution__org-name'>
-                  Vue A11y
-                </p>
-              </a>
-            </li>
-          </ul>
         </div>
 
         <ul class='contribution__stats-list'>
@@ -73,21 +64,6 @@ changefreq: 'monthly'
       </div>
 
       <div class='contribution__profile-content contribution__profile-content--mobile'>
-        <p class='contribution__orgs-title'>Organizations</p>
-
-        <ul class='contribution__orgs-list'>
-          <li>
-            <a class='contribution__org' href='https://github.com/vue-a11y/' target='_blank' rel='noopener noreferrer'>
-              <div class='contribution__org-img-container'>
-                <img src='/images/vue-a11y.png' alt=''>
-              </div>
-              <p class='contribution__org-name'>
-                Vue A11y
-              </p>
-            </a>
-          </li>
-        </ul>
-
         <p class='contribution__list-title'>Recent Contributions</p>
 
         <ul class='contribution__list'>
@@ -170,3 +146,21 @@ changefreq: 'monthly'
     </p>
   </section>
 </div>
+
+<svg id="svgfilters" aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <filter id="red-sunset" x="-10%" y="-10%" width="120%" height="120%" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feColorMatrix type="matrix" values=".33 .33 .33 0 0
+        .33 .33 .33 0 0
+        .33 .33 .33 0 0
+        0 0 0 1 0" in="SourceGraphic" result="colormatrix"/>
+      <feComponentTransfer in="colormatrix" result="componentTransfer">
+        <feFuncR type="table" tableValues="0.27 0.86 0.97"/>
+        <feFuncG type="table" tableValues="0.01 0.08 0.81"/>
+        <feFuncB type="table" tableValues="0.02 0.24 0.05"/>
+        <feFuncA type="table" tableValues="0 1"/>
+      </feComponentTransfer>
+      <feBlend mode="normal" in="componentTransfer" in2="SourceGraphic" result="blend"/>
+    </filter>
+  </defs>
+</svg>
