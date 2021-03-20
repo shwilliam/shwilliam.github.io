@@ -1,0 +1,22 @@
+{
+  "title": "@shwilliam",
+  "url": "https://shwilliam.com/",
+  "language": "en",
+  "description": "developer",
+  "email": "shwilliam@hey.com",
+  "feed": {
+    "subtitle": "thoughts",
+    "filename": "feed.xml",
+    "path": "/feed/feed.xml",
+    "id": "https://shwilliam.com/"
+  },
+  "jsonfeed": {
+    "path": "/feed/feed.json",
+    "url": "https://shwilliam.com/feed/feed.json"
+  },
+  "author": {
+    "name": "William Lindvall",
+    "email": "shwilliam@hey.com",
+    "url": "https://shwilliam.com/"
+  }
+}

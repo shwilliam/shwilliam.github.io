@@ -1,0 +1,48 @@
+---
+layout: layouts/base.njk
+templateClass: post
+---
+
+<div class="post__header">
+  {%- for tag in tags | filterTagList %}
+  {%- set tagUrl %}/tags/{{ tag | slug }}/{% endset %}
+    <a href="{{ tagUrl | url }}" title="view posts tagged {{ tag }}" class="post__tag">
+      {%- if tag == 'img' %}
+        📷
+      {%- elseif tag == 'lib' %}
+        ⌨️
+      {%- elseif tag == 'site' or tag == 'app' %}
+        🌐
+      {%- elseif tag == 'theme' %}
+        💅
+      {%- else %}
+        📄
+      {% endif %}
+    </a>
+  {%- endfor %}
+
+  <h1 class="post__title">{{ title }}</h1>
+</div>
+
+{%- if description %}
+  <p>
+    {{ description }}
+  </p>
+{% endif %}
+
+
+{{ content | safe }}
+
+{%- if source %}
+  <a href="{{ source }}" target="_blank">
+    Source
+  </a>
+{% endif %}
+
+<ul class="gallery">
+  {%- for filename in images %}
+    <li class="gallery-img">
+      <img src="{{ filename }}">
+    </li>
+  {%- endfor %}
+</ul>

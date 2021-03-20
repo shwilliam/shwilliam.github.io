@@ -1,0 +1,24 @@
+---
+pagination:
+  data: collections
+  size: 1
+  alias: tag
+  filter:
+    - all
+    - nav
+    - post
+    - posts
+    - tagList
+  addAllPagesToCollections: true
+layout: layouts/home.njk
+eleventyComputed:
+  title: tagged "{{ tag }}"
+permalink: /tags/{{ tag | slug }}/
+---
+
+<h1>tagged "{{ tag }}"</h1>
+
+{% set postslist = collections[ tag ] %}
+{% include "postslist.njk" %}
+
+<p><a href="{{ '/tags/' | url }}">all tags</a></p>
