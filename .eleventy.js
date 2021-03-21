@@ -36,6 +36,26 @@ module.exports = config => {
     ),
   )
 
+  config.addCollection('postsByYear', collection => {
+    const postsByYear = collection.getAll().reduce((postsByYear, project) => {
+      if (!project.data.date) return postsByYear
+      const year = new Date(project.data.date).getFullYear()
+      return postsByYear[year]
+        ? {
+            ...postsByYear,
+            [year]: [...postsByYear[year], project],
+          }
+        : {...postsByYear, [year]: [project]}
+    }, {})
+
+    return Object.entries(postsByYear)
+      .sort(([year1], [year2]) => year2 - year1)
+      .map(([year, projects]) => ({
+        year,
+        projects,
+      }))
+  })
+
   config.addCollection('tagList', collection => {
     const tagSet = new Set()
     collection.getAll().forEach(item => {

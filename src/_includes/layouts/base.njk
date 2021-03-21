@@ -15,17 +15,24 @@
       <h2><a href="{{ '/' | url }}" class="title">{{ metadata.title }}</a></h2>
 
       <nav class="nav">
-        {% set postslist = collections.posts %}
-        <ul reversed>
-          {% for post in postslist | reverse %}
+        {% set postsByYear = collections.postsByYear %}
+        <ul>
+          {% for postYear in postsByYear %}
             <li>
-              <a href="{{ post.url | url }}" {% if post.url == url %}class="bold"{% endif %}>
-                {% if post.data.title %}
-                  {{ post.data.title }}
-                {% else %}
-                  <code>{{ post.url }}</code>
-                {% endif %}
-              </a>
+              <span class="bold">{{postYear.year}}</span>
+              <ul class="nav__year" reversed>
+                {% for project in postYear.projects | reverse  %}
+                  <li>
+                    <a href="{{ project.url | url }}" {% if project.url == url %}class="bold"{% endif %}>
+                      {% if project.data.title %}
+                        {{ project.data.title }}
+                      {% else %}
+                        <code>{{ project.url }}</code>
+                      {% endif %}
+                    </a>
+                  </li>
+                {% endfor %}
+              </ul>
             </li>
           {% endfor %}
         </ul>

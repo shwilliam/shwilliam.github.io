@@ -126,6 +126,10 @@ textarea,
   flex: 1;
 }
 
+.nav__year {
+  margin-bottom: var(--margin);
+}
+
 .main {
   flex: 1;
 }
