@@ -10,13 +10,50 @@
     <link rel="alternate" href="{{ metadata.feed.path | url }}" type="application/atom+xml" title="{{ metadata.title }}">
     <link rel="alternate" href="{{ metadata.jsonfeed.path | url }}" type="application/json" title="{{ metadata.title }}">
   </head>
-  <body class="body">
-    <header class="header">
-      <h2><a href="{{ '/' | url }}" class="title">{{ metadata.title }}</a></h2>
+  <body class="body" data-open="false">
+    <button id="hamburger" class="hamburger">
+      <span class="sr-only">Toggle menu</span>
+      <svg
+        id="hamburger--closed"
+        class="hamburger--closed"
+        xmlns="http://www.w3.org/2000/svg"
+        width="24" height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line>
+        <line x1="3" y1="18" x2="21" y2="18"></line>
+      </svg>
+      <svg
+        id="hamburger--open"
+        class="hamburger--open"
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <line x1="18" y1="6" x2="6" y2="18"></line>
+        <line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg>
+    </button>
+
+    <header id="sidebar" class="sidebar">
+      <h2 class="sidebar__title">
+        <a href="{{ '/' | url }}" class="title">{{ metadata.title }}</a>
+      </h2>
 
       <nav class="nav">
         {% set postsByYear = collections.postsByYear %}
-        <ul>
+        <ul class="nav__list">
           {% for postYear in postsByYear %}
             <li>
               <span class="bold">{{postYear.year}}</span>
@@ -42,5 +79,15 @@
     <main class="main{% if templateClass %} {{ templateClass }}{% endif %}">
       {{ content | safe }}
     </main>
+
+    <script>
+      const hamburger = document.getElementById('hamburger'),
+        { body } = document
+
+      hamburger.addEventListener('click', () => {
+        const isOpen = body.dataset.open === 'true'
+        body.dataset.open = !isOpen
+      })
+    </script>
   </body>
 </html>

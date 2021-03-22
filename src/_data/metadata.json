@@ -4,6 +4,7 @@
   "language": "en",
   "description": "developer",
   "email": "shwilliam@hey.com",
+  "github": "https://github.com/shwilliam",
   "feed": {
     "subtitle": "thoughts",
     "filename": "feed.xml",
