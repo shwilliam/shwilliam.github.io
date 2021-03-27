@@ -1,0 +1,263 @@
+
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+	<title>@shwilliam</title>
+	<subtitle>thoughts</subtitle>
+	
+	<link href="https://shwilliam.com/feed/feed.xml" rel="self"/>
+	<link href="https://shwilliam.com/"/>
+	<updated>2021-02-14T00:00:00Z</updated>
+	<id>https://shwilliam.com/</id>
+	<author>
+		<name>William Lindvall</name>
+		<email>shwilliam@hey.com</email>
+	</author>
+	
+	<entry>
+		<title>lagom theme</title>
+		<link href="https://shwilliam.com/posts/2021/vscode-lagom/"/>
+		<updated>2021-02-14T00:00:00Z</updated>
+		<id>https://shwilliam.com/posts/2021/vscode-lagom/</id>
+		<content type="html"></content>
+	</entry>
+	
+	<entry>
+		<title>gatsby-source-gh</title>
+		<link href="https://shwilliam.com/posts/2020/gatsby-source-gh/"/>
+		<updated>2020-07-28T00:00:00Z</updated>
+		<id>https://shwilliam.com/posts/2020/gatsby-source-gh/</id>
+		<content type="html"></content>
+	</entry>
+	
+	<entry>
+		<title>gatsby-source-copy</title>
+		<link href="https://shwilliam.com/posts/2020/gatsby-source-copy/"/>
+		<updated>2020-07-23T00:00:00Z</updated>
+		<id>https://shwilliam.com/posts/2020/gatsby-source-copy/</id>
+		<content type="html"></content>
+	</entry>
+	
+	<entry>
+		<title>magic-emoji</title>
+		<link href="https://shwilliam.com/posts/2020/magic-emoji/"/>
+		<updated>2020-07-20T00:00:00Z</updated>
+		<id>https://shwilliam.com/posts/2020/magic-emoji/</id>
+		<content type="html"></content>
+	</entry>
+	
+	<entry>
+		<title>react-use-hover-direction</title>
+		<link href="https://shwilliam.com/posts/2020/react-use-hover-direction/"/>
+		<updated>2020-06-03T00:00:00Z</updated>
+		<id>https://shwilliam.com/posts/2020/react-use-hover-direction/</id>
+		<content type="html"></content>
+	</entry>
+	
+	<entry>
+		<title>react-rubber-slider</title>
+		<link href="https://shwilliam.com/posts/2020/react-rubber-slider/"/>
+		<updated>2020-05-25T00:00:00Z</updated>
+		<id>https://shwilliam.com/posts/2020/react-rubber-slider/</id>
+		<content type="html"></content>
+	</entry>
+	
+	<entry>
+		<title>box breathing vis</title>
+		<link href="https://shwilliam.com/posts/2020/box/"/>
+		<updated>2020-05-12T00:00:00Z</updated>
+		<id>https://shwilliam.com/posts/2020/box/</id>
+		<content type="html"></content>
+	</entry>
+	
+	<entry>
+		<title>react-use-css-var</title>
+		<link href="https://shwilliam.com/posts/2020/react-use-css-var/"/>
+		<updated>2020-05-10T00:00:00Z</updated>
+		<id>https://shwilliam.com/posts/2020/react-use-css-var/</id>
+		<content type="html"></content>
+	</entry>
+	
+	<entry>
+		<title>color picker</title>
+		<link href="https://shwilliam.com/posts/2019/colors/"/>
+		<updated>2020-05-09T00:00:00Z</updated>
+		<id>https://shwilliam.com/posts/2019/colors/</id>
+		<content type="html"></content>
+	</entry>
+	
+	<entry>
+		<title>hamster</title>
+		<link href="https://shwilliam.com/posts/2020/hamster/"/>
+		<updated>2020-04-25T00:00:00Z</updated>
+		<id>https://shwilliam.com/posts/2020/hamster/</id>
+		<content type="html"></content>
+	</entry>
+	
+	<entry>
+		<title>react-use-form</title>
+		<link href="https://shwilliam.com/posts/2020/react-use-form/"/>
+		<updated>2020-04-14T00:00:00Z</updated>
+		<id>https://shwilliam.com/posts/2020/react-use-form/</id>
+		<content type="html"></content>
+	</entry>
+	
+	<entry>
+		<title>react-modal-wrap</title>
+		<link href="https://shwilliam.com/posts/2020/react-modal-wrap/"/>
+		<updated>2020-02-02T00:00:00Z</updated>
+		<id>https://shwilliam.com/posts/2020/react-modal-wrap/</id>
+		<content type="html"></content>
+	</entry>
+	
+	<entry>
+		<title>react-use-machine</title>
+		<link href="https://shwilliam.com/posts/2020/react-use-machine/"/>
+		<updated>2020-01-17T00:00:00Z</updated>
+		<id>https://shwilliam.com/posts/2020/react-use-machine/</id>
+		<content type="html"></content>
+	</entry>
+	
+	<entry>
+		<title>react-tri-state-checkbox</title>
+		<link href="https://shwilliam.com/posts/2019/react-tri-state-checkbox/"/>
+		<updated>2019-10-28T00:00:00Z</updated>
+		<id>https://shwilliam.com/posts/2019/react-tri-state-checkbox/</id>
+		<content type="html"></content>
+	</entry>
+	
+	<entry>
+		<title>cheese-toast</title>
+		<link href="https://shwilliam.com/posts/2019/cheese-toast/"/>
+		<updated>2019-08-10T00:00:00Z</updated>
+		<id>https://shwilliam.com/posts/2019/cheese-toast/</id>
+		<content type="html"></content>
+	</entry>
+	
+	<entry>
+		<title>lagom-css</title>
+		<link href="https://shwilliam.com/posts/2019/lagom-css/"/>
+		<updated>2019-05-22T00:00:00Z</updated>
+		<id>https://shwilliam.com/posts/2019/lagom-css/</id>
+		<content type="html"></content>
+	</entry>
+	
+	<entry>
+		<title>vue-window-dimensions</title>
+		<link href="https://shwilliam.com/posts/2019/vue-window-dimensions/"/>
+		<updated>2019-05-01T00:00:00Z</updated>
+		<id>https://shwilliam.com/posts/2019/vue-window-dimensions/</id>
+		<content type="html"></content>
+	</entry>
+	
+	<entry>
+		<title>poke-js</title>
+		<link href="https://shwilliam.com/posts/2019/poke-js/"/>
+		<updated>2019-04-24T00:00:00Z</updated>
+		<id>https://shwilliam.com/posts/2019/poke-js/</id>
+		<content type="html"></content>
+	</entry>
+	
+	<entry>
+		<title>vue-direction</title>
+		<link href="https://shwilliam.com/posts/2019/vue-direction/"/>
+		<updated>2019-03-10T00:00:00Z</updated>
+		<id>https://shwilliam.com/posts/2019/vue-direction/</id>
+		<content type="html"></content>
+	</entry>
+	
+	<entry>
+		<title>vue-shortcut</title>
+		<link href="https://shwilliam.com/posts/2019/vue-shortcut/"/>
+		<updated>2019-02-01T00:00:00Z</updated>
+		<id>https://shwilliam.com/posts/2019/vue-shortcut/</id>
+		<content type="html"></content>
+	</entry>
+	
+	<entry>
+		<title>aeropress animation</title>
+		<link href="https://shwilliam.com/posts/2019/aeropress/"/>
+		<updated>2019-01-14T00:00:00Z</updated>
+		<id>https://shwilliam.com/posts/2019/aeropress/</id>
+		<content type="html"></content>
+	</entry>
+	
+	<entry>
+		<title>vue-visibility-trigger</title>
+		<link href="https://shwilliam.com/posts/2018/vue-visibility-trigger/"/>
+		<updated>2018-10-14T00:00:00Z</updated>
+		<id>https://shwilliam.com/posts/2018/vue-visibility-trigger/</id>
+		<content type="html"></content>
+	</entry>
+	
+	<entry>
+		<title>vue-responsive-text</title>
+		<link href="https://shwilliam.com/posts/2018/vue-responsive-text/"/>
+		<updated>2018-09-11T00:00:00Z</updated>
+		<id>https://shwilliam.com/posts/2018/vue-responsive-text/</id>
+		<content type="html"></content>
+	</entry>
+	
+	<entry>
+		<title>ray tait, au</title>
+		<link href="https://shwilliam.com/posts/2018/ray-aus/"/>
+		<updated>2018-01-03T00:00:00Z</updated>
+		<id>https://shwilliam.com/posts/2018/ray-aus/</id>
+		<content type="html"></content>
+	</entry>
+	
+	<entry>
+		<title>untitled, jp</title>
+		<link href="https://shwilliam.com/posts/2018/untitled-jp/"/>
+		<updated>2018-01-02T00:00:00Z</updated>
+		<id>https://shwilliam.com/posts/2018/untitled-jp/</id>
+		<content type="html"></content>
+	</entry>
+	
+	<entry>
+		<title>untitled, sg</title>
+		<link href="https://shwilliam.com/posts/2017/untitled-sg/"/>
+		<updated>2017-01-02T00:00:00Z</updated>
+		<id>https://shwilliam.com/posts/2017/untitled-sg/</id>
+		<content type="html"></content>
+	</entry>
+	
+	<entry>
+		<title>these days</title>
+		<link href="https://shwilliam.com/posts/2017/these-days/"/>
+		<updated>2017-01-02T00:00:00Z</updated>
+		<id>https://shwilliam.com/posts/2017/these-days/</id>
+		<content type="html"></content>
+	</entry>
+	
+	<entry>
+		<title>untitled, hk</title>
+		<link href="https://shwilliam.com/posts/2016/untitled-hk/"/>
+		<updated>2016-01-02T00:00:00Z</updated>
+		<id>https://shwilliam.com/posts/2016/untitled-hk/</id>
+		<content type="html"></content>
+	</entry>
+	
+	<entry>
+		<title>geylang, sg</title>
+		<link href="https://shwilliam.com/posts/2015/geylang/"/>
+		<updated>2015-01-03T00:00:00Z</updated>
+		<id>https://shwilliam.com/posts/2015/geylang/</id>
+		<content type="html"></content>
+	</entry>
+	
+	<entry>
+		<title>robert williamson, au</title>
+		<link href="https://shwilliam.com/posts/2015/rob-aus/"/>
+		<updated>2015-01-02T00:00:00Z</updated>
+		<id>https://shwilliam.com/posts/2015/rob-aus/</id>
+		<content type="html"></content>
+	</entry>
+	
+	<entry>
+		<title>robert williamson, sg</title>
+		<link href="https://shwilliam.com/posts/2014/rob-sg/"/>
+		<updated>2014-01-02T00:00:00Z</updated>
+		<id>https://shwilliam.com/posts/2014/rob-sg/</id>
+		<content type="html"></content>
+	</entry>
+</feed>

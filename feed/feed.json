@@ -1,0 +1,201 @@
+
+{
+  "version": "https://jsonfeed.org/version/1.1",
+  "title": "@shwilliam",
+  "language": "en",
+  "home_page_url": "https://shwilliam.com/",
+  "feed_url": "https://shwilliam.com/feed/feed.json",
+  "description": "developer",
+  "author": {
+    "name": "William Lindvall",
+    "url": "https://shwilliam.com/"
+  },
+  "items": [{
+      "id": "https://shwilliam.com/posts/2021/vscode-lagom/",
+      "url": "https://shwilliam.com/posts/2021/vscode-lagom/",
+      "title": "lagom theme",
+      "content_html": "",
+      "date_published": "2021-02-14T00:00:00Z"
+    },{
+      "id": "https://shwilliam.com/posts/2020/gatsby-source-gh/",
+      "url": "https://shwilliam.com/posts/2020/gatsby-source-gh/",
+      "title": "gatsby-source-gh",
+      "content_html": "",
+      "date_published": "2020-07-28T00:00:00Z"
+    },{
+      "id": "https://shwilliam.com/posts/2020/gatsby-source-copy/",
+      "url": "https://shwilliam.com/posts/2020/gatsby-source-copy/",
+      "title": "gatsby-source-copy",
+      "content_html": "",
+      "date_published": "2020-07-23T00:00:00Z"
+    },{
+      "id": "https://shwilliam.com/posts/2020/magic-emoji/",
+      "url": "https://shwilliam.com/posts/2020/magic-emoji/",
+      "title": "magic-emoji",
+      "content_html": "",
+      "date_published": "2020-07-20T00:00:00Z"
+    },{
+      "id": "https://shwilliam.com/posts/2020/react-use-hover-direction/",
+      "url": "https://shwilliam.com/posts/2020/react-use-hover-direction/",
+      "title": "react-use-hover-direction",
+      "content_html": "",
+      "date_published": "2020-06-03T00:00:00Z"
+    },{
+      "id": "https://shwilliam.com/posts/2020/react-rubber-slider/",
+      "url": "https://shwilliam.com/posts/2020/react-rubber-slider/",
+      "title": "react-rubber-slider",
+      "content_html": "",
+      "date_published": "2020-05-25T00:00:00Z"
+    },{
+      "id": "https://shwilliam.com/posts/2020/box/",
+      "url": "https://shwilliam.com/posts/2020/box/",
+      "title": "box breathing vis",
+      "content_html": "",
+      "date_published": "2020-05-12T00:00:00Z"
+    },{
+      "id": "https://shwilliam.com/posts/2020/react-use-css-var/",
+      "url": "https://shwilliam.com/posts/2020/react-use-css-var/",
+      "title": "react-use-css-var",
+      "content_html": "",
+      "date_published": "2020-05-10T00:00:00Z"
+    },{
+      "id": "https://shwilliam.com/posts/2019/colors/",
+      "url": "https://shwilliam.com/posts/2019/colors/",
+      "title": "color picker",
+      "content_html": "",
+      "date_published": "2020-05-09T00:00:00Z"
+    },{
+      "id": "https://shwilliam.com/posts/2020/hamster/",
+      "url": "https://shwilliam.com/posts/2020/hamster/",
+      "title": "hamster",
+      "content_html": "",
+      "date_published": "2020-04-25T00:00:00Z"
+    },{
+      "id": "https://shwilliam.com/posts/2020/react-use-form/",
+      "url": "https://shwilliam.com/posts/2020/react-use-form/",
+      "title": "react-use-form",
+      "content_html": "",
+      "date_published": "2020-04-14T00:00:00Z"
+    },{
+      "id": "https://shwilliam.com/posts/2020/react-modal-wrap/",
+      "url": "https://shwilliam.com/posts/2020/react-modal-wrap/",
+      "title": "react-modal-wrap",
+      "content_html": "",
+      "date_published": "2020-02-02T00:00:00Z"
+    },{
+      "id": "https://shwilliam.com/posts/2020/react-use-machine/",
+      "url": "https://shwilliam.com/posts/2020/react-use-machine/",
+      "title": "react-use-machine",
+      "content_html": "",
+      "date_published": "2020-01-17T00:00:00Z"
+    },{
+      "id": "https://shwilliam.com/posts/2019/react-tri-state-checkbox/",
+      "url": "https://shwilliam.com/posts/2019/react-tri-state-checkbox/",
+      "title": "react-tri-state-checkbox",
+      "content_html": "",
+      "date_published": "2019-10-28T00:00:00Z"
+    },{
+      "id": "https://shwilliam.com/posts/2019/cheese-toast/",
+      "url": "https://shwilliam.com/posts/2019/cheese-toast/",
+      "title": "cheese-toast",
+      "content_html": "",
+      "date_published": "2019-08-10T00:00:00Z"
+    },{
+      "id": "https://shwilliam.com/posts/2019/lagom-css/",
+      "url": "https://shwilliam.com/posts/2019/lagom-css/",
+      "title": "lagom-css",
+      "content_html": "",
+      "date_published": "2019-05-22T00:00:00Z"
+    },{
+      "id": "https://shwilliam.com/posts/2019/vue-window-dimensions/",
+      "url": "https://shwilliam.com/posts/2019/vue-window-dimensions/",
+      "title": "vue-window-dimensions",
+      "content_html": "",
+      "date_published": "2019-05-01T00:00:00Z"
+    },{
+      "id": "https://shwilliam.com/posts/2019/poke-js/",
+      "url": "https://shwilliam.com/posts/2019/poke-js/",
+      "title": "poke-js",
+      "content_html": "",
+      "date_published": "2019-04-24T00:00:00Z"
+    },{
+      "id": "https://shwilliam.com/posts/2019/vue-direction/",
+      "url": "https://shwilliam.com/posts/2019/vue-direction/",
+      "title": "vue-direction",
+      "content_html": "",
+      "date_published": "2019-03-10T00:00:00Z"
+    },{
+      "id": "https://shwilliam.com/posts/2019/vue-shortcut/",
+      "url": "https://shwilliam.com/posts/2019/vue-shortcut/",
+      "title": "vue-shortcut",
+      "content_html": "",
+      "date_published": "2019-02-01T00:00:00Z"
+    },{
+      "id": "https://shwilliam.com/posts/2019/aeropress/",
+      "url": "https://shwilliam.com/posts/2019/aeropress/",
+      "title": "aeropress animation",
+      "content_html": "",
+      "date_published": "2019-01-14T00:00:00Z"
+    },{
+      "id": "https://shwilliam.com/posts/2018/vue-visibility-trigger/",
+      "url": "https://shwilliam.com/posts/2018/vue-visibility-trigger/",
+      "title": "vue-visibility-trigger",
+      "content_html": "",
+      "date_published": "2018-10-14T00:00:00Z"
+    },{
+      "id": "https://shwilliam.com/posts/2018/vue-responsive-text/",
+      "url": "https://shwilliam.com/posts/2018/vue-responsive-text/",
+      "title": "vue-responsive-text",
+      "content_html": "",
+      "date_published": "2018-09-11T00:00:00Z"
+    },{
+      "id": "https://shwilliam.com/posts/2018/ray-aus/",
+      "url": "https://shwilliam.com/posts/2018/ray-aus/",
+      "title": "ray tait, au",
+      "content_html": "",
+      "date_published": "2018-01-03T00:00:00Z"
+    },{
+      "id": "https://shwilliam.com/posts/2018/untitled-jp/",
+      "url": "https://shwilliam.com/posts/2018/untitled-jp/",
+      "title": "untitled, jp",
+      "content_html": "",
+      "date_published": "2018-01-02T00:00:00Z"
+    },{
+      "id": "https://shwilliam.com/posts/2017/untitled-sg/",
+      "url": "https://shwilliam.com/posts/2017/untitled-sg/",
+      "title": "untitled, sg",
+      "content_html": "",
+      "date_published": "2017-01-02T00:00:00Z"
+    },{
+      "id": "https://shwilliam.com/posts/2017/these-days/",
+      "url": "https://shwilliam.com/posts/2017/these-days/",
+      "title": "these days",
+      "content_html": "",
+      "date_published": "2017-01-02T00:00:00Z"
+    },{
+      "id": "https://shwilliam.com/posts/2016/untitled-hk/",
+      "url": "https://shwilliam.com/posts/2016/untitled-hk/",
+      "title": "untitled, hk",
+      "content_html": "",
+      "date_published": "2016-01-02T00:00:00Z"
+    },{
+      "id": "https://shwilliam.com/posts/2015/geylang/",
+      "url": "https://shwilliam.com/posts/2015/geylang/",
+      "title": "geylang, sg",
+      "content_html": "",
+      "date_published": "2015-01-03T00:00:00Z"
+    },{
+      "id": "https://shwilliam.com/posts/2015/rob-aus/",
+      "url": "https://shwilliam.com/posts/2015/rob-aus/",
+      "title": "robert williamson, au",
+      "content_html": "",
+      "date_published": "2015-01-02T00:00:00Z"
+    },{
+      "id": "https://shwilliam.com/posts/2014/rob-sg/",
+      "url": "https://shwilliam.com/posts/2014/rob-sg/",
+      "title": "robert williamson, sg",
+      "content_html": "",
+      "date_published": "2014-01-02T00:00:00Z"
+    }
+  ]
+}
