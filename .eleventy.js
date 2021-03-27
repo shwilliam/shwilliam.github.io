@@ -66,6 +66,7 @@ module.exports = config => {
 
   config.addPassthroughCopy('src/img')
   config.addPassthroughCopy('src/css')
+  config.addPassthroughCopy('src/CNAME')
 
   let markdownLibrary = markdownIt({
     html: true,
