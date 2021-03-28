@@ -129,6 +129,7 @@ textarea,
 
 .nav {
   margin-top: var(--margin);
+  padding-bottom: var(--margin);
   flex: 1;
 }
 
