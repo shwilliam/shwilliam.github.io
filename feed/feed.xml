@@ -22,6 +22,14 @@
 	</entry>
 	
 	<entry>
+		<title>gradient</title>
+		<link href="https://shwilliam.com/posts/2020/gradient/"/>
+		<updated>2020-08-04T00:00:00Z</updated>
+		<id>https://shwilliam.com/posts/2020/gradient/</id>
+		<content type="html"></content>
+	</entry>
+	
+	<entry>
 		<title>gatsby-source-gh</title>
 		<link href="https://shwilliam.com/posts/2020/gatsby-source-gh/"/>
 		<updated>2020-07-28T00:00:00Z</updated>
