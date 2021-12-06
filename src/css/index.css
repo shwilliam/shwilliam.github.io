@@ -238,13 +238,6 @@ textarea,
   padding-right: 1em;
 }
 
-#wip {
-  position: absolute;
-  bottom: 20px;
-  right: 20px;
-  width: 200px;
-}
-
 .sr-only {
   position: absolute;
   left: -10000px;
