@@ -1,9 +1,9 @@
 FROM gitpod/workspace-full
 
-# Install Fly
+# install fly
 RUN curl -L https://fly.io/install.sh | sh
 ENV FLYCTL_INSTALL="/home/gitpod/.fly"
 ENV PATH="$FLYCTL_INSTALL/bin:$PATH"
 
-# Install GitHub CLI
+# install github cli
 RUN brew install gh
