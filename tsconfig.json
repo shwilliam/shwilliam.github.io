@@ -19,6 +19,7 @@
       "~/*": ["./app/*"]
     },
     "skipLibCheck": true,
+    // remix handles building everything `remix build`
     "noEmit": true
   }
 }

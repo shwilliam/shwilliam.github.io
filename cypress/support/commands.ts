@@ -3,40 +3,18 @@ import {faker} from '@faker-js/faker'
 declare global {
   namespace Cypress {
     interface Chainable {
-      /**
-       * logs in with a random user. yields the user and adds an alias to the user
-       *
-       * @returns {typeof login}
-       * @memberof Chainable
-       * @example
-       *    cy.login()
-       * @example
-       *    cy.login({ email: 'whatever@example.com' })
-       */
+      // log in with rando user
+      // cy.login()
+      // cy.login({ email: 'whatever@example.com' })
       login: typeof login
 
-      /**
-       * deletes the current @user
-       *
-       * @returns {typeof cleanupUser}
-       * @memberof Chainable
-       * @example
-       *    cy.cleanupUser()
-       * @example
-       *    cy.cleanupUser({ email: 'whatever@example.com' })
-       */
+      // delete user
+      // cy.cleanupUser({ email: 'whatever@example.com' })
+      // cy.cleanupUser()
       cleanupUser: typeof cleanupUser
 
-      /**
-       * extends the standard visit command to wait for the page to load
-       *
-       * @returns {typeof visitAndCheck}
-       * @memberof Chainable
-       * @example
-       *    cy.visitAndCheck('/')
-       *  @example
-       *    cy.visitAndCheck('/', 500)
-       */
+      // cy.visitAndCheck('/')
+      // cy.visitAndCheck('/', 500)
       visitAndCheck: typeof visitAndCheck
     }
   }
@@ -63,7 +41,7 @@ function cleanupUser({email}: {email?: string} = {}) {
   if (email) {
     deleteUserByEmail(email)
   } else {
-    cy.get('@user').then(user => {
+    cy.get('@user').then((user) => {
       const email = (user as {email?: string}).email
       if (email) {
         deleteUserByEmail(email)

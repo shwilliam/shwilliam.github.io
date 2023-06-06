@@ -6,10 +6,7 @@ const prisma = new PrismaClient()
 async function seed() {
   const email = 'test@mail.com'
 
-  // clean up the existing database
-  await prisma.user.delete({where: {email}}).catch(() => {
-    // all goods
-  })
+  await prisma.user.delete({where: {email}}).catch(() => {})
 
   const hashedPassword = await bcrypt.hash('password', 10)
 
@@ -26,25 +23,25 @@ async function seed() {
 
   await prisma.note.create({
     data: {
-      title: 'note 1',
-      body: 'hi hi',
+      title: 'My first note',
+      body: 'Hello, world!',
       userId: user.id,
     },
   })
 
   await prisma.note.create({
     data: {
-      title: 'note 2',
-      body: 'ho ho',
+      title: 'My second note',
+      body: 'Hello, world!',
       userId: user.id,
     },
   })
 
-  console.log(`Database has been seeded. 🌱`)
+  console.log(`db seeded 🌱`)
 }
 
 seed()
-  .catch(e => {
+  .catch((e) => {
     console.error(e)
     process.exit(1)
   })

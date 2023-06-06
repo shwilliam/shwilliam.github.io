@@ -1,6 +1,5 @@
 // create a new user and login with that user
 // npx ts-node --require tsconfig-paths/register ./cypress/support/create-user.ts username@example.com
-// it will log out the cookie value you can use to interact with the server as that new user
 
 import {installGlobals} from '@remix-run/node'
 import {parse} from 'cookie'
@@ -32,8 +31,7 @@ async function createAndLogin(email: string) {
     throw new Error('Cookie missing from createUserSession response')
   }
   const parsedCookie = parse(cookieValue)
-  // we log it like this so our cypress command can parse it out and set it as
-  // the cookie value.
+  // log it like this so cypress command can parse it out and set it as cookie value
   console.log(
     `
 <cookie>

@@ -5,13 +5,8 @@ import type {User} from '~/models/user.server'
 
 const DEFAULT_REDIRECT = '/'
 
-/**
- * should be used any time the redirect path is user-provided
- * (like the query string on our login/signup pages)
- * this avoids open-redirect vulnerabilities.
- * @param {string} to The redirect destination
- * @param {string} defaultRedirect The redirect to use if the to is unsafe.
- */
+// use when redirect path is user-provided (like query string on login/signup pages)
+// avoids open-redirect vulnerabilities
 export function safeRedirect(
   to: FormDataEntryValue | string | null | undefined,
   defaultRedirect: string = DEFAULT_REDIRECT,
@@ -27,17 +22,12 @@ export function safeRedirect(
   return to
 }
 
-/**
- * quickly search for specific data across all loader data using useMatches
- * @param {string} id The route id
- * @returns {JSON|undefined} The router data or undefined if not found
- */
 export function useMatchesData(
   id: string,
 ): Record<string, unknown> | undefined {
   const matchingRoutes = useMatches()
   const route = useMemo(
-    () => matchingRoutes.find(route => route.id === id),
+    () => matchingRoutes.find((route) => route.id === id),
     [matchingRoutes, id],
   )
   return route?.data
